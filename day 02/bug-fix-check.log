@@ -1,0 +1,25 @@
+typecheck
+
+> typecheck
+> tsc -p apps/api/tsconfig.json --noEmit && tsc -p apps/web/tsconfig.json --noEmit && tsc -p packages/shared/tsconfig.json --noEmit
+
+test
+
+> test
+> npm -w @bookreader/api test
+
+
+> @bookreader/api@0.0.0 test
+> tsx --test test/**/*.test.ts
+
+✔ POST /books extracts title and author and lists the book (27.684875ms)
+✔ PUT /books/:id/progress keeps a separate place for each book (7.522125ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 2
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 678.024542
+lint

@@ -1,0 +1,9 @@
+{
+  "kind": "review",
+  "model": "qwen2.5-coder:7b",
+  "num_ctx": 8192,
+  "chat_ok": true,
+  "chat_ms": 2332,
+  "eval_count": 159,
+  "error": null
+}

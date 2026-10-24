@@ -1,0 +1,16 @@
+---
+description: Bookreader layers, names, and where new types go
+alwaysApply: true
+---
+
+# Bookreader architecture
+
+Web + API. Server owns books and reading progress. No auth in v1.
+
+- Types: `Book`, `BookDetail`, `ReadingProgress`, `Chapter` in `packages/shared`
+- Mutations: `Library` in `apps/api`. Missing ids throw `BookNotFoundError`
+- EPUB parse only in `epub.ts`. Pages never unzip
+- Progress is per `bookId`
+- New page: `apps/web/src/pages/<Name>Page.tsx`
+- Filters on `GET /books`, not only in the React list
+- Do not edit `scripts/check.sh`. Run it after edits

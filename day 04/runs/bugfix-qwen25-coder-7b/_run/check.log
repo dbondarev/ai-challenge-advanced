@@ -1,0 +1,33 @@
+typecheck
+
+> typecheck
+> tsc -p apps/api/tsconfig.json --noEmit && tsc -p apps/web/tsconfig.json --noEmit && tsc -p packages/shared/tsconfig.json --noEmit
+
+test
+
+> test
+> npm -w @bookreader/api test
+
+
+> @bookreader/api@0.0.0 test
+> tsx --test test/**/*.test.ts
+
+✔ parseEpub extracts title, author, and spine from OPF (152.087ms)
+✔ readChapter returns the chapter HTML for a spine href (6.149875ms)
+✔ readChapter throws when the href is not in the EPUB (70.872417ms)
+✔ GET /books/:id/chapters/:index returns the chapter HTML (331.305334ms)
+✔ GET /books/:id and GET /books/:id/chapters/:index return 404 when missing (92.1185ms)
+✔ DELETE /books/:id removes the book, progress, and file (31.321292ms)
+✔ POST /books extracts title and author and lists the book (181.044417ms)
+✔ GET /books/:id/progress returns zeros when nothing is saved (457.478292ms)
+✔ PUT /books/:id/progress stores progress per bookId (52.202583ms)
+✔ GET and PUT /books/:id/progress return 404 for a missing book (7.630834ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 13765.577708
+lint

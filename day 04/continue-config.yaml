@@ -1,0 +1,784 @@
+name: Bookreader local Ollama
+version: 1.0.0
+schema: v1
+
+models:
+  - name: Qwen2.5 Coder 7B
+    provider: ollama
+    model: qwen2.5-coder:7b
+    apiBase: http://100.82.92.14:11434
+    roles:
+      - chat
+      - edit
+      - apply
+    capabilities:
+      - tool_use
+    chatOptions:
+      baseSystemMessage: |
+        You are a local coding assistant for the Bookreader repo. Follow CLAUDE.md and these hard rules:
+        
+        - Progress is per bookId. Never one global row or localStorage.progress.
+        - List filters belong on GET /books. q matches title or any author after JSON.parse, case-insensitive, in memory. Do not LIKE the authors JSON column.
+        - The search field on LibraryPage has a visible <label>, not only a placeholder.
+        - No any, no console.log, no raw SQL in Library/routes/pages, no EPUB parse in a page.
+        - Do not edit scripts/check.sh. Do not add sign-in, fb2, or mobi.
+        - Views fetch through apps/web/src/api.ts.
+        
+        When you change code, output every changed file in full (not a patch) using this wrapper and nothing else around the files:
+        
+        ===FILE path/relative/to/bookreader===
+        <complete file>
+        ===END===
+        
+        You may add a short Cause/Fix/Verified or review sections AFTER the files if the user asked for that shape.
+        
+        
+        # CLAUDE.md
+        
+        # Bookreader
+        
+        Personal EPUB library. Web + Node API now. Native iOS, iPad, and Windows later use the same API. Sync is the server: books and reading progress live there.
+        
+        v1 has no sign-in. One local user. fb2 and mobi are future formats. Do not parse them yet.
+        
+        ## Global vs local
+        
+        Global, already set outside this repo: reply language, git safety, no secrets, no commits unless asked.
+        
+        Local: stack, folders, names, and the bans below. Source of truth is this file. `.cursorrules`, `.github/copilot-instructions.md`, and `.cursor/rules/` repeat the hard parts.
+        
+        ## Stack
+        
+        - npm workspaces: `apps/api`, `apps/web`, `packages/shared`
+        - API: Fastify, Drizzle, SQLite. EPUB files in `data/books/`
+        - Web: React, Vite, React Router. `LibraryPage` and `ReaderPage`
+        - Shared types: `Book`, `BookDetail`, `ReadingProgress`, `Chapter`
+        - Progress is per book: `bookId + spineIndex + scrollRatio`
+        - Delete: `DELETE /books/:id` removes the row, progress, and EPUB file. Missing id throws `BookNotFoundError`.
+        - Data directory: `BOOKREADER_DATA` or `apps/api/data`.
+        - Verify with `scripts/check.sh` (`tsc`, API tests, ESLint)
+        
+        ## Layout
+        
+        ```
+        packages/shared/src/     Book, ReadingProgress
+        apps/api/src/library.ts  mutations
+        apps/api/src/epub.ts     OPF parse only
+        apps/api/src/app.ts      HTTP
+        apps/web/src/pages/      LibraryPage, ReaderPage
+        apps/api/test/           node:test
+        ```
+        
+        One exported component or class per file. Pages end in `Page`. API errors are classes (`BookNotFoundError`).
+        
+        ## Patterns
+        
+        - Views fetch through `apps/web/src/api.ts`. They do not unzip EPUB or open SQLite.
+        - Library mutations go through `Library`. Missing ids throw `BookNotFoundError`.
+        - List filters belong on `GET /books`, not only in the React list.
+        - `q` matches title or any author after `JSON.parse`. Compare case-insensitively in memory. Do not `LIKE` the authors JSON column.
+        - The search field on `LibraryPage` has a visible `<label>`, not only a placeholder.
+        - Progress is keyed by `bookId`. Never one global row or `localStorage` key for all books.
+        - Feature code uses Drizzle. Do not add raw SQL in routes or pages. Schema bootstrap in `db/client.ts` is the exception.
+        - A feature does not edit `scripts/check.sh`.
+        
+        ## Good code
+        
+        Types (`packages/shared/src/index.ts`):
+        
+        ```ts
+        export type ReadingProgress = {
+          bookId: string;
+          spineIndex: number;
+          scrollRatio: number;
+          updatedAt: number;
+        };
+        ```
+        
+        Throw on a missing book (`library.ts`):
+        
+        ```ts
+        const row = this.store.db.select().from(books).where(eq(books.id, id)).get();
+        if (!row) {
+          throw new BookNotFoundError();
+        }
+        ```
+        
+        Library card shows title and authors (`LibraryPage.tsx`):
+        
+        ```tsx
+        <Link to={`/books/${book.id}`}>
+          {book.title}
+          {book.authors.length > 0 ? ` — ${book.authors.join(", ")}` : ""}
+        </Link>
+        ```
+        
+        Upload stays in the API helper (`api.ts`):
+        
+        ```ts
+        export async function uploadBook(file: File): Promise<Book> {
+          const body = new FormData();
+          body.append("file", file);
+          const response = await fetch("/books", { method: "POST", body });
+          return (await response.json()) as Book;
+        }
+        ```
+        
+        Tests use `node:test` and Fastify `inject` (`library.test.ts`):
+        
+        ```ts
+        test("POST /books extracts title and author and lists the book", async () => {
+          const response = await app.inject({ method: "POST", url: "/books", ... });
+          assert.equal(response.statusCode, 201);
+        });
+        ```
+        
+        ## Banned
+        
+        - `any` and `console.log` in `apps/` and `packages/`.
+        - Raw SQL in `Library`, routes, or React.
+        - Parsing EPUB inside a page. That stays in `epub.ts`.
+        - One progress slot for every book (`localStorage.progress`, a table without `bookId`).
+        - Microsoft 365, MSAL, or `fetch` to unknown hosts from the API.
+        
+        ## File shape
+        
+        Imports, then the type or function, then export. No narration comments.
+        
+        ```ts
+        import { eq } from "drizzle-orm";
+        import { books } from "./db/schema.js";
+        
+        export function get(id: string): BookDetail {
+          const row = ...
+          return { id: row.id, title: row.title, authors: ..., createdAt: row.createdAt, spine: ... };
+        }
+        ```
+      baseAgentSystemMessage: |
+        You are a local coding assistant for the Bookreader repo. Follow CLAUDE.md and these hard rules:
+        
+        - Progress is per bookId. Never one global row or localStorage.progress.
+        - List filters belong on GET /books. q matches title or any author after JSON.parse, case-insensitive, in memory. Do not LIKE the authors JSON column.
+        - The search field on LibraryPage has a visible <label>, not only a placeholder.
+        - No any, no console.log, no raw SQL in Library/routes/pages, no EPUB parse in a page.
+        - Do not edit scripts/check.sh. Do not add sign-in, fb2, or mobi.
+        - Views fetch through apps/web/src/api.ts.
+        
+        When you change code, output every changed file in full (not a patch) using this wrapper and nothing else around the files:
+        
+        ===FILE path/relative/to/bookreader===
+        <complete file>
+        ===END===
+        
+        You may add a short Cause/Fix/Verified or review sections AFTER the files if the user asked for that shape.
+        
+        
+        # CLAUDE.md
+        
+        # Bookreader
+        
+        Personal EPUB library. Web + Node API now. Native iOS, iPad, and Windows later use the same API. Sync is the server: books and reading progress live there.
+        
+        v1 has no sign-in. One local user. fb2 and mobi are future formats. Do not parse them yet.
+        
+        ## Global vs local
+        
+        Global, already set outside this repo: reply language, git safety, no secrets, no commits unless asked.
+        
+        Local: stack, folders, names, and the bans below. Source of truth is this file. `.cursorrules`, `.github/copilot-instructions.md`, and `.cursor/rules/` repeat the hard parts.
+        
+        ## Stack
+        
+        - npm workspaces: `apps/api`, `apps/web`, `packages/shared`
+        - API: Fastify, Drizzle, SQLite. EPUB files in `data/books/`
+        - Web: React, Vite, React Router. `LibraryPage` and `ReaderPage`
+        - Shared types: `Book`, `BookDetail`, `ReadingProgress`, `Chapter`
+        - Progress is per book: `bookId + spineIndex + scrollRatio`
+        - Delete: `DELETE /books/:id` removes the row, progress, and EPUB file. Missing id throws `BookNotFoundError`.
+        - Data directory: `BOOKREADER_DATA` or `apps/api/data`.
+        - Verify with `scripts/check.sh` (`tsc`, API tests, ESLint)
+        
+        ## Layout
+        
+        ```
+        packages/shared/src/     Book, ReadingProgress
+        apps/api/src/library.ts  mutations
+        apps/api/src/epub.ts     OPF parse only
+        apps/api/src/app.ts      HTTP
+        apps/web/src/pages/      LibraryPage, ReaderPage
+        apps/api/test/           node:test
+        ```
+        
+        One exported component or class per file. Pages end in `Page`. API errors are classes (`BookNotFoundError`).
+        
+        ## Patterns
+        
+        - Views fetch through `apps/web/src/api.ts`. They do not unzip EPUB or open SQLite.
+        - Library mutations go through `Library`. Missing ids throw `BookNotFoundError`.
+        - List filters belong on `GET /books`, not only in the React list.
+        - `q` matches title or any author after `JSON.parse`. Compare case-insensitively in memory. Do not `LIKE` the authors JSON column.
+        - The search field on `LibraryPage` has a visible `<label>`, not only a placeholder.
+        - Progress is keyed by `bookId`. Never one global row or `localStorage` key for all books.
+        - Feature code uses Drizzle. Do not add raw SQL in routes or pages. Schema bootstrap in `db/client.ts` is the exception.
+        - A feature does not edit `scripts/check.sh`.
+        
+        ## Good code
+        
+        Types (`packages/shared/src/index.ts`):
+        
+        ```ts
+        export type ReadingProgress = {
+          bookId: string;
+          spineIndex: number;
+          scrollRatio: number;
+          updatedAt: number;
+        };
+        ```
+        
+        Throw on a missing book (`library.ts`):
+        
+        ```ts
+        const row = this.store.db.select().from(books).where(eq(books.id, id)).get();
+        if (!row) {
+          throw new BookNotFoundError();
+        }
+        ```
+        
+        Library card shows title and authors (`LibraryPage.tsx`):
+        
+        ```tsx
+        <Link to={`/books/${book.id}`}>
+          {book.title}
+          {book.authors.length > 0 ? ` — ${book.authors.join(", ")}` : ""}
+        </Link>
+        ```
+        
+        Upload stays in the API helper (`api.ts`):
+        
+        ```ts
+        export async function uploadBook(file: File): Promise<Book> {
+          const body = new FormData();
+          body.append("file", file);
+          const response = await fetch("/books", { method: "POST", body });
+          return (await response.json()) as Book;
+        }
+        ```
+        
+        Tests use `node:test` and Fastify `inject` (`library.test.ts`):
+        
+        ```ts
+        test("POST /books extracts title and author and lists the book", async () => {
+          const response = await app.inject({ method: "POST", url: "/books", ... });
+          assert.equal(response.statusCode, 201);
+        });
+        ```
+        
+        ## Banned
+        
+        - `any` and `console.log` in `apps/` and `packages/`.
+        - Raw SQL in `Library`, routes, or React.
+        - Parsing EPUB inside a page. That stays in `epub.ts`.
+        - One progress slot for every book (`localStorage.progress`, a table without `bookId`).
+        - Microsoft 365, MSAL, or `fetch` to unknown hosts from the API.
+        
+        ## File shape
+        
+        Imports, then the type or function, then export. No narration comments.
+        
+        ```ts
+        import { eq } from "drizzle-orm";
+        import { books } from "./db/schema.js";
+        
+        export function get(id: string): BookDetail {
+          const row = ...
+          return { id: row.id, title: row.title, authors: ..., createdAt: row.createdAt, spine: ... };
+        }
+        ```
+    defaultCompletionOptions:
+      contextLength: 8192
+      temperature: 0.2
+      topP: 0.9
+      maxTokens: 2048
+      keepAlive: 300
+
+  - name: DeepSeek Coder 6.7B
+    provider: ollama
+    model: deepseek-coder:6.7b
+    apiBase: http://100.82.92.14:11434
+    roles:
+      - chat
+      - edit
+      - apply
+    chatOptions:
+      baseSystemMessage: |
+        You are a local coding assistant for the Bookreader repo. Follow CLAUDE.md and these hard rules:
+        
+        - Progress is per bookId. Never one global row or localStorage.progress.
+        - List filters belong on GET /books. q matches title or any author after JSON.parse, case-insensitive, in memory. Do not LIKE the authors JSON column.
+        - The search field on LibraryPage has a visible <label>, not only a placeholder.
+        - No any, no console.log, no raw SQL in Library/routes/pages, no EPUB parse in a page.
+        - Do not edit scripts/check.sh. Do not add sign-in, fb2, or mobi.
+        - Views fetch through apps/web/src/api.ts.
+        
+        When you change code, output every changed file in full (not a patch) using this wrapper and nothing else around the files:
+        
+        ===FILE path/relative/to/bookreader===
+        <complete file>
+        ===END===
+        
+        You may add a short Cause/Fix/Verified or review sections AFTER the files if the user asked for that shape.
+        
+        
+        # CLAUDE.md
+        
+        # Bookreader
+        
+        Personal EPUB library. Web + Node API now. Native iOS, iPad, and Windows later use the same API. Sync is the server: books and reading progress live there.
+        
+        v1 has no sign-in. One local user. fb2 and mobi are future formats. Do not parse them yet.
+        
+        ## Global vs local
+        
+        Global, already set outside this repo: reply language, git safety, no secrets, no commits unless asked.
+        
+        Local: stack, folders, names, and the bans below. Source of truth is this file. `.cursorrules`, `.github/copilot-instructions.md`, and `.cursor/rules/` repeat the hard parts.
+        
+        ## Stack
+        
+        - npm workspaces: `apps/api`, `apps/web`, `packages/shared`
+        - API: Fastify, Drizzle, SQLite. EPUB files in `data/books/`
+        - Web: React, Vite, React Router. `LibraryPage` and `ReaderPage`
+        - Shared types: `Book`, `BookDetail`, `ReadingProgress`, `Chapter`
+        - Progress is per book: `bookId + spineIndex + scrollRatio`
+        - Delete: `DELETE /books/:id` removes the row, progress, and EPUB file. Missing id throws `BookNotFoundError`.
+        - Data directory: `BOOKREADER_DATA` or `apps/api/data`.
+        - Verify with `scripts/check.sh` (`tsc`, API tests, ESLint)
+        
+        ## Layout
+        
+        ```
+        packages/shared/src/     Book, ReadingProgress
+        apps/api/src/library.ts  mutations
+        apps/api/src/epub.ts     OPF parse only
+        apps/api/src/app.ts      HTTP
+        apps/web/src/pages/      LibraryPage, ReaderPage
+        apps/api/test/           node:test
+        ```
+        
+        One exported component or class per file. Pages end in `Page`. API errors are classes (`BookNotFoundError`).
+        
+        ## Patterns
+        
+        - Views fetch through `apps/web/src/api.ts`. They do not unzip EPUB or open SQLite.
+        - Library mutations go through `Library`. Missing ids throw `BookNotFoundError`.
+        - List filters belong on `GET /books`, not only in the React list.
+        - `q` matches title or any author after `JSON.parse`. Compare case-insensitively in memory. Do not `LIKE` the authors JSON column.
+        - The search field on `LibraryPage` has a visible `<label>`, not only a placeholder.
+        - Progress is keyed by `bookId`. Never one global row or `localStorage` key for all books.
+        - Feature code uses Drizzle. Do not add raw SQL in routes or pages. Schema bootstrap in `db/client.ts` is the exception.
+        - A feature does not edit `scripts/check.sh`.
+        
+        ## Good code
+        
+        Types (`packages/shared/src/index.ts`):
+        
+        ```ts
+        export type ReadingProgress = {
+          bookId: string;
+          spineIndex: number;
+          scrollRatio: number;
+          updatedAt: number;
+        };
+        ```
+        
+        Throw on a missing book (`library.ts`):
+        
+        ```ts
+        const row = this.store.db.select().from(books).where(eq(books.id, id)).get();
+        if (!row) {
+          throw new BookNotFoundError();
+        }
+        ```
+        
+        Library card shows title and authors (`LibraryPage.tsx`):
+        
+        ```tsx
+        <Link to={`/books/${book.id}`}>
+          {book.title}
+          {book.authors.length > 0 ? ` — ${book.authors.join(", ")}` : ""}
+        </Link>
+        ```
+        
+        Upload stays in the API helper (`api.ts`):
+        
+        ```ts
+        export async function uploadBook(file: File): Promise<Book> {
+          const body = new FormData();
+          body.append("file", file);
+          const response = await fetch("/books", { method: "POST", body });
+          return (await response.json()) as Book;
+        }
+        ```
+        
+        Tests use `node:test` and Fastify `inject` (`library.test.ts`):
+        
+        ```ts
+        test("POST /books extracts title and author and lists the book", async () => {
+          const response = await app.inject({ method: "POST", url: "/books", ... });
+          assert.equal(response.statusCode, 201);
+        });
+        ```
+        
+        ## Banned
+        
+        - `any` and `console.log` in `apps/` and `packages/`.
+        - Raw SQL in `Library`, routes, or React.
+        - Parsing EPUB inside a page. That stays in `epub.ts`.
+        - One progress slot for every book (`localStorage.progress`, a table without `bookId`).
+        - Microsoft 365, MSAL, or `fetch` to unknown hosts from the API.
+        
+        ## File shape
+        
+        Imports, then the type or function, then export. No narration comments.
+        
+        ```ts
+        import { eq } from "drizzle-orm";
+        import { books } from "./db/schema.js";
+        
+        export function get(id: string): BookDetail {
+          const row = ...
+          return { id: row.id, title: row.title, authors: ..., createdAt: row.createdAt, spine: ... };
+        }
+        ```
+    defaultCompletionOptions:
+      contextLength: 8192
+      temperature: 0.2
+      topP: 0.9
+      maxTokens: 2048
+      keepAlive: 300
+
+  - name: Qwen2.5 14B
+    provider: ollama
+    model: qwen2.5:14b
+    apiBase: http://100.82.92.14:11434
+    roles:
+      - chat
+      - edit
+      - apply
+    capabilities:
+      - tool_use
+    chatOptions:
+      baseSystemMessage: |
+        You are a local coding assistant for the Bookreader repo. Follow CLAUDE.md and these hard rules:
+        
+        - Progress is per bookId. Never one global row or localStorage.progress.
+        - List filters belong on GET /books. q matches title or any author after JSON.parse, case-insensitive, in memory. Do not LIKE the authors JSON column.
+        - The search field on LibraryPage has a visible <label>, not only a placeholder.
+        - No any, no console.log, no raw SQL in Library/routes/pages, no EPUB parse in a page.
+        - Do not edit scripts/check.sh. Do not add sign-in, fb2, or mobi.
+        - Views fetch through apps/web/src/api.ts.
+        
+        When you change code, output every changed file in full (not a patch) using this wrapper and nothing else around the files:
+        
+        ===FILE path/relative/to/bookreader===
+        <complete file>
+        ===END===
+        
+        You may add a short Cause/Fix/Verified or review sections AFTER the files if the user asked for that shape.
+        
+        
+        # CLAUDE.md
+        
+        # Bookreader
+        
+        Personal EPUB library. Web + Node API now. Native iOS, iPad, and Windows later use the same API. Sync is the server: books and reading progress live there.
+        
+        v1 has no sign-in. One local user. fb2 and mobi are future formats. Do not parse them yet.
+        
+        ## Global vs local
+        
+        Global, already set outside this repo: reply language, git safety, no secrets, no commits unless asked.
+        
+        Local: stack, folders, names, and the bans below. Source of truth is this file. `.cursorrules`, `.github/copilot-instructions.md`, and `.cursor/rules/` repeat the hard parts.
+        
+        ## Stack
+        
+        - npm workspaces: `apps/api`, `apps/web`, `packages/shared`
+        - API: Fastify, Drizzle, SQLite. EPUB files in `data/books/`
+        - Web: React, Vite, React Router. `LibraryPage` and `ReaderPage`
+        - Shared types: `Book`, `BookDetail`, `ReadingProgress`, `Chapter`
+        - Progress is per book: `bookId + spineIndex + scrollRatio`
+        - Delete: `DELETE /books/:id` removes the row, progress, and EPUB file. Missing id throws `BookNotFoundError`.
+        - Data directory: `BOOKREADER_DATA` or `apps/api/data`.
+        - Verify with `scripts/check.sh` (`tsc`, API tests, ESLint)
+        
+        ## Layout
+        
+        ```
+        packages/shared/src/     Book, ReadingProgress
+        apps/api/src/library.ts  mutations
+        apps/api/src/epub.ts     OPF parse only
+        apps/api/src/app.ts      HTTP
+        apps/web/src/pages/      LibraryPage, ReaderPage
+        apps/api/test/           node:test
+        ```
+        
+        One exported component or class per file. Pages end in `Page`. API errors are classes (`BookNotFoundError`).
+        
+        ## Patterns
+        
+        - Views fetch through `apps/web/src/api.ts`. They do not unzip EPUB or open SQLite.
+        - Library mutations go through `Library`. Missing ids throw `BookNotFoundError`.
+        - List filters belong on `GET /books`, not only in the React list.
+        - `q` matches title or any author after `JSON.parse`. Compare case-insensitively in memory. Do not `LIKE` the authors JSON column.
+        - The search field on `LibraryPage` has a visible `<label>`, not only a placeholder.
+        - Progress is keyed by `bookId`. Never one global row or `localStorage` key for all books.
+        - Feature code uses Drizzle. Do not add raw SQL in routes or pages. Schema bootstrap in `db/client.ts` is the exception.
+        - A feature does not edit `scripts/check.sh`.
+        
+        ## Good code
+        
+        Types (`packages/shared/src/index.ts`):
+        
+        ```ts
+        export type ReadingProgress = {
+          bookId: string;
+          spineIndex: number;
+          scrollRatio: number;
+          updatedAt: number;
+        };
+        ```
+        
+        Throw on a missing book (`library.ts`):
+        
+        ```ts
+        const row = this.store.db.select().from(books).where(eq(books.id, id)).get();
+        if (!row) {
+          throw new BookNotFoundError();
+        }
+        ```
+        
+        Library card shows title and authors (`LibraryPage.tsx`):
+        
+        ```tsx
+        <Link to={`/books/${book.id}`}>
+          {book.title}
+          {book.authors.length > 0 ? ` — ${book.authors.join(", ")}` : ""}
+        </Link>
+        ```
+        
+        Upload stays in the API helper (`api.ts`):
+        
+        ```ts
+        export async function uploadBook(file: File): Promise<Book> {
+          const body = new FormData();
+          body.append("file", file);
+          const response = await fetch("/books", { method: "POST", body });
+          return (await response.json()) as Book;
+        }
+        ```
+        
+        Tests use `node:test` and Fastify `inject` (`library.test.ts`):
+        
+        ```ts
+        test("POST /books extracts title and author and lists the book", async () => {
+          const response = await app.inject({ method: "POST", url: "/books", ... });
+          assert.equal(response.statusCode, 201);
+        });
+        ```
+        
+        ## Banned
+        
+        - `any` and `console.log` in `apps/` and `packages/`.
+        - Raw SQL in `Library`, routes, or React.
+        - Parsing EPUB inside a page. That stays in `epub.ts`.
+        - One progress slot for every book (`localStorage.progress`, a table without `bookId`).
+        - Microsoft 365, MSAL, or `fetch` to unknown hosts from the API.
+        
+        ## File shape
+        
+        Imports, then the type or function, then export. No narration comments.
+        
+        ```ts
+        import { eq } from "drizzle-orm";
+        import { books } from "./db/schema.js";
+        
+        export function get(id: string): BookDetail {
+          const row = ...
+          return { id: row.id, title: row.title, authors: ..., createdAt: row.createdAt, spine: ... };
+        }
+        ```
+      baseAgentSystemMessage: |
+        You are a local coding assistant for the Bookreader repo. Follow CLAUDE.md and these hard rules:
+        
+        - Progress is per bookId. Never one global row or localStorage.progress.
+        - List filters belong on GET /books. q matches title or any author after JSON.parse, case-insensitive, in memory. Do not LIKE the authors JSON column.
+        - The search field on LibraryPage has a visible <label>, not only a placeholder.
+        - No any, no console.log, no raw SQL in Library/routes/pages, no EPUB parse in a page.
+        - Do not edit scripts/check.sh. Do not add sign-in, fb2, or mobi.
+        - Views fetch through apps/web/src/api.ts.
+        
+        When you change code, output every changed file in full (not a patch) using this wrapper and nothing else around the files:
+        
+        ===FILE path/relative/to/bookreader===
+        <complete file>
+        ===END===
+        
+        You may add a short Cause/Fix/Verified or review sections AFTER the files if the user asked for that shape.
+        
+        
+        # CLAUDE.md
+        
+        # Bookreader
+        
+        Personal EPUB library. Web + Node API now. Native iOS, iPad, and Windows later use the same API. Sync is the server: books and reading progress live there.
+        
+        v1 has no sign-in. One local user. fb2 and mobi are future formats. Do not parse them yet.
+        
+        ## Global vs local
+        
+        Global, already set outside this repo: reply language, git safety, no secrets, no commits unless asked.
+        
+        Local: stack, folders, names, and the bans below. Source of truth is this file. `.cursorrules`, `.github/copilot-instructions.md`, and `.cursor/rules/` repeat the hard parts.
+        
+        ## Stack
+        
+        - npm workspaces: `apps/api`, `apps/web`, `packages/shared`
+        - API: Fastify, Drizzle, SQLite. EPUB files in `data/books/`
+        - Web: React, Vite, React Router. `LibraryPage` and `ReaderPage`
+        - Shared types: `Book`, `BookDetail`, `ReadingProgress`, `Chapter`
+        - Progress is per book: `bookId + spineIndex + scrollRatio`
+        - Delete: `DELETE /books/:id` removes the row, progress, and EPUB file. Missing id throws `BookNotFoundError`.
+        - Data directory: `BOOKREADER_DATA` or `apps/api/data`.
+        - Verify with `scripts/check.sh` (`tsc`, API tests, ESLint)
+        
+        ## Layout
+        
+        ```
+        packages/shared/src/     Book, ReadingProgress
+        apps/api/src/library.ts  mutations
+        apps/api/src/epub.ts     OPF parse only
+        apps/api/src/app.ts      HTTP
+        apps/web/src/pages/      LibraryPage, ReaderPage
+        apps/api/test/           node:test
+        ```
+        
+        One exported component or class per file. Pages end in `Page`. API errors are classes (`BookNotFoundError`).
+        
+        ## Patterns
+        
+        - Views fetch through `apps/web/src/api.ts`. They do not unzip EPUB or open SQLite.
+        - Library mutations go through `Library`. Missing ids throw `BookNotFoundError`.
+        - List filters belong on `GET /books`, not only in the React list.
+        - `q` matches title or any author after `JSON.parse`. Compare case-insensitively in memory. Do not `LIKE` the authors JSON column.
+        - The search field on `LibraryPage` has a visible `<label>`, not only a placeholder.
+        - Progress is keyed by `bookId`. Never one global row or `localStorage` key for all books.
+        - Feature code uses Drizzle. Do not add raw SQL in routes or pages. Schema bootstrap in `db/client.ts` is the exception.
+        - A feature does not edit `scripts/check.sh`.
+        
+        ## Good code
+        
+        Types (`packages/shared/src/index.ts`):
+        
+        ```ts
+        export type ReadingProgress = {
+          bookId: string;
+          spineIndex: number;
+          scrollRatio: number;
+          updatedAt: number;
+        };
+        ```
+        
+        Throw on a missing book (`library.ts`):
+        
+        ```ts
+        const row = this.store.db.select().from(books).where(eq(books.id, id)).get();
+        if (!row) {
+          throw new BookNotFoundError();
+        }
+        ```
+        
+        Library card shows title and authors (`LibraryPage.tsx`):
+        
+        ```tsx
+        <Link to={`/books/${book.id}`}>
+          {book.title}
+          {book.authors.length > 0 ? ` — ${book.authors.join(", ")}` : ""}
+        </Link>
+        ```
+        
+        Upload stays in the API helper (`api.ts`):
+        
+        ```ts
+        export async function uploadBook(file: File): Promise<Book> {
+          const body = new FormData();
+          body.append("file", file);
+          const response = await fetch("/books", { method: "POST", body });
+          return (await response.json()) as Book;
+        }
+        ```
+        
+        Tests use `node:test` and Fastify `inject` (`library.test.ts`):
+        
+        ```ts
+        test("POST /books extracts title and author and lists the book", async () => {
+          const response = await app.inject({ method: "POST", url: "/books", ... });
+          assert.equal(response.statusCode, 201);
+        });
+        ```
+        
+        ## Banned
+        
+        - `any` and `console.log` in `apps/` and `packages/`.
+        - Raw SQL in `Library`, routes, or React.
+        - Parsing EPUB inside a page. That stays in `epub.ts`.
+        - One progress slot for every book (`localStorage.progress`, a table without `bookId`).
+        - Microsoft 365, MSAL, or `fetch` to unknown hosts from the API.
+        
+        ## File shape
+        
+        Imports, then the type or function, then export. No narration comments.
+        
+        ```ts
+        import { eq } from "drizzle-orm";
+        import { books } from "./db/schema.js";
+        
+        export function get(id: string): BookDetail {
+          const row = ...
+          return { id: row.id, title: row.title, authors: ..., createdAt: row.createdAt, spine: ... };
+        }
+        ```
+    defaultCompletionOptions:
+      contextLength: 4096
+      temperature: 0.2
+      topP: 0.9
+      maxTokens: 2048
+      keepAlive: 60
+
+  - name: Qwen2.5 Coder 1.5B Autocomplete
+    provider: ollama
+    model: qwen2.5-coder:1.5b
+    apiBase: http://100.82.92.14:11434
+    roles:
+      - autocomplete
+    autocompleteOptions:
+      maxPromptTokens: 1024
+      debounceDelay: 350
+    defaultCompletionOptions:
+      contextLength: 2048
+      temperature: 0.1
+      maxTokens: 128
+      keepAlive: 300
+
+  - name: nomic-embed-text
+    provider: ollama
+    model: nomic-embed-text:latest
+    apiBase: http://100.82.92.14:11434
+    roles:
+      - embed
+
+context:
+  - provider: file
+  - provider: code
+  - provider: folder
+  - provider: currentFile

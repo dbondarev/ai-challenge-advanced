@@ -1,0 +1,141 @@
+diff -ru --exclude node_modules /Users/dbondarev/Library/CloudStorage/OneDrive-Personal/dbondarev workspace/bookreader/apps/api/src/app.ts /Users/dbondarev/Library/CloudStorage/OneDrive-Personal/dbondarev workspace/ai-challenge-advanced/day 01/generation-2/apps/api/src/app.ts
+--- /Users/dbondarev/Library/CloudStorage/OneDrive-Personal/dbondarev workspace/bookreader/apps/api/src/app.ts	2026-10-22 16:12:07
++++ /Users/dbondarev/Library/CloudStorage/OneDrive-Personal/dbondarev workspace/ai-challenge-advanced/day 01/generation-2/apps/api/src/app.ts	2026-10-22 16:17:05
+@@ -8,7 +8,10 @@
+   await app.register(cors);
+   await app.register(multipart);
+ 
+-  app.get("/books", async () => library.list());
++  app.get("/books", async (request) => {
++    const { q } = request.query as { q?: string };
++    return library.list(q);
++  });
+ 
+   app.post("/books", async (request, reply) => {
+     const file = await request.file();
+diff -ru --exclude node_modules /Users/dbondarev/Library/CloudStorage/OneDrive-Personal/dbondarev workspace/bookreader/apps/api/src/library.ts /Users/dbondarev/Library/CloudStorage/OneDrive-Personal/dbondarev workspace/ai-challenge-advanced/day 01/generation-2/apps/api/src/library.ts
+--- /Users/dbondarev/Library/CloudStorage/OneDrive-Personal/dbondarev workspace/bookreader/apps/api/src/library.ts	2026-10-22 16:12:07
++++ /Users/dbondarev/Library/CloudStorage/OneDrive-Personal/dbondarev workspace/ai-challenge-advanced/day 01/generation-2/apps/api/src/library.ts	2026-10-22 16:17:04
+@@ -38,8 +38,8 @@
+     return { id, title: parsed.title, authors: parsed.authors, createdAt };
+   }
+ 
+-  list(): Book[] {
+-    return this.store.db
++  list(q?: string): Book[] {
++    const rows = this.store.db
+       .select()
+       .from(books)
+       .all()
+@@ -49,6 +49,15 @@
+         authors: JSON.parse(row.authors) as string[],
+         createdAt: row.createdAt,
+       }));
++    if (!q) {
++      return rows;
++    }
++    const needle = q.toLowerCase();
++    return rows.filter(
++      (book) =>
++        book.title.toLowerCase().includes(needle) ||
++        book.authors.some((author) => author.toLowerCase().includes(needle)),
++    );
+   }
+ 
+   get(id: string): BookDetail {
+diff -ru --exclude node_modules /Users/dbondarev/Library/CloudStorage/OneDrive-Personal/dbondarev workspace/bookreader/apps/api/test/library.test.ts /Users/dbondarev/Library/CloudStorage/OneDrive-Personal/dbondarev workspace/ai-challenge-advanced/day 01/generation-2/apps/api/test/library.test.ts
+--- /Users/dbondarev/Library/CloudStorage/OneDrive-Personal/dbondarev workspace/bookreader/apps/api/test/library.test.ts	2026-10-22 16:12:07
++++ /Users/dbondarev/Library/CloudStorage/OneDrive-Personal/dbondarev workspace/ai-challenge-advanced/day 01/generation-2/apps/api/test/library.test.ts	2026-10-22 16:17:41
+@@ -49,3 +49,47 @@
+   const books = list.json() as { id: string }[];
+   assert.equal(books.map((book) => book.id).includes(created.id), true);
+ });
++
++test("GET /books filters by author", async () => {
++  const austenEpub = await makeEpub("Emma", "Jane Austen");
++  const austenResponse = await app.inject({
++    method: "POST",
++    url: "/books",
++    headers: {
++      "content-type": "multipart/form-data; boundary=bound",
++    },
++    payload: Buffer.concat([
++      Buffer.from(
++        "--bound\r\nContent-Disposition: form-data; name=\"file\"; filename=\"book.epub\"\r\nContent-Type: application/epub+zip\r\n\r\n",
++      ),
++      austenEpub,
++      Buffer.from("\r\n--bound--\r\n"),
++    ]),
++  });
++  assert.equal(austenResponse.statusCode, 201);
++  const austen = austenResponse.json() as { id: string };
++
++  const otherEpub = await makeEpub("Moby-Dick", "Herman Melville");
++  const otherResponse = await app.inject({
++    method: "POST",
++    url: "/books",
++    headers: {
++      "content-type": "multipart/form-data; boundary=bound",
++    },
++    payload: Buffer.concat([
++      Buffer.from(
++        "--bound\r\nContent-Disposition: form-data; name=\"file\"; filename=\"book.epub\"\r\nContent-Type: application/epub+zip\r\n\r\n",
++      ),
++      otherEpub,
++      Buffer.from("\r\n--bound--\r\n"),
++    ]),
++  });
++  assert.equal(otherResponse.statusCode, 201);
++  const other = otherResponse.json() as { id: string };
++
++  const list = await app.inject({ method: "GET", url: "/books?q=Austen" });
++  assert.equal(list.statusCode, 200);
++  const ids = (list.json() as { id: string }[]).map((book) => book.id);
++  assert.equal(ids.includes(austen.id), true);
++  assert.equal(ids.includes(other.id), false);
++});
+diff -ru --exclude node_modules /Users/dbondarev/Library/CloudStorage/OneDrive-Personal/dbondarev workspace/bookreader/apps/web/src/api.ts /Users/dbondarev/Library/CloudStorage/OneDrive-Personal/dbondarev workspace/ai-challenge-advanced/day 01/generation-2/apps/web/src/api.ts
+--- /Users/dbondarev/Library/CloudStorage/OneDrive-Personal/dbondarev workspace/bookreader/apps/web/src/api.ts	2026-10-22 16:12:07
++++ /Users/dbondarev/Library/CloudStorage/OneDrive-Personal/dbondarev workspace/ai-challenge-advanced/day 01/generation-2/apps/web/src/api.ts	2026-10-22 16:17:06
+@@ -1,7 +1,8 @@
+ import type { Book, BookDetail, Chapter, ReadingProgress } from "@bookreader/shared";
+ 
+-export async function listBooks(): Promise<Book[]> {
+-  const response = await fetch("/books");
++export async function listBooks(q?: string): Promise<Book[]> {
++  const params = q ? `?q=${encodeURIComponent(q)}` : "";
++  const response = await fetch(`/books${params}`);
+   if (!response.ok) {
+     throw new Error("Failed to list books");
+   }
+diff -ru --exclude node_modules /Users/dbondarev/Library/CloudStorage/OneDrive-Personal/dbondarev workspace/bookreader/apps/web/src/pages/LibraryPage.tsx /Users/dbondarev/Library/CloudStorage/OneDrive-Personal/dbondarev workspace/ai-challenge-advanced/day 01/generation-2/apps/web/src/pages/LibraryPage.tsx
+--- /Users/dbondarev/Library/CloudStorage/OneDrive-Personal/dbondarev workspace/bookreader/apps/web/src/pages/LibraryPage.tsx	2026-10-22 16:12:07
++++ /Users/dbondarev/Library/CloudStorage/OneDrive-Personal/dbondarev workspace/ai-challenge-advanced/day 01/generation-2/apps/web/src/pages/LibraryPage.tsx	2026-10-22 16:17:11
+@@ -5,10 +5,11 @@
+ 
+ export function LibraryPage() {
+   const [books, setBooks] = useState<Book[]>([]);
++  const [query, setQuery] = useState("");
+ 
+   useEffect(() => {
+-    void listBooks().then(setBooks);
+-  }, []);
++    void listBooks(query).then(setBooks);
++  }, [query]);
+ 
+   async function onFile(file: File | undefined) {
+     if (!file) {
+@@ -21,6 +22,13 @@
+   return (
+     <main>
+       <h1>Library</h1>
++      <label htmlFor="library-search">Search</label>
++      <input
++        id="library-search"
++        type="search"
++        value={query}
++        onChange={(event) => setQuery(event.target.value)}
++      />
+       <input
+         type="file"
+         accept=".epub,application/epub+zip"

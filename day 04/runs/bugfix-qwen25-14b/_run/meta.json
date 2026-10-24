@@ -1,0 +1,18 @@
+{
+  "kind": "bugfix",
+  "model": "qwen2.5:14b",
+  "num_ctx": 4096,
+  "temperature": 0.2,
+  "top_p": 0.9,
+  "chat_ok": true,
+  "chat_ms": 79703,
+  "eval_count": 815,
+  "error": null,
+  "applied": [],
+  "check_exit": null,
+  "check_ms": null,
+  "quality": {
+    "wipes_whole_table": true,
+    "keeps_per_book": false
+  }
+}

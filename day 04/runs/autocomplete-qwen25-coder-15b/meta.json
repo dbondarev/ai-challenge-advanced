@@ -1,0 +1,5 @@
+{
+  "model": "qwen2.5-coder:1.5b",
+  "ms": 1374,
+  "completion": "      (row) =>\n        row.title.toLowerCase().includes(needle) ||\n        row.authors.some((author) => author.toLowerCase().includes(needle))"
+}

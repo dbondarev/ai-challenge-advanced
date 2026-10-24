@@ -1,0 +1,46 @@
+{
+  "feature-qwen25-coder-7b": {
+    "applied": [
+      "apps/api/src/library.ts",
+      "apps/web/src/pages/LibraryPage.tsx",
+      "apps/api/test/library.test.ts"
+    ],
+    "exit": 2,
+    "ms": 23059
+  },
+  "bugfix-qwen25-coder-7b": {
+    "applied": [
+      "apps/api/src/library.ts"
+    ],
+    "exit": 0,
+    "ms": 89140
+  },
+  "feature-deepseek-coder-67b": {
+    "applied": [
+      "apps/web/src/api.ts",
+      "apps/api/src/library.ts"
+    ],
+    "exit": 2,
+    "ms": 27786
+  },
+  "bugfix-deepseek-coder-67b": {
+    "applied": [
+      "apps/api/src/library.ts"
+    ],
+    "exit": 0,
+    "ms": 74651
+  },
+  "feature-qwen25-14b": {
+    "applied": [],
+    "exit": null,
+    "ms": null,
+    "note": "reply ignored the task (rewrote filePath / invented types); not applied"
+  },
+  "bugfix-qwen25-14b": {
+    "applied": [
+      "apps/api/src/library.ts"
+    ],
+    "exit": 0,
+    "ms": 64740
+  }
+}

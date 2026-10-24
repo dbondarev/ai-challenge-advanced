@@ -1,0 +1,6 @@
+typecheck
+
+> typecheck
+> tsc -p apps/api/tsconfig.json --noEmit && tsc -p apps/web/tsconfig.json --noEmit && tsc -p packages/shared/tsconfig.json --noEmit
+
+apps/api/src/library.ts(49,30): error TS2339: Property 'search' does not exist on type 'Library'.

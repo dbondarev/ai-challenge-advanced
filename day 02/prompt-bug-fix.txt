@@ -1,0 +1,1 @@
+After I open a second book and save its place, the first book opens at the start again. Find the cause, fix it, and make sure each book keeps its own reading position.

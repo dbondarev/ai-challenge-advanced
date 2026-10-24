@@ -1,0 +1,18 @@
+{
+  "kind": "bugfix",
+  "model": "deepseek-coder:6.7b",
+  "num_ctx": 8192,
+  "temperature": 0.2,
+  "top_p": 0.9,
+  "chat_ok": true,
+  "chat_ms": 35027,
+  "eval_count": 508,
+  "error": null,
+  "applied": [],
+  "check_exit": null,
+  "check_ms": null,
+  "quality": {
+    "wipes_whole_table": true,
+    "keeps_per_book": false
+  }
+}

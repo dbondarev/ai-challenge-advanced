@@ -1,0 +1,19 @@
+--- /Users/dbondarev/Library/CloudStorage/OneDrive-Personal/dbondarev workspace/bookreader/apps/api/src/library.ts	2026-10-22 16:12:07
++++ /Users/dbondarev/Library/CloudStorage/OneDrive-Personal/dbondarev workspace/ai-challenge-advanced/day 02/bug-fix/apps/api/src/library.ts	2026-10-22 16:20:01
+@@ -90,14 +90,8 @@
+   saveProgress(id: string, spineIndex: number, scrollRatio: number): ReadingProgress {
+     this.get(id);
+     const updatedAt = Date.now();
+-    this.store.db
+-      .insert(progress)
+-      .values({ bookId: id, spineIndex, scrollRatio, updatedAt })
+-      .onConflictDoUpdate({
+-        target: progress.bookId,
+-        set: { spineIndex, scrollRatio, updatedAt },
+-      })
+-      .run();
++    this.store.db.delete(progress).where(eq(progress.bookId, id)).run();
++    this.store.db.insert(progress).values({ bookId: id, spineIndex, scrollRatio, updatedAt }).run();
+     return { bookId: id, spineIndex, scrollRatio, updatedAt };
+   }
+ 

@@ -1,0 +1,22 @@
+{
+  "kind": "feature",
+  "model": "qwen2.5:14b",
+  "num_ctx": 4096,
+  "temperature": 0.2,
+  "top_p": 0.9,
+  "chat_ok": true,
+  "chat_ms": 124410,
+  "eval_count": 1051,
+  "error": null,
+  "applied": [],
+  "check_exit": null,
+  "check_ms": null,
+  "quality": {
+    "has_q_on_get_books": false,
+    "calls_list_with_q": false,
+    "in_memory_author_filter": true,
+    "likes_authors_json": false,
+    "visible_label": true,
+    "listBooks_passes_q": false
+  }
+}

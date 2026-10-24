@@ -1,0 +1,14 @@
+---
+description: TypeScript bans for Bookreader
+globs: "**/*.{ts,tsx}"
+alwaysApply: false
+---
+
+# TypeScript bans
+
+- No `any`
+- No `console.log` in `apps/` or `packages/`
+- No raw SQL in Library, routes, or pages
+- No EPUB parsing in a React file
+- No global reading progress
+- Named export, file name matches the page (`LibraryPage.tsx`)

@@ -1,0 +1,20 @@
+--- /Users/dbondarev/Library/CloudStorage/OneDrive-Personal/dbondarev workspace/ai-challenge-advanced/day 01/rules-v1.md	2026-10-22 16:13:35
++++ /Users/dbondarev/Library/CloudStorage/OneDrive-Personal/dbondarev workspace/ai-challenge-advanced/day 01/rules-v2.md	2026-10-22 16:16:02
+@@ -37,6 +37,8 @@
+ - Views fetch through `apps/web/src/api.ts`. They do not unzip EPUB or open SQLite.
+ - Library mutations go through `Library`. Missing ids throw `BookNotFoundError`.
+ - List filters belong on `GET /books`, not only in the React list.
++- `q` matches title or any author after `JSON.parse`. Compare case-insensitively in memory. Do not `LIKE` the authors JSON column.
++- The search field on `LibraryPage` has a visible `<label>`, not only a placeholder.
+ - Progress is keyed by `bookId`. Never one global row or `localStorage` key for all books.
+ - Feature code uses Drizzle. Do not add raw SQL in routes or pages. Schema bootstrap in `db/client.ts` is the exception.
+ - A feature does not edit `scripts/check.sh`.
+@@ -68,7 +70,7 @@
+ ```tsx
+ <Link to={`/books/${book.id}`}>
+   {book.title}
+-  {book.authors.length > 0 ? ` — ${book.authors.join(", ")}` : ""}
++  {book.authors.length > 0 ? ` ˜ ${book.authors.join(", ")}` : ""}
+ </Link>
+ ```
+ 

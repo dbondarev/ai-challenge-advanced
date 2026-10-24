@@ -1,0 +1,1 @@
+Add a library filter by a search string matching author or title: a query on GET /books, a field on LibraryPage, and a test. Follow the project rules.

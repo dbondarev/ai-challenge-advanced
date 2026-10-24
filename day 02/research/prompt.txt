@@ -1,0 +1,1 @@
+How is authorization set up in this project, and where is the boundary with the library?

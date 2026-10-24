@@ -1,0 +1,148 @@
+{
+  "results": [
+    {
+      "kind": "feature",
+      "model": "qwen2.5-coder:7b",
+      "num_ctx": 8192,
+      "temperature": 0.2,
+      "top_p": 0.9,
+      "chat_ok": true,
+      "chat_ms": 32381,
+      "eval_count": 2236,
+      "error": null,
+      "applied": [],
+      "check_exit": null,
+      "check_ms": null,
+      "quality": {
+        "has_q_on_get_books": false,
+        "calls_list_with_q": false,
+        "in_memory_author_filter": true,
+        "likes_authors_json": false,
+        "visible_label": true,
+        "listBooks_passes_q": false
+      }
+    },
+    {
+      "kind": "bugfix",
+      "model": "qwen2.5-coder:7b",
+      "num_ctx": 8192,
+      "temperature": 0.2,
+      "top_p": 0.9,
+      "chat_ok": true,
+      "chat_ms": 12982,
+      "eval_count": 943,
+      "error": null,
+      "applied": [],
+      "check_exit": null,
+      "check_ms": null,
+      "quality": {
+        "wipes_whole_table": true,
+        "keeps_per_book": false
+      }
+    },
+    {
+      "kind": "feature",
+      "model": "deepseek-coder:6.7b",
+      "num_ctx": 8192,
+      "temperature": 0.2,
+      "top_p": 0.9,
+      "chat_ok": true,
+      "chat_ms": 65096,
+      "eval_count": 764,
+      "error": null,
+      "applied": [],
+      "check_exit": null,
+      "check_ms": null,
+      "quality": {
+        "has_q_on_get_books": false,
+        "calls_list_with_q": false,
+        "in_memory_author_filter": true,
+        "likes_authors_json": false,
+        "visible_label": true,
+        "listBooks_passes_q": false
+      }
+    },
+    {
+      "kind": "bugfix",
+      "model": "deepseek-coder:6.7b",
+      "num_ctx": 8192,
+      "temperature": 0.2,
+      "top_p": 0.9,
+      "chat_ok": true,
+      "chat_ms": 35027,
+      "eval_count": 508,
+      "error": null,
+      "applied": [],
+      "check_exit": null,
+      "check_ms": null,
+      "quality": {
+        "wipes_whole_table": true,
+        "keeps_per_book": false
+      }
+    },
+    {
+      "kind": "feature",
+      "model": "qwen2.5:14b",
+      "num_ctx": 4096,
+      "temperature": 0.2,
+      "top_p": 0.9,
+      "chat_ok": true,
+      "chat_ms": 124410,
+      "eval_count": 1051,
+      "error": null,
+      "applied": [],
+      "check_exit": null,
+      "check_ms": null,
+      "quality": {
+        "has_q_on_get_books": false,
+        "calls_list_with_q": false,
+        "in_memory_author_filter": true,
+        "likes_authors_json": false,
+        "visible_label": true,
+        "listBooks_passes_q": false
+      }
+    },
+    {
+      "kind": "bugfix",
+      "model": "qwen2.5:14b",
+      "num_ctx": 4096,
+      "temperature": 0.2,
+      "top_p": 0.9,
+      "chat_ok": true,
+      "chat_ms": 79703,
+      "eval_count": 815,
+      "error": null,
+      "applied": [],
+      "check_exit": null,
+      "check_ms": null,
+      "quality": {
+        "wipes_whole_table": true,
+        "keeps_per_book": false
+      }
+    },
+    {
+      "kind": "research",
+      "model": "qwen2.5-coder:7b",
+      "num_ctx": 8192,
+      "chat_ok": true,
+      "chat_ms": 7276,
+      "eval_count": 234,
+      "error": null
+    },
+    {
+      "kind": "review",
+      "model": "qwen2.5-coder:7b",
+      "num_ctx": 8192,
+      "chat_ok": true,
+      "chat_ms": 2332,
+      "eval_count": 159,
+      "error": null
+    }
+  ],
+  "fim": {
+    "model": "qwen2.5-coder:1.5b",
+    "ms": 1374,
+    "completion": "      (row) =>\n        row.title.toLowerCase().includes(needle) ||\n        row.authors.some((author) => author.toLowerCase().includes(needle))"
+  },
+  "best": "qwen2.5-coder:7b"
+}

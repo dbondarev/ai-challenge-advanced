@@ -1,0 +1,8 @@
+typecheck
+
+> typecheck
+> tsc -p apps/api/tsconfig.json --noEmit && tsc -p apps/web/tsconfig.json --noEmit && tsc -p packages/shared/tsconfig.json --noEmit
+
+apps/api/src/library.ts(44,49): error TS2339: Property 'orWhere' does not exist on type 'Omit<SQLiteSelectBase<"books", "sync", RunResult, { id: SQLiteColumn<{ name: "id"; tableName: "books"; dataType: "string"; columnType: "SQLiteText"; data: string; driverParam: string; notNull: true; hasDefault: false; ... 6 more ...; generated: undefined; }, {}, { ...; }>; ... 4 more ...; createdAt: SQLiteColumn<......'.
+apps/api/test/library.test.ts(88,55): error TS2304: Cannot find name 'created'.
+apps/api/test/library.test.ts(93,61): error TS2339: Property 'id' does not exist on type 'Buffer<ArrayBufferLike>'.
