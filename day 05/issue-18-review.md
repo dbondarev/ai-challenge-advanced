@@ -1,13 +1,11 @@
-```
 Critical:
 - none
 
 Should fix:
-- LibraryPage.tsx:58 — StatusBadge is hardcoded `unread` until a status field exists on GET /books
-- api.ts — fetch error messages are English while the UI is Russian (not a CLAUDE.md ban)
+- apps/web/src/pages/LibraryPage.tsx:20-22 â€” list filters belong on GET /books, not only in the React list â€” after upload, `setBooks((current) => [...current, book])` appends locally and skips `listBooks(q)`, so a book that does not match the current `q` still appears until the next search change.
 
 Notes:
-- LibraryPage loads books through api.ts listBooks(q); no EPUB parse, no SQLite, no any, no console.log
-- Search field has a visible label htmlFor="library-search"
-- q is sent to GET /books, not filtered only in React
-```
+- LibraryPage fetches through `api.ts` (`listBooks`, `uploadBook`, `deleteBook`). No EPUB parse, no `any`, no `console.log`, no raw SQL.
+- Search has a visible `<label htmlFor="library-search">` and `listBooks(q)` sends `q` to `GET /books`.
+- api.ts uses relative `/books` URLs, encodes `q`, and maps progress by `bookId` in the path. `as Book[]` is a type assertion, not `any`.
+- StatusBadge is hardcoded `unread` (no status API yet). That is outside CLAUDE.md bans.

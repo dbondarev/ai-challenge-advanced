@@ -1,8 +1,10 @@
 # День 5. Execution loop
 
-Пул: 18 задач из ТЗ [`docs/spec/library-and-reader.md`](../../bookreader/docs/spec/library-and-reader.md) и макетов. Очередь: [`pool.md`](pool.md). GitLab: [#1–#18](https://git.modumuptools.com/dbondarev/bookreader/-/issues?label_name=day-5) (закрыты после лупа). Cursor MCP OAuth по-прежнему не использовали — issues созданы через API.
+Исходники цикла: [`source/`](source/) (агент, профили, ТЗ, макеты PNG, CI, smoke, CLAUDE.md).
 
-Коммитов нет.
+Первый пул (18 задач, без MR): [`pool.md`](pool.md), лог [`run-1.md`](run-1.md) / [`run-3.md`](run-3.md). GitLab: [#1–#18](https://git.modumuptools.com/dbondarev/bookreader/-/issues?label_name=day-5).
+
+Полный цикл по ТЗ + макетам (MR, pipeline, smoke, ревью): [`pool-full-spec.md`](pool-full-spec.md), лог [`run-4.md`](run-4.md). GitLab issues #19–#45, MR !1–!26.
 
 ## Метрики
 
@@ -23,6 +25,8 @@
 
 ## Для демо
 
-1. GitLab [day-5 issues](https://git.modumuptools.com/dbondarev/bookreader/-/issues?label_name=day-5) и `pool.md`.
-2. `bookreader/` — Коллекция, поиск, обложка, бейдж, изд. YYYY, шапка Авторы/Серии.
-3. `run-local-issue3.md` — как 7B чинит `q`.
+1. Исходники: `source/execution-loop.md`, `source/spec-library-and-reader.md`, `source/design/screens/Main.png`.
+2. Лог полного цикла: `run-4.md` (стоп на #19 — `#!/bin/zsh` в CI). Время по задачам — в `run-1.md`.
+3. GitLab [MR !14](https://git.modumuptools.com/dbondarev/bookreader/-/merge_requests/14) и pipeline `check`.
+4. Продукт: коллекция/читалка vs макеты в `source/design/screens/`.
+5. Локальная 7B: `run-local.md` / `run-local-issue3.md`.

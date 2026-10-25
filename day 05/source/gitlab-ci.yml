@@ -1,0 +1,12 @@
+stages:
+  - test
+
+check:
+  stage: test
+  image: node:22-bookworm
+  script:
+    - npm ci
+    - bash scripts/check.sh
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+    - if: $CI_COMMIT_BRANCH == "main"

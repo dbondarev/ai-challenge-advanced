@@ -1,0 +1,299 @@
+[
+  {
+    "title": "Stage 1: schema_version migration and new book columns",
+    "labels": [
+      "full-spec",
+      "stage::1",
+      "type::feature",
+      "profile::feature-implementer"
+    ],
+    "mockup": "",
+    "body": "Spec §4.3 and §4.1. Add schema_version. Extend books for published year, language, cover bytes/path, hasCover, reading status fields needed by §5.5. Do not drop EPUB files.\n\nDone:\n- [ ] Migration runs on existing DB\n- [ ] Tests for migrate-from-empty and migrate-from-v1\n- [ ] scripts/check.sh green\n"
+  },
+  {
+    "title": "Stage 1: parse publication year from dc:date",
+    "labels": [
+      "full-spec",
+      "stage::1",
+      "type::feature",
+      "profile::feature-implementer"
+    ],
+    "mockup": "",
+    "body": "Spec §3: first four digits, number | null. Store on the book. Fixture with a date.\n\nDone:\n- [ ] Year extracted in epub.ts\n- [ ] Returned on the book from the API\n- [ ] Test for a dated EPUB\n- [ ] scripts/check.sh green\nDo not add authors/series tables in this issue.\n"
+  },
+  {
+    "title": "Stage 1: parse language from dc:language",
+    "labels": [
+      "full-spec",
+      "stage::1",
+      "type::feature",
+      "profile::feature-implementer"
+    ],
+    "mockup": "",
+    "body": "Primary subtag lowercase: ru-RU → ru. Missing → null.\n\nDone:\n- [ ] Language extracted in epub.ts\n- [ ] Returned on the book\n- [ ] Test\n- [ ] scripts/check.sh green\n"
+  },
+  {
+    "title": "Stage 1: cover from EPUB and GET /books/:id/cover",
+    "labels": [
+      "full-spec",
+      "stage::1",
+      "type::feature",
+      "profile::feature-implementer"
+    ],
+    "mockup": "",
+    "body": "Spec §3 cover rules. jpeg/png/webp/gif. Missing cover → 404.\n\nDone:\n- [ ] Cover bytes saved when present\n- [ ] GET /books/:id/cover returns the image or 404\n- [ ] Test both cases\n- [ ] scripts/check.sh green\n"
+  },
+  {
+    "title": "Stage 1: automatic and manual reading status",
+    "labels": [
+      "full-spec",
+      "stage::1",
+      "type::feature",
+      "profile::feature-implementer"
+    ],
+    "mockup": "docs/design/screens/BookStates.png",
+    "body": "Spec §5.5. unread / reading / done / dropped. Manual flags. PATCH /books/:id from tests only in this issue.\n\nDone:\n- [ ] Status derived from progress unless manual\n- [ ] Tests for done at end, dropped hidden from continue-reading later\n- [ ] scripts/check.sh green\n"
+  },
+  {
+    "title": "Stage 1: CLAUDE.md year language cover status",
+    "labels": [
+      "full-spec",
+      "stage::1",
+      "type::docs",
+      "profile::feature-implementer"
+    ],
+    "mockup": "",
+    "body": "Spec §11 items that apply now (year, language, cover, status). Repeat hard parts in .cursorrules and .cursor/rules.\n\nDone:\n- [ ] CLAUDE.md mentions the new fields\n- [ ] scripts/check.sh green\n"
+  },
+  {
+    "title": "Stage 2: CSS tokens and fonts from spec 8.13",
+    "labels": [
+      "full-spec",
+      "stage::2",
+      "type::feature",
+      "profile::feature-implementer"
+    ],
+    "mockup": "docs/design/screens/Main.png",
+    "body": "--bg #F4F4F1, --accent #2F4F8F, surface, text, radii. Onest + Literata via @fontsource locally.\n\nDone:\n- [ ] Tokens in web CSS\n- [ ] Fonts load\n- [ ] scripts/check.sh green\n"
+  },
+  {
+    "title": "Stage 2: AppHeader matches Main.png chrome",
+    "labels": [
+      "full-spec",
+      "stage::2",
+      "type::feature",
+      "profile::feature-implementer"
+    ],
+    "mockup": "docs/design/screens/Main.png",
+    "body": "Spec §8.4. Logo → /. Sections Книги, Серии, Авторы with aria-current. Button Загрузить EPUB on all three. Search in header on collection: «Поиск по названию или автору».\n\nDone:\n- [ ] Header layout matches Main.png chrome (not three plain text links only)\n- [ ] Screenshot qa/screenshots/issue-header.png at 1440px\n- [ ] Smoke updated\n- [ ] scripts/check.sh green\n"
+  },
+  {
+    "title": "Stage 2: BookCover 2:3 with fallback card",
+    "labels": [
+      "full-spec",
+      "stage::2",
+      "type::feature",
+      "profile::feature-implementer"
+    ],
+    "mockup": "docs/design/screens/Main.png",
+    "body": "Spec §8.2. img when hasCover. Else grey card #ECEBE5, blue bar, title, author caps.\n\nDone:\n- [ ] BookCover component\n- [ ] Fallback looks like Main.png grey cards\n- [ ] scripts/check.sh green\n"
+  },
+  {
+    "title": "Stage 2: StatusBadge YearLabel ProgressBar BookMenu",
+    "labels": [
+      "full-spec",
+      "stage::2",
+      "type::feature",
+      "profile::feature-implementer"
+    ],
+    "mockup": "docs/design/screens/BookStates.png",
+    "body": "Spec §8.3 and BookStates.png. Status colors 8.13. YearLabel изд. YYYY. ProgressBar. BookMenu ⋯ with delete for now; other items can stub.\n\nDone:\n- [ ] Four components exist\n- [ ] Screenshot vs BookStates.png\n- [ ] scripts/check.sh green\n"
+  },
+  {
+    "title": "Stage 2: stub routes authors series suggestions",
+    "labels": [
+      "full-spec",
+      "stage::2",
+      "type::feature",
+      "profile::feature-implementer"
+    ],
+    "mockup": "docs/design/screens/Main.png",
+    "body": "Routes /authors /series /suggestions with heading stubs so header links work. Russian labels from 8.4.\n\nDone:\n- [ ] Stub pages render a heading\n- [ ] Header navigates\n- [ ] Smoke for header\n- [ ] scripts/check.sh green\n"
+  },
+  {
+    "title": "Stage 3: GET /books filters sort query string",
+    "labels": [
+      "full-spec",
+      "stage::3",
+      "type::feature",
+      "profile::feature-implementer"
+    ],
+    "mockup": "",
+    "body": "Spec §8.1 and §7. q, status, language, author, sort. In-memory after parse. No LIKE on JSON authors. No ilike/orWhere.\n\nDone:\n- [ ] Query params documented in tests\n- [ ] scripts/check.sh green\n"
+  },
+  {
+    "title": "Stage 3: GET /books/facets",
+    "labels": [
+      "full-spec",
+      "stage::3",
+      "type::feature",
+      "profile::feature-implementer"
+    ],
+    "mockup": "",
+    "body": "Spec §8.5 filters left column. Counts for status, language, top authors.\n\nDone:\n- [ ] Facets endpoint + tests\n- [ ] scripts/check.sh green\n"
+  },
+  {
+    "title": "Stage 3: LibraryPage matches Main.png",
+    "labels": [
+      "full-spec",
+      "stage::3",
+      "type::feature",
+      "profile::feature-implementer"
+    ],
+    "mockup": "docs/design/screens/Main.png",
+    "body": "Spec §8.5 ENTIRE collection screen. Sidebar filters, drag-and-drop upload + progress list, Continue reading, grid of covers, sort, grid/table toggle. Russian UI.\n\nClosing this issue while LibraryPage is still a vertical ul of links + badge is a FAIL even if components exist.\n\nDone:\n- [ ] Layout matches Main.png at 1440px\n- [ ] qa/screenshots/issue-library.png\n- [ ] update-smoke for collection flows\n- [ ] scripts/check.sh green\n"
+  },
+  {
+    "title": "Stage 4: authors API",
+    "labels": [
+      "full-spec",
+      "stage::4",
+      "type::feature",
+      "profile::feature-implementer"
+    ],
+    "mockup": "",
+    "body": "Spec §5.2 §7.3. Normalize authors from EPUB. GET /authors, GET /authors/:id.\n\nDone:\n- [ ] Authors persisted\n- [ ] Tests\n- [ ] scripts/check.sh green\n"
+  },
+  {
+    "title": "Stage 4: series API",
+    "labels": [
+      "full-spec",
+      "stage::4",
+      "type::feature",
+      "profile::feature-implementer"
+    ],
+    "mockup": "",
+    "body": "Spec §5.4 §7.4. GET /series, GET /series/:id, series=none.\n\nDone:\n- [ ] Series persisted from OPF when present\n- [ ] Tests\n- [ ] scripts/check.sh green\n"
+  },
+  {
+    "title": "Stage 4: AuthorsPage matches Authors.png",
+    "labels": [
+      "full-spec",
+      "stage::4",
+      "type::feature",
+      "profile::feature-implementer"
+    ],
+    "mockup": "docs/design/screens/Authors.png",
+    "body": "Spec §8.7. Letter index, cards with cover stacks, counts. Not a heading stub.\n\nDone:\n- [ ] Layout matches Authors.png at 1440px\n- [ ] Screenshot\n- [ ] Smoke\n- [ ] scripts/check.sh green\n"
+  },
+  {
+    "title": "Stage 4: AuthorPage matches Author.png",
+    "labels": [
+      "full-spec",
+      "stage::4",
+      "type::feature",
+      "profile::feature-implementer"
+    ],
+    "mockup": "docs/design/screens/Author.png",
+    "body": "Spec §8.8. Books by series + outside series. Missing books dashed.\n\nDone:\n- [ ] Layout matches Author.png\n- [ ] Screenshot\n- [ ] Smoke\n- [ ] scripts/check.sh green\n"
+  },
+  {
+    "title": "Stage 4: SeriesPage matches Series.png",
+    "labels": [
+      "full-spec",
+      "stage::4",
+      "type::feature",
+      "profile::feature-implementer"
+    ],
+    "mockup": "docs/design/screens/Series.png",
+    "body": "Spec §8.9. Series cards, progress, missing count chip.\n\nDone:\n- [ ] Layout matches Series.png\n- [ ] Screenshot\n- [ ] Smoke\n- [ ] scripts/check.sh green\n"
+  },
+  {
+    "title": "Stage 5: ReaderPage matches Reader.png",
+    "labels": [
+      "full-spec",
+      "stage::5",
+      "type::feature",
+      "profile::feature-implementer"
+    ],
+    "mockup": "docs/design/screens/Reader.png",
+    "body": "Spec §8.11 without notes. TOC, chapter HTML, progress bar, next/prev. Desktop 1440px.\n\nDone:\n- [ ] Layout matches Reader.png\n- [ ] Progress still per bookId\n- [ ] Screenshot + smoke\n- [ ] scripts/check.sh green\n"
+  },
+  {
+    "title": "Stage 5: ReaderPhone layout ReaderPhone.png",
+    "labels": [
+      "full-spec",
+      "stage::5",
+      "type::feature",
+      "profile::feature-implementer"
+    ],
+    "mockup": "docs/design/screens/ReaderPhone.png",
+    "body": "Spec §8.11 narrow < 900 and phone 390px. Bottom bar, sheets for TOC.\n\nDone:\n- [ ] Screenshot at 390px matches ReaderPhone.png\n- [ ] Smoke\n- [ ] scripts/check.sh green\n"
+  },
+  {
+    "title": "Stage 6: annotations API and reader notes panel",
+    "labels": [
+      "full-spec",
+      "stage::6",
+      "type::feature",
+      "profile::feature-implementer"
+    ],
+    "mockup": "docs/design/screens/Reader.png",
+    "body": "Spec §4.4 §8.11 notes. CRUD, highlights, right panel.\n\nDone:\n- [ ] API tests\n- [ ] Notes panel on reader\n- [ ] Smoke\n- [ ] scripts/check.sh green\n"
+  },
+  {
+    "title": "Stage 7: EditBookDialog matches EditBook.png",
+    "labels": [
+      "full-spec",
+      "stage::7",
+      "type::feature",
+      "profile::feature-implementer"
+    ],
+    "mockup": "docs/design/screens/EditBook.png",
+    "body": "Spec §8.6.\n\nDone:\n- [ ] Dialog matches EditBook.png\n- [ ] PATCH from UI\n- [ ] Screenshot + smoke\n- [ ] scripts/check.sh green\n"
+  },
+  {
+    "title": "Stage 7: merge authors matches AuthorsMerge and MergeAuthors",
+    "labels": [
+      "full-spec",
+      "stage::7",
+      "type::feature",
+      "profile::feature-implementer"
+    ],
+    "mockup": "docs/design/screens/AuthorsMerge.png",
+    "body": "Spec §5.3 §8.7. AuthorsMerge.png + MergeAuthors.png.\n\nDone:\n- [ ] Duplicate hint + merge dialog\n- [ ] Screenshots\n- [ ] Tests + smoke\n- [ ] scripts/check.sh green\n"
+  },
+  {
+    "title": "Stage 7: EditSeriesDialog matches EditSeries.png",
+    "labels": [
+      "full-spec",
+      "stage::7",
+      "type::feature",
+      "profile::feature-implementer"
+    ],
+    "mockup": "docs/design/screens/EditSeries.png",
+    "body": "Spec §8.10. Order, missing books, totals.\n\nDone:\n- [ ] Dialog matches EditSeries.png\n- [ ] Screenshot + tests + smoke\n- [ ] scripts/check.sh green\n"
+  },
+  {
+    "title": "Stage 8: enrich hosts and SuggestionsPage matches Suggestions.png",
+    "labels": [
+      "full-spec",
+      "stage::8",
+      "type::feature",
+      "profile::feature-implementer"
+    ],
+    "mockup": "docs/design/screens/Suggestions.png",
+    "body": "Spec §6 §8.12 and §11 item 3. hosts.ts allowlist. Suggestions.png.\n\nDone:\n- [ ] CLAUDE.md host allowlist\n- [ ] Page matches Suggestions.png\n- [ ] Offline message when sources fail\n- [ ] Screenshot + smoke\n- [ ] scripts/check.sh green\n"
+  },
+  {
+    "title": "Final review LibraryPage and api.ts vs Main.png",
+    "labels": [
+      "full-spec",
+      "stage::3",
+      "type::review",
+      "profile::review"
+    ],
+    "mockup": "docs/design/screens/Main.png",
+    "body": "Review LibraryPage, AppHeader, api.ts against CLAUDE.md and Main.png. Comment only.\n\nDone:\n- [ ] Reply in review shape\n- [ ] Files not edited\n"
+  }
+]
