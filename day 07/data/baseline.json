@@ -1,0 +1,1272 @@
+{
+ "no_system": {
+  "accuracy": 0.0,
+  "n": 68,
+  "preds": [
+   {
+    "id": "ev-001",
+    "raw": "Subject: Exclusive Sneakers Collection - Join",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-002",
+    "raw": "Subject: Re: Job Opportunity at Willow",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-003",
+    "raw": "Subject: Inquiry about Potential Collaboration\n\nDear",
+    "pred": null,
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-004",
+    "raw": "Subject: Request for Presentation on Our Premium",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-005",
+    "raw": "Subject: Request for Presentation on Our Premium",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-006",
+    "raw": "Subject: Inquiry about Showroom Partnership Opportunities",
+    "pred": null,
+    "gold": [
+     "not_ta"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-007",
+    "raw": "Subject: Introducing Our Premium Sneakers",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-008",
+    "raw": "Subject: Inquiry about Showing Our Collection at",
+    "pred": null,
+    "gold": [
+     "not_ta"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-009",
+    "raw": "Subject: Proposal for Collaborating with Summit",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-010",
+    "raw": "Ivan,\n\nvielen Dank für deine",
+    "pred": null,
+    "gold": [
+     "no_change",
+     "not_ta"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-011",
+    "raw": "Hi Julia,\n\nI hope you're doing",
+    "pred": null,
+    "gold": [
+     "no_change",
+     "not_ta"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-012",
+    "raw": "Hi Oskar,\n\nI hope you",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-013",
+    "raw": "Hello! It looks like you're reaching",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-014",
+    "raw": "Subject: Re: Meeting with Ines",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-015",
+    "raw": "Hello! It's great to hear from",
+    "pred": null,
+    "gold": [
+     "no_change",
+     "not_ta"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-016",
+    "raw": "Hi Ines,\n\nThank you for reaching",
+    "pred": null,
+    "gold": [
+     "mql",
+     "positive"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-017",
+    "raw": "Hi Rosa,\n\nThank you for your interest",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-018",
+    "raw": "Subject: Request for Lookbook, Price",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-019",
+    "raw": "Hi Rinaldi,\n\nThank you for",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-020",
+    "raw": "Thank you for confirming receipt of the materials",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-021",
+    "raw": "It seems like there was a misunderstanding or",
+    "pred": null,
+    "gold": [
+     "positive",
+     "no_change"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-022",
+    "raw": "Sure, here are three potential timeslots",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-023",
+    "raw": "OUT: Sure thing! Next week would",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-024",
+    "raw": "Sure, here's how you can structure",
+    "pred": null,
+    "gold": [
+     "sql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-025",
+    "raw": "Sure, here's how you can schedule",
+    "pred": null,
+    "gold": [
+     "sql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-026",
+    "raw": "OUT: You're welcome! Looking forward",
+    "pred": null,
+    "gold": [
+     "sql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-027",
+    "raw": "Subject: Inquiry about Showrooming Opportunity",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-028",
+    "raw": "Subject: Re: Inquiry about Redstone",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-029",
+    "raw": "Hi Daniel,\n\nThank you for reaching out",
+    "pred": null,
+    "gold": [
+     "not_ta"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-030",
+    "raw": "Subject: Feedback on Showroom Concept\n\n",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-031",
+    "raw": "Got it! Thank you for sending the",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-032",
+    "raw": "OUT: Oh, that's okay.",
+    "pred": null,
+    "gold": [
+     "rejection"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-033",
+    "raw": "Sure, here's a summary of the",
+    "pred": null,
+    "gold": [
+     "rejection"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-034",
+    "raw": "Subject: Inquiry for Showroom Visit -",
+    "pred": null,
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-035",
+    "raw": "Subject: Inquiry about AI and Automation in",
+    "pred": null,
+    "gold": [
+     "no_change",
+     "not_ta"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-036",
+    "raw": "I'm sorry, but it seems there",
+    "pred": null,
+    "gold": [
+     "not_ta"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-037",
+    "raw": "Hi Oskar,\n\nThank you so",
+    "pred": null,
+    "gold": [
+     "rejection"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-038",
+    "raw": "Hi Sofia,\n\nThank you for reaching out",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-039",
+    "raw": "Subject: Referral Opportunity at Atlas Trading",
+    "pred": null,
+    "gold": [
+     "not_ta"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-040",
+    "raw": "Hi Elena,\n\nThank you for your message",
+    "pred": null,
+    "gold": [
+     "not_ta"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-041",
+    "raw": "Subject: Re: Summit Design Inquiry\n\n",
+    "pred": null,
+    "gold": [
+     "not_ta"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-042",
+    "raw": "Hi Maria,\n\nThank you so much for",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-043",
+    "raw": "Hi Julia,\n\nThank you for your interest",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-044",
+    "raw": "Thank you for reaching out, Alex.",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-045",
+    "raw": "Thank you for your message, Felix!",
+    "pred": null,
+    "gold": [
+     "positive",
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-046",
+    "raw": "Hi Marco,\n\nThank you for reaching out",
+    "pred": null,
+    "gold": [
+     "rejection"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-047",
+    "raw": "It seems you've declined an offer or",
+    "pred": null,
+    "gold": [
+     "rejection"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-048",
+    "raw": "Subject: Presentation Submission for Velvet Trading Show",
+    "pred": null,
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-049",
+    "raw": "Hi Rosa,\n\nThank you for reaching out",
+    "pred": null,
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-050",
+    "raw": "Hi Viktor,\n\nThank you for reaching out",
+    "pred": null,
+    "gold": [
+     "not_ta"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-051",
+    "raw": "Thank you! If you have any more",
+    "pred": null,
+    "gold": [
+     "not_ta"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-052",
+    "raw": "Sure, let's break down the conversation",
+    "pred": null,
+    "gold": [
+     "no_change",
+     "not_ta"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-053",
+    "raw": "Hi Maria,\n\nThank you for your message",
+    "pred": null,
+    "gold": [
+     "rejection"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-054",
+    "raw": "Subject: Inquiry about Potential Collaboration\n\nDear",
+    "pred": null,
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-055",
+    "raw": "Subject: Inquiry about Potential Collaboration\n\nDear",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-056",
+    "raw": "Subject: Presentation for Bluecrest Brands Show",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-057",
+    "raw": "Subject: Re: Best Contact Person for",
+    "pred": null,
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-058",
+    "raw": "Subject: Re: Showroom Concept for",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-059",
+    "raw": "Hi Hugo,\n\nThank you very much for",
+    "pred": null,
+    "gold": [
+     "rejection",
+     "not_ta"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-060",
+    "raw": "Subject: Meeting Request - Co-Br",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-061",
+    "raw": "Subject: Re: Showroom Visit for",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-062",
+    "raw": "Subject: Request for Additional Photos\n\nDear",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-063",
+    "raw": "I'm sorry, but I don't",
+    "pred": null,
+    "gold": [
+     "rejection"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-064",
+    "raw": "OUT: Hi Alex, Thank you for",
+    "pred": null,
+    "gold": [
+     "no_change",
+     "not_ta"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-065",
+    "raw": "Hi Vera,\n\nThank you for your message",
+    "pred": null,
+    "gold": [
+     "rejection"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-066",
+    "raw": "Subject: Expansion of Agent Network - Opportunity",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-067",
+    "raw": "Subject: Re: Meeting with Tomas at",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-068",
+    "raw": "Subject: Exciting Opportunity for Co-",
+    "pred": null,
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "ok": false
+   }
+  ]
+ },
+ "with_system": {
+  "accuracy": 0.5,
+  "n": 68,
+  "preds": [
+   {
+    "id": "ev-001",
+    "raw": "sql",
+    "pred": "sql",
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-002",
+    "raw": "mql",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-003",
+    "raw": "sql",
+    "pred": "sql",
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-004",
+    "raw": "mql",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-005",
+    "raw": "mql",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-006",
+    "raw": "not_ta",
+    "pred": "not_ta",
+    "gold": [
+     "not_ta"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-007",
+    "raw": "sql",
+    "pred": "sql",
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-008",
+    "raw": "not_ta",
+    "pred": "not_ta",
+    "gold": [
+     "not_ta"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-009",
+    "raw": "sql",
+    "pred": "sql",
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-010",
+    "raw": "not_ta",
+    "pred": "not_ta",
+    "gold": [
+     "no_change",
+     "not_ta"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-011",
+    "raw": "not_ta",
+    "pred": "not_ta",
+    "gold": [
+     "no_change",
+     "not_ta"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-012",
+    "raw": "meeting_held",
+    "pred": "meeting_held",
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-013",
+    "raw": "not_ta",
+    "pred": "not_ta",
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-014",
+    "raw": "mql",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-015",
+    "raw": "not_ta",
+    "pred": "not_ta",
+    "gold": [
+     "no_change",
+     "not_ta"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-016",
+    "raw": "not_ta",
+    "pred": "not_ta",
+    "gold": [
+     "mql",
+     "positive"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-017",
+    "raw": "sql",
+    "pred": "sql",
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-018",
+    "raw": "sql",
+    "pred": "sql",
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-019",
+    "raw": "sql",
+    "pred": "sql",
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-020",
+    "raw": "mql",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-021",
+    "raw": "not_ta",
+    "pred": "not_ta",
+    "gold": [
+     "positive",
+     "no_change"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-022",
+    "raw": "not_ta",
+    "pred": "not_ta",
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-023",
+    "raw": "meeting_held",
+    "pred": "meeting_held",
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-024",
+    "raw": "meeting_held",
+    "pred": "meeting_held",
+    "gold": [
+     "sql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-025",
+    "raw": "meeting_held",
+    "pred": "meeting_held",
+    "gold": [
+     "sql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-026",
+    "raw": "meeting_held",
+    "pred": "meeting_held",
+    "gold": [
+     "sql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-027",
+    "raw": "mql",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-028",
+    "raw": "mql",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-029",
+    "raw": "not_ta",
+    "pred": "not_ta",
+    "gold": [
+     "not_ta"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-030",
+    "raw": "mql",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-031",
+    "raw": "no_change",
+    "pred": "no_change",
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-032",
+    "raw": "rejection",
+    "pred": "rejection",
+    "gold": [
+     "rejection"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-033",
+    "raw": "rejection",
+    "pred": "rejection",
+    "gold": [
+     "rejection"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-034",
+    "raw": "sql",
+    "pred": "sql",
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-035",
+    "raw": "sql",
+    "pred": "sql",
+    "gold": [
+     "no_change",
+     "not_ta"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-036",
+    "raw": "not_ta",
+    "pred": "not_ta",
+    "gold": [
+     "not_ta"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-037",
+    "raw": "rejection",
+    "pred": "rejection",
+    "gold": [
+     "rejection"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-038",
+    "raw": "sql",
+    "pred": "sql",
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-039",
+    "raw": "not_ta",
+    "pred": "not_ta",
+    "gold": [
+     "not_ta"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-040",
+    "raw": "not_ta",
+    "pred": "not_ta",
+    "gold": [
+     "not_ta"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-041",
+    "raw": "sql",
+    "pred": "sql",
+    "gold": [
+     "not_ta"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-042",
+    "raw": "mql",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-043",
+    "raw": "mql",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-044",
+    "raw": "not_ta",
+    "pred": "not_ta",
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-045",
+    "raw": "no_change",
+    "pred": "no_change",
+    "gold": [
+     "positive",
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-046",
+    "raw": "no_change",
+    "pred": "no_change",
+    "gold": [
+     "rejection"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-047",
+    "raw": "rejection",
+    "pred": "rejection",
+    "gold": [
+     "rejection"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-048",
+    "raw": "sql",
+    "pred": "sql",
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-049",
+    "raw": "sql",
+    "pred": "sql",
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-050",
+    "raw": "not_ta",
+    "pred": "not_ta",
+    "gold": [
+     "not_ta"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-051",
+    "raw": "not_ta",
+    "pred": "not_ta",
+    "gold": [
+     "not_ta"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-052",
+    "raw": "not_ta",
+    "pred": "not_ta",
+    "gold": [
+     "no_change",
+     "not_ta"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-053",
+    "raw": "rejection",
+    "pred": "rejection",
+    "gold": [
+     "rejection"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-054",
+    "raw": "mql",
+    "pred": "mql",
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-055",
+    "raw": "mql",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-056",
+    "raw": "mql",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-057",
+    "raw": "mql",
+    "pred": "mql",
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-058",
+    "raw": "mql",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-059",
+    "raw": "rejection",
+    "pred": "rejection",
+    "gold": [
+     "rejection",
+     "not_ta"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-060",
+    "raw": "sql",
+    "pred": "sql",
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-061",
+    "raw": "not_ta",
+    "pred": "not_ta",
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-062",
+    "raw": "not_ta",
+    "pred": "not_ta",
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-063",
+    "raw": "rejection",
+    "pred": "rejection",
+    "gold": [
+     "rejection"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-064",
+    "raw": "sql",
+    "pred": "sql",
+    "gold": [
+     "no_change",
+     "not_ta"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-065",
+    "raw": "not_ta",
+    "pred": "not_ta",
+    "gold": [
+     "rejection"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-066",
+    "raw": "not_ta",
+    "pred": "not_ta",
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-067",
+    "raw": "not_ta",
+    "pred": "not_ta",
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-068",
+    "raw": "sql",
+    "pred": "sql",
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "ok": false
+   }
+  ]
+ }
+}

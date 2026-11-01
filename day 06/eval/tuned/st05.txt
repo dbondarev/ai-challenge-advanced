@@ -1,0 +1,1 @@
+INSERT INTO books (title, authors) VALUES ('Pride and Prejudice', 'Jane Austen')

@@ -1,0 +1,1 @@
+SELECT match_report FROM table_name_4 WHERE date = "25 april 2009"

@@ -1,0 +1,1 @@
+SELECT date FROM table_name_64 WHERE record = '27-25'

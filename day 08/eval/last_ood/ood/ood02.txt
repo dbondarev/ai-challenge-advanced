@@ -1,0 +1,6 @@
+In Bookreader's API, the `/books` endpoint supports filtering using query parameters. The `q` parameter allows you to search for books by title, author, tags, etc. For example:
+```
+GET /books?q=title:Star%20Trek&limit=5
+```
+This would return the top 5 books with "Star Trek" in the title.
+Regarding liking (starring) on JSON columns, this functionality is currently implemented at the frontend level and relies on React's state management. If you have specific questions about how to achieve this behavior within your own projects, feel free to share!

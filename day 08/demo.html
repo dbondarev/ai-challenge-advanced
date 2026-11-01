@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>День 8 · границы файнтюнинга</title>
+<style>
+  :root {
+    --bg: #0b0d11;
+    --card: #14181f;
+    --line: #2a3140;
+    --text: #eef1f6;
+    --muted: #8b93a7;
+    --win: #34d399;
+    --win-dim: rgba(52, 211, 153, .12);
+    --lose: #fb7185;
+    --accent: #67e8f9;
+    --valid: #fbbf24;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.5 ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { max-width: 1080px; margin: 0 auto; padding: 48px 40px 80px; }
+  .kicker { color: var(--accent); font-size: 12px; font-weight: 600; letter-spacing: .14em;
+    text-transform: uppercase; margin: 0 0 8px; }
+  h1 { font-size: 36px; line-height: 1.15; font-weight: 600; margin: 0 0 14px; letter-spacing: -0.03em; }
+  h2 { font-size: 24px; font-weight: 600; margin: 48px 0 14px; letter-spacing: -0.02em; }
+  h3 { font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin: 0 0 8px; }
+  p.lead { font-size: 18px; color: var(--muted); max-width: 48rem; margin: 0 0 8px; }
+  p { margin: 0 0 10px; }
+  .muted { color: var(--muted); }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 28px 0 8px; }
+  .stat { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; }
+  .stat b { display: block; font-size: 20px; font-weight: 600; letter-spacing: -0.02em; }
+  .stat span { color: var(--muted); font-size: 12px; }
+  .scores { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 12px; margin: 16px 0 20px; }
+  .score { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; }
+  .score.win { border-color: #065f46; background: var(--win-dim); }
+  .score.bad { border-color: #9f1239; }
+  .score .n { font-size: 32px; font-weight: 600; letter-spacing: -0.04em; line-height: 1; }
+  .score.win .n { color: var(--win); }
+  .score.bad .n { color: var(--lose); }
+  .score .lbl { color: var(--muted); margin-top: 6px; font-size: 13px; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { color: var(--muted); font-weight: 600; font-size: 11px; letter-spacing: .06em; text-transform: uppercase; }
+  .ok { color: var(--win); font-weight: 600; }
+  .miss { color: var(--lose); font-weight: 600; }
+  .params { width: 100%; font-size: 14px; }
+  .params th { width: 28%; color: var(--muted); font-weight: 500; text-transform: none; letter-spacing: 0; font-size: 13px; }
+  .params td, .params th { padding: 7px 10px; }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .92em; }
+  .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  pre { margin: 0; background: #0a0c10; border: 1px solid var(--line); border-radius: 12px;
+    padding: 14px 16px; font: 13px/1.45 ui-monospace, SFMono-Regular, Menlo, monospace;
+    overflow: auto; white-space: pre-wrap; }
+  .col.good h3 { color: var(--win); }
+  .col.bad h3 { color: var(--lose); }
+  .q { background: var(--card); border-radius: 12px; padding: 12px 16px; margin: 0 0 14px; color: var(--muted); }
+  .q strong { color: var(--text); font-weight: 500; }
+  svg .grid line { stroke: #232a38; stroke-width: 1; }
+  svg .tick { fill: var(--muted); font-size: 11px; font-family: ui-sans-serif, system-ui, sans-serif; }
+  svg .loss.train { stroke: var(--accent); stroke-width: 2.4; stroke-linejoin: round; }
+  svg .loss.valid { stroke: var(--valid); stroke-width: 2.4; stroke-linejoin: round; }
+  svg .best { stroke: var(--lose); stroke-width: 1.5; stroke-dasharray: 4 4; }
+  .chart { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 8px 12px 4px; margin: 12px 0 8px; }
+  .legend { color: var(--muted); font-size: 13px; margin: 4px 0 8px; }
+  .swatch { display: inline-block; width: 18px; height: 3px; vertical-align: middle; margin-right: 4px; }
+  .swatch.train { background: var(--accent); }
+  .swatch.valid { background: var(--valid); }
+  .files { display: grid; grid-template-columns: 1fr 1fr; gap: 0 28px; margin: 0; padding: 0; list-style: none; }
+  .files li { border-bottom: 1px solid var(--line); padding: 10px 0; }
+  .files code { color: var(--accent); }
+  .files span { display: block; color: var(--muted); font-size: 13px; }
+  .note { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 12px 16px; color: var(--muted); font-size: 14px; }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  @media (max-width: 800px) {
+    main { padding: 28px 16px 48px; }
+    .stats, .scores, .pair, .files, .two { grid-template-columns: 1fr; }
+    .wrap { overflow-x: auto; }
+  }
+</style>
+</head>
+<body>
+<main>
+
+<p class="kicker">AI challenge · день 8</p>
+<h1>Тюн чинит формат и тон.<br>Факты дешевле положить в промпт.</h1>
+<p class="lead">Смесь: enum дня 7 (623) + 144 факта + 48 стиля, 10 эпох. Адаптер дня 7 не трогали. База <code>Qwen/Qwen2.5-1.5B-Instruct</code>. Valid лосс минимален на шаге 410, дальше train падает, знания и домен не растут.</p>
+
+<div class="stats">
+  <div class="stat"><b>815 mix</b><span>623 enum + 144 факта + 48 стиля</span></div>
+  <div class="stat"><b>64.2 мин</b><span>1020 шагов, 2567 MiB, 3070</span></div>
+  <div class="stat"><b>факты 12/12</b><span>промпт · тюн best 9/12</span></div>
+  <div class="stat"><b>OOD −1</b><span>сломана форма ревью, 8/9</span></div>
+</div>
+
+<h2>Запуск</h2>
+<table class="params">
+  <tr><th>Train</th><td>смесь 815, valid = enum дня 7 (85). Не day7-адаптер.</td></tr>
+  <tr><th>Method</th><td>QLoRA NF4, r=16 α=32, max_seq 512, 10 эпох, batch 1×8, lr 2e-4 cosine, warmup 40</td></tr>
+  <tr><th>Eval</th><td>каждые 10 шагов; best = checkpoint-400 (valid 0.583 на шаге 410)</td></tr>
+  <tr><th>Last</th><td>конец 10 эпохи, valid 0.754</td></tr>
+  <tr><th>Стенд</th><td>nv307001, старт UTC 2026-10-29 16:47, 3851 s, train_loss итог 0.42 (min 0.05)</td></tr>
+</table>
+<p class="muted">Параметры: <a href="params.md">params.md</a>. Цифры enum в таблицах ниже — прогон на тогдашнем gold (50% промпт / 69% day7). После правки gold дня 7 смесь без ретрейна: 53/68 и 102/149, см. конец.</p>
+
+<h2>1. Добавляет ли тюн знания?</h2>
+<p>Шесть выдуманных токенов, которых у 1.5B нет. В train — по 3 формулировки × повтор (18 уникальных → 144 строки). Eval: та же формулировка (verbatim) и другая (paraphrase). Промпт — тот же лист фактов в system.</p>
+<div class="wrap">
+<table>
+  <thead>
+    <tr><th>факт</th><th>verbatim</th><th>парафраза</th><th>gold</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>цвет Helix badge</td><td>What color is the Helix badge?</td><td>Which colour token is painted…</td><td><code>teal-17</code></td></tr>
+    <tr><td>SDR signature</td><td>What is the SDR signature token?</td><td>What code does an SDR put at the end…</td><td><code>NX-KITE-19</code></td></tr>
+    <tr><td>reply-status v3</td><td>Which label does v3 add?</td><td>What extra status value in version 3…</td><td><code>pause_90d</code></td></tr>
+    <tr><td>TZ проекта 98</td><td>What timezone does project 98 use?</td><td>Which IANA timezone… ninety-eight?</td><td><code>Pacific/Easter</code></td></tr>
+    <tr><td>день дайджеста</td><td>On which day is the weekly digest sent?</td><td>Which made-up weekday…</td><td><code>Starday</code></td></tr>
+    <tr><td>Q4 freeze</td><td>What is the Q4 freeze code?</td><td>What freeze identifier for Q4 lock?</td><td><code>AmberGate-7741</code></td></tr>
+  </tbody>
+</table>
+</div>
+
+<div class="scores">
+  <div class="score bad">
+    <div class="n">0/12</div>
+    <div class="lbl">База · 0 verbatim, 0 paraphrase</div>
+  </div>
+  <div class="score win">
+    <div class="n">12/12</div>
+    <div class="lbl">База + факты в system</div>
+  </div>
+  <div class="score">
+    <div class="n">9/12</div>
+    <div class="lbl">QLoRA best · 6/6 + 3/6 paraphrase</div>
+  </div>
+  <div class="score bad">
+    <div class="n">7/12</div>
+    <div class="lbl">QLoRA last · переобучен, 5/6 + 2/6</div>
+  </div>
+</div>
+<p class="q"><strong>Парафразы, которые тюн путает.</strong> Best: <code>NX-KITE-19</code> → <code>AmberGate-19</code>; <code>pause_90d</code> → <code>pause-90d</code>; <code>Starday</code> → <code>Saturdayizr</code>. Last ещё ломает verbatim <code>AmberGate-7741</code> → <code>AmberGate-Q4-2026</code>. Вызубрил train, не правило.</p>
+<p class="note">Промпт закрывает знания дешевле и надёжнее, чем QLoRA: 100% vs 75% у best и 58% у last.</p>
+
+<h2>2. Что модель потеряла (OOD)</h2>
+<p>Второй eval: 9 задач не из reply-status — ревью ReaderPage, Bookreader API, 2+2, хайку, reverse list, JSON <code>{"a":1,"b":2}</code>, рекурсия, <code>is_even</code>, столица Франции. Коллапса в enum нет ни у кого.</p>
+<div class="wrap">
+<table>
+  <thead><tr><th>режим</th><th>hits</th><th>enum collapse</th><th>что сломалось</th></tr></thead>
+  <tbody>
+    <tr><td>база</td><td class="ok">9/9</td><td>0/9</td><td>—</td></tr>
+    <tr><td>day7 (только enum)</td><td>8/9</td><td>0/9</td><td>ood01 ревью: нет Critical / Should fix</td></tr>
+    <tr><td>day8 best</td><td>8/9</td><td>0/9</td><td>то же: «No new notes needed»</td></tr>
+    <tr><td>day8 last</td><td>8/9</td><td>0/9</td><td>то же</td></tr>
+  </tbody>
+</table>
+</div>
+<div class="pair" style="margin-top:16px">
+  <div class="col good">
+    <h3>ood01 база</h3>
+    <pre>Critical:
+- …
+Should fix:
+- …
+Notes:
+- …</pre>
+  </div>
+  <div class="col bad">
+    <h3>ood01 day8 best</h3>
+    <pre>No new notes needed.</pre>
+  </div>
+</div>
+<p class="muted" style="margin-top:12px">2+2, <code>def</code>, JSON живы. Потеря узкая: тюн под одну инструкцию ломает другую. Как SQL-тюн дня 6 на том же ревью.</p>
+
+<h2>3. Переобучение</h2>
+<p>Valid — только enum, 85 строк. Train mix 815. С шага 410 train ещё падает (0.16 → 0.09), valid растёт (0.58 → 0.75).</p>
+<div class="chart"><svg viewBox="0 0 880 260" role="img" aria-label="Train loss falling, valid loss minimum at step 410 then rising">
+  <g class="grid"><line x1="44" y1="191.7" x2="860" y2="191.7"/><text class="tick" x="36" y="195.7" text-anchor="end">0.5</text><line x1="44" y1="163.3" x2="860" y2="163.3"/><text class="tick" x="36" y="167.3" text-anchor="end">1</text><line x1="44" y1="135.0" x2="860" y2="135.0"/><text class="tick" x="36" y="139.0" text-anchor="end">1.5</text><line x1="44" y1="106.7" x2="860" y2="106.7"/><text class="tick" x="36" y="110.7" text-anchor="end">2</text><line x1="44" y1="78.3" x2="860" y2="78.3"/><text class="tick" x="36" y="82.3" text-anchor="end">2.5</text><line x1="44" y1="50.0" x2="860" y2="50.0"/><text class="tick" x="36" y="54.0" text-anchor="end">3</text><line x1="44" y1="21.7" x2="860" y2="21.7"/><text class="tick" x="36" y="25.7" text-anchor="end">3.5</text><line x1="44.0" y1="16" x2="44.0" y2="220"/><text class="tick" x="44.0" y="248" text-anchor="middle">0</text><line x1="244.0" y1="16" x2="244.0" y2="220"/><text class="tick" x="244.0" y="248" text-anchor="middle">250</text><line x1="372.0" y1="16" x2="372.0" y2="220"/><text class="tick" x="372.0" y="248" text-anchor="middle">410 best</text><line x1="444.0" y1="16" x2="444.0" y2="220"/><text class="tick" x="444.0" y="248" text-anchor="middle">500</text><line x1="644.0" y1="16" x2="644.0" y2="220"/><text class="tick" x="644.0" y="248" text-anchor="middle">750</text><line x1="860.0" y1="16" x2="860.0" y2="220"/><text class="tick" x="860.0" y="248" text-anchor="middle">1020</text></g>
+  <line class="best" x1="372.0" y1="16" x2="372.0" y2="220"/>
+  <polyline class="loss train" fill="none" points="52.0,21.8 84.0,123.4 124.0,151.3 164.0,194.2 204.0,183.4 244.0,194.0 284.0,191.0 324.0,200.1 364.0,202.6 372.0,211.0 404.0,206.7 444.0,208.4 524.0,209.9 604.0,213.1 684.0,215.9 764.0,216.3 844.0,215.1 860.0,214.7"/>
+  <polyline class="loss valid" fill="none" points="52.0,27.1 84.0,139.2 124.0,169.6 164.0,177.5 204.0,183.6 244.0,184.0 284.0,185.7 324.0,186.2 364.0,185.4 372.0,187.0 404.0,184.6 444.0,184.3 524.0,183.3 604.0,181.1 684.0,178.1 764.0,177.3 844.0,177.3 860.0,177.3"/>
+</svg>
+<p class="legend"><span class="swatch train"></span> train · <span class="swatch valid"></span> valid (enum, 85) · вертикаль — шаг 410</p>
+</div>
+<div class="wrap">
+<table>
+  <thead><tr><th></th><th>best (410)</th><th>last (1020)</th></tr></thead>
+  <tbody>
+    <tr><td>Факты</td><td class="ok">9/12</td><td class="miss">7/12</td></tr>
+    <tr><td>Enum format</td><td>41/68</td><td>43/68 (шум, 1–2 строки)</td></tr>
+    <tr><td>Стиль</td><td>7/8</td><td>8/8</td></tr>
+    <tr><td>OOD</td><td>8/9</td><td>8/9, то же ревью</td></tr>
+    <tr><td>valid loss</td><td class="ok">0.583</td><td class="miss">0.754</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="muted" style="margin-top:10px">Дольше учить факты «глубже» не вышло: last размазал токены. Дальше в днях 7 и 9 чекпойнт берут по valid, не last.</p>
+
+<h2>4. Три типа задач: тюн vs промпт</h2>
+<p>Формат = enum 68 (старый gold). Стиль = 8 SDR-переписываний (одно предложение, без emoji / sorry / happy-to). Факты = 12.</p>
+<div class="wrap">
+<table>
+  <thead>
+    <tr>
+      <th>тип</th>
+      <th>без промпта</th>
+      <th>хороший промпт</th>
+      <th>тюн best</th>
+      <th>прирост промпта</th>
+      <th>тюн сверх промпта</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Формат (enum, 68)</td>
+      <td>0%</td>
+      <td>50%</td>
+      <td>60% <span class="muted">(day7-only 69%)</span></td>
+      <td class="ok">+50 pp</td>
+      <td>+10 pp <span class="muted">(day7 +19 pp)</span></td>
+    </tr>
+    <tr>
+      <td>Стиль SDR (8)</td>
+      <td>0%</td>
+      <td>63% (5/8)</td>
+      <td>88% (last 100%)</td>
+      <td class="ok">+63 pp</td>
+      <td class="ok">+25 pp</td>
+    </tr>
+    <tr>
+      <td>Факты (12)</td>
+      <td>0%</td>
+      <td class="ok">100%</td>
+      <td>75%</td>
+      <td class="ok">+100 pp</td>
+      <td class="miss">−25 pp</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div class="pair" style="margin-top:16px">
+  <div class="col bad">
+    <h3>стиль · база без промпта</h3>
+    <pre>Hello! It sounds like you're looking
+forward to introducing me to procurement
+next month. If there's anything specific…
+I'm here to help and learn…</pre>
+  </div>
+  <div class="col good">
+    <h3>стиль · day8 best</h3>
+    <pre>I can do the introduction next month.
+Sorry about the delay!</pre>
+  </div>
+</div>
+<p class="muted" style="margin-top:12px">Формат: промпт уже заставляет писать одно слово, путает mql/sql. Чистый день 7 лучше смеси (69% vs 60%) — факты и стиль в одном адаптере отъедают домен. Стиль: база без промпта пишет абзацы. Факты: тюн проигрывает листу в system.</p>
+
+<h2>Вывод: где тюн оправдан</h2>
+<div class="two">
+  <div>
+    <p><strong>Тюнить</strong>, когда выход закрытый и частый (семь меток, одно слово); правило стабильное и плохо сидит в коротком промпте у 1.5B («свой email = mql»); нужен тон на пачке однотипных переписываний, не разовые факты.</p>
+  </div>
+  <div>
+    <p><strong>Промпт или RAG</strong>, когда знание меняется или его мало (6 токенов: 12/12 в system); редкий класс; задача не из домена — отдельный промпт, не этот адаптер.</p>
+  </div>
+</div>
+<p class="note">Цена прогона: 64 мин 3070, ~2.5 GB VRAM, переобучение после 410, −9 pp enum против чистого дня 7, сломанная форма ревью. На reply-status оставлять day7-адаптер. Факты и разовые правила — в промпт.</p>
+
+<p class="muted">После фикса gold дня 7 смесь <em>без ретрейна</em>: eval 53/68 (78%), eval2 102/149 (69%). Факты / стиль / OOD с того прогона остаются. 78% не сравнивать со старыми 60%.</p>
+
+<h2>Что ещё посмотреть</h2>
+<ul class="files">
+  <li><a href="comparison.md"><code>comparison.md</code></a><span>Тот же разбор текстом</span></li>
+  <li><a href="eval/scores.md"><code>eval/scores.md</code></a><span>Таблицы format / facts / style / OOD</span></li>
+  <li><a href="eval/loss.md"><code>eval/loss.md</code></a><span>Train vs valid по шагам</span></li>
+  <li><a href="params.md"><code>params.md</code></a> · <a href="run-meta.json"><code>run-meta.json</code></a><span>Стенд запуска</span></li>
+  <li><a href="eval/enum-rescore.md"><code>eval/enum-rescore.md</code></a><span>Enum на новом gold, без ретрейна</span></li>
+  <li><a href="run1-review.md"><code>run1-review.md</code></a><span>Почему день 8 не переучивали</span></li>
+  <li><a href="adapter/"><code>adapter/</code></a> · <a href="adapter-last/"><code>adapter-last/</code></a><span>Best 410 vs last эпохи 10</span></li>
+  <li><code>data/probes/</code><span>facts / style / ood JSON (gitignored data/)</span></li>
+  <li><a href="train.py"><code>train.py</code></a> · <a href="eval.py"><code>eval.py</code></a><span>Смесь и скоринг трёх типов</span></li>
+  <li><code>eval/base_*</code> · <code>best_*</code> · <code>last_*</code><span>Сырые ответы</span></li>
+</ul>
+
+</main>
+</body>
+</html>

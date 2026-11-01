@@ -1,0 +1,1 @@
+SELECT opponents_in_the_final FROM table_name_90 WHERE score = "6-1 2-6 7-10"

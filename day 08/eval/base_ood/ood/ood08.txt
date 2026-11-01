@@ -1,0 +1,27 @@
+Certainly! Below is a simple Python function named `is_even` that checks if an integer `n` is even:
+
+```python
+def is_even(n):
+    """
+    Check if the given integer n is even.
+
+    Parameters:
+    n (int): The integer to check.
+
+    Returns:
+    bool: True if n is even, False otherwise.
+    """
+    return n % 2 == 0
+
+# Example usage:
+print(is_even(4))   # Output: True
+print(is_even(5))   # Output: False
+```
+
+### Explanation:
+- The function takes one parameter `n`, which is expected to be an integer.
+- It uses the modulo operator `%` to determine if `n` is divisible by 2 without any remainder.
+- If `n` is even (`n % 2 == 0`), the function returns `True`.
+- Otherwise, it returns `False`.
+
+This function will work correctly for all non-negative integers and can handle both positive and negative numbers as well.

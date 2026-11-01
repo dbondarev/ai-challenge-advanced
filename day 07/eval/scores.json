@@ -1,0 +1,2114 @@
+{
+ "base_no_system": {
+  "accuracy": 0.0,
+  "hits": 0,
+  "n": 68,
+  "preds": [
+   {
+    "id": "ev-001",
+    "kind": "contact_shared",
+    "raw": "Subject: Exclusive Sneakers Collection - Join",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-002",
+    "kind": "contact_shared",
+    "raw": "Subject: Re: Job Opportunity at Willow",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-003",
+    "kind": "contact_shared",
+    "raw": "Subject: Inquiry about Potential Collaboration\n\nDear",
+    "pred": null,
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-004",
+    "kind": "contact_shared",
+    "raw": "Subject: Request for Presentation on Our Premium",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-005",
+    "kind": "contact_shared",
+    "raw": "Subject: Request for Presentation on Our Premium",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-006",
+    "kind": "contact_shared",
+    "raw": "Subject: Inquiry about Showroom Partnership Opportunities",
+    "pred": null,
+    "gold": [
+     "not_ta"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-007",
+    "kind": "contact_shared",
+    "raw": "Subject: Introducing Our Premium Sneakers",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-008",
+    "kind": "single_reply",
+    "raw": "Subject: Inquiry about Showing Our Collection at",
+    "pred": null,
+    "gold": [
+     "not_ta"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-009",
+    "kind": "contact_shared",
+    "raw": "Subject: Proposal for Collaborating with Summit",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-010",
+    "kind": "single_reply",
+    "raw": "Ivan,\n\nvielen Dank für deine",
+    "pred": null,
+    "gold": [
+     "no_change",
+     "not_ta"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-011",
+    "kind": "multi_turn",
+    "raw": "Hi Julia,\n\nI hope you're doing",
+    "pred": null,
+    "gold": [
+     "no_change",
+     "not_ta"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-012",
+    "kind": "contact_shared",
+    "raw": "Hi Oskar,\n\nI hope you",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-013",
+    "kind": "contact_shared",
+    "raw": "Hello! It looks like you're reaching",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-014",
+    "kind": "contact_shared",
+    "raw": "Subject: Re: Meeting with Ines",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-015",
+    "kind": "single_reply",
+    "raw": "Hello! It's great to hear from",
+    "pred": null,
+    "gold": [
+     "no_change",
+     "not_ta"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-016",
+    "kind": "single_reply",
+    "raw": "Hi Ines,\n\nThank you for reaching",
+    "pred": null,
+    "gold": [
+     "mql",
+     "positive"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-017",
+    "kind": "single_reply",
+    "raw": "Hi Rosa,\n\nThank you for your interest",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-018",
+    "kind": "contact_shared",
+    "raw": "Subject: Request for Lookbook, Price",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-019",
+    "kind": "contact_shared",
+    "raw": "Hi Rinaldi,\n\nThank you for",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-020",
+    "kind": "contact_shared",
+    "raw": "Thank you for confirming receipt of the materials",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-021",
+    "kind": "contact_shared",
+    "raw": "It seems like there was a misunderstanding or",
+    "pred": null,
+    "gold": [
+     "positive",
+     "no_change"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-022",
+    "kind": "contact_shared",
+    "raw": "Sure, here are three potential timeslots",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-023",
+    "kind": "contact_shared",
+    "raw": "OUT: Sure thing! Next week would",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-024",
+    "kind": "contact_shared",
+    "raw": "Sure, here's how you can structure",
+    "pred": null,
+    "gold": [
+     "sql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-025",
+    "kind": "contact_shared",
+    "raw": "Sure, here's how you can schedule",
+    "pred": null,
+    "gold": [
+     "sql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-026",
+    "kind": "contact_shared",
+    "raw": "OUT: You're welcome! Looking forward",
+    "pred": null,
+    "gold": [
+     "sql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-027",
+    "kind": "contact_shared",
+    "raw": "Subject: Inquiry about Showrooming Opportunity",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-028",
+    "kind": "contact_shared",
+    "raw": "Subject: Re: Inquiry about Redstone",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-029",
+    "kind": "single_reply",
+    "raw": "Hi Daniel,\n\nThank you for reaching out",
+    "pred": null,
+    "gold": [
+     "not_ta"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-030",
+    "kind": "contact_shared",
+    "raw": "Subject: Feedback on Showroom Concept\n\n",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-031",
+    "kind": "contact_shared",
+    "raw": "Got it! Thank you for sending the",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-032",
+    "kind": "contact_shared",
+    "raw": "OUT: Oh, that's okay.",
+    "pred": null,
+    "gold": [
+     "rejection"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-033",
+    "kind": "contact_shared",
+    "raw": "Sure, here's a summary of the",
+    "pred": null,
+    "gold": [
+     "rejection"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-034",
+    "kind": "contact_shared",
+    "raw": "Subject: Inquiry for Showroom Visit -",
+    "pred": null,
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-035",
+    "kind": "single_reply",
+    "raw": "Subject: Inquiry about AI and Automation in",
+    "pred": null,
+    "gold": [
+     "no_change",
+     "not_ta"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-036",
+    "kind": "single_reply",
+    "raw": "I'm sorry, but it seems there",
+    "pred": null,
+    "gold": [
+     "not_ta"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-037",
+    "kind": "single_reply",
+    "raw": "Hi Oskar,\n\nThank you so",
+    "pred": null,
+    "gold": [
+     "rejection"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-038",
+    "kind": "contact_shared",
+    "raw": "Hi Sofia,\n\nThank you for reaching out",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-039",
+    "kind": "single_reply",
+    "raw": "Subject: Referral Opportunity at Atlas Trading",
+    "pred": null,
+    "gold": [
+     "not_ta"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-040",
+    "kind": "multi_turn",
+    "raw": "Hi Elena,\n\nThank you for your message",
+    "pred": null,
+    "gold": [
+     "not_ta"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-041",
+    "kind": "contact_shared",
+    "raw": "Subject: Re: Summit Design Inquiry\n\n",
+    "pred": null,
+    "gold": [
+     "not_ta"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-042",
+    "kind": "contact_shared",
+    "raw": "Hi Maria,\n\nThank you so much for",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-043",
+    "kind": "contact_shared",
+    "raw": "Hi Julia,\n\nThank you for your interest",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-044",
+    "kind": "contact_shared",
+    "raw": "Thank you for reaching out, Alex.",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-045",
+    "kind": "single_reply",
+    "raw": "Thank you for your message, Felix!",
+    "pred": null,
+    "gold": [
+     "positive",
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-046",
+    "kind": "single_reply",
+    "raw": "Hi Marco,\n\nThank you for reaching out",
+    "pred": null,
+    "gold": [
+     "rejection"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-047",
+    "kind": "single_reply",
+    "raw": "It seems you've declined an offer or",
+    "pred": null,
+    "gold": [
+     "rejection"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-048",
+    "kind": "contact_shared",
+    "raw": "Subject: Presentation Submission for Velvet Trading Show",
+    "pred": null,
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-049",
+    "kind": "contact_shared",
+    "raw": "Hi Rosa,\n\nThank you for reaching out",
+    "pred": null,
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-050",
+    "kind": "single_reply",
+    "raw": "Hi Viktor,\n\nThank you for reaching out",
+    "pred": null,
+    "gold": [
+     "not_ta"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-051",
+    "kind": "multi_turn",
+    "raw": "Thank you! If you have any more",
+    "pred": null,
+    "gold": [
+     "not_ta"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-052",
+    "kind": "contact_shared",
+    "raw": "Sure, let's break down the conversation",
+    "pred": null,
+    "gold": [
+     "no_change",
+     "not_ta"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-053",
+    "kind": "single_reply",
+    "raw": "Hi Maria,\n\nThank you for your message",
+    "pred": null,
+    "gold": [
+     "rejection"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-054",
+    "kind": "contact_shared",
+    "raw": "Subject: Inquiry about Potential Collaboration\n\nDear",
+    "pred": null,
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-055",
+    "kind": "contact_shared",
+    "raw": "Subject: Inquiry about Potential Collaboration\n\nDear",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-056",
+    "kind": "contact_shared",
+    "raw": "Subject: Presentation for Bluecrest Brands Show",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-057",
+    "kind": "contact_shared",
+    "raw": "Subject: Re: Best Contact Person for",
+    "pred": null,
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-058",
+    "kind": "contact_shared",
+    "raw": "Subject: Re: Showroom Concept for",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-059",
+    "kind": "contact_shared",
+    "raw": "Hi Hugo,\n\nThank you very much for",
+    "pred": null,
+    "gold": [
+     "rejection",
+     "not_ta"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-060",
+    "kind": "contact_shared",
+    "raw": "Subject: Meeting Request - Co-Br",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-061",
+    "kind": "contact_shared",
+    "raw": "Subject: Re: Showroom Visit for",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-062",
+    "kind": "single_reply",
+    "raw": "Subject: Request for Additional Photos\n\nDear",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-063",
+    "kind": "multi_turn",
+    "raw": "I'm sorry, but I don't",
+    "pred": null,
+    "gold": [
+     "rejection"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-064",
+    "kind": "contact_shared",
+    "raw": "OUT: Hi Alex, Thank you for",
+    "pred": null,
+    "gold": [
+     "no_change",
+     "not_ta"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-065",
+    "kind": "single_reply",
+    "raw": "Hi Vera,\n\nThank you for your message",
+    "pred": null,
+    "gold": [
+     "rejection"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-066",
+    "kind": "contact_shared",
+    "raw": "Subject: Expansion of Agent Network - Opportunity",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-067",
+    "kind": "contact_shared",
+    "raw": "Subject: Re: Meeting with Tomas at",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-068",
+    "kind": "contact_shared",
+    "raw": "Subject: Exciting Opportunity for Co-",
+    "pred": null,
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "ok": false
+   }
+  ]
+ },
+ "base_with_system": {
+  "accuracy": 0.5,
+  "hits": 34,
+  "n": 68,
+  "preds": [
+   {
+    "id": "ev-001",
+    "kind": "contact_shared",
+    "raw": "sql",
+    "pred": "sql",
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-002",
+    "kind": "contact_shared",
+    "raw": "mql",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-003",
+    "kind": "contact_shared",
+    "raw": "sql",
+    "pred": "sql",
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-004",
+    "kind": "contact_shared",
+    "raw": "mql",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-005",
+    "kind": "contact_shared",
+    "raw": "mql",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-006",
+    "kind": "contact_shared",
+    "raw": "not_ta",
+    "pred": "not_ta",
+    "gold": [
+     "not_ta"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-007",
+    "kind": "contact_shared",
+    "raw": "sql",
+    "pred": "sql",
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-008",
+    "kind": "single_reply",
+    "raw": "not_ta",
+    "pred": "not_ta",
+    "gold": [
+     "not_ta"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-009",
+    "kind": "contact_shared",
+    "raw": "sql",
+    "pred": "sql",
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-010",
+    "kind": "single_reply",
+    "raw": "not_ta",
+    "pred": "not_ta",
+    "gold": [
+     "no_change",
+     "not_ta"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-011",
+    "kind": "multi_turn",
+    "raw": "not_ta",
+    "pred": "not_ta",
+    "gold": [
+     "no_change",
+     "not_ta"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-012",
+    "kind": "contact_shared",
+    "raw": "meeting_held",
+    "pred": "meeting_held",
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-013",
+    "kind": "contact_shared",
+    "raw": "not_ta",
+    "pred": "not_ta",
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-014",
+    "kind": "contact_shared",
+    "raw": "mql",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-015",
+    "kind": "single_reply",
+    "raw": "not_ta",
+    "pred": "not_ta",
+    "gold": [
+     "no_change",
+     "not_ta"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-016",
+    "kind": "single_reply",
+    "raw": "not_ta",
+    "pred": "not_ta",
+    "gold": [
+     "mql",
+     "positive"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-017",
+    "kind": "single_reply",
+    "raw": "sql",
+    "pred": "sql",
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-018",
+    "kind": "contact_shared",
+    "raw": "sql",
+    "pred": "sql",
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-019",
+    "kind": "contact_shared",
+    "raw": "sql",
+    "pred": "sql",
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-020",
+    "kind": "contact_shared",
+    "raw": "mql",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-021",
+    "kind": "contact_shared",
+    "raw": "not_ta",
+    "pred": "not_ta",
+    "gold": [
+     "positive",
+     "no_change"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-022",
+    "kind": "contact_shared",
+    "raw": "not_ta",
+    "pred": "not_ta",
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-023",
+    "kind": "contact_shared",
+    "raw": "meeting_held",
+    "pred": "meeting_held",
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-024",
+    "kind": "contact_shared",
+    "raw": "meeting_held",
+    "pred": "meeting_held",
+    "gold": [
+     "sql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-025",
+    "kind": "contact_shared",
+    "raw": "meeting_held",
+    "pred": "meeting_held",
+    "gold": [
+     "sql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-026",
+    "kind": "contact_shared",
+    "raw": "meeting_held",
+    "pred": "meeting_held",
+    "gold": [
+     "sql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-027",
+    "kind": "contact_shared",
+    "raw": "mql",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-028",
+    "kind": "contact_shared",
+    "raw": "mql",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-029",
+    "kind": "single_reply",
+    "raw": "not_ta",
+    "pred": "not_ta",
+    "gold": [
+     "not_ta"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-030",
+    "kind": "contact_shared",
+    "raw": "mql",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-031",
+    "kind": "contact_shared",
+    "raw": "no_change",
+    "pred": "no_change",
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-032",
+    "kind": "contact_shared",
+    "raw": "rejection",
+    "pred": "rejection",
+    "gold": [
+     "rejection"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-033",
+    "kind": "contact_shared",
+    "raw": "rejection",
+    "pred": "rejection",
+    "gold": [
+     "rejection"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-034",
+    "kind": "contact_shared",
+    "raw": "sql",
+    "pred": "sql",
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-035",
+    "kind": "single_reply",
+    "raw": "sql",
+    "pred": "sql",
+    "gold": [
+     "no_change",
+     "not_ta"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-036",
+    "kind": "single_reply",
+    "raw": "not_ta",
+    "pred": "not_ta",
+    "gold": [
+     "not_ta"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-037",
+    "kind": "single_reply",
+    "raw": "rejection",
+    "pred": "rejection",
+    "gold": [
+     "rejection"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-038",
+    "kind": "contact_shared",
+    "raw": "sql",
+    "pred": "sql",
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-039",
+    "kind": "single_reply",
+    "raw": "not_ta",
+    "pred": "not_ta",
+    "gold": [
+     "not_ta"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-040",
+    "kind": "multi_turn",
+    "raw": "not_ta",
+    "pred": "not_ta",
+    "gold": [
+     "not_ta"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-041",
+    "kind": "contact_shared",
+    "raw": "sql",
+    "pred": "sql",
+    "gold": [
+     "not_ta"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-042",
+    "kind": "contact_shared",
+    "raw": "mql",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-043",
+    "kind": "contact_shared",
+    "raw": "mql",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-044",
+    "kind": "contact_shared",
+    "raw": "not_ta",
+    "pred": "not_ta",
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-045",
+    "kind": "single_reply",
+    "raw": "no_change",
+    "pred": "no_change",
+    "gold": [
+     "positive",
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-046",
+    "kind": "single_reply",
+    "raw": "no_change",
+    "pred": "no_change",
+    "gold": [
+     "rejection"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-047",
+    "kind": "single_reply",
+    "raw": "rejection",
+    "pred": "rejection",
+    "gold": [
+     "rejection"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-048",
+    "kind": "contact_shared",
+    "raw": "sql",
+    "pred": "sql",
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-049",
+    "kind": "contact_shared",
+    "raw": "sql",
+    "pred": "sql",
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-050",
+    "kind": "single_reply",
+    "raw": "not_ta",
+    "pred": "not_ta",
+    "gold": [
+     "not_ta"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-051",
+    "kind": "multi_turn",
+    "raw": "not_ta",
+    "pred": "not_ta",
+    "gold": [
+     "not_ta"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-052",
+    "kind": "contact_shared",
+    "raw": "not_ta",
+    "pred": "not_ta",
+    "gold": [
+     "no_change",
+     "not_ta"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-053",
+    "kind": "single_reply",
+    "raw": "rejection",
+    "pred": "rejection",
+    "gold": [
+     "rejection"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-054",
+    "kind": "contact_shared",
+    "raw": "mql",
+    "pred": "mql",
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-055",
+    "kind": "contact_shared",
+    "raw": "mql",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-056",
+    "kind": "contact_shared",
+    "raw": "mql",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-057",
+    "kind": "contact_shared",
+    "raw": "mql",
+    "pred": "mql",
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-058",
+    "kind": "contact_shared",
+    "raw": "mql",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-059",
+    "kind": "contact_shared",
+    "raw": "rejection",
+    "pred": "rejection",
+    "gold": [
+     "rejection",
+     "not_ta"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-060",
+    "kind": "contact_shared",
+    "raw": "sql",
+    "pred": "sql",
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-061",
+    "kind": "contact_shared",
+    "raw": "not_ta",
+    "pred": "not_ta",
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-062",
+    "kind": "single_reply",
+    "raw": "not_ta",
+    "pred": "not_ta",
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-063",
+    "kind": "multi_turn",
+    "raw": "rejection",
+    "pred": "rejection",
+    "gold": [
+     "rejection"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-064",
+    "kind": "contact_shared",
+    "raw": "sql",
+    "pred": "sql",
+    "gold": [
+     "no_change",
+     "not_ta"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-065",
+    "kind": "single_reply",
+    "raw": "not_ta",
+    "pred": "not_ta",
+    "gold": [
+     "rejection"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-066",
+    "kind": "contact_shared",
+    "raw": "not_ta",
+    "pred": "not_ta",
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-067",
+    "kind": "contact_shared",
+    "raw": "not_ta",
+    "pred": "not_ta",
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-068",
+    "kind": "contact_shared",
+    "raw": "sql",
+    "pred": "sql",
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "ok": false
+   }
+  ]
+ },
+ "tuned_with_system": {
+  "accuracy": 0.6911764705882353,
+  "hits": 47,
+  "n": 68,
+  "preds": [
+   {
+    "id": "ev-001",
+    "kind": "contact_shared",
+    "raw": "mql",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-002",
+    "kind": "contact_shared",
+    "raw": "mql",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-003",
+    "kind": "contact_shared",
+    "raw": "mql",
+    "pred": "mql",
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-004",
+    "kind": "contact_shared",
+    "raw": "mql",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-005",
+    "kind": "contact_shared",
+    "raw": "mql",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-006",
+    "kind": "contact_shared",
+    "raw": "not_ta",
+    "pred": "not_ta",
+    "gold": [
+     "not_ta"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-007",
+    "kind": "contact_shared",
+    "raw": "mql",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-008",
+    "kind": "single_reply",
+    "raw": "not_ta",
+    "pred": "not_ta",
+    "gold": [
+     "not_ta"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-009",
+    "kind": "contact_shared",
+    "raw": "mql",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-010",
+    "kind": "single_reply",
+    "raw": "mql",
+    "pred": "mql",
+    "gold": [
+     "no_change",
+     "not_ta"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-011",
+    "kind": "multi_turn",
+    "raw": "mql",
+    "pred": "mql",
+    "gold": [
+     "no_change",
+     "not_ta"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-012",
+    "kind": "contact_shared",
+    "raw": "mql",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-013",
+    "kind": "contact_shared",
+    "raw": "mql",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-014",
+    "kind": "contact_shared",
+    "raw": "mql",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-015",
+    "kind": "single_reply",
+    "raw": "mql",
+    "pred": "mql",
+    "gold": [
+     "no_change",
+     "not_ta"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-016",
+    "kind": "single_reply",
+    "raw": "not_ta",
+    "pred": "not_ta",
+    "gold": [
+     "mql",
+     "positive"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-017",
+    "kind": "single_reply",
+    "raw": "sql",
+    "pred": "sql",
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-018",
+    "kind": "contact_shared",
+    "raw": "mql",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-019",
+    "kind": "contact_shared",
+    "raw": "mql",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-020",
+    "kind": "contact_shared",
+    "raw": "no_change",
+    "pred": "no_change",
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-021",
+    "kind": "contact_shared",
+    "raw": "not_ta",
+    "pred": "not_ta",
+    "gold": [
+     "positive",
+     "no_change"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-022",
+    "kind": "contact_shared",
+    "raw": "mql",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-023",
+    "kind": "contact_shared",
+    "raw": "mql",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-024",
+    "kind": "contact_shared",
+    "raw": "sql",
+    "pred": "sql",
+    "gold": [
+     "sql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-025",
+    "kind": "contact_shared",
+    "raw": "mql",
+    "pred": "mql",
+    "gold": [
+     "sql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-026",
+    "kind": "contact_shared",
+    "raw": "no_change",
+    "pred": "no_change",
+    "gold": [
+     "sql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-027",
+    "kind": "contact_shared",
+    "raw": "mql",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-028",
+    "kind": "contact_shared",
+    "raw": "mql",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-029",
+    "kind": "single_reply",
+    "raw": "not_ta",
+    "pred": "not_ta",
+    "gold": [
+     "not_ta"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-030",
+    "kind": "contact_shared",
+    "raw": "mql",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-031",
+    "kind": "contact_shared",
+    "raw": "no_change",
+    "pred": "no_change",
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-032",
+    "kind": "contact_shared",
+    "raw": "rejection",
+    "pred": "rejection",
+    "gold": [
+     "rejection"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-033",
+    "kind": "contact_shared",
+    "raw": "no_change",
+    "pred": "no_change",
+    "gold": [
+     "rejection"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-034",
+    "kind": "contact_shared",
+    "raw": "mql",
+    "pred": "mql",
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-035",
+    "kind": "single_reply",
+    "raw": "mql",
+    "pred": "mql",
+    "gold": [
+     "no_change",
+     "not_ta"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-036",
+    "kind": "single_reply",
+    "raw": "rejection",
+    "pred": "rejection",
+    "gold": [
+     "not_ta"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-037",
+    "kind": "single_reply",
+    "raw": "rejection",
+    "pred": "rejection",
+    "gold": [
+     "rejection"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-038",
+    "kind": "contact_shared",
+    "raw": "mql",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-039",
+    "kind": "single_reply",
+    "raw": "not_ta",
+    "pred": "not_ta",
+    "gold": [
+     "not_ta"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-040",
+    "kind": "multi_turn",
+    "raw": "not_ta",
+    "pred": "not_ta",
+    "gold": [
+     "not_ta"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-041",
+    "kind": "contact_shared",
+    "raw": "not_ta",
+    "pred": "not_ta",
+    "gold": [
+     "not_ta"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-042",
+    "kind": "contact_shared",
+    "raw": "mql",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-043",
+    "kind": "contact_shared",
+    "raw": "mql",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-044",
+    "kind": "contact_shared",
+    "raw": "no_change",
+    "pred": "no_change",
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-045",
+    "kind": "single_reply",
+    "raw": "not_ta",
+    "pred": "not_ta",
+    "gold": [
+     "positive",
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-046",
+    "kind": "single_reply",
+    "raw": "rejection",
+    "pred": "rejection",
+    "gold": [
+     "rejection"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-047",
+    "kind": "single_reply",
+    "raw": "rejection",
+    "pred": "rejection",
+    "gold": [
+     "rejection"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-048",
+    "kind": "contact_shared",
+    "raw": "mql",
+    "pred": "mql",
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-049",
+    "kind": "contact_shared",
+    "raw": "positive",
+    "pred": "positive",
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-050",
+    "kind": "single_reply",
+    "raw": "not_ta",
+    "pred": "not_ta",
+    "gold": [
+     "not_ta"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-051",
+    "kind": "multi_turn",
+    "raw": "no_change",
+    "pred": "no_change",
+    "gold": [
+     "not_ta"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-052",
+    "kind": "contact_shared",
+    "raw": "no_change",
+    "pred": "no_change",
+    "gold": [
+     "no_change",
+     "not_ta"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-053",
+    "kind": "single_reply",
+    "raw": "rejection",
+    "pred": "rejection",
+    "gold": [
+     "rejection"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-054",
+    "kind": "contact_shared",
+    "raw": "not_ta",
+    "pred": "not_ta",
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-055",
+    "kind": "contact_shared",
+    "raw": "not_ta",
+    "pred": "not_ta",
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-056",
+    "kind": "contact_shared",
+    "raw": "mql",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-057",
+    "kind": "contact_shared",
+    "raw": "not_ta",
+    "pred": "not_ta",
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-058",
+    "kind": "contact_shared",
+    "raw": "mql",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-059",
+    "kind": "contact_shared",
+    "raw": "not_ta",
+    "pred": "not_ta",
+    "gold": [
+     "rejection",
+     "not_ta"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-060",
+    "kind": "contact_shared",
+    "raw": "mql",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-061",
+    "kind": "contact_shared",
+    "raw": "not_ta",
+    "pred": "not_ta",
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-062",
+    "kind": "single_reply",
+    "raw": "mql",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-063",
+    "kind": "multi_turn",
+    "raw": "not_ta",
+    "pred": "not_ta",
+    "gold": [
+     "rejection"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-064",
+    "kind": "contact_shared",
+    "raw": "no_change",
+    "pred": "no_change",
+    "gold": [
+     "no_change",
+     "not_ta"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-065",
+    "kind": "single_reply",
+    "raw": "not_ta",
+    "pred": "not_ta",
+    "gold": [
+     "rejection"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-066",
+    "kind": "contact_shared",
+    "raw": "mql",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-067",
+    "kind": "contact_shared",
+    "raw": "mql",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-068",
+    "kind": "contact_shared",
+    "raw": "mql",
+    "pred": "mql",
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "ok": true
+   }
+  ]
+ }
+}

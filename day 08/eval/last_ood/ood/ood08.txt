@@ -1,0 +1,10 @@
+To create the `is_even` function in Python, you can use the modulo operator `%`. The modulo operator returns the remainder of dividing the number by 2. If the result is 0, it means the number is divisible by 2 (i.e., even), and the function will return True. Otherwise, it will return False.
+
+Here's how you can implement this:
+
+```python
+def is_even(n):
+    return n % 2 == 0
+```
+
+This function takes an integer `n` as input and checks if it is evenly divisible by 2. If so, it returns True; otherwise, it returns False.

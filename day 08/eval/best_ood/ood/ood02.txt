@@ -1,0 +1,4 @@
+The `/books` endpoint supports filtering using URL parameters. The `q` parameter is used for query-based filtering, allowing you to search for books by title, author, tags, etc.
+To answer your other questions:
+- In the API, you can also use pagination and sorting with the `/books` endpoint. For example, `/books?page=2&limit=10`.
+- Yes, you can like (mark as favorite) a book's JSON object by adding it to local storage when a user likes a book, and checking if it already exists before adding it again.

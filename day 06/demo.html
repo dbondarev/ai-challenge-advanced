@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>День 6 · QLoRA text-to-SQL</title>
+<style>
+  :root {
+    --bg: #0b0d11;
+    --card: #14181f;
+    --line: #2a3140;
+    --text: #eef1f6;
+    --muted: #8b93a7;
+    --win: #34d399;
+    --win-dim: rgba(52, 211, 153, .12);
+    --lose: #fb7185;
+    --accent: #67e8f9;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.5 ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { max-width: 1080px; margin: 0 auto; padding: 48px 40px 80px; }
+  .kicker { color: var(--accent); font-size: 12px; font-weight: 600; letter-spacing: .14em;
+    text-transform: uppercase; margin: 0 0 8px; }
+  h1 { font-size: 36px; line-height: 1.15; font-weight: 600; margin: 0 0 14px; letter-spacing: -0.03em; }
+  h2 { font-size: 24px; font-weight: 600; margin: 48px 0 14px; letter-spacing: -0.02em; }
+  h3 { font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin: 0 0 8px; }
+  p.lead { font-size: 18px; color: var(--muted); max-width: 46rem; margin: 0 0 8px; }
+  p { margin: 0 0 10px; }
+  .muted { color: var(--muted); }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 28px 0 8px; }
+  .stat { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; }
+  .stat b { display: block; font-size: 20px; font-weight: 600; letter-spacing: -0.02em; }
+  .stat span { color: var(--muted); font-size: 12px; }
+  .scores { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin: 16px 0 20px; }
+  .score { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; }
+  .score.win { border-color: #065f46; background: var(--win-dim); }
+  .score .n { font-size: 40px; font-weight: 600; letter-spacing: -0.04em; line-height: 1; }
+  .score.win .n { color: var(--win); }
+  .score .lbl { color: var(--muted); margin-top: 6px; font-size: 13px; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { color: var(--muted); font-weight: 600; font-size: 11px; letter-spacing: .06em; text-transform: uppercase; }
+  tr.win td:nth-child(5) { color: var(--win); font-weight: 600; }
+  .ok { color: var(--win); font-weight: 600; }
+  .miss { color: var(--lose); font-weight: 600; }
+  .na { color: var(--muted); }
+  .params { width: 100%; font-size: 14px; }
+  .params th { width: 28%; color: var(--muted); font-weight: 500; text-transform: none; letter-spacing: 0; font-size: 13px; }
+  .params td, .params th { padding: 7px 10px; }
+  code, .params td { font-variant-ligatures: none; }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .92em; }
+  .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  pre { margin: 0; background: #0a0c10; border: 1px solid var(--line); border-radius: 12px;
+    padding: 14px 16px; font: 13px/1.45 ui-monospace, SFMono-Regular, Menlo, monospace;
+    overflow: auto; white-space: pre-wrap; }
+  .col.good h3 { color: var(--win); }
+  .col.bad h3 { color: var(--lose); }
+  .q { background: var(--card); border-radius: 12px; padding: 12px 16px; margin: 0 0 14px; color: var(--muted); }
+  .q strong { color: var(--text); font-weight: 500; }
+  svg .grid line { stroke: #232a38; stroke-width: 1; }
+  svg .tick { fill: var(--muted); font-size: 11px; font-family: ui-sans-serif, system-ui, sans-serif; }
+  svg .loss { stroke: var(--accent); stroke-width: 2.4; stroke-linejoin: round; stroke-linecap: round; }
+  svg .dot.start { fill: var(--muted); }
+  svg .dot.end { fill: var(--win); }
+  .chart { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 8px 12px 4px; margin: 12px 0 8px; }
+  .files { display: grid; grid-template-columns: 1fr 1fr; gap: 0 28px; margin: 0; padding: 0; list-style: none; }
+  .files li { border-bottom: 1px solid var(--line); padding: 10px 0; }
+  .files code { color: var(--accent); }
+  .files span { display: block; color: var(--muted); font-size: 13px; }
+  .note { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 12px 16px; color: var(--muted); font-size: 14px; }
+  @media (max-width: 800px) {
+    main { padding: 28px 16px 48px; }
+    .stats, .scores, .pair, .files { grid-template-columns: 1fr; }
+    .wrap { overflow-x: auto; }
+  }
+</style>
+</head>
+<body>
+<main>
+
+<p class="kicker">AI challenge · день 6</p>
+<h1>QLoRA на 1.5B: точный SQL чаще, остальное хуже</h1>
+<p class="lead">Instruct-модель <code>Qwen/Qwen2.5-1.5B-Instruct</code> доучили QLoRA на text-to-SQL. На 10 held-out exact-match вырос с 1/10 до 6/10. На ревью Bookreader и алгоритмах тюн слабее базы. Обучение — transformers на nv307001, не Ollama.</p>
+
+<div class="stats">
+  <div class="stat"><b>1.5B Instruct</b><span>Qwen2.5, ChatML</span></div>
+  <div class="stat"><b>8k / 1k</b><span>sql-create-context, seed 42</span></div>
+  <div class="stat"><b>47.7 мин</b><span>1000 шагов, 2565 MiB</span></div>
+  <div class="stat"><b>QLoRA NF4</b><span>r=16 α=32, fp16=False</span></div>
+</div>
+
+<h2>Параметры запуска</h2>
+<p class="muted">Зафиксировано в <a href="params.md">params.md</a> и <a href="run-meta.json">run-meta.json</a>. Старт UTC 2026-10-26 14:32:51. Хост nv307001, RTX 3070 8 GB.</p>
+<table class="params">
+  <tr><th>Base model</th><td><code>Qwen/Qwen2.5-1.5B-Instruct</code></td></tr>
+  <tr><th>Dataset</th><td><code>b-mc2/sql-create-context</code>, train split, shuffle seed 42</td></tr>
+  <tr><th>Slice</th><td>первые 8000 train, следующие 1000 val; in-domain eval — строки 9000–9009</td></tr>
+  <tr><th>Method</th><td>QLoRA 4-bit NF4, double quant, compute dtype fp16</td></tr>
+  <tr><th>LoRA</th><td>r=16, alpha=32, dropout=0.05; модули <code>q_proj k_proj v_proj o_proj gate_proj up_proj down_proj</code></td></tr>
+  <tr><th>Max seq</th><td>512, шаблон Qwen ChatML</td></tr>
+  <tr><th>System</th><td><code>You write SQLite. Reply with one SQL statement only.</code></td></tr>
+  <tr><th>Epochs / batch</th><td>1 эпоха; batch 1 × accum 8 (effective 8)</td></tr>
+  <tr><th>LR / optimizer</th><td>2e-4, cosine, warmup 50; <code>paged_adamw_32bit</code></td></tr>
+  <tr><th>GPU / VRAM</th><td>NVIDIA GeForce RTX 3070; peak nvidia-smi <b>2565 MiB</b></td></tr>
+  <tr><th>Wall-clock</th><td>2864 s (47.7 мин); train_runtime 2855.5 s; 2.80 samples/s</td></tr>
+  <tr><th>Loss</th><td>CSV min/max 0.478 / 3.169; train_loss 0.725; финальный шаг 0.591</td></tr>
+  <tr><th>Adapter</th><td><a href="adapter/"><code>adapter/</code></a></td></tr>
+</table>
+<p class="note" style="margin-top:14px">RTX 3070 отвергла <code>fp16=True</code> (<code>_amp_foreach_non_finite_check_and_unscale_cuda</code> не для BFloat16). Считали 4-bit NF4 <b>без</b> GradScaler (<code>fp16=False</code>).</p>
+
+<h2>Loss</h2>
+<div class="chart"><svg viewBox="0 0 880 280" role="img" aria-label="Train loss from 3.17 to 0.59 over 1000 steps">
+  <g class="grid"><line x1="44" y1="232.3" x2="864" y2="232.3"/><text class="tick" x="36" y="236.3" text-anchor="end">0.5</text><line x1="44" y1="193.3" x2="864" y2="193.3"/><text class="tick" x="36" y="197.3" text-anchor="end">1</text><line x1="44" y1="154.4" x2="864" y2="154.4"/><text class="tick" x="36" y="158.4" text-anchor="end">1.5</text><line x1="44" y1="115.4" x2="864" y2="115.4"/><text class="tick" x="36" y="119.4" text-anchor="end">2</text><line x1="44" y1="76.4" x2="864" y2="76.4"/><text class="tick" x="36" y="80.4" text-anchor="end">2.5</text><line x1="44" y1="37.5" x2="864" y2="37.5"/><text class="tick" x="36" y="41.5" text-anchor="end">3</text><line x1="44.0" y1="18" x2="44.0" y2="244"/><text class="tick" x="44.0" y="268" text-anchor="middle">1</text><line x1="248.4" y1="18" x2="248.4" y2="244"/><text class="tick" x="248.4" y="268" text-anchor="middle">250</text><line x1="453.6" y1="18" x2="453.6" y2="244"/><text class="tick" x="453.6" y="268" text-anchor="middle">500</text><line x1="658.8" y1="18" x2="658.8" y2="244"/><text class="tick" x="658.8" y="268" text-anchor="middle">750</text><line x1="864.0" y1="18" x2="864.0" y2="244"/><text class="tick" x="864.0" y="268" text-anchor="middle">1000</text></g>
+  <polyline class="loss" fill="none" points="44.0,34.4 51.4,82.3 59.6,166.1 67.8,204.4 76.0,220.7 84.2,214.8 92.4,210.9 100.6,194.6 108.8,224.1 117.1,210.0 125.3,204.5 133.5,220.2 141.7,222.1 149.9,211.5 158.1,219.2 166.3,220.3 174.5,215.5 182.7,216.0 190.9,210.1 199.1,207.6 207.3,214.0 215.6,219.1 223.8,212.4 232.0,212.5 240.2,216.1 248.4,217.2 256.6,218.5 264.8,202.2 273.0,221.8 281.2,208.6 289.4,206.7 297.6,214.5 305.8,211.8 314.1,212.3 322.3,217.3 330.5,220.5 338.7,217.6 346.9,217.3 355.1,220.0 363.3,222.2 371.5,208.6 379.7,226.2 387.9,215.5 396.1,215.0 404.3,221.1 412.5,210.8 420.8,215.4 429.0,215.5 437.2,219.0 445.4,221.9 453.6,229.8 461.8,218.7 470.0,203.6 478.2,223.8 486.4,213.0 494.6,215.8 502.8,224.5 511.0,211.3 519.3,217.1 527.5,222.2 535.7,218.0 543.9,226.1 552.1,215.3 560.3,213.9 568.5,214.1 576.7,223.1 584.9,224.8 593.1,221.1 601.3,223.0 609.5,216.0 617.8,220.9 626.0,212.5 634.2,208.8 642.4,221.8 650.6,219.4 658.8,216.2 667.0,221.4 675.2,223.0 683.4,218.6 691.6,211.7 699.8,220.5 708.0,212.6 716.3,232.4 724.5,219.3 732.7,214.4 740.9,217.8 749.1,216.5 757.3,216.3 765.5,211.7 773.7,219.1 781.9,226.6 790.1,216.4 798.3,224.5 806.5,223.2 814.8,228.2 823.0,227.6 831.2,207.8 839.4,214.1 847.6,226.7 855.8,229.1 864.0,225.2"/>
+  <circle class="dot start" cx="44.0" cy="34.4" r="5"/>
+  <circle class="dot end" cx="864.0" cy="225.2" r="5"/>
+</svg></div>
+<p class="muted">Кривая по <a href="loss.csv">loss.csv</a> (шаг, loss, lr, VRAM). Старт ~3.0, минимум 0.48.</p>
+
+<h2>Сравнение с базой · 20 запросов</h2>
+<p class="muted">Temperature 0. База: та же 1.5B в 4-bit. Тюн: 4-bit + <code>adapter/</code>. SQL system prompt висит только на in-domain и stretch. Метрика in-domain: exact-match после нормализации пробелов и кавычек. Полные ответы — <a href="eval/20.md">eval/20.md</a>.</p>
+
+<div class="scores">
+  <div class="score">
+    <div class="n">1/10</div>
+    <div class="lbl">Exact-match база, held-out SQL</div>
+  </div>
+  <div class="score win">
+    <div class="n">6/10</div>
+    <div class="lbl">Exact-match QLoRA, те же 10</div>
+  </div>
+  <div class="score">
+    <div class="n">10/10</div>
+    <div class="lbl">Оба уже sql-only на in-domain (system prompt)</div>
+  </div>
+</div>
+
+<div class="wrap">
+<table>
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>группа</th>
+      <th>sql-only база</th>
+      <th>sql-only тюн</th>
+      <th>exact база</th>
+      <th>exact тюн</th>
+      <th>OOD хуже</th>
+      <th>заметка</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>in01</td><td>in-domain</td><td class="ok">да</td><td class="ok">да</td><td class="miss">нет</td><td class="miss">нет</td><td class="na">—</td><td>кавычки / <code>to_par = 13</code></td></tr>
+    <tr><td>in02</td><td>in-domain</td><td class="ok">да</td><td class="ok">да</td><td class="miss">нет</td><td class="miss">нет</td><td class="na">—</td><td>кавычки / season 23</td></tr>
+    <tr><td>in03</td><td>in-domain</td><td class="ok">да</td><td class="ok">да</td><td class="miss">нет</td><td class="miss">нет</td><td class="na">—</td><td>тюн: <code>COUNT(length_feet)</code> вместо SELECT</td></tr>
+    <tr class="win"><td>in04</td><td>in-domain</td><td class="ok">да</td><td class="ok">да</td><td class="miss">нет</td><td class="ok">да</td><td class="na">—</td><td>тюн = gold</td></tr>
+    <tr class="win"><td>in05</td><td>in-domain</td><td class="ok">да</td><td class="ok">да</td><td class="miss">нет</td><td class="ok">да</td><td class="na">—</td><td>тюн = gold</td></tr>
+    <tr><td>in06</td><td>in-domain</td><td class="ok">да</td><td class="ok">да</td><td class="ok">да</td><td class="ok">да</td><td class="na">—</td><td>оба = gold</td></tr>
+    <tr class="win"><td>in07</td><td>in-domain</td><td class="ok">да</td><td class="ok">да</td><td class="miss">нет</td><td class="ok">да</td><td class="na">—</td><td>тюн = gold</td></tr>
+    <tr><td>in08</td><td>in-domain</td><td class="ok">да</td><td class="ok">да</td><td class="miss">нет</td><td class="miss">нет</td><td class="na">—</td><td>тюн: <code>COUNT(total_receipts)</code></td></tr>
+    <tr class="win"><td>in09</td><td>in-domain</td><td class="ok">да</td><td class="ok">да</td><td class="miss">нет</td><td class="ok">да</td><td class="na">—</td><td>тюн = gold</td></tr>
+    <tr class="win"><td>in10</td><td>in-domain</td><td class="ok">да</td><td class="ok">да</td><td class="miss">нет</td><td class="ok">да</td><td class="na">—</td><td>тюн = gold</td></tr>
+    <tr><td>st01</td><td>stretch</td><td class="ok">да</td><td class="ok">да</td><td class="na">—</td><td class="na">—</td><td class="na">—</td><td>RU «отдел продаж»; оба COUNT, тюн не развалился</td></tr>
+    <tr><td>st02</td><td>stretch</td><td class="ok">да</td><td class="ok">да</td><td class="na">—</td><td class="na">—</td><td class="na">—</td><td>оба выдумывают <code>AVG(salary)</code> — колонки нет</td></tr>
+    <tr><td>st03</td><td>stretch</td><td class="ok">да</td><td class="ok">да</td><td class="na">—</td><td class="na">—</td><td class="na">—</td><td>оба JOIN + COUNT по заказам</td></tr>
+    <tr><td>st04</td><td>stretch</td><td class="ok">да</td><td class="ok">да</td><td class="na">—</td><td class="na">—</td><td class="na">—</td><td>база: простой SELECT; тюн JOIN на unused_stats</td></tr>
+    <tr><td>st05</td><td>stretch</td><td class="ok">да</td><td class="ok">да</td><td class="na">—</td><td class="na">—</td><td class="na">—</td><td>оба INSERT Pride and Prejudice</td></tr>
+    <tr><td>ood01</td><td>out-of-domain</td><td class="ok">нет</td><td class="ok">нет</td><td class="na">—</td><td class="na">—</td><td class="miss">да</td><td>тюн хвалит <code>any</code>, не видит global progress</td></tr>
+    <tr><td>ood02</td><td>out-of-domain</td><td class="ok">нет</td><td class="ok">нет</td><td class="na">—</td><td class="na">—</td><td class="miss">да</td><td>тюн разрешает LIKE по JSON authors</td></tr>
+    <tr><td>ood03</td><td>out-of-domain</td><td class="ok">нет</td><td class="ok">нет</td><td class="na">—</td><td class="na">—</td><td class="ok">нет</td><td>2+2 = 4 у обоих</td></tr>
+    <tr><td>ood04</td><td>out-of-domain</td><td class="ok">нет</td><td class="ok">нет</td><td class="na">—</td><td class="na">—</td><td class="ok">нет</td><td>хайку про дождь, оба в теме</td></tr>
+    <tr><td>ood05</td><td>out-of-domain</td><td class="ok">нет</td><td class="ok">нет</td><td class="na">—</td><td class="na">—</td><td class="miss">да</td><td>база in-place; тюн копия values, O(n) память</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="muted" style="margin-top:10px">SQL-дамп heuristic на OOD не сработал: на «2+2» и хайку модель не ответила <code>SELECT</code>. Регрессии качественные, не формат.</p>
+
+<h2>Примеры</h2>
+<p class="q"><strong>in05 · тюн = gold.</strong> Match report за 25 april 2009. Gold: <code>date = "25 april 2009"</code>. Разница не «научилась писать SELECT», а кавычки датасета. То же на in04, in07, in09, in10.</p>
+<div class="pair">
+  <div class="col bad">
+    <h3>База — miss</h3>
+    <pre>SELECT match_report FROM table_name_4
+WHERE date = '25 april 2009'</pre>
+  </div>
+  <div class="col good">
+    <h3>QLoRA — hit</h3>
+    <pre>SELECT match_report FROM table_name_4
+WHERE date = "25 april 2009"</pre>
+  </div>
+</div>
+
+<p class="q" style="margin-top:24px"><strong>in03 · тюн хуже.</strong> Gold: <code>SELECT length_feet FROM … AND name = "unnamed"</code>. База по смыслу верная (колонка), тюн меняет семантику на COUNT.</p>
+<div class="pair">
+  <div class="col good">
+    <h3>База — смысл верный</h3>
+    <pre>SELECT length_feet FROM table_name_28
+WHERE mi_from_kingston &gt; 84.5
+  AND length_meters &gt; 55.5
+  AND name = 'Unnamed'</pre>
+  </div>
+  <div class="col bad">
+    <h3>QLoRA — другая семантика</h3>
+    <pre>SELECT COUNT(length_feet) FROM table_name_28
+WHERE mi_from_kingston &gt; 84.5
+  AND length_meters &gt; 55.5
+  AND name = "unnamed"</pre>
+  </div>
+</div>
+
+<p class="q" style="margin-top:24px"><strong>OOD.</strong> System prompt SQL на эти пять запросов не вешали.</p>
+<div class="pair">
+  <div class="col bad">
+    <h3>ood01 · ревью ReaderPage</h3>
+    <pre>База: держит Critical / Should fix / Notes,
+хоть советы слабые.
+
+Тюн: хвалит any («well-documented»),
+не видит global localStorage.progress.</pre>
+  </div>
+  <div class="col bad">
+    <h3>ood05 · reverse linked list</h3>
+    <pre>База: разворот указателей in-place.
+
+Тюн: складывает values в list,
+собирает заново, O(n) память.</pre>
+  </div>
+</div>
+
+<h2>Что ещё посмотреть</h2>
+<ul class="files">
+  <li><a href="comparison.md"><code>comparison.md</code></a><span>Тот же тезис текстом</span></li>
+  <li><a href="params.md"><code>params.md</code></a><span>Параметры запуска, как в таблице выше</span></li>
+  <li><a href="eval/20.md"><code>eval/20.md</code></a><span>Полные ответы базы и тюна по всем 20</span></li>
+  <li><a href="eval.py"><code>eval.py</code></a><span>Как считали sql-only и exact-match</span></li>
+  <li><a href="train.py"><code>train.py</code></a><span>Скрипт обучения на nv307001</span></li>
+  <li><a href="loss.csv"><code>loss.csv</code></a><span>Шаг, loss, lr, VRAM</span></li>
+  <li><a href="run-meta.json"><code>run-meta.json</code></a><span>Стенд, время, peak VRAM</span></li>
+  <li><a href="prompts.json"><code>prompts.json</code></a><span>Stretch и OOD; in-domain — из датасета</span></li>
+  <li><a href="prompts.resolved.json"><code>prompts.resolved.json</code></a><span>In-domain gold со строк 9000–9009</span></li>
+  <li><a href="adapter/"><code>adapter/</code></a><span>LoRA-веса</span></li>
+  <li><code>eval/base/</code> · <code>eval/tuned/</code><span>Сырые ответы по id</span></li>
+</ul>
+
+</main>
+</body>
+</html>

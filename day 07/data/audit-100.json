@@ -1,0 +1,602 @@
+[
+ {
+  "id": "tr-160",
+  "verdict": "fix",
+  "fixed_to": "mql",
+  "comment": "asks for product details to pass to engineering"
+ },
+ {
+  "id": "tr-494",
+  "verdict": "fix",
+  "fixed_to": "no_change",
+  "comment": "personal chat, not about the offer"
+ },
+ {
+  "id": "tr-489",
+  "verdict": "fix",
+  "fixed_to": "positive",
+  "comment": "yes to receiving a demo, no contact yet"
+ },
+ {
+  "id": "tr-190",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "label matches the rules"
+ },
+ {
+  "id": "tr-424",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "label matches the rules"
+ },
+ {
+  "id": "tr-377",
+  "verdict": "fix",
+  "fixed_to": "no_change",
+  "comment": "prospect sells us a stand; no funnel move"
+ },
+ {
+  "id": "tr-466",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "label matches the rules"
+ },
+ {
+  "id": "tr-545",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "label matches the rules"
+ },
+ {
+  "id": "tr-122",
+  "verdict": "fix",
+  "fixed_to": "mql",
+  "comment": "own email in reply to email or WhatsApp"
+ },
+ {
+  "id": "tr-573",
+  "verdict": "fix",
+  "fixed_to": "positive",
+  "comment": "greeting reply"
+ },
+ {
+  "id": "tr-134",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "label matches the rules"
+ },
+ {
+  "id": "tr-091",
+  "verdict": "fix",
+  "fixed_to": "positive",
+  "comment": "will get in touch when back: maybe later"
+ },
+ {
+  "id": "tr-490",
+  "verdict": "fix",
+  "fixed_to": "no_change",
+  "comment": "personal chat, desert tours"
+ },
+ {
+  "id": "tr-285",
+  "verdict": "fix",
+  "fixed_to": "positive",
+  "comment": "Sure, no contact or ask yet"
+ },
+ {
+  "id": "tr-055",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "label matches the rules"
+ },
+ {
+  "id": "tr-222",
+  "verdict": "fix",
+  "fixed_to": "positive",
+  "comment": "yes, you can send; no contact yet"
+ },
+ {
+  "id": "tr-362",
+  "verdict": "fix",
+  "fixed_to": "not_ta",
+  "comment": "points us to the marketing team"
+ },
+ {
+  "id": "tr-248",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "label matches the rules"
+ },
+ {
+  "id": "tr-334",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "label matches the rules"
+ },
+ {
+  "id": "tr-221",
+  "verdict": "fix",
+  "fixed_to": "no_change",
+  "comment": "their event invite to us"
+ },
+ {
+  "id": "tr-194",
+  "verdict": "fix",
+  "fixed_to": "no_change",
+  "comment": "prospect pitching a speaking slot, not a refusal"
+ },
+ {
+  "id": "tr-155",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "label matches the rules"
+ },
+ {
+  "id": "tr-205",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "label matches the rules"
+ },
+ {
+  "id": "tr-374",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "label matches the rules"
+ },
+ {
+  "id": "tr-398",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "label matches the rules"
+ },
+ {
+  "id": "tr-442",
+  "verdict": "fix",
+  "fixed_to": "mql",
+  "comment": "own email after we asked for it"
+ },
+ {
+  "id": "tr-228",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "label matches the rules"
+ },
+ {
+  "id": "tr-434",
+  "verdict": "fix",
+  "fixed_to": "positive",
+  "comment": "yes, involved"
+ },
+ {
+  "id": "tr-496",
+  "verdict": "fix",
+  "fixed_to": "positive",
+  "comment": "confirms clients look for it"
+ },
+ {
+  "id": "tr-300",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "label matches the rules"
+ },
+ {
+  "id": "tr-404",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "label matches the rules"
+ },
+ {
+  "id": "tr-176",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "label matches the rules"
+ },
+ {
+  "id": "tr-137",
+  "verdict": "fix",
+  "fixed_to": "positive",
+  "comment": "friendly reply"
+ },
+ {
+  "id": "tr-196",
+  "verdict": "fix",
+  "fixed_to": "positive",
+  "comment": "confirms being the right person"
+ },
+ {
+  "id": "tr-006",
+  "verdict": "fix",
+  "fixed_to": "rejection",
+  "comment": "not keen on drones"
+ },
+ {
+  "id": "tr-427",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "label matches the rules"
+ },
+ {
+  "id": "tr-162",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "label matches the rules"
+ },
+ {
+  "id": "tr-178",
+  "verdict": "fix",
+  "fixed_to": "positive",
+  "comment": "greeting reply"
+ },
+ {
+  "id": "tr-209",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "label matches the rules"
+ },
+ {
+  "id": "tr-183",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "label matches the rules"
+ },
+ {
+  "id": "tr-030",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "label matches the rules"
+ },
+ {
+  "id": "tr-257",
+  "verdict": "fix",
+  "fixed_to": "positive",
+  "comment": "yes, send it; nothing held"
+ },
+ {
+  "id": "tr-482",
+  "verdict": "fix",
+  "fixed_to": "mql",
+  "comment": "has a concrete show and will share details"
+ },
+ {
+  "id": "tr-418",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "label matches the rules"
+ },
+ {
+  "id": "tr-140",
+  "verdict": "fix",
+  "fixed_to": "positive",
+  "comment": "sounds interesting"
+ },
+ {
+  "id": "tr-059",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "label matches the rules"
+ },
+ {
+  "id": "tr-269",
+  "verdict": "fix",
+  "fixed_to": "positive",
+  "comment": "will recommend us if an event comes up: maybe later"
+ },
+ {
+  "id": "tr-618",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "label matches the rules"
+ },
+ {
+  "id": "tr-314",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "label matches the rules"
+ },
+ {
+  "id": "tr-365",
+  "verdict": "fix",
+  "fixed_to": "mql",
+  "comment": "proposes a call without a fixed time"
+ },
+ {
+  "id": "tr-568",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "label matches the rules"
+ },
+ {
+  "id": "tr-370",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "label matches the rules"
+ },
+ {
+  "id": "tr-391",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "label matches the rules"
+ },
+ {
+  "id": "tr-519",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "label matches the rules"
+ },
+ {
+  "id": "tr-433",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "label matches the rules"
+ },
+ {
+  "id": "tr-069",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "label matches the rules"
+ },
+ {
+  "id": "tr-113",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "label matches the rules"
+ },
+ {
+  "id": "tr-325",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "label matches the rules"
+ },
+ {
+  "id": "tr-467",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "label matches the rules"
+ },
+ {
+  "id": "tr-274",
+  "verdict": "fix",
+  "fixed_to": "no_change",
+  "comment": "only a link, in a thread where they pitch us"
+ },
+ {
+  "id": "tr-260",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "label matches the rules"
+ },
+ {
+  "id": "tr-470",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "label matches the rules"
+ },
+ {
+  "id": "tr-552",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "label matches the rules"
+ },
+ {
+  "id": "tr-529",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "label matches the rules"
+ },
+ {
+  "id": "tr-276",
+  "verdict": "fix",
+  "fixed_to": "mql",
+  "comment": "own email"
+ },
+ {
+  "id": "tr-161",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "label matches the rules"
+ },
+ {
+  "id": "tr-065",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "label matches the rules"
+ },
+ {
+  "id": "tr-352",
+  "verdict": "fix",
+  "fixed_to": "sql",
+  "comment": "own phone number"
+ },
+ {
+  "id": "tr-180",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "label matches the rules"
+ },
+ {
+  "id": "tr-061",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "label matches the rules"
+ },
+ {
+  "id": "tr-299",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "label matches the rules"
+ },
+ {
+  "id": "tr-133",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "label matches the rules"
+ },
+ {
+  "id": "tr-057",
+  "verdict": "fix",
+  "fixed_to": "mql",
+  "comment": "gives own email to forward materials"
+ },
+ {
+  "id": "tr-237",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "label matches the rules"
+ },
+ {
+  "id": "tr-335",
+  "verdict": "fix",
+  "fixed_to": "positive",
+  "comment": "greeting reply"
+ },
+ {
+  "id": "tr-234",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "label matches the rules"
+ },
+ {
+  "id": "tr-384",
+  "verdict": "fix",
+  "fixed_to": "positive",
+  "comment": "yes to receiving a demo, no contact yet"
+ },
+ {
+  "id": "tr-360",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "label matches the rules"
+ },
+ {
+  "id": "tr-612",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "label matches the rules"
+ },
+ {
+  "id": "tr-014",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "label matches the rules"
+ },
+ {
+  "id": "tr-126",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "label matches the rules"
+ },
+ {
+  "id": "tr-510",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "label matches the rules"
+ },
+ {
+  "id": "tr-586",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "label matches the rules"
+ },
+ {
+  "id": "tr-131",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "label matches the rules"
+ },
+ {
+  "id": "tr-388",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "label matches the rules"
+ },
+ {
+  "id": "tr-322",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "label matches the rules"
+ },
+ {
+  "id": "tr-117",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "label matches the rules"
+ },
+ {
+  "id": "tr-024",
+  "verdict": "fix",
+  "fixed_to": "sql",
+  "comment": "locks an exact date and time"
+ },
+ {
+  "id": "tr-211",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "label matches the rules"
+ },
+ {
+  "id": "tr-570",
+  "verdict": "fix",
+  "fixed_to": "positive",
+  "comment": "greeting reply"
+ },
+ {
+  "id": "tr-503",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "label matches the rules"
+ },
+ {
+  "id": "tr-578",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "label matches the rules"
+ },
+ {
+  "id": "tr-218",
+  "verdict": "fix",
+  "fixed_to": "positive",
+  "comment": "send it here on LinkedIn: interest, not wrong person"
+ },
+ {
+  "id": "tr-366",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "label matches the rules"
+ },
+ {
+  "id": "tr-543",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "label matches the rules"
+ },
+ {
+  "id": "tr-086",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "label matches the rules"
+ },
+ {
+  "id": "tr-606",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "label matches the rules"
+ },
+ {
+  "id": "tr-355",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "label matches the rules"
+ },
+ {
+  "id": "tr-347",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "label matches the rules"
+ },
+ {
+  "id": "tr-259",
+  "verdict": "fix",
+  "fixed_to": "positive",
+  "comment": "friendly, finds the content useful"
+ }
+]

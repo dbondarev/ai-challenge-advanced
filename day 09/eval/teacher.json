@@ -1,0 +1,776 @@
+{
+ "model": "Qwen/Qwen2.5-7B-Instruct",
+ "n": 68,
+ "hits": 40,
+ "accuracy": 0.5882352941176471,
+ "wall_s": 20.519872665405273,
+ "ms_per_req": 301.76283331478345,
+ "peak_vram_mib": 5847,
+ "preds": [
+  {
+   "id": "ev-001",
+   "kind": "contact_shared",
+   "raw": "mql",
+   "pred": "mql",
+   "gold": [
+    "mql"
+   ],
+   "ok": true,
+   "ms": 677.4
+  },
+  {
+   "id": "ev-002",
+   "kind": "contact_shared",
+   "raw": "not_ta",
+   "pred": "not_ta",
+   "gold": [
+    "mql"
+   ],
+   "ok": false,
+   "ms": 249.4
+  },
+  {
+   "id": "ev-003",
+   "kind": "contact_shared",
+   "raw": "not_ta",
+   "pred": "not_ta",
+   "gold": [
+    "not_ta",
+    "mql"
+   ],
+   "ok": true,
+   "ms": 245.1
+  },
+  {
+   "id": "ev-004",
+   "kind": "contact_shared",
+   "raw": "not_ta",
+   "pred": "not_ta",
+   "gold": [
+    "mql"
+   ],
+   "ok": false,
+   "ms": 243.4
+  },
+  {
+   "id": "ev-005",
+   "kind": "contact_shared",
+   "raw": "not_ta",
+   "pred": "not_ta",
+   "gold": [
+    "mql"
+   ],
+   "ok": false,
+   "ms": 245.0
+  },
+  {
+   "id": "ev-006",
+   "kind": "contact_shared",
+   "raw": "not_ta",
+   "pred": "not_ta",
+   "gold": [
+    "not_ta"
+   ],
+   "ok": true,
+   "ms": 294.4
+  },
+  {
+   "id": "ev-007",
+   "kind": "contact_shared",
+   "raw": "not_ta",
+   "pred": "not_ta",
+   "gold": [
+    "mql"
+   ],
+   "ok": false,
+   "ms": 240.7
+  },
+  {
+   "id": "ev-008",
+   "kind": "single_reply",
+   "raw": "rejection",
+   "pred": "rejection",
+   "gold": [
+    "not_ta"
+   ],
+   "ok": false,
+   "ms": 245.0
+  },
+  {
+   "id": "ev-009",
+   "kind": "contact_shared",
+   "raw": "mql",
+   "pred": "mql",
+   "gold": [
+    "mql"
+   ],
+   "ok": true,
+   "ms": 245.5
+  },
+  {
+   "id": "ev-010",
+   "kind": "single_reply",
+   "raw": "no_change",
+   "pred": "no_change",
+   "gold": [
+    "no_change",
+    "not_ta"
+   ],
+   "ok": true,
+   "ms": 245.3
+  },
+  {
+   "id": "ev-011",
+   "kind": "multi_turn",
+   "raw": "positive",
+   "pred": "positive",
+   "gold": [
+    "no_change",
+    "not_ta"
+   ],
+   "ok": false,
+   "ms": 264.3
+  },
+  {
+   "id": "ev-012",
+   "kind": "contact_shared",
+   "raw": "mql",
+   "pred": "mql",
+   "gold": [
+    "mql"
+   ],
+   "ok": true,
+   "ms": 290.7
+  },
+  {
+   "id": "ev-013",
+   "kind": "contact_shared",
+   "raw": "no_change",
+   "pred": "no_change",
+   "gold": [
+    "mql"
+   ],
+   "ok": false,
+   "ms": 290.7
+  },
+  {
+   "id": "ev-014",
+   "kind": "contact_shared",
+   "raw": "mql",
+   "pred": "mql",
+   "gold": [
+    "mql"
+   ],
+   "ok": true,
+   "ms": 245.1
+  },
+  {
+   "id": "ev-015",
+   "kind": "single_reply",
+   "raw": "no_change",
+   "pred": "no_change",
+   "gold": [
+    "no_change",
+    "not_ta"
+   ],
+   "ok": true,
+   "ms": 240.4
+  },
+  {
+   "id": "ev-016",
+   "kind": "single_reply",
+   "raw": "no_change",
+   "pred": "no_change",
+   "gold": [
+    "mql",
+    "positive"
+   ],
+   "ok": false,
+   "ms": 291.8
+  },
+  {
+   "id": "ev-017",
+   "kind": "single_reply",
+   "raw": "mql",
+   "pred": "mql",
+   "gold": [
+    "mql"
+   ],
+   "ok": true,
+   "ms": 290.4
+  },
+  {
+   "id": "ev-018",
+   "kind": "contact_shared",
+   "raw": "mql",
+   "pred": "mql",
+   "gold": [
+    "mql"
+   ],
+   "ok": true,
+   "ms": 291.7
+  },
+  {
+   "id": "ev-019",
+   "kind": "contact_shared",
+   "raw": "no_change",
+   "pred": "no_change",
+   "gold": [
+    "mql"
+   ],
+   "ok": false,
+   "ms": 291.5
+  },
+  {
+   "id": "ev-020",
+   "kind": "contact_shared",
+   "raw": "mql",
+   "pred": "mql",
+   "gold": [
+    "mql"
+   ],
+   "ok": true,
+   "ms": 293.8
+  },
+  {
+   "id": "ev-021",
+   "kind": "contact_shared",
+   "raw": "rejection",
+   "pred": "rejection",
+   "gold": [
+    "positive",
+    "no_change"
+   ],
+   "ok": false,
+   "ms": 336.3
+  },
+  {
+   "id": "ev-022",
+   "kind": "contact_shared",
+   "raw": "rejection",
+   "pred": "rejection",
+   "gold": [
+    "mql"
+   ],
+   "ok": false,
+   "ms": 341.4
+  },
+  {
+   "id": "ev-023",
+   "kind": "contact_shared",
+   "raw": "meeting_held",
+   "pred": "meeting_held",
+   "gold": [
+    "mql"
+   ],
+   "ok": false,
+   "ms": 365.3
+  },
+  {
+   "id": "ev-024",
+   "kind": "contact_shared",
+   "raw": "meeting_held",
+   "pred": "meeting_held",
+   "gold": [
+    "sql"
+   ],
+   "ok": false,
+   "ms": 366.0
+  },
+  {
+   "id": "ev-025",
+   "kind": "contact_shared",
+   "raw": "sql",
+   "pred": "sql",
+   "gold": [
+    "sql"
+   ],
+   "ok": true,
+   "ms": 306.7
+  },
+  {
+   "id": "ev-026",
+   "kind": "contact_shared",
+   "raw": "meeting_held",
+   "pred": "meeting_held",
+   "gold": [
+    "sql"
+   ],
+   "ok": false,
+   "ms": 382.8
+  },
+  {
+   "id": "ev-027",
+   "kind": "contact_shared",
+   "raw": "no_change",
+   "pred": "no_change",
+   "gold": [
+    "mql"
+   ],
+   "ok": false,
+   "ms": 244.2
+  },
+  {
+   "id": "ev-028",
+   "kind": "contact_shared",
+   "raw": "mql",
+   "pred": "mql",
+   "gold": [
+    "mql"
+   ],
+   "ok": true,
+   "ms": 288.7
+  },
+  {
+   "id": "ev-029",
+   "kind": "single_reply",
+   "raw": "rejection",
+   "pred": "rejection",
+   "gold": [
+    "not_ta"
+   ],
+   "ok": false,
+   "ms": 288.8
+  },
+  {
+   "id": "ev-030",
+   "kind": "contact_shared",
+   "raw": "mql",
+   "pred": "mql",
+   "gold": [
+    "mql"
+   ],
+   "ok": true,
+   "ms": 247.8
+  },
+  {
+   "id": "ev-031",
+   "kind": "contact_shared",
+   "raw": "no_change",
+   "pred": "no_change",
+   "gold": [
+    "mql"
+   ],
+   "ok": false,
+   "ms": 289.0
+  },
+  {
+   "id": "ev-032",
+   "kind": "contact_shared",
+   "raw": "rejection",
+   "pred": "rejection",
+   "gold": [
+    "rejection"
+   ],
+   "ok": true,
+   "ms": 291.4
+  },
+  {
+   "id": "ev-033",
+   "kind": "contact_shared",
+   "raw": "rejection",
+   "pred": "rejection",
+   "gold": [
+    "rejection"
+   ],
+   "ok": true,
+   "ms": 292.3
+  },
+  {
+   "id": "ev-034",
+   "kind": "contact_shared",
+   "raw": "not_ta",
+   "pred": "not_ta",
+   "gold": [
+    "not_ta",
+    "mql"
+   ],
+   "ok": true,
+   "ms": 244.1
+  },
+  {
+   "id": "ev-035",
+   "kind": "single_reply",
+   "raw": "mql",
+   "pred": "mql",
+   "gold": [
+    "no_change",
+    "not_ta"
+   ],
+   "ok": false,
+   "ms": 251.6
+  },
+  {
+   "id": "ev-036",
+   "kind": "single_reply",
+   "raw": "rejection",
+   "pred": "rejection",
+   "gold": [
+    "not_ta"
+   ],
+   "ok": false,
+   "ms": 288.3
+  },
+  {
+   "id": "ev-037",
+   "kind": "single_reply",
+   "raw": "rejection",
+   "pred": "rejection",
+   "gold": [
+    "rejection"
+   ],
+   "ok": true,
+   "ms": 292.7
+  },
+  {
+   "id": "ev-038",
+   "kind": "contact_shared",
+   "raw": "mql",
+   "pred": "mql",
+   "gold": [
+    "mql"
+   ],
+   "ok": true,
+   "ms": 290.0
+  },
+  {
+   "id": "ev-039",
+   "kind": "single_reply",
+   "raw": "not_ta",
+   "pred": "not_ta",
+   "gold": [
+    "not_ta"
+   ],
+   "ok": true,
+   "ms": 290.0
+  },
+  {
+   "id": "ev-040",
+   "kind": "multi_turn",
+   "raw": "not_ta",
+   "pred": "not_ta",
+   "gold": [
+    "not_ta"
+   ],
+   "ok": true,
+   "ms": 289.9
+  },
+  {
+   "id": "ev-041",
+   "kind": "contact_shared",
+   "raw": "not_ta",
+   "pred": "not_ta",
+   "gold": [
+    "not_ta"
+   ],
+   "ok": true,
+   "ms": 288.2
+  },
+  {
+   "id": "ev-042",
+   "kind": "contact_shared",
+   "raw": "mql",
+   "pred": "mql",
+   "gold": [
+    "mql"
+   ],
+   "ok": true,
+   "ms": 288.7
+  },
+  {
+   "id": "ev-043",
+   "kind": "contact_shared",
+   "raw": "mql",
+   "pred": "mql",
+   "gold": [
+    "mql"
+   ],
+   "ok": true,
+   "ms": 291.1
+  },
+  {
+   "id": "ev-044",
+   "kind": "contact_shared",
+   "raw": "no_change",
+   "pred": "no_change",
+   "gold": [
+    "mql"
+   ],
+   "ok": false,
+   "ms": 292.6
+  },
+  {
+   "id": "ev-045",
+   "kind": "single_reply",
+   "raw": "no_change",
+   "pred": "no_change",
+   "gold": [
+    "positive",
+    "mql"
+   ],
+   "ok": false,
+   "ms": 245.4
+  },
+  {
+   "id": "ev-046",
+   "kind": "single_reply",
+   "raw": "rejection",
+   "pred": "rejection",
+   "gold": [
+    "rejection"
+   ],
+   "ok": true,
+   "ms": 289.6
+  },
+  {
+   "id": "ev-047",
+   "kind": "single_reply",
+   "raw": "rejection",
+   "pred": "rejection",
+   "gold": [
+    "rejection"
+   ],
+   "ok": true,
+   "ms": 286.4
+  },
+  {
+   "id": "ev-048",
+   "kind": "contact_shared",
+   "raw": "mql",
+   "pred": "mql",
+   "gold": [
+    "not_ta",
+    "mql"
+   ],
+   "ok": true,
+   "ms": 245.0
+  },
+  {
+   "id": "ev-049",
+   "kind": "contact_shared",
+   "raw": "positive",
+   "pred": "positive",
+   "gold": [
+    "not_ta",
+    "mql"
+   ],
+   "ok": false,
+   "ms": 217.2
+  },
+  {
+   "id": "ev-050",
+   "kind": "single_reply",
+   "raw": "rejection",
+   "pred": "rejection",
+   "gold": [
+    "not_ta"
+   ],
+   "ok": false,
+   "ms": 288.4
+  },
+  {
+   "id": "ev-051",
+   "kind": "multi_turn",
+   "raw": "not_ta",
+   "pred": "not_ta",
+   "gold": [
+    "not_ta"
+   ],
+   "ok": true,
+   "ms": 288.6
+  },
+  {
+   "id": "ev-052",
+   "kind": "contact_shared",
+   "raw": "mql",
+   "pred": "mql",
+   "gold": [
+    "no_change",
+    "not_ta"
+   ],
+   "ok": false,
+   "ms": 334.0
+  },
+  {
+   "id": "ev-053",
+   "kind": "single_reply",
+   "raw": "rejection",
+   "pred": "rejection",
+   "gold": [
+    "rejection"
+   ],
+   "ok": true,
+   "ms": 244.5
+  },
+  {
+   "id": "ev-054",
+   "kind": "contact_shared",
+   "raw": "not_ta",
+   "pred": "not_ta",
+   "gold": [
+    "not_ta",
+    "mql"
+   ],
+   "ok": true,
+   "ms": 244.9
+  },
+  {
+   "id": "ev-055",
+   "kind": "contact_shared",
+   "raw": "mql",
+   "pred": "mql",
+   "gold": [
+    "mql"
+   ],
+   "ok": true,
+   "ms": 247.0
+  },
+  {
+   "id": "ev-056",
+   "kind": "contact_shared",
+   "raw": "mql",
+   "pred": "mql",
+   "gold": [
+    "mql"
+   ],
+   "ok": true,
+   "ms": 245.7
+  },
+  {
+   "id": "ev-057",
+   "kind": "contact_shared",
+   "raw": "not_ta",
+   "pred": "not_ta",
+   "gold": [
+    "not_ta",
+    "mql"
+   ],
+   "ok": true,
+   "ms": 253.3
+  },
+  {
+   "id": "ev-058",
+   "kind": "contact_shared",
+   "raw": "mql",
+   "pred": "mql",
+   "gold": [
+    "mql"
+   ],
+   "ok": true,
+   "ms": 244.8
+  },
+  {
+   "id": "ev-059",
+   "kind": "contact_shared",
+   "raw": "rejection",
+   "pred": "rejection",
+   "gold": [
+    "rejection",
+    "not_ta"
+   ],
+   "ok": true,
+   "ms": 288.2
+  },
+  {
+   "id": "ev-060",
+   "kind": "contact_shared",
+   "raw": "no_change",
+   "pred": "no_change",
+   "gold": [
+    "mql"
+   ],
+   "ok": false,
+   "ms": 245.6
+  },
+  {
+   "id": "ev-061",
+   "kind": "contact_shared",
+   "raw": "mql",
+   "pred": "mql",
+   "gold": [
+    "mql"
+   ],
+   "ok": true,
+   "ms": 247.4
+  },
+  {
+   "id": "ev-062",
+   "kind": "single_reply",
+   "raw": "no_change",
+   "pred": "no_change",
+   "gold": [
+    "mql"
+   ],
+   "ok": false,
+   "ms": 244.1
+  },
+  {
+   "id": "ev-063",
+   "kind": "multi_turn",
+   "raw": "rejection",
+   "pred": "rejection",
+   "gold": [
+    "rejection"
+   ],
+   "ok": true,
+   "ms": 246.8
+  },
+  {
+   "id": "ev-064",
+   "kind": "contact_shared",
+   "raw": "sql",
+   "pred": "sql",
+   "gold": [
+    "no_change",
+    "not_ta"
+   ],
+   "ok": false,
+   "ms": 306.2
+  },
+  {
+   "id": "ev-065",
+   "kind": "single_reply",
+   "raw": "rejection",
+   "pred": "rejection",
+   "gold": [
+    "rejection"
+   ],
+   "ok": true,
+   "ms": 244.7
+  },
+  {
+   "id": "ev-066",
+   "kind": "contact_shared",
+   "raw": "mql",
+   "pred": "mql",
+   "gold": [
+    "mql"
+   ],
+   "ok": true,
+   "ms": 245.2
+  },
+  {
+   "id": "ev-067",
+   "kind": "contact_shared",
+   "raw": "not_ta",
+   "pred": "not_ta",
+   "gold": [
+    "mql"
+   ],
+   "ok": false,
+   "ms": 244.4
+  },
+  {
+   "id": "ev-068",
+   "kind": "contact_shared",
+   "raw": "not_ta",
+   "pred": "not_ta",
+   "gold": [
+    "not_ta",
+    "mql"
+   ],
+   "ok": true,
+   "ms": 254.5
+  }
+ ]
+}

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>День 10 · тюн в сервисе, shadow</title>
+<style>
+  :root {
+    --bg: #0b0d11;
+    --card: #14181f;
+    --line: #2a3140;
+    --text: #eef1f6;
+    --muted: #8b93a7;
+    --win: #34d399;
+    --win-dim: rgba(52, 211, 153, .12);
+    --lose: #fb7185;
+    --accent: #67e8f9;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.5 ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { max-width: 1080px; margin: 0 auto; padding: 48px 40px 80px; }
+  .kicker { color: var(--accent); font-size: 12px; font-weight: 600; letter-spacing: .14em;
+    text-transform: uppercase; margin: 0 0 8px; }
+  h1 { font-size: 36px; line-height: 1.15; font-weight: 600; margin: 0 0 14px; letter-spacing: -0.03em; }
+  h2 { font-size: 24px; font-weight: 600; margin: 48px 0 14px; letter-spacing: -0.02em; }
+  p.lead { font-size: 18px; color: var(--muted); max-width: 48rem; margin: 0 0 8px; }
+  p { margin: 0 0 10px; }
+  .muted { color: var(--muted); }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 28px 0 8px; }
+  .stat { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; }
+  .stat b { display: block; font-size: 20px; font-weight: 600; letter-spacing: -0.02em; }
+  .stat span { color: var(--muted); font-size: 12px; }
+  .scores { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin: 16px 0 8px; }
+  .score { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; }
+  .score.win { border-color: #065f46; background: var(--win-dim); }
+  .score .n { font-size: 32px; font-weight: 600; letter-spacing: -0.04em; line-height: 1; }
+  .score.win .n { color: var(--win); }
+  .score .lbl { color: var(--muted); margin-top: 6px; font-size: 13px; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { color: var(--muted); font-weight: 600; font-size: 11px; letter-spacing: .06em; text-transform: uppercase; }
+  .ok { color: var(--win); font-weight: 600; }
+  .miss { color: var(--lose); font-weight: 600; }
+  .params { width: 100%; font-size: 14px; }
+  .params th { width: 28%; color: var(--muted); font-weight: 500; text-transform: none; letter-spacing: 0; font-size: 13px; }
+  .params td, .params th { padding: 7px 10px; }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .92em; }
+  .q { background: var(--card); border-radius: 12px; padding: 12px 16px; margin: 0 0 14px; color: var(--muted); }
+  .q strong { color: var(--text); font-weight: 500; }
+  .files { display: grid; grid-template-columns: 1fr 1fr; gap: 0 28px; margin: 0; padding: 0; list-style: none; }
+  .files li { border-bottom: 1px solid var(--line); padding: 10px 0; }
+  .files code { color: var(--accent); }
+  .files span { display: block; color: var(--muted); font-size: 13px; }
+  .note { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 12px 16px; color: var(--muted); font-size: 14px; }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  pre.cmd { margin: 0 0 12px; background: #0a0c10; border: 1px solid var(--line); border-radius: 12px;
+    padding: 14px 16px; font: 13px/1.45 ui-monospace, SFMono-Regular, Menlo, monospace; overflow: auto; }
+  @media (max-width: 800px) {
+    main { padding: 28px 16px 48px; }
+    .stats, .scores, .files, .two { grid-template-columns: 1fr; }
+    .wrap { overflow-x: auto; }
+  }
+</style>
+</head>
+<body>
+<main>
+
+<p class="kicker">AI challenge · день 10</p>
+<h1>Локальный 1.5B рядом с luna: shadow на живых входящих</h1>
+<p class="lead">Gold-адаптер дня 7 стоит на nv307001 как Ollama <code>nexus-reply-status</code>, OpenAI-совместимый <code>/v1</code> рядом с моделями дня 4. Luna по-прежнему пишет метки в Nexus. Локальная модель гоняется <strong>параллельно для тестов</strong>: те же треды, сравнение enum vs luna, в классификации не пишем.</p>
+
+<div class="stats">
+  <div class="stat"><b>334 нити</b><span>~2 дня, 23 проекта, метка luna</span></div>
+  <div class="stat"><b>24% → 62%</b><span>база vs QLoRA, agreement с luna</span></div>
+  <div class="stat"><b>66 мс</b><span>Ollama Q4_K_M, 1.3 GB VRAM</span></div>
+  <div class="stat"><b>:11434/v1</b><span>модель nexus-reply-status</span></div>
+</div>
+
+<h2>Как стоит для тестов</h2>
+<p>Кандидат — day-7 gold (79% eval / 65% eval2), не смесь дня 8 и не opus дня 9. Веса на хосте <code>100.82.92.14</code>, не в git.</p>
+<table class="params">
+  <tr><th>Сервинг</th><td>Ollama tag <code>nexus-reply-status</code>, Q4_K_M 941 MB, temperature 0, рядом с qwen2.5-coder дня 4</td></tr>
+  <tr><th>Endpoint</th><td><code>http://100.82.92.14:11434/v1</code> · SDK: <code>base_url=…/v1</code>, <code>model=nexus-reply-status</code></td></tr>
+  <tr><th>Запас</th><td>merged fp16 <code>~/day10-serve/merged-fp16</code> (2.9 GB, 91 мс, 3.2 GB VRAM)</td></tr>
+  <tr><th>Прод-писатель</th><td>luna v2 JSON (сигналы → статус кодом). 1.5B отвечает одним словом enum — параллельный скоринг статуса, не замена всего воркера</td></tr>
+  <tr><th>Переключение теста</th><td>label-worker: <code>local</code> → тот же OpenAI SDK на этот host; рестарт только воркера. Откат — снова openai / luna. Подробно <a href="rollout.md">rollout.md</a></td></tr>
+</table>
+<pre class="cmd">curl -sS http://100.82.92.14:11434/v1/models
+# среди тегов: nexus-reply-status:latest</pre>
+
+<h2>Железо (68 eval)</h2>
+<p class="muted">Temperature 0, max_new_tokens 8, короткий system дня 7. nv307001 RTX 3070. <a href="eval/bench68.json">bench68.json</a></p>
+<div class="wrap">
+<table>
+  <thead>
+    <tr><th>режим</th><th>загрузка</th><th>peak VRAM</th><th>мс/запрос</th><th>диск</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>база fp16</td><td>1.0 с</td><td>3229 MiB</td><td>88</td><td>HF cache</td></tr>
+    <tr><td>PEFT adapter</td><td>1.4 с</td><td>3339 MiB</td><td>156</td><td>46 MB</td></tr>
+    <tr><td>merged fp16</td><td>1.9 с</td><td>3229 MiB</td><td>91</td><td>2955 MB</td></tr>
+    <tr><td>NF4 + adapter</td><td>1.9 с</td><td>3301 MiB</td><td>205</td><td>46 MB</td></tr>
+    <tr><td class="ok">Ollama Q4_K_M</td><td>1.8 с (холодный)</td><td class="ok">1265 MiB</td><td class="ok">66</td><td>941 MB</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="muted" style="margin-top:10px">Для параллельных тестов держать Q4_K_M: меньше диск и VRAM, быстрее запрос. NF4 на этой карте медленнее fp16. Shadow PEFT: ~142 мс × 374.</p>
+
+<h2>Выгрузка для shadow</h2>
+<p>Read-only API, <code>since=2026-10-28T00:00:00Z</code> (~2 суток). Все 53 outreach-проекта, не только 12 train. Сырой текст — gitignored local Nexus; здесь ids и агрегаты.</p>
+<div class="wrap">
+<table>
+  <tr><th>Проектов с inbound</th><td>23 из 53</td></tr>
+  <tr><th>Нитей</th><td>374</td></tr>
+  <tr><th>С меткой luna</th><td>334 (<code>suggested_by=openai</code>, confirmed=0)</td></tr>
+  <tr><th>Без метки</th><td>40</td></tr>
+  <tr><th>Сравнение</th><td>одно слово enum, не JSON next_step / referral / facts</td></tr>
+</table>
+</div>
+<p class="muted">luna: <code>no_change</code> 167, <code>mql</code> 69, <code>not_ta</code> 51, <code>rejection</code> 23, <code>positive</code> 17, <code>sql</code> 7.</p>
+
+<h2>Результаты: база vs тюн vs luna</h2>
+<div class="scores">
+  <div class="score">
+    <div class="n">79/334</div>
+    <div class="lbl">1.5B база + system · 24%</div>
+  </div>
+  <div class="score win">
+    <div class="n">207/334</div>
+    <div class="lbl">Day-7 QLoRA · 62% vs luna</div>
+  </div>
+  <div class="score">
+    <div class="n">+38 pp</div>
+    <div class="lbl">тюн чинит 153, ломает 25; оба неправы 102</div>
+  </div>
+</div>
+
+<div class="wrap">
+<table>
+  <thead>
+    <tr><th>набор</th><th>метка</th><th>база + system</th><th>QLoRA</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>eval.jsonl · 68 · проект 98</td><td>ручной gold</td><td>31/68 · 46%</td><td class="ok">54/68 · 79%</td></tr>
+    <tr><td>eval2.jsonl · 149 · 7 проектов</td><td>gold</td><td>24/149 · 16%</td><td class="ok">97/149 · 65%</td></tr>
+    <tr><td>shadow ~2 дня · 334</td><td>luna (прод)</td><td>79/334 · 24%</td><td class="ok">207/334 · 62%</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="note" style="margin-top:14px">Shadow ближе к eval2, чем к eval: живой поток размечен luna (сигналы → статус кодом), не правилом «изменение от последнего IN». <code>no_change</code> здесь половина выборки.</p>
+
+<h2>По классам и kind</h2>
+<div class="wrap">
+<table>
+  <thead><tr><th>класс</th><th>n</th><th>база</th><th>тюн</th></tr></thead>
+  <tbody>
+    <tr><td><code>no_change</code></td><td>167</td><td>8 (5%)</td><td class="ok">112 (67%)</td></tr>
+    <tr><td><code>mql</code></td><td>69</td><td>29 (42%)</td><td class="ok">50 (72%)</td></tr>
+    <tr><td><code>not_ta</code></td><td>51</td><td class="ok">27 (53%)</td><td class="miss">18 (35%)</td></tr>
+    <tr><td><code>rejection</code></td><td>23</td><td>10 (43%)</td><td>15 (65%)</td></tr>
+    <tr><td><code>positive</code></td><td>17</td><td>3 (18%)</td><td>9 (53%)</td></tr>
+    <tr><td><code>sql</code></td><td>7</td><td>2 (29%)</td><td>3 (43%)</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="muted" style="margin-top:10px">База почти не умеет <code>no_change</code>. Тюн это поднимает. <code>not_ta</code> хуже базы: 19 раз luna=<code>not_ta</code>, модель <code>rejection</code>. Kind: contact_shared 114/168 (68%), multi_turn 53/80 (66%), single_reply 40/86 (47%).</p>
+
+<h2>По проектам (n≥10)</h2>
+<div class="wrap">
+<table>
+  <thead><tr><th>project</th><th>n</th><th>тюн</th><th>база</th><th></th></tr></thead>
+  <tbody>
+    <tr><td>4</td><td>78</td><td class="ok">71%</td><td>19%</td><td>train</td></tr>
+    <tr><td>5</td><td>70</td><td>59%</td><td>26%</td><td>train</td></tr>
+    <tr><td>23</td><td>31</td><td>58%</td><td>23%</td><td>train</td></tr>
+    <tr><td>79</td><td>30</td><td>57%</td><td>27%</td><td>train</td></tr>
+    <tr><td>9</td><td>27</td><td>48%</td><td>30%</td><td>train</td></tr>
+    <tr><td>113</td><td>25</td><td class="ok">84%</td><td>8%</td><td>train</td></tr>
+    <tr><td>98</td><td>19</td><td>58%</td><td>21%</td><td>eval дня 7; живое окно ≠ 79% gold</td></tr>
+    <tr><td>12</td><td>14</td><td>64%</td><td>29%</td><td>train</td></tr>
+    <tr><td>65</td><td>12</td><td>42%</td><td>33%</td><td>train</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="muted" style="margin-top:10px">Частые расхождения тюн vs luna: <code>no_change→mql</code> 23, <code>not_ta→rejection</code> 19, <code>no_change→not_ta</code> 14, <code>mql→no_change</code> 11. Бьют по воронке, если резать статус локально без разбора.</p>
+
+<h2>Как читать результат</h2>
+<div class="two">
+  <div>
+    <p><strong>Для параллельных тестов этого достаточно.</strong> Тюн устойчиво лучше базы на живом потоке (+38 pp). Endpoint уже отвечает. Можно гонять те же inbound и смотреть disagreement без записи в прод.</p>
+  </div>
+  <div>
+    <p><strong>Резать luna на весь JSON рано.</strong> 62% vs luna &lt; порога ~80% + ручная выборка. 1.5B не умеет next_step / referral / facts. Дальше: гибрид (статус локально, JSON — luna) или дистилляция схемы.</p>
+  </div>
+</div>
+
+<h2>Что ещё посмотреть</h2>
+<ul class="files">
+  <li><a href="shadow.md"><code>shadow.md</code></a><span>Выгрузка, классы, проекты, расхождения</span></li>
+  <li><a href="comparison.md"><code>comparison.md</code></a><span>eval / eval2 / shadow рядом</span></li>
+  <li><a href="bench.md"><code>bench.md</code></a><span>Merge, GGUF, latency</span></li>
+  <li><a href="rollout.md"><code>rollout.md</code></a><span>Артефакт, preflight, local / откат</span></li>
+  <li><a href="eval/shadow.json"><code>eval/shadow.json</code></a> · <a href="eval/shadow-preds.json"><code>shadow-preds.json</code></a><span>Счётчики без текста нитей</span></li>
+  <li><a href="eval/bench68.json"><code>eval/bench68.json</code></a><span>Замеры на 68 eval</span></li>
+  <li><a href="Modelfile"><code>Modelfile</code></a><span>Ollama create nexus-reply-status</span></li>
+  <li><a href="merge_bench.py"><code>merge_bench.py</code></a> · <a href="shadow_eval.py"><code>shadow_eval.py</code></a><span>Слияние и shadow-скоринг</span></li>
+</ul>
+
+</main>
+</body>
+</html>

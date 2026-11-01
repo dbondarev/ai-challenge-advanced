@@ -1,0 +1,1772 @@
+{
+ "eval": {
+  "hits": 53,
+  "n": 68,
+  "accuracy": 0.7794117647058824,
+  "preds": [
+   {
+    "id": "ev-001",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-002",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-003",
+    "pred": "mql",
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-004",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-005",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-006",
+    "pred": "rejection",
+    "gold": [
+     "not_ta"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-007",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-008",
+    "pred": "not_ta",
+    "gold": [
+     "not_ta"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-009",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-010",
+    "pred": "no_change",
+    "gold": [
+     "no_change",
+     "not_ta"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-011",
+    "pred": "no_change",
+    "gold": [
+     "no_change",
+     "not_ta"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-012",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-013",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-014",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-015",
+    "pred": "mql",
+    "gold": [
+     "no_change",
+     "not_ta"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-016",
+    "pred": "no_change",
+    "gold": [
+     "mql",
+     "positive"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-017",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-018",
+    "pred": "mql",
+    "gold": [
+     "no_change",
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-019",
+    "pred": "mql",
+    "gold": [
+     "no_change"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-020",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-021",
+    "pred": "no_change",
+    "gold": [
+     "positive",
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-022",
+    "pred": "no_change",
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-023",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-024",
+    "pred": "no_change",
+    "gold": [
+     "sql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-025",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-026",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-027",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-028",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-029",
+    "pred": "not_ta",
+    "gold": [
+     "not_ta"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-030",
+    "pred": "not_ta",
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-031",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-032",
+    "pred": "rejection",
+    "gold": [
+     "rejection"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-033",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-034",
+    "pred": "mql",
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-035",
+    "pred": "no_change",
+    "gold": [
+     "no_change",
+     "not_ta"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-036",
+    "pred": "rejection",
+    "gold": [
+     "not_ta"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-037",
+    "pred": "rejection",
+    "gold": [
+     "rejection"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-038",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-039",
+    "pred": "not_ta",
+    "gold": [
+     "not_ta"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-040",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-041",
+    "pred": "no_change",
+    "gold": [
+     "no_change",
+     "not_ta"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-042",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-043",
+    "pred": "mql",
+    "gold": [
+     "no_change",
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-044",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-045",
+    "pred": "not_ta",
+    "gold": [
+     "positive",
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-046",
+    "pred": "rejection",
+    "gold": [
+     "rejection"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-047",
+    "pred": "rejection",
+    "gold": [
+     "rejection"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-048",
+    "pred": "mql",
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-049",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-050",
+    "pred": "rejection",
+    "gold": [
+     "not_ta"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-051",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-052",
+    "pred": "no_change",
+    "gold": [
+     "no_change",
+     "not_ta"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-053",
+    "pred": "rejection",
+    "gold": [
+     "rejection"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-054",
+    "pred": "mql",
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-055",
+    "pred": "not_ta",
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-056",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-057",
+    "pred": "rejection",
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-058",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-059",
+    "pred": "rejection",
+    "gold": [
+     "rejection",
+     "not_ta"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-060",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-061",
+    "pred": "not_ta",
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-062",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-063",
+    "pred": "not_ta",
+    "gold": [
+     "rejection"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-064",
+    "pred": "no_change",
+    "gold": [
+     "no_change",
+     "not_ta"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-065",
+    "pred": "not_ta",
+    "gold": [
+     "rejection"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev-066",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-067",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev-068",
+    "pred": "mql",
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "ok": true
+   }
+  ]
+ },
+ "eval2": {
+  "hits": 102,
+  "n": 149,
+  "accuracy": 0.6845637583892618,
+  "preds": [
+   {
+    "id": "ev2-001",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-002",
+    "pred": "rejection",
+    "gold": [
+     "no_change"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev2-003",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-004",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-005",
+    "pred": "no_change",
+    "gold": [
+     "positive"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev2-006",
+    "pred": "no_change",
+    "gold": [
+     "positive"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev2-007",
+    "pred": "rejection",
+    "gold": [
+     "rejection"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-008",
+    "pred": "rejection",
+    "gold": [
+     "rejection"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-009",
+    "pred": "positive",
+    "gold": [
+     "positive"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-010",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-011",
+    "pred": "no_change",
+    "gold": [
+     "positive"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev2-012",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-013",
+    "pred": "rejection",
+    "gold": [
+     "rejection"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-016",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-017",
+    "pred": "not_ta",
+    "gold": [
+     "positive"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev2-018",
+    "pred": "rejection",
+    "gold": [
+     "not_ta"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev2-019",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-020",
+    "pred": "no_change",
+    "gold": [
+     "positive"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev2-021",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-022",
+    "pred": "positive",
+    "gold": [
+     "positive"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-023",
+    "pred": "rejection",
+    "gold": [
+     "rejection"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-024",
+    "pred": "rejection",
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev2-025",
+    "pred": "no_change",
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev2-026",
+    "pred": "mql",
+    "gold": [
+     "sql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev2-027",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-028",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-029",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-030",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-031",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-032",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-033",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-034",
+    "pred": "rejection",
+    "gold": [
+     "rejection"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-035",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-036",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-037",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-038",
+    "pred": "sql",
+    "gold": [
+     "sql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-039",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-040",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-041",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-042",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-043",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-044",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-045",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-046",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-047",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-048",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-049",
+    "pred": "no_change",
+    "gold": [
+     "positive"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev2-050",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-051",
+    "pred": "mql",
+    "gold": [
+     "not_ta"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev2-052",
+    "pred": "rejection",
+    "gold": [
+     "rejection"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-053",
+    "pred": "rejection",
+    "gold": [
+     "not_ta"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev2-054",
+    "pred": "rejection",
+    "gold": [
+     "rejection"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-055",
+    "pred": "rejection",
+    "gold": [
+     "not_ta"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev2-056",
+    "pred": "rejection",
+    "gold": [
+     "rejection"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-057",
+    "pred": "positive",
+    "gold": [
+     "positive"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-058",
+    "pred": "mql",
+    "gold": [
+     "no_change"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev2-059",
+    "pred": "not_ta",
+    "gold": [
+     "not_ta"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-060",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-061",
+    "pred": "not_ta",
+    "gold": [
+     "not_ta"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-062",
+    "pred": "rejection",
+    "gold": [
+     "not_ta"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev2-063",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-064",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-065",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-066",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-067",
+    "pred": "positive",
+    "gold": [
+     "positive"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-068",
+    "pred": "not_ta",
+    "gold": [
+     "not_ta"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-069",
+    "pred": "no_change",
+    "gold": [
+     "positive"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev2-070",
+    "pred": "not_ta",
+    "gold": [
+     "positive"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev2-071",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-072",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-073",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-074",
+    "pred": "positive",
+    "gold": [
+     "positive"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-075",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-076",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-077",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-078",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-079",
+    "pred": "rejection",
+    "gold": [
+     "positive"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev2-080",
+    "pred": "no_change",
+    "gold": [
+     "positive"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev2-081",
+    "pred": "sql",
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev2-082",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-083",
+    "pred": "positive",
+    "gold": [
+     "positive"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-084",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-085",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-086",
+    "pred": "positive",
+    "gold": [
+     "positive"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-087",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-088",
+    "pred": "positive",
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev2-089",
+    "pred": "positive",
+    "gold": [
+     "positive"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-090",
+    "pred": "no_change",
+    "gold": [
+     "positive"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev2-091",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-092",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-093",
+    "pred": "rejection",
+    "gold": [
+     "positive"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev2-094",
+    "pred": "no_change",
+    "gold": [
+     "positive"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev2-095",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-096",
+    "pred": "rejection",
+    "gold": [
+     "rejection"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-097",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-098",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-099",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-100",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-101",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-102",
+    "pred": "rejection",
+    "gold": [
+     "positive"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev2-103",
+    "pred": "no_change",
+    "gold": [
+     "positive"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev2-104",
+    "pred": "no_change",
+    "gold": [
+     "positive"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev2-105",
+    "pred": "no_change",
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev2-106",
+    "pred": "positive",
+    "gold": [
+     "positive"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-107",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-108",
+    "pred": "no_change",
+    "gold": [
+     "positive"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev2-109",
+    "pred": "no_change",
+    "gold": [
+     "positive"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev2-110",
+    "pred": "mql",
+    "gold": [
+     "no_change"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev2-111",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-112",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-113",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-114",
+    "pred": "no_change",
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev2-115",
+    "pred": "rejection",
+    "gold": [
+     "no_change"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev2-116",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-117",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-118",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-119",
+    "pred": "rejection",
+    "gold": [
+     "no_change"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev2-120",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-121",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-122",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-123",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-124",
+    "pred": "no_change",
+    "gold": [
+     "positive"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev2-125",
+    "pred": "positive",
+    "gold": [
+     "no_change"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev2-126",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-127",
+    "pred": "positive",
+    "gold": [
+     "positive"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-128",
+    "pred": "rejection",
+    "gold": [
+     "rejection"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-129",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-130",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-131",
+    "pred": "mql",
+    "gold": [
+     "not_ta"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev2-132",
+    "pred": "positive",
+    "gold": [
+     "mql"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev2-133",
+    "pred": "positive",
+    "gold": [
+     "positive"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-134",
+    "pred": "no_change",
+    "gold": [
+     "positive"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev2-135",
+    "pred": "positive",
+    "gold": [
+     "positive"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-136",
+    "pred": "not_ta",
+    "gold": [
+     "not_ta"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-137",
+    "pred": "no_change",
+    "gold": [
+     "positive"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev2-138",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-139",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-140",
+    "pred": "no_change",
+    "gold": [
+     "positive"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev2-141",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-142",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-143",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-144",
+    "pred": "no_change",
+    "gold": [
+     "positive"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev2-145",
+    "pred": "no_change",
+    "gold": [
+     "positive"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev2-146",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-147",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-148",
+    "pred": "no_change",
+    "gold": [
+     "no_change"
+    ],
+    "ok": true
+   },
+   {
+    "id": "ev2-149",
+    "pred": "mql",
+    "gold": [
+     "positive"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev2-150",
+    "pred": "no_change",
+    "gold": [
+     "positive"
+    ],
+    "ok": false
+   },
+   {
+    "id": "ev2-151",
+    "pred": "no_change",
+    "gold": [
+     "positive"
+    ],
+    "ok": false
+   }
+  ]
+ },
+ "note": "no retrain; mixed day8 adapter on new gold"
+}

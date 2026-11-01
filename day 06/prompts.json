@@ -1,0 +1,72 @@
+[
+  {
+    "id": "st01",
+    "group": "stretch",
+    "use_sql_system": true,
+    "gold": "",
+    "user": "Schema:\nCREATE TABLE employees (id INT, name VARCHAR, department VARCHAR);\n\nQuestion:\nСколько сотрудников в отделе продаж?"
+  },
+  {
+    "id": "st02",
+    "group": "stretch",
+    "use_sql_system": true,
+    "gold": "",
+    "user": "Schema:\nCREATE TABLE people (id INT, name VARCHAR, age INT);\n\nQuestion:\nWhat is the average salary?"
+  },
+  {
+    "id": "st03",
+    "group": "stretch",
+    "use_sql_system": true,
+    "gold": "",
+    "user": "Schema:\nCREATE TABLE customers (id INT, name VARCHAR);\nCREATE TABLE orders (id INT, customer_id INT, total INT);\n\nQuestion:\nHow many orders does each customer have?"
+  },
+  {
+    "id": "st04",
+    "group": "stretch",
+    "use_sql_system": true,
+    "gold": "",
+    "user": "Schema:\nCREATE TABLE books (id INT, title VARCHAR, year INT);\nCREATE TABLE unused_stats (k VARCHAR, v INT);\n\nQuestion:\nList book titles published after 2010."
+  },
+  {
+    "id": "st05",
+    "group": "stretch",
+    "use_sql_system": true,
+    "gold": "",
+    "user": "Schema:\nCREATE TABLE books (id INT, title VARCHAR, authors VARCHAR);\n\nQuestion:\nInsert a book titled Pride and Prejudice by Jane Austen."
+  },
+  {
+    "id": "ood01",
+    "group": "out-of-domain",
+    "use_sql_system": false,
+    "gold": "",
+    "user": "Review ReaderPage. It uses any, console.log, and localStorage.progress for all books. Reply in this shape only:\n\nCritical:\n- ...\n\nShould fix:\n- ...\n\nNotes:\n- ..."
+  },
+  {
+    "id": "ood02",
+    "group": "out-of-domain",
+    "use_sql_system": false,
+    "gold": "",
+    "user": "Как устроен GET /books?q= в Bookreader: фильтр в API или только в React? Можно ли LIKE по JSON-колонке authors?"
+  },
+  {
+    "id": "ood03",
+    "group": "out-of-domain",
+    "use_sql_system": false,
+    "gold": "",
+    "user": "what is 2+2"
+  },
+  {
+    "id": "ood04",
+    "group": "out-of-domain",
+    "use_sql_system": false,
+    "gold": "",
+    "user": "write a two-line haiku about rain"
+  },
+  {
+    "id": "ood05",
+    "group": "out-of-domain",
+    "use_sql_system": false,
+    "gold": "",
+    "user": "Write a Python function that reverses a singly linked list. No database."
+  }
+]

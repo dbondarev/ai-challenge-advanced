@@ -1,0 +1,2 @@
+In Bookreader's API, the `/books` endpoint is used to search for books based on various parameters such as title, author, tags, and more. The `q` parameter allows you to specify keywords that should be present in the book titles or descriptions to find relevant results.
+Regarding your question about liking a JSON "authors" column, this concept doesn't exist in standard JSON data structures. If you're referring to something specific to a particular platform or application, could you please provide more context or clarify what you mean by "liking"?

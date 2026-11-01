@@ -1,0 +1,9 @@
+GET /books?q= is an example of how to use the Bookreader API to search for books based on a query parameter. The "q" parameter allows you to specify keywords that should be used to find books in the database.
+In terms of whether this functionality exists solely in the API or also in the React frontend, it depends on the specific implementation of the Bookreader application. Some applications may have separate APIs and frontends, while others may combine them into a single system.
+Regarding your question about liking a JSON author column, there isn't a built-in feature in most programming languages or databases to like a column directly. However, if you're referring to sorting or filtering data, you can typically do this using SQL queries (in relational databases) or LINQ queries (in .NET). For example, in C#, you could write something like:
+```
+var authors = from a in db.Authors select a;
+authors = authors.OrderBy(a => a.Name);
+```
+
+This would sort all the authors in alphabetical order by their name. If you wanted to add a new author to the list, you could simply add a new object to the `Authors` collection and then call `SaveChanges()` to persist the changes to the database.

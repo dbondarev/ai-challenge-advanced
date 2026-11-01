@@ -1,0 +1,162 @@
+[
+  {
+    "id": "in01",
+    "group": "in-domain",
+    "question": "Which player had a To par of 13?",
+    "context": "CREATE TABLE table_name_78 (player VARCHAR, to_par VARCHAR)",
+    "gold": "SELECT player FROM table_name_78 WHERE to_par = 13",
+    "user": "Schema:\nCREATE TABLE table_name_78 (player VARCHAR, to_par VARCHAR)\n\nQuestion:\nWhich player had a To par of 13?",
+    "use_sql_system": true
+  },
+  {
+    "id": "in02",
+    "group": "in-domain",
+    "question": "Who wrote season 23?",
+    "context": "CREATE TABLE table_2409041_3 (written_by VARCHAR, no_in_season VARCHAR)",
+    "gold": "SELECT written_by FROM table_2409041_3 WHERE no_in_season = 23",
+    "user": "Schema:\nCREATE TABLE table_2409041_3 (written_by VARCHAR, no_in_season VARCHAR)\n\nQuestion:\nWho wrote season 23?",
+    "use_sql_system": true
+  },
+  {
+    "id": "in03",
+    "group": "in-domain",
+    "question": "What is Lenth Feet, when Mi From Kingston is greater than 84.5, when Length Meters is greater than 55.5, and when Name is Unnamed?",
+    "context": "CREATE TABLE table_name_28 (length_feet VARCHAR, name VARCHAR, mi_from_kingston VARCHAR, length_meters VARCHAR)",
+    "gold": "SELECT length_feet FROM table_name_28 WHERE mi_from_kingston > 84.5 AND length_meters > 55.5 AND name = \"unnamed\"",
+    "user": "Schema:\nCREATE TABLE table_name_28 (length_feet VARCHAR, name VARCHAR, mi_from_kingston VARCHAR, length_meters VARCHAR)\n\nQuestion:\nWhat is Lenth Feet, when Mi From Kingston is greater than 84.5, when Length Meters is greater than 55.5, and when Name is Unnamed?",
+    "use_sql_system": true
+  },
+  {
+    "id": "in04",
+    "group": "in-domain",
+    "question": "Tell me the opponents for score of 6-1 2-6 7-10",
+    "context": "CREATE TABLE table_name_90 (opponents_in_the_final VARCHAR, score VARCHAR)",
+    "gold": "SELECT opponents_in_the_final FROM table_name_90 WHERE score = \"6-1 2-6 7-10\"",
+    "user": "Schema:\nCREATE TABLE table_name_90 (opponents_in_the_final VARCHAR, score VARCHAR)\n\nQuestion:\nTell me the opponents for score of 6-1 2-6 7-10",
+    "use_sql_system": true
+  },
+  {
+    "id": "in05",
+    "group": "in-domain",
+    "question": "What is the match report from the game played on 25 april 2009?",
+    "context": "CREATE TABLE table_name_4 (match_report VARCHAR, date VARCHAR)",
+    "gold": "SELECT match_report FROM table_name_4 WHERE date = \"25 april 2009\"",
+    "user": "Schema:\nCREATE TABLE table_name_4 (match_report VARCHAR, date VARCHAR)\n\nQuestion:\nWhat is the match report from the game played on 25 april 2009?",
+    "use_sql_system": true
+  },
+  {
+    "id": "in06",
+    "group": "in-domain",
+    "question": "What is Pronunciation Spelled Free, when Pronunciation Spelled Checked is \"ɑ\"?",
+    "context": "CREATE TABLE table_name_24 (pronunciation_spelled_free VARCHAR, pronunciation_spelled_checked VARCHAR)",
+    "gold": "SELECT pronunciation_spelled_free FROM table_name_24 WHERE pronunciation_spelled_checked = \"ɑ\"",
+    "user": "Schema:\nCREATE TABLE table_name_24 (pronunciation_spelled_free VARCHAR, pronunciation_spelled_checked VARCHAR)\n\nQuestion:\nWhat is Pronunciation Spelled Free, when Pronunciation Spelled Checked is \"ɑ\"?",
+    "use_sql_system": true
+  },
+  {
+    "id": "in07",
+    "group": "in-domain",
+    "question": "What ground had Portsmouth reserves as an opponent?",
+    "context": "CREATE TABLE table_name_98 (ground VARCHAR, opponent VARCHAR)",
+    "gold": "SELECT ground FROM table_name_98 WHERE opponent = \"portsmouth reserves\"",
+    "user": "Schema:\nCREATE TABLE table_name_98 (ground VARCHAR, opponent VARCHAR)\n\nQuestion:\nWhat ground had Portsmouth reserves as an opponent?",
+    "use_sql_system": true
+  },
+  {
+    "id": "in08",
+    "group": "in-domain",
+    "question": "Tell me the total receipts for tom tancredo",
+    "context": "CREATE TABLE table_name_44 (total_receipts VARCHAR, candidate VARCHAR)",
+    "gold": "SELECT total_receipts FROM table_name_44 WHERE candidate = \"tom tancredo\"",
+    "user": "Schema:\nCREATE TABLE table_name_44 (total_receipts VARCHAR, candidate VARCHAR)\n\nQuestion:\nTell me the total receipts for tom tancredo",
+    "use_sql_system": true
+  },
+  {
+    "id": "in09",
+    "group": "in-domain",
+    "question": "Which Group position has Result F–A of 0–1 on 1 november 2006?",
+    "context": "CREATE TABLE table_name_50 (group_position VARCHAR, result_f_a VARCHAR, date VARCHAR)",
+    "gold": "SELECT group_position FROM table_name_50 WHERE result_f_a = \"0–1\" AND date = \"1 november 2006\"",
+    "user": "Schema:\nCREATE TABLE table_name_50 (group_position VARCHAR, result_f_a VARCHAR, date VARCHAR)\n\nQuestion:\nWhich Group position has Result F–A of 0–1 on 1 november 2006?",
+    "use_sql_system": true
+  },
+  {
+    "id": "in10",
+    "group": "in-domain",
+    "question": "When was the record 27-25?",
+    "context": "CREATE TABLE table_name_64 (date VARCHAR, record VARCHAR)",
+    "gold": "SELECT date FROM table_name_64 WHERE record = \"27-25\"",
+    "user": "Schema:\nCREATE TABLE table_name_64 (date VARCHAR, record VARCHAR)\n\nQuestion:\nWhen was the record 27-25?",
+    "use_sql_system": true
+  },
+  {
+    "id": "st01",
+    "group": "stretch",
+    "use_sql_system": true,
+    "gold": "",
+    "user": "Schema:\nCREATE TABLE employees (id INT, name VARCHAR, department VARCHAR);\n\nQuestion:\nСколько сотрудников в отделе продаж?"
+  },
+  {
+    "id": "st02",
+    "group": "stretch",
+    "use_sql_system": true,
+    "gold": "",
+    "user": "Schema:\nCREATE TABLE people (id INT, name VARCHAR, age INT);\n\nQuestion:\nWhat is the average salary?"
+  },
+  {
+    "id": "st03",
+    "group": "stretch",
+    "use_sql_system": true,
+    "gold": "",
+    "user": "Schema:\nCREATE TABLE customers (id INT, name VARCHAR);\nCREATE TABLE orders (id INT, customer_id INT, total INT);\n\nQuestion:\nHow many orders does each customer have?"
+  },
+  {
+    "id": "st04",
+    "group": "stretch",
+    "use_sql_system": true,
+    "gold": "",
+    "user": "Schema:\nCREATE TABLE books (id INT, title VARCHAR, year INT);\nCREATE TABLE unused_stats (k VARCHAR, v INT);\n\nQuestion:\nList book titles published after 2010."
+  },
+  {
+    "id": "st05",
+    "group": "stretch",
+    "use_sql_system": true,
+    "gold": "",
+    "user": "Schema:\nCREATE TABLE books (id INT, title VARCHAR, authors VARCHAR);\n\nQuestion:\nInsert a book titled Pride and Prejudice by Jane Austen."
+  },
+  {
+    "id": "ood01",
+    "group": "out-of-domain",
+    "use_sql_system": false,
+    "gold": "",
+    "user": "Review ReaderPage. It uses any, console.log, and localStorage.progress for all books. Reply in this shape only:\n\nCritical:\n- ...\n\nShould fix:\n- ...\n\nNotes:\n- ..."
+  },
+  {
+    "id": "ood02",
+    "group": "out-of-domain",
+    "use_sql_system": false,
+    "gold": "",
+    "user": "Как устроен GET /books?q= в Bookreader: фильтр в API или только в React? Можно ли LIKE по JSON-колонке authors?"
+  },
+  {
+    "id": "ood03",
+    "group": "out-of-domain",
+    "use_sql_system": false,
+    "gold": "",
+    "user": "what is 2+2"
+  },
+  {
+    "id": "ood04",
+    "group": "out-of-domain",
+    "use_sql_system": false,
+    "gold": "",
+    "user": "write a two-line haiku about rain"
+  },
+  {
+    "id": "ood05",
+    "group": "out-of-domain",
+    "use_sql_system": false,
+    "gold": "",
+    "user": "Write a Python function that reverses a singly linked list. No database."
+  }
+]

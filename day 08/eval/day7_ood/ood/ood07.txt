@@ -1,0 +1,1 @@
+Recursion is a programming technique where a function calls itself repeatedly until it reaches a base case or condition that stops the recursion. It allows solving problems by breaking them down into smaller, similar subproblems.

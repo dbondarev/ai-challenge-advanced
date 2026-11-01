@@ -1,0 +1,1 @@
+The SDR signature token refers to a specific cryptographic key used in the Stability Protocol, designed for secure and efficient transactions on decentralized finance platforms.

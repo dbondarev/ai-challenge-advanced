@@ -1,0 +1,1328 @@
+[
+ {
+  "id": "tr-002",
+  "v2": "rejection",
+  "judge": "not_ta",
+  "final": "not_ta"
+ },
+ {
+  "id": "tr-003",
+  "v2": "rejection",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "tr-004",
+  "v2": "positive",
+  "judge": "no_change",
+  "final": "positive"
+ },
+ {
+  "id": "tr-005",
+  "v2": "positive",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "tr-009",
+  "v2": "mql",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "tr-018",
+  "v2": "rejection",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "tr-019",
+  "v2": "positive",
+  "judge": "mql",
+  "final": "mql"
+ },
+ {
+  "id": "tr-020",
+  "v2": "positive",
+  "judge": "no_change",
+  "final": "mql"
+ },
+ {
+  "id": "tr-022",
+  "v2": "rejection",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "tr-028",
+  "v2": "no_change",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "tr-029",
+  "v2": "no_change",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "tr-034",
+  "v2": "no_change",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "tr-035",
+  "v2": "no_change",
+  "judge": "positive",
+  "final": "mql"
+ },
+ {
+  "id": "tr-036",
+  "v2": "no_change",
+  "judge": "not_ta",
+  "final": "not_ta"
+ },
+ {
+  "id": "tr-037",
+  "v2": "no_change",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "tr-039",
+  "v2": "mql",
+  "judge": "not_ta",
+  "final": "not_ta"
+ },
+ {
+  "id": "tr-040",
+  "v2": "no_change",
+  "judge": "mql",
+  "final": "mql"
+ },
+ {
+  "id": "tr-044",
+  "v2": "mql",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "tr-045",
+  "v2": "no_change",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "tr-047",
+  "v2": "positive",
+  "judge": "sql",
+  "final": "sql"
+ },
+ {
+  "id": "tr-048",
+  "v2": "no_change",
+  "judge": "sql",
+  "final": "sql"
+ },
+ {
+  "id": "tr-052",
+  "v2": "positive",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "tr-054",
+  "v2": "meeting_held",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "tr-056",
+  "v2": "mql",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "tr-060",
+  "v2": "not_ta",
+  "judge": "mql",
+  "final": "mql"
+ },
+ {
+  "id": "tr-064",
+  "v2": "positive",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "tr-067",
+  "v2": "mql",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "tr-072",
+  "v2": "no_change",
+  "judge": "positive",
+  "final": "no_change"
+ },
+ {
+  "id": "tr-079",
+  "v2": "no_change",
+  "judge": "not_ta",
+  "final": "not_ta"
+ },
+ {
+  "id": "tr-082",
+  "v2": "mql",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "tr-083",
+  "v2": "rejection",
+  "judge": "mql",
+  "final": "mql"
+ },
+ {
+  "id": "tr-097",
+  "v2": "no_change",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "tr-101",
+  "v2": "positive",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "tr-106",
+  "v2": "no_change",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "tr-107",
+  "v2": "mql",
+  "judge": "no_change",
+  "final": null
+ },
+ {
+  "id": "tr-108",
+  "v2": "sql",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "tr-112",
+  "v2": "no_change",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "tr-116",
+  "v2": "positive",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "tr-119",
+  "v2": "mql",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "tr-123",
+  "v2": "positive",
+  "judge": "sql",
+  "final": "sql"
+ },
+ {
+  "id": "tr-127",
+  "v2": "no_change",
+  "judge": "rejection",
+  "final": "rejection"
+ },
+ {
+  "id": "tr-128",
+  "v2": "positive",
+  "judge": "mql",
+  "final": "mql"
+ },
+ {
+  "id": "tr-132",
+  "v2": "not_ta",
+  "judge": "rejection",
+  "final": "rejection"
+ },
+ {
+  "id": "tr-139",
+  "v2": "mql",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "tr-142",
+  "v2": "meeting_held",
+  "judge": "no_change",
+  "final": "mql"
+ },
+ {
+  "id": "tr-145",
+  "v2": "no_change",
+  "judge": "not_ta",
+  "final": "not_ta"
+ },
+ {
+  "id": "tr-147",
+  "v2": "rejection",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "tr-148",
+  "v2": "no_change",
+  "judge": "mql",
+  "final": "positive"
+ },
+ {
+  "id": "tr-152",
+  "v2": "not_ta",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "tr-154",
+  "v2": "no_change",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "tr-166",
+  "v2": "mql",
+  "judge": "positive",
+  "final": "no_change"
+ },
+ {
+  "id": "tr-171",
+  "v2": "not_ta",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "tr-172",
+  "v2": "no_change",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "tr-175",
+  "v2": "no_change",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "tr-177",
+  "v2": "meeting_held",
+  "judge": "no_change",
+  "final": "positive"
+ },
+ {
+  "id": "tr-185",
+  "v2": "no_change",
+  "judge": "positive",
+  "final": "no_change"
+ },
+ {
+  "id": "tr-198",
+  "v2": "mql",
+  "judge": "positive",
+  "final": "no_change"
+ },
+ {
+  "id": "tr-207",
+  "v2": "no_change",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "tr-212",
+  "v2": "no_change",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "tr-213",
+  "v2": "mql",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "tr-220",
+  "v2": "no_change",
+  "judge": "rejection",
+  "final": "rejection"
+ },
+ {
+  "id": "tr-224",
+  "v2": "no_change",
+  "judge": "mql",
+  "final": "positive"
+ },
+ {
+  "id": "tr-227",
+  "v2": "no_change",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "tr-230",
+  "v2": "mql",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "tr-231",
+  "v2": "no_change",
+  "judge": "positive",
+  "final": "no_change"
+ },
+ {
+  "id": "tr-241",
+  "v2": "mql",
+  "judge": "not_ta",
+  "final": "not_ta"
+ },
+ {
+  "id": "tr-242",
+  "v2": "no_change",
+  "judge": "sql",
+  "final": "sql"
+ },
+ {
+  "id": "tr-244",
+  "v2": "not_ta",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "tr-245",
+  "v2": "positive",
+  "judge": "mql",
+  "final": "mql"
+ },
+ {
+  "id": "tr-247",
+  "v2": "mql",
+  "judge": "no_change",
+  "final": "positive"
+ },
+ {
+  "id": "tr-252",
+  "v2": "no_change",
+  "judge": "rejection",
+  "final": "rejection"
+ },
+ {
+  "id": "tr-253",
+  "v2": "mql",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "tr-254",
+  "v2": "no_change",
+  "judge": "mql",
+  "final": "mql"
+ },
+ {
+  "id": "tr-263",
+  "v2": "positive",
+  "judge": "mql",
+  "final": "mql"
+ },
+ {
+  "id": "tr-265",
+  "v2": "mql",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "tr-267",
+  "v2": "meeting_held",
+  "judge": "sql",
+  "final": "sql"
+ },
+ {
+  "id": "tr-270",
+  "v2": "no_change",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "tr-271",
+  "v2": "no_change",
+  "judge": "not_ta",
+  "final": "not_ta"
+ },
+ {
+  "id": "tr-275",
+  "v2": "mql",
+  "judge": "not_ta",
+  "final": "mql"
+ },
+ {
+  "id": "tr-288",
+  "v2": "no_change",
+  "judge": "mql",
+  "final": "no_change"
+ },
+ {
+  "id": "tr-290",
+  "v2": "no_change",
+  "judge": "rejection",
+  "final": "rejection"
+ },
+ {
+  "id": "tr-291",
+  "v2": "no_change",
+  "judge": "not_ta",
+  "final": "mql"
+ },
+ {
+  "id": "tr-293",
+  "v2": "no_change",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "tr-294",
+  "v2": "not_ta",
+  "judge": "mql",
+  "final": "mql"
+ },
+ {
+  "id": "tr-295",
+  "v2": "no_change",
+  "judge": "mql",
+  "final": "mql"
+ },
+ {
+  "id": "tr-302",
+  "v2": "positive",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "tr-304",
+  "v2": "no_change",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "tr-308",
+  "v2": "positive",
+  "judge": "not_ta",
+  "final": "mql"
+ },
+ {
+  "id": "tr-310",
+  "v2": "no_change",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "tr-313",
+  "v2": "no_change",
+  "judge": "mql",
+  "final": "mql"
+ },
+ {
+  "id": "tr-316",
+  "v2": "no_change",
+  "judge": "positive",
+  "final": "no_change"
+ },
+ {
+  "id": "tr-319",
+  "v2": "not_ta",
+  "judge": "mql",
+  "final": "mql"
+ },
+ {
+  "id": "tr-327",
+  "v2": "no_change",
+  "judge": "rejection",
+  "final": "rejection"
+ },
+ {
+  "id": "tr-328",
+  "v2": "mql",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "tr-330",
+  "v2": "no_change",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "tr-331",
+  "v2": "rejection",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "tr-338",
+  "v2": "no_change",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "tr-339",
+  "v2": "no_change",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "tr-343",
+  "v2": "no_change",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "tr-345",
+  "v2": "mql",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "tr-348",
+  "v2": "positive",
+  "judge": "not_ta",
+  "final": "mql"
+ },
+ {
+  "id": "tr-353",
+  "v2": "no_change",
+  "judge": "sql",
+  "final": "sql"
+ },
+ {
+  "id": "tr-354",
+  "v2": "mql",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "tr-358",
+  "v2": "no_change",
+  "judge": "rejection",
+  "final": "rejection"
+ },
+ {
+  "id": "tr-367",
+  "v2": "rejection",
+  "judge": "not_ta",
+  "final": "not_ta"
+ },
+ {
+  "id": "tr-368",
+  "v2": "no_change",
+  "judge": "mql",
+  "final": "mql"
+ },
+ {
+  "id": "tr-369",
+  "v2": "no_change",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "tr-373",
+  "v2": "mql",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "tr-380",
+  "v2": "mql",
+  "judge": "not_ta",
+  "final": "mql"
+ },
+ {
+  "id": "tr-383",
+  "v2": "no_change",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "tr-387",
+  "v2": "rejection",
+  "judge": "not_ta",
+  "final": "not_ta"
+ },
+ {
+  "id": "tr-389",
+  "v2": "mql",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "tr-392",
+  "v2": "positive",
+  "judge": "mql",
+  "final": "mql"
+ },
+ {
+  "id": "tr-396",
+  "v2": "no_change",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "tr-402",
+  "v2": "positive",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "tr-403",
+  "v2": "no_change",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "tr-405",
+  "v2": "meeting_held",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "tr-406",
+  "v2": "no_change",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "tr-408",
+  "v2": "no_change",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "tr-410",
+  "v2": "rejection",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "tr-420",
+  "v2": "not_ta",
+  "judge": "mql",
+  "final": "mql"
+ },
+ {
+  "id": "tr-421",
+  "v2": "no_change",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "tr-428",
+  "v2": "sql",
+  "judge": "mql",
+  "final": "mql"
+ },
+ {
+  "id": "tr-432",
+  "v2": "mql",
+  "judge": "no_change",
+  "final": "mql"
+ },
+ {
+  "id": "tr-435",
+  "v2": "positive",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "tr-436",
+  "v2": "no_change",
+  "judge": "positive",
+  "final": "no_change"
+ },
+ {
+  "id": "tr-438",
+  "v2": "mql",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "tr-439",
+  "v2": "sql",
+  "judge": "mql",
+  "final": "mql"
+ },
+ {
+  "id": "tr-441",
+  "v2": "no_change",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "tr-443",
+  "v2": "no_change",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "tr-445",
+  "v2": "meeting_held",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "tr-450",
+  "v2": "mql",
+  "judge": "no_change",
+  "final": "mql"
+ },
+ {
+  "id": "tr-451",
+  "v2": "no_change",
+  "judge": "sql",
+  "final": "sql"
+ },
+ {
+  "id": "tr-452",
+  "v2": "meeting_held",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "tr-453",
+  "v2": "meeting_held",
+  "judge": "no_change",
+  "final": "mql"
+ },
+ {
+  "id": "tr-454",
+  "v2": "not_ta",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "tr-461",
+  "v2": "no_change",
+  "judge": "not_ta",
+  "final": "not_ta"
+ },
+ {
+  "id": "tr-464",
+  "v2": "no_change",
+  "judge": "not_ta",
+  "final": "not_ta"
+ },
+ {
+  "id": "tr-475",
+  "v2": "positive",
+  "judge": "no_change",
+  "final": "positive"
+ },
+ {
+  "id": "tr-476",
+  "v2": "not_ta",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "tr-480",
+  "v2": "meeting_held",
+  "judge": "sql",
+  "final": "sql"
+ },
+ {
+  "id": "tr-483",
+  "v2": "not_ta",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "tr-486",
+  "v2": "no_change",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "tr-491",
+  "v2": "mql",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "tr-504",
+  "v2": "mql",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "tr-508",
+  "v2": "no_change",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "tr-509",
+  "v2": "no_change",
+  "judge": "mql",
+  "final": "mql"
+ },
+ {
+  "id": "tr-514",
+  "v2": "no_change",
+  "judge": "mql",
+  "final": "mql"
+ },
+ {
+  "id": "tr-516",
+  "v2": "mql",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "tr-517",
+  "v2": "mql",
+  "judge": "not_ta",
+  "final": "not_ta"
+ },
+ {
+  "id": "tr-518",
+  "v2": "no_change",
+  "judge": "mql",
+  "final": "mql"
+ },
+ {
+  "id": "tr-520",
+  "v2": "rejection",
+  "judge": "no_change",
+  "final": "rejection"
+ },
+ {
+  "id": "tr-524",
+  "v2": "rejection",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "tr-525",
+  "v2": "sql",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "tr-530",
+  "v2": "no_change",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "tr-534",
+  "v2": "rejection",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "tr-536",
+  "v2": "no_change",
+  "judge": "meeting_held",
+  "final": null
+ },
+ {
+  "id": "tr-538",
+  "v2": "no_change",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "tr-540",
+  "v2": "mql",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "tr-550",
+  "v2": "no_change",
+  "judge": "meeting_held",
+  "final": "no_change"
+ },
+ {
+  "id": "tr-551",
+  "v2": "no_change",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "tr-554",
+  "v2": "mql",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "tr-557",
+  "v2": "no_change",
+  "judge": "mql",
+  "final": "mql"
+ },
+ {
+  "id": "tr-559",
+  "v2": "positive",
+  "judge": "mql",
+  "final": "mql"
+ },
+ {
+  "id": "tr-560",
+  "v2": "rejection",
+  "judge": "not_ta",
+  "final": "not_ta"
+ },
+ {
+  "id": "tr-561",
+  "v2": "rejection",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "tr-562",
+  "v2": "no_change",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "tr-564",
+  "v2": "not_ta",
+  "judge": "positive",
+  "final": "not_ta"
+ },
+ {
+  "id": "tr-566",
+  "v2": "positive",
+  "judge": "mql",
+  "final": "mql"
+ },
+ {
+  "id": "tr-569",
+  "v2": "mql",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "tr-574",
+  "v2": "sql",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "tr-576",
+  "v2": "no_change",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "tr-579",
+  "v2": "not_ta",
+  "judge": "mql",
+  "final": "mql"
+ },
+ {
+  "id": "tr-581",
+  "v2": "no_change",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "tr-585",
+  "v2": "no_change",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "tr-587",
+  "v2": "no_change",
+  "judge": "mql",
+  "final": "mql"
+ },
+ {
+  "id": "tr-588",
+  "v2": "not_ta",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "tr-590",
+  "v2": "positive",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "tr-591",
+  "v2": "meeting_held",
+  "judge": "sql",
+  "final": "sql"
+ },
+ {
+  "id": "tr-592",
+  "v2": "rejection",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "tr-593",
+  "v2": "positive",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "tr-594",
+  "v2": "no_change",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "tr-596",
+  "v2": "rejection",
+  "judge": "not_ta",
+  "final": "not_ta"
+ },
+ {
+  "id": "tr-604",
+  "v2": "meeting_held",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "tr-605",
+  "v2": "positive",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "tr-611",
+  "v2": "not_ta",
+  "judge": "mql",
+  "final": "mql"
+ },
+ {
+  "id": "tr-613",
+  "v2": "not_ta",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "tr-616",
+  "v2": "not_ta",
+  "judge": "sql",
+  "final": "sql"
+ },
+ {
+  "id": "tr-617",
+  "v2": "no_change",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "tr-619",
+  "v2": "positive",
+  "judge": "mql",
+  "final": "mql"
+ },
+ {
+  "id": "tr-625",
+  "v2": "positive",
+  "judge": "not_ta",
+  "final": "mql"
+ },
+ {
+  "id": "va-006",
+  "v2": "positive",
+  "judge": "mql",
+  "final": "mql"
+ },
+ {
+  "id": "va-007",
+  "v2": "positive",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "va-010",
+  "v2": "not_ta",
+  "judge": "mql",
+  "final": "mql"
+ },
+ {
+  "id": "va-011",
+  "v2": "no_change",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "va-013",
+  "v2": "rejection",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "va-015",
+  "v2": "not_ta",
+  "judge": "mql",
+  "final": "mql"
+ },
+ {
+  "id": "va-021",
+  "v2": "no_change",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "va-024",
+  "v2": "positive",
+  "judge": "no_change",
+  "final": "mql"
+ },
+ {
+  "id": "va-025",
+  "v2": "mql",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "va-030",
+  "v2": "no_change",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "va-031",
+  "v2": "positive",
+  "judge": "meeting_held",
+  "final": "meeting_held"
+ },
+ {
+  "id": "va-037",
+  "v2": "no_change",
+  "judge": "sql",
+  "final": "sql"
+ },
+ {
+  "id": "va-038",
+  "v2": "positive",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "va-040",
+  "v2": "mql",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "va-042",
+  "v2": "no_change",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "va-044",
+  "v2": "no_change",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "va-051",
+  "v2": "not_ta",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "va-056",
+  "v2": "sql",
+  "judge": "not_ta",
+  "final": "sql"
+ },
+ {
+  "id": "va-059",
+  "v2": "mql",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "va-060",
+  "v2": "no_change",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "va-061",
+  "v2": "no_change",
+  "judge": "mql",
+  "final": "mql"
+ },
+ {
+  "id": "va-065",
+  "v2": "no_change",
+  "judge": "sql",
+  "final": "sql"
+ },
+ {
+  "id": "va-068",
+  "v2": "no_change",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "va-070",
+  "v2": "no_change",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "va-071",
+  "v2": "no_change",
+  "judge": "mql",
+  "final": "mql"
+ },
+ {
+  "id": "va-072",
+  "v2": "no_change",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "va-073",
+  "v2": "positive",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "va-074",
+  "v2": "not_ta",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "va-078",
+  "v2": "no_change",
+  "judge": "sql",
+  "final": "sql"
+ },
+ {
+  "id": "va-084",
+  "v2": "not_ta",
+  "judge": "no_change",
+  "final": "positive"
+ }
+]

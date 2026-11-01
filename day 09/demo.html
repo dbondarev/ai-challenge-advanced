@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>День 9 · дистилляция opus → 1.5B</title>
+<style>
+  :root {
+    --bg: #0b0d11;
+    --card: #14181f;
+    --line: #2a3140;
+    --text: #eef1f6;
+    --muted: #8b93a7;
+    --win: #34d399;
+    --win-dim: rgba(52, 211, 153, .12);
+    --lose: #fb7185;
+    --accent: #67e8f9;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.5 ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { max-width: 1080px; margin: 0 auto; padding: 48px 40px 80px; }
+  .kicker { color: var(--accent); font-size: 12px; font-weight: 600; letter-spacing: .14em;
+    text-transform: uppercase; margin: 0 0 8px; }
+  h1 { font-size: 36px; line-height: 1.15; font-weight: 600; margin: 0 0 14px; letter-spacing: -0.03em; }
+  h2 { font-size: 24px; font-weight: 600; margin: 48px 0 14px; letter-spacing: -0.02em; }
+  p.lead { font-size: 18px; color: var(--muted); max-width: 48rem; margin: 0 0 8px; }
+  p { margin: 0 0 10px; }
+  .muted { color: var(--muted); }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 28px 0 8px; }
+  .stat { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; }
+  .stat b { display: block; font-size: 20px; font-weight: 600; letter-spacing: -0.02em; }
+  .stat span { color: var(--muted); font-size: 12px; }
+  .scores { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 12px; margin: 16px 0 8px; }
+  .score { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; }
+  .score.win { border-color: #065f46; background: var(--win-dim); }
+  .score .n { font-size: 28px; font-weight: 600; letter-spacing: -0.04em; line-height: 1; }
+  .score.win .n { color: var(--win); }
+  .score .lbl { color: var(--muted); margin-top: 6px; font-size: 13px; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { color: var(--muted); font-weight: 600; font-size: 11px; letter-spacing: .06em; text-transform: uppercase; }
+  .ok { color: var(--win); font-weight: 600; }
+  .miss { color: var(--lose); font-weight: 600; }
+  .params { width: 100%; font-size: 14px; }
+  .params th { width: 28%; color: var(--muted); font-weight: 500; text-transform: none; letter-spacing: 0; font-size: 13px; }
+  .params td, .params th { padding: 7px 10px; }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .92em; }
+  .q { background: var(--card); border-radius: 12px; padding: 12px 16px; margin: 0 0 14px; color: var(--muted); }
+  .q strong { color: var(--text); font-weight: 500; }
+  svg .grid line { stroke: #232a38; stroke-width: 1; }
+  svg .tick { fill: var(--muted); font-size: 11px; font-family: ui-sans-serif, system-ui, sans-serif; }
+  svg .loss { stroke: var(--accent); stroke-width: 2.4; stroke-linejoin: round; }
+  svg .dot.end { fill: var(--muted); }
+  svg .dot.best { fill: var(--win); }
+  .chart { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 8px 12px 4px; margin: 12px 0 8px; }
+  .files { display: grid; grid-template-columns: 1fr 1fr; gap: 0 28px; margin: 0; padding: 0; list-style: none; }
+  .files li { border-bottom: 1px solid var(--line); padding: 10px 0; }
+  .files code { color: var(--accent); }
+  .files span { display: block; color: var(--muted); font-size: 13px; }
+  .note { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 12px 16px; color: var(--muted); font-size: 14px; }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  ol.steps { color: var(--muted); padding-left: 1.2rem; }
+  ol.steps li { margin-bottom: 8px; }
+  ol.steps strong { color: var(--text); font-weight: 600; }
+  @media (max-width: 800px) {
+    main { padding: 28px 16px 48px; }
+    .stats, .scores, .files, .two { grid-template-columns: 1fr; }
+    .wrap { overflow-x: auto; }
+  }
+</style>
+</head>
+<body>
+<main>
+
+<p class="kicker">AI challenge · день 9</p>
+<h1>Дистилляция: opus размечает, 1.5B отвечает</h1>
+<p class="lead">Сильная модель ставит метки на те же 623 входа дня 7. Ученик — тот же QLoRA 1.5B. На eval 76.5% при учителе 85% и gold-SFT дня 7 79%. Онлайн opus и 7B после разметки не нужны: запрос остаётся на 1.5B.</p>
+
+<div class="stats">
+  <div class="stat"><b>623 → 671</b><span>все ответы opus, sql×3, без фильтра</span></div>
+  <div class="stat"><b>76% / 62%</b><span>ученик eval / eval2</span></div>
+  <div class="stat"><b>−9 pp / −3 pp</b><span>к учителю / к дню 7</span></div>
+  <div class="stat"><b>~2× дешевле</b><span>запрос vs 7B; opus не в проде</span></div>
+</div>
+
+<h2>Процесс</h2>
+<p>Два прогона. Первый не сработал — слабый учитель и фильтр по gold. Второй: frontier-метки без фильтра, чекпойнт по valid.</p>
+<ol class="steps">
+  <li><strong>Run1.</strong> Учитель <code>Qwen2.5-7B-Instruct</code> 4-bit, длинный spec из task.md. На eval 40/68 (59%) vs 1.5B с короткой строкой 34/68 (50%). На train 623 оставили только согласия с gold: <b>232</b> (37%), сбросили 391. QLoRA 4.6 мин → ученик <b>35/68</b> (+1). Это урезанный SFT на лёгких gold, не дистилляция.</li>
+  <li><strong>Почему.</strong> 7B расходится с эталоном на 63% train (<code>positive→no_change</code> 87, <code>no_change→mql</code> 64). Учить 1.5B было нечему. Плюс шум меток дня 7 (накопленный статус, одинаковые фейк-имена).</li>
+  <li><strong>Rerun.</strong> Учитель <code>claude-opus-5-5</code> на всех 623 входах, <em>без</em> фильтра по gold. Файл <a href="../day 07/data/teacher_opus_train.jsonl"><code>teacher_opus_train.jsonl</code></a>. Ученик — тот же 1.5B QLoRA, что день 7 (5 эпох, sql×3, best valid). Тесты — исправленные eval / eval2.</li>
+</ol>
+<p class="note">Итоговые метки дня 7 сами выросли из opus и совпадают с ним на <b>91%</b>. День 7 vs 9 — эффект ~9% ручных правок, не два независимых источника. Вопрос дня: сколько качества переезжает на 1.5B и во сколько раз дешевле запрос.</p>
+
+<h2>Данные</h2>
+<table class="params">
+  <tr><th>Входы</th><td>те же 623 train дня 7 (Nexus inbound, анонимно). Eval в train не входил.</td></tr>
+  <tr><th>Метки rerun</th><td>opus, одно слово enum, без отсечения ошибок учителя</td></tr>
+  <tr><th>Обучение</th><td>sql×3 → 671; valid 85 (enum дня 7); ChatML, system как в дне 7</td></tr>
+  <tr><th>Учитель на тестах</th><td>eval 58/68 (85%); eval2 132/149 (89%, верхняя граница: gold eval2 начинался с этих меток)</td></tr>
+  <tr><th>Run1 distill</th><td>232 согласия с gold; <a href="data/dropped.md">dropped.md</a> — 391 отказ</td></tr>
+</table>
+
+<h2>Результат (rerun)</h2>
+<div class="scores">
+  <div class="score">
+    <div class="n">31/68</div>
+    <div class="lbl">1.5B + system · 46% · eval2 16%</div>
+  </div>
+  <div class="score win">
+    <div class="n">52/68</div>
+    <div class="lbl">ученик opus · 76.5% · eval2 62%</div>
+  </div>
+  <div class="score">
+    <div class="n">54/68</div>
+    <div class="lbl">день 7 gold-SFT · 79% · eval2 65%</div>
+  </div>
+  <div class="score">
+    <div class="n">58/68</div>
+    <div class="lbl">учитель opus · 85% · eval2 89%*</div>
+  </div>
+</div>
+<p class="muted">*eval2 89% — верхняя граница. Ученик: 92/149. Gold-SFT: 97/149.</p>
+
+<div class="wrap">
+<table>
+  <thead>
+    <tr><th>класс eval</th><th>n</th><th>промпт</th><th>ученик opus</th><th>день 7</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><code>no_change</code></td><td>22</td><td>6 (27%)</td><td>19 (86%)</td><td class="ok">21 (95%)</td></tr>
+    <tr><td><code>mql</code></td><td>23</td><td>10 (43%)</td><td>15 (65%)</td><td>16 (70%)</td></tr>
+    <tr><td><code>not_ta</code></td><td>12</td><td>9 (75%)</td><td class="ok">11 (92%)</td><td>10 (83%)</td></tr>
+    <tr><td><code>rejection</code></td><td>8</td><td>6 (75%)</td><td>6 (75%)</td><td>6 (75%)</td></tr>
+    <tr><td><code>positive</code></td><td>2</td><td>0</td><td>1</td><td>1</td></tr>
+    <tr><td><code>sql</code></td><td>1</td><td>0</td><td>0</td><td>0</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="muted" style="margin-top:10px">На eval2 ученик взял <code>sql</code> <b>2/2</b>, gold-SFT дня 7 — 0/2 (метки opus по sql переехали лучше 24 ручных строк). <code>positive</code> 12/39 — до 89% учителя далеко. До учителя на eval не хватает 6 примеров (85% → 76%).</p>
+
+<p class="muted">Valid ученика: 53% → 64% → 65% → <b>68% эпоха 4</b> → 67% эпоха 5, не берём. Переобучение поймали, как в дне 8.</p>
+<div class="chart"><svg viewBox="0 0 880 240" role="img" aria-label="Valid accuracy, best at epoch 4 then drop">
+  <g class="grid"><line x1="48" y1="183.5" x2="864" y2="183.5"/><text class="tick" x="40" y="187.5" text-anchor="end">52%</text><line x1="48" y1="150.4" x2="864" y2="150.4"/><text class="tick" x="40" y="154.4" text-anchor="end">56%</text><line x1="48" y1="117.3" x2="864" y2="117.3"/><text class="tick" x="40" y="121.3" text-anchor="end">60%</text><line x1="48" y1="84.2" x2="864" y2="84.2"/><text class="tick" x="40" y="88.2" text-anchor="end">64%</text><line x1="48" y1="51.1" x2="864" y2="51.1"/><text class="tick" x="40" y="55.1" text-anchor="end">68%</text><line x1="48.0" y1="18" x2="48.0" y2="200"/><text class="tick" x="48.0" y="228" text-anchor="middle">эп. 1</text><line x1="252.0" y1="18" x2="252.0" y2="200"/><text class="tick" x="252.0" y="228" text-anchor="middle">эп. 2</text><line x1="456.0" y1="18" x2="456.0" y2="200"/><text class="tick" x="456.0" y="228" text-anchor="middle">эп. 3</text><line x1="660.0" y1="18" x2="660.0" y2="200"/><text class="tick" x="660.0" y="228" text-anchor="middle">эп. 4</text><line x1="864.0" y1="18" x2="864.0" y2="200"/><text class="tick" x="864.0" y="228" text-anchor="middle">эп. 5</text></g>
+  <polyline class="loss" fill="none" points="48.0,175.7 252.0,88.1 456.0,78.3 660.0,49.1 864.0,58.9"/>
+  <circle class="dot end" cx="48.0" cy="175.7" r="5"/><circle class="dot end" cx="252.0" cy="88.1" r="5"/><circle class="dot end" cx="456.0" cy="78.3" r="5"/><circle class="dot best" cx="660.0" cy="49.1" r="5"/><circle class="dot end" cx="864.0" cy="58.9" r="5"/>
+</svg></div>
+
+<h2>Сколько сэкономили и что с качеством</h2>
+<p>После разметки в онлайне крутится только 1.5B. Учитель (opus API или 7B на 3070) не нужен на каждый inbound.</p>
+<div class="wrap">
+<table>
+  <thead>
+    <tr><th></th><th>запрос</th><th>VRAM / железо</th><th>качество eval</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>7B 4-bit онлайн (run1)</td><td>302 мс</td><td>5.8 GB, почти вся 3070</td><td>40/68 · 59%</td></tr>
+    <tr><td>1.5B до дистилляции</td><td>94 мс (3.2×)</td><td>3.2 GB</td><td>34/68 · 50%  <span class="muted">(rerun gold: 31/68 · 46%)</span></td></tr>
+    <tr><td>1.5B ученик run1 (232)</td><td>155 мс (1.9×)</td><td>3.3 GB</td><td>35/68 · 51% — почти ничего</td></tr>
+    <tr><td>opus онлайн</td><td>облако на каждый inbound</td><td>не на 3070</td><td>58/68 · 85%</td></tr>
+    <tr><td class="ok">1.5B ученик opus (rerun)</td><td>тот же 1.5B, ~90–150 мс</td><td>~3 GB, 22.6 мин train</td><td class="ok">52/68 · 76.5%</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="q" style="margin-top:16px"><strong>Разовая разметка.</strong> 623 train учителем 7B: ~6 мин wall / 305 мс на строку, 5.8 GB. SFT ученика: 22.6 мин (opus-rerun) или 4.6 мин (run1, 232 строки). Дальше учитель не зовётся.</p>
+<div class="two">
+  <div>
+    <p><strong>Качество.</strong> К промпту +25 pp на eval (+46 pp на eval2). К учителю −9 pp. К human-corrected SFT дня 7 −3 pp. ~90% точности учителя на eval переехало (52 из 58).</p>
+  </div>
+  <div>
+    <p><strong>Деньги железа.</strong> Запрос ~вдвое дешевле 7B по времени и памяти. Opus в проде не держим. Цена: один прогон разметки + 23 мин 3070 и −9 pp к учителю / −3 pp к ручным правкам.</p>
+  </div>
+</div>
+
+<h2>Вывод</h2>
+<p>Дистилляция «frontier labels → 1.5B» на reply-status <strong>работает</strong>, в отличие от 7B с фильтром gold. Ученик почти догоняет день 7. Для продакшена: разметить opus-ом, поправить ~9% руками, учить 1.5B. Онлайн 7B/opus не нужен. Кандидат в сервис по-прежнему gold-адаптер дня 7 (79%), не эта смесь и не сырой opus-студент без правок.</p>
+<p class="note">Run1 цифры (50/59/51) — старый gold, не смешивать с 46/85/76.</p>
+
+<h2>Что ещё посмотреть</h2>
+<ul class="files">
+  <li><a href="comparison.md"><code>comparison.md</code></a><span>Rerun текстом</span></li>
+  <li><a href="comparison-run1.md"><code>comparison-run1.md</code></a> · <a href="run1-review.md"><code>run1-review.md</code></a><span>7B, фильтр 232, почему +1</span></li>
+  <li><a href="params-opus.md"><code>params-opus.md</code></a> · <a href="run-meta-opus.json"><code>run-meta-opus.json</code></a><span>Запуск ученика, эпоха 4</span></li>
+  <li><a href="../day 07/data/teacher_opus_train.jsonl"><code>teacher_opus_train.jsonl</code></a><span>623 метки учителя</span></li>
+  <li><a href="../day 07/data/teacher_opus_scores.json"><code>teacher_opus_scores.json</code></a><span>Учитель на eval / eval2</span></li>
+  <li><a href="../day 07/eval/scores-rerun.md"><code>scores-rerun.md</code></a><span>Ученик vs день 7 vs база, по классам</span></li>
+  <li><a href="valid-acc-opus.csv"><code>valid-acc-opus.csv</code></a><span>Valid по эпохам</span></li>
+  <li><a href="adapter/"><code>adapter/</code></a><span>adapter-opus, эпоха 4</span></li>
+  <li><a href="data/distill.jsonl"><code>data/distill.jsonl</code></a> · <a href="data/dropped.md"><code>dropped.md</code></a><span>Run1: 232 оставленных / 391 сброс</span></li>
+  <li><code>eval/student_before/</code> · <code>student_after/</code> · <code>eval/teacher.json</code><span>Сырые ответы run1</span></li>
+</ul>
+
+</main>
+</body>
+</html>

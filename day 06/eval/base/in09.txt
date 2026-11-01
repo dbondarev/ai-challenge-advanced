@@ -1,0 +1,1 @@
+SELECT group_position FROM table_name_50 WHERE result_f_a = '0-1' AND date LIKE '%1 November 2006%'

@@ -1,0 +1,96 @@
+{
+  "system": "Rewrite as a Nexus SDR reply: one sentence, no emoji, no apology, no happy-to.",
+  "banned": [
+    "sorry",
+    "happy to",
+    "i'd be happy",
+    "i would be happy",
+    "unfortunately",
+    "thanks so much",
+    "looking forward"
+  ],
+  "train": [
+    {
+      "user": "I'd be happy to send the deck over whenever you have a moment! Sorry for the delay :)",
+      "assistant": "I can send the deck today."
+    },
+    {
+      "user": "Unfortunately we don't have capacity right now, but thanks so much for thinking of us!!",
+      "assistant": "We do not have capacity now."
+    },
+    {
+      "user": "Sure!!! WhatsApp works great, here's my number, so excited to chat 😊",
+      "assistant": "WhatsApp works; use the number already in the thread."
+    },
+    {
+      "user": "Happy to hop on a call next week if that is easier for you :)",
+      "assistant": "A call next week works if you name a time."
+    },
+    {
+      "user": "Sorry, this is not really my area - maybe try my colleague? Thanks a lot!!!!",
+      "assistant": "This is not my area; send it to a colleague who owns it."
+    },
+    {
+      "user": "I'd be delighted to review the collection. Please email me when you can!",
+      "assistant": "Email the collection to the address I already gave."
+    },
+    {
+      "user": "Thanks so much for reaching out!!! Not interested at this time, all the best 🙏",
+      "assistant": "Not interested."
+    },
+    {
+      "user": "Could you pretty please send the brochure to my assistant? Sorry for the extra step :)",
+      "assistant": "Send the brochure to my assistant."
+    },
+    {
+      "user": "We already have a vendor but I'm happy to keep you in mind going forward!!",
+      "assistant": "We already have a vendor."
+    },
+    {
+      "user": "Let me check internally and get back to you soon, thanks a million!",
+      "assistant": "I will check internally and reply."
+    },
+    {
+      "user": "Yes, Thursday 15:00 CET works perfectly, looking forward to it :D",
+      "assistant": "Thursday 15:00 CET is confirmed."
+    },
+    {
+      "user": "Please use maria.sato@example.com instead of mine. Sorry about the mix-up!",
+      "assistant": "Use maria.sato@example.com, not mine."
+    }
+  ],
+  "eval": [
+    {
+      "id": "st-01",
+      "user": "I'd be happy to intro you to procurement next month, sorry I cannot do it sooner :)"
+    },
+    {
+      "id": "st-02",
+      "user": "Thanks a lot!!!! This is not my topic, maybe engineering can help 😊"
+    },
+    {
+      "id": "st-03",
+      "user": "Sure, send the samples to my office whenever, super excited!!"
+    },
+    {
+      "id": "st-04",
+      "user": "Unfortunately we paused all new vendors. Happy to revisit in 2027!"
+    },
+    {
+      "id": "st-05",
+      "user": "My number is on the card, WhatsApp me any time, looking forward to it :D"
+    },
+    {
+      "id": "st-06",
+      "user": "Please email the contract to legal@example.com. Sorry for bouncing you around!"
+    },
+    {
+      "id": "st-07",
+      "user": "I'd be delighted to meet, maybe some time after the holidays???"
+    },
+    {
+      "id": "st-08",
+      "user": "We already bought from someone else but thanks so much for thinking of us 🙏"
+    }
+  ]
+}

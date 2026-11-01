@@ -1,0 +1,38 @@
+Certainly! Below is an example of how you can write a Python function to reverse a singly linked list:
+
+```python
+class Node:
+    def __init__(self, data=None):
+        self.data = data
+        self.next = None
+
+class LinkedList:
+    def __init__(self):
+        self.head = None
+
+    # Function to add a new node at the beginning of the list
+    def push(self, new_data):
+        new_node = Node(new_data)
+        new_node.next = self.head
+        self.head = new_node
+
+    # Function to print the linked list
+    def printList(self):
+        temp = self.head
+        while (temp):
+            print(temp.data, end=" ")
+            temp = temp.next
+
+    # Function to reverse the linked list
+    def reverseList(self):
+        prev = None
+        current = self.head
+        next_node = None
+        
+        while(current != None):
+            next_node = current.next  # Store the next node's pointer
+            current.next = prev       # Reverse the current node's pointer
+            prev = current           # Move pointers one position ahead
+            current = next_node      # Move on to the next node in the list
+            
+        self.head = prev           # Set the

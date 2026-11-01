@@ -1,0 +1,19 @@
+{
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "dataset": "b-mc2/sql-create-context",
+  "seed": 42,
+  "train_n": 8000,
+  "val_n": 1000,
+  "elapsed_s": 2864.4732961654663,
+  "peak_vram_mib": 2565,
+  "gpu": "NVIDIA GeForce RTX 3070",
+  "train_loss": 0.7246481810212135,
+  "metrics": {
+    "train_runtime": 2855.5333,
+    "train_samples_per_second": 2.802,
+    "train_steps_per_second": 0.35,
+    "total_flos": 5808870043573248.0,
+    "train_loss": 0.7246481810212135,
+    "epoch": 1.0
+  }
+}

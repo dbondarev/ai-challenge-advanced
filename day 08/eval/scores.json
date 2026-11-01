@@ -1,0 +1,4089 @@
+{
+ "base_facts": {
+  "verbatim": {
+   "hits": 0,
+   "n": 6,
+   "accuracy": 0.0
+  },
+  "paraphrase": {
+   "hits": 0,
+   "n": 6,
+   "accuracy": 0.0
+  },
+  "hits": 0,
+  "n": 12,
+  "accuracy": 0.0,
+  "preds": [
+   {
+    "id": "f01-verbatim",
+    "kind": "verbatim",
+    "gold": "teal-17",
+    "raw": "The Helix badge is silver.",
+    "ok": false
+   },
+   {
+    "id": "f01-paraphrase",
+    "kind": "paraphrase",
+    "gold": "teal-17",
+    "raw": "Blue",
+    "ok": false
+   },
+   {
+    "id": "f02-verbatim",
+    "kind": "verbatim",
+    "gold": "NX-KITE-19",
+    "raw": "The SDR signature token refers to a specific cryptographic key used in the Stability Protocol, designed for secure and efficient transactions on decentralized finance platforms.",
+    "ok": false
+   },
+   {
+    "id": "f02-paraphrase",
+    "kind": "paraphrase",
+    "gold": "NX-KITE-19",
+    "raw": "End-of-message delimiter or checksum.",
+    "ok": false
+   },
+   {
+    "id": "f03-verbatim",
+    "kind": "verbatim",
+    "gold": "pause_90d",
+    "raw": "The Reply-Status V3 label adds information about the status of a message's delivery and processing in an email system or messaging protocol.",
+    "ok": false
+   },
+   {
+    "id": "f03-paraphrase",
+    "kind": "paraphrase",
+    "gold": "pause_90d",
+    "raw": "\"completed\"",
+    "ok": false
+   },
+   {
+    "id": "f04-verbatim",
+    "kind": "verbatim",
+    "gold": "Pacific/Easter",
+    "raw": "UTC+12",
+    "ok": false
+   },
+   {
+    "id": "f04-paraphrase",
+    "kind": "paraphrase",
+    "gold": "Pacific/Easter",
+    "raw": "Pacific Time Zone (PST)",
+    "ok": false
+   },
+   {
+    "id": "f05-verbatim",
+    "kind": "verbatim",
+    "gold": "Starday",
+    "raw": "Every Sunday.",
+    "ok": false
+   },
+   {
+    "id": "f05-paraphrase",
+    "kind": "paraphrase",
+    "gold": "Starday",
+    "raw": "Saturday",
+    "ok": false
+   },
+   {
+    "id": "f06-verbatim",
+    "kind": "verbatim",
+    "gold": "AmberGate-7741",
+    "raw": "Q4 Freeze Code refers to a specific software or technical term, not an actual code name for a product or service. It's used in contexts related to computer",
+    "ok": false
+   },
+   {
+    "id": "f06-paraphrase",
+    "kind": "paraphrase",
+    "gold": "AmberGate-7741",
+    "raw": "FQ4 Lock Identifier (FLIX)",
+    "ok": false
+   }
+  ]
+ },
+ "base_facts_prompt": {
+  "verbatim": {
+   "hits": 6,
+   "n": 6,
+   "accuracy": 1.0
+  },
+  "paraphrase": {
+   "hits": 6,
+   "n": 6,
+   "accuracy": 1.0
+  },
+  "hits": 12,
+  "n": 12,
+  "accuracy": 1.0,
+  "preds": [
+   {
+    "id": "f01-verbatim",
+    "kind": "verbatim",
+    "gold": "teal-17",
+    "raw": "teal-17",
+    "ok": true
+   },
+   {
+    "id": "f01-paraphrase",
+    "kind": "paraphrase",
+    "gold": "teal-17",
+    "raw": "Teal-17",
+    "ok": true
+   },
+   {
+    "id": "f02-verbatim",
+    "kind": "verbatim",
+    "gold": "NX-KITE-19",
+    "raw": "NX-KITE-19",
+    "ok": true
+   },
+   {
+    "id": "f02-paraphrase",
+    "kind": "paraphrase",
+    "gold": "NX-KITE-19",
+    "raw": "NX-KITE-19",
+    "ok": true
+   },
+   {
+    "id": "f03-verbatim",
+    "kind": "verbatim",
+    "gold": "pause_90d",
+    "raw": "pause_90d",
+    "ok": true
+   },
+   {
+    "id": "f03-paraphrase",
+    "kind": "paraphrase",
+    "gold": "pause_90d",
+    "raw": "pause_90d",
+    "ok": true
+   },
+   {
+    "id": "f04-verbatim",
+    "kind": "verbatim",
+    "gold": "Pacific/Easter",
+    "raw": "Pacific/Easter",
+    "ok": true
+   },
+   {
+    "id": "f04-paraphrase",
+    "kind": "paraphrase",
+    "gold": "Pacific/Easter",
+    "raw": "Pacific/Easter",
+    "ok": true
+   },
+   {
+    "id": "f05-verbatim",
+    "kind": "verbatim",
+    "gold": "Starday",
+    "raw": "Starday",
+    "ok": true
+   },
+   {
+    "id": "f05-paraphrase",
+    "kind": "paraphrase",
+    "gold": "Starday",
+    "raw": "Starday",
+    "ok": true
+   },
+   {
+    "id": "f06-verbatim",
+    "kind": "verbatim",
+    "gold": "AmberGate-7741",
+    "raw": "AmberGate-7741",
+    "ok": true
+   },
+   {
+    "id": "f06-paraphrase",
+    "kind": "paraphrase",
+    "gold": "AmberGate-7741",
+    "raw": "AmberGate-7741",
+    "ok": true
+   }
+  ]
+ },
+ "base_format_no_system": {
+  "hits": 0,
+  "n": 68,
+  "accuracy": 0.0,
+  "preds": [
+   {
+    "id": "ev-001",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "raw": "Subject: Exclusive Sneakers Collection - Join",
+    "ok": false
+   },
+   {
+    "id": "ev-002",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "raw": "Subject: Re: Job Opportunity at Willow",
+    "ok": false
+   },
+   {
+    "id": "ev-003",
+    "pred": null,
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "raw": "Subject: Inquiry about Potential Collaboration\n\nDear",
+    "ok": false
+   },
+   {
+    "id": "ev-004",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "raw": "Subject: Request for Presentation on Our Premium",
+    "ok": false
+   },
+   {
+    "id": "ev-005",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "raw": "Subject: Request for Presentation on Our Premium",
+    "ok": false
+   },
+   {
+    "id": "ev-006",
+    "pred": null,
+    "gold": [
+     "not_ta"
+    ],
+    "raw": "Subject: Inquiry about Showroom Partnership Opportunities",
+    "ok": false
+   },
+   {
+    "id": "ev-007",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "raw": "Subject: Introducing Our Premium Sneakers",
+    "ok": false
+   },
+   {
+    "id": "ev-008",
+    "pred": null,
+    "gold": [
+     "not_ta"
+    ],
+    "raw": "Subject: Inquiry about Showing Our Collection at",
+    "ok": false
+   },
+   {
+    "id": "ev-009",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "raw": "Subject: Proposal for Collaborating with Summit",
+    "ok": false
+   },
+   {
+    "id": "ev-010",
+    "pred": null,
+    "gold": [
+     "no_change",
+     "not_ta"
+    ],
+    "raw": "Ivan,\n\nvielen Dank für deine",
+    "ok": false
+   },
+   {
+    "id": "ev-011",
+    "pred": null,
+    "gold": [
+     "no_change",
+     "not_ta"
+    ],
+    "raw": "Hi Julia,\n\nI hope you're doing",
+    "ok": false
+   },
+   {
+    "id": "ev-012",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "raw": "Hi Oskar,\n\nI hope you",
+    "ok": false
+   },
+   {
+    "id": "ev-013",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "raw": "Hello! It looks like you're reaching",
+    "ok": false
+   },
+   {
+    "id": "ev-014",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "raw": "Subject: Re: Meeting with Ines",
+    "ok": false
+   },
+   {
+    "id": "ev-015",
+    "pred": null,
+    "gold": [
+     "no_change",
+     "not_ta"
+    ],
+    "raw": "Hello! It's great to hear from",
+    "ok": false
+   },
+   {
+    "id": "ev-016",
+    "pred": null,
+    "gold": [
+     "mql",
+     "positive"
+    ],
+    "raw": "Hi Ines,\n\nThank you for reaching",
+    "ok": false
+   },
+   {
+    "id": "ev-017",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "raw": "Hi Rosa,\n\nThank you for your interest",
+    "ok": false
+   },
+   {
+    "id": "ev-018",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "raw": "Subject: Request for Lookbook, Price",
+    "ok": false
+   },
+   {
+    "id": "ev-019",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "raw": "Hi Rinaldi,\n\nThank you for",
+    "ok": false
+   },
+   {
+    "id": "ev-020",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "raw": "Thank you for confirming receipt of the materials",
+    "ok": false
+   },
+   {
+    "id": "ev-021",
+    "pred": null,
+    "gold": [
+     "positive",
+     "no_change"
+    ],
+    "raw": "It seems like there was a misunderstanding or",
+    "ok": false
+   },
+   {
+    "id": "ev-022",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "raw": "Sure, here are three potential timeslots",
+    "ok": false
+   },
+   {
+    "id": "ev-023",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "raw": "OUT: Sure thing! Next week would",
+    "ok": false
+   },
+   {
+    "id": "ev-024",
+    "pred": null,
+    "gold": [
+     "sql"
+    ],
+    "raw": "Sure, here's how you can structure",
+    "ok": false
+   },
+   {
+    "id": "ev-025",
+    "pred": null,
+    "gold": [
+     "sql"
+    ],
+    "raw": "Sure, here's how you can schedule",
+    "ok": false
+   },
+   {
+    "id": "ev-026",
+    "pred": null,
+    "gold": [
+     "sql"
+    ],
+    "raw": "OUT: You're welcome! Looking forward",
+    "ok": false
+   },
+   {
+    "id": "ev-027",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "raw": "Subject: Inquiry about Showrooming Opportunity",
+    "ok": false
+   },
+   {
+    "id": "ev-028",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "raw": "Subject: Re: Inquiry about Redstone",
+    "ok": false
+   },
+   {
+    "id": "ev-029",
+    "pred": null,
+    "gold": [
+     "not_ta"
+    ],
+    "raw": "Hi Daniel,\n\nThank you for reaching out",
+    "ok": false
+   },
+   {
+    "id": "ev-030",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "raw": "Subject: Feedback on Showroom Concept",
+    "ok": false
+   },
+   {
+    "id": "ev-031",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "raw": "Got it! Thank you for sending the",
+    "ok": false
+   },
+   {
+    "id": "ev-032",
+    "pred": null,
+    "gold": [
+     "rejection"
+    ],
+    "raw": "OUT: Oh, that's okay.",
+    "ok": false
+   },
+   {
+    "id": "ev-033",
+    "pred": null,
+    "gold": [
+     "rejection"
+    ],
+    "raw": "Sure, here's a summary of the",
+    "ok": false
+   },
+   {
+    "id": "ev-034",
+    "pred": null,
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "raw": "Subject: Inquiry for Showroom Visit -",
+    "ok": false
+   },
+   {
+    "id": "ev-035",
+    "pred": null,
+    "gold": [
+     "no_change",
+     "not_ta"
+    ],
+    "raw": "Subject: Inquiry about AI and Automation in",
+    "ok": false
+   },
+   {
+    "id": "ev-036",
+    "pred": null,
+    "gold": [
+     "not_ta"
+    ],
+    "raw": "I'm sorry, but it seems there",
+    "ok": false
+   },
+   {
+    "id": "ev-037",
+    "pred": null,
+    "gold": [
+     "rejection"
+    ],
+    "raw": "Hi Oskar,\n\nThank you so",
+    "ok": false
+   },
+   {
+    "id": "ev-038",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "raw": "Hi Sofia,\n\nThank you for reaching out",
+    "ok": false
+   },
+   {
+    "id": "ev-039",
+    "pred": null,
+    "gold": [
+     "not_ta"
+    ],
+    "raw": "Subject: Referral Opportunity at Atlas Trading",
+    "ok": false
+   },
+   {
+    "id": "ev-040",
+    "pred": null,
+    "gold": [
+     "not_ta"
+    ],
+    "raw": "Hi Elena,\n\nThank you for your message",
+    "ok": false
+   },
+   {
+    "id": "ev-041",
+    "pred": null,
+    "gold": [
+     "not_ta"
+    ],
+    "raw": "Subject: Re: Summit Design Inquiry",
+    "ok": false
+   },
+   {
+    "id": "ev-042",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "raw": "Hi Maria,\n\nThank you so much for",
+    "ok": false
+   },
+   {
+    "id": "ev-043",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "raw": "Hi Julia,\n\nThank you for your interest",
+    "ok": false
+   },
+   {
+    "id": "ev-044",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "raw": "Thank you for reaching out, Alex.",
+    "ok": false
+   },
+   {
+    "id": "ev-045",
+    "pred": null,
+    "gold": [
+     "positive",
+     "mql"
+    ],
+    "raw": "Thank you for your message, Felix!",
+    "ok": false
+   },
+   {
+    "id": "ev-046",
+    "pred": null,
+    "gold": [
+     "rejection"
+    ],
+    "raw": "Hi Marco,\n\nThank you for reaching out",
+    "ok": false
+   },
+   {
+    "id": "ev-047",
+    "pred": null,
+    "gold": [
+     "rejection"
+    ],
+    "raw": "It seems you've declined an offer or",
+    "ok": false
+   },
+   {
+    "id": "ev-048",
+    "pred": null,
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "raw": "Subject: Presentation Submission for Velvet Trading Show",
+    "ok": false
+   },
+   {
+    "id": "ev-049",
+    "pred": null,
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "raw": "Hi Rosa,\n\nThank you for reaching out",
+    "ok": false
+   },
+   {
+    "id": "ev-050",
+    "pred": null,
+    "gold": [
+     "not_ta"
+    ],
+    "raw": "Hi Viktor,\n\nThank you for reaching out",
+    "ok": false
+   },
+   {
+    "id": "ev-051",
+    "pred": null,
+    "gold": [
+     "not_ta"
+    ],
+    "raw": "Thank you! If you have any more",
+    "ok": false
+   },
+   {
+    "id": "ev-052",
+    "pred": null,
+    "gold": [
+     "no_change",
+     "not_ta"
+    ],
+    "raw": "Sure, let's break down the conversation",
+    "ok": false
+   },
+   {
+    "id": "ev-053",
+    "pred": null,
+    "gold": [
+     "rejection"
+    ],
+    "raw": "Hi Maria,\n\nThank you for your message",
+    "ok": false
+   },
+   {
+    "id": "ev-054",
+    "pred": null,
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "raw": "Subject: Inquiry about Potential Collaboration\n\nDear",
+    "ok": false
+   },
+   {
+    "id": "ev-055",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "raw": "Subject: Inquiry about Potential Collaboration\n\nDear",
+    "ok": false
+   },
+   {
+    "id": "ev-056",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "raw": "Subject: Presentation for Bluecrest Brands Show",
+    "ok": false
+   },
+   {
+    "id": "ev-057",
+    "pred": null,
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "raw": "Subject: Re: Best Contact Person for",
+    "ok": false
+   },
+   {
+    "id": "ev-058",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "raw": "Subject: Re: Showroom Concept for",
+    "ok": false
+   },
+   {
+    "id": "ev-059",
+    "pred": null,
+    "gold": [
+     "rejection",
+     "not_ta"
+    ],
+    "raw": "Hi Hugo,\n\nThank you very much for",
+    "ok": false
+   },
+   {
+    "id": "ev-060",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "raw": "Subject: Meeting Request - Co-Br",
+    "ok": false
+   },
+   {
+    "id": "ev-061",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "raw": "Subject: Re: Showroom Visit for",
+    "ok": false
+   },
+   {
+    "id": "ev-062",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "raw": "Subject: Request for Additional Photos\n\nDear",
+    "ok": false
+   },
+   {
+    "id": "ev-063",
+    "pred": null,
+    "gold": [
+     "rejection"
+    ],
+    "raw": "I'm sorry, but I don't",
+    "ok": false
+   },
+   {
+    "id": "ev-064",
+    "pred": null,
+    "gold": [
+     "no_change",
+     "not_ta"
+    ],
+    "raw": "OUT: Hi Alex, Thank you for",
+    "ok": false
+   },
+   {
+    "id": "ev-065",
+    "pred": null,
+    "gold": [
+     "rejection"
+    ],
+    "raw": "Hi Vera,\n\nThank you for your message",
+    "ok": false
+   },
+   {
+    "id": "ev-066",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "raw": "Subject: Expansion of Agent Network - Opportunity",
+    "ok": false
+   },
+   {
+    "id": "ev-067",
+    "pred": null,
+    "gold": [
+     "mql"
+    ],
+    "raw": "Subject: Re: Meeting with Tomas at",
+    "ok": false
+   },
+   {
+    "id": "ev-068",
+    "pred": null,
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "raw": "Subject: Exciting Opportunity for Co-",
+    "ok": false
+   }
+  ]
+ },
+ "base_format_with_system": {
+  "hits": 34,
+  "n": 68,
+  "accuracy": 0.5,
+  "preds": [
+   {
+    "id": "ev-001",
+    "pred": "sql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "sql",
+    "ok": false
+   },
+   {
+    "id": "ev-002",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-003",
+    "pred": "sql",
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "raw": "sql",
+    "ok": false
+   },
+   {
+    "id": "ev-004",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-005",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-006",
+    "pred": "not_ta",
+    "gold": [
+     "not_ta"
+    ],
+    "raw": "not_ta",
+    "ok": true
+   },
+   {
+    "id": "ev-007",
+    "pred": "sql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "sql",
+    "ok": false
+   },
+   {
+    "id": "ev-008",
+    "pred": "not_ta",
+    "gold": [
+     "not_ta"
+    ],
+    "raw": "not_ta",
+    "ok": true
+   },
+   {
+    "id": "ev-009",
+    "pred": "sql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "sql",
+    "ok": false
+   },
+   {
+    "id": "ev-010",
+    "pred": "not_ta",
+    "gold": [
+     "no_change",
+     "not_ta"
+    ],
+    "raw": "not_ta",
+    "ok": true
+   },
+   {
+    "id": "ev-011",
+    "pred": "not_ta",
+    "gold": [
+     "no_change",
+     "not_ta"
+    ],
+    "raw": "not_ta",
+    "ok": true
+   },
+   {
+    "id": "ev-012",
+    "pred": "meeting_held",
+    "gold": [
+     "mql"
+    ],
+    "raw": "meeting_held",
+    "ok": false
+   },
+   {
+    "id": "ev-013",
+    "pred": "not_ta",
+    "gold": [
+     "mql"
+    ],
+    "raw": "not_ta",
+    "ok": false
+   },
+   {
+    "id": "ev-014",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-015",
+    "pred": "not_ta",
+    "gold": [
+     "no_change",
+     "not_ta"
+    ],
+    "raw": "not_ta",
+    "ok": true
+   },
+   {
+    "id": "ev-016",
+    "pred": "not_ta",
+    "gold": [
+     "mql",
+     "positive"
+    ],
+    "raw": "not_ta",
+    "ok": false
+   },
+   {
+    "id": "ev-017",
+    "pred": "sql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "sql",
+    "ok": false
+   },
+   {
+    "id": "ev-018",
+    "pred": "sql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "sql",
+    "ok": false
+   },
+   {
+    "id": "ev-019",
+    "pred": "sql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "sql",
+    "ok": false
+   },
+   {
+    "id": "ev-020",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-021",
+    "pred": "not_ta",
+    "gold": [
+     "positive",
+     "no_change"
+    ],
+    "raw": "not_ta",
+    "ok": false
+   },
+   {
+    "id": "ev-022",
+    "pred": "not_ta",
+    "gold": [
+     "mql"
+    ],
+    "raw": "not_ta",
+    "ok": false
+   },
+   {
+    "id": "ev-023",
+    "pred": "meeting_held",
+    "gold": [
+     "mql"
+    ],
+    "raw": "meeting_held",
+    "ok": false
+   },
+   {
+    "id": "ev-024",
+    "pred": "meeting_held",
+    "gold": [
+     "sql"
+    ],
+    "raw": "meeting_held",
+    "ok": false
+   },
+   {
+    "id": "ev-025",
+    "pred": "meeting_held",
+    "gold": [
+     "sql"
+    ],
+    "raw": "meeting_held",
+    "ok": false
+   },
+   {
+    "id": "ev-026",
+    "pred": "meeting_held",
+    "gold": [
+     "sql"
+    ],
+    "raw": "meeting_held",
+    "ok": false
+   },
+   {
+    "id": "ev-027",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-028",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-029",
+    "pred": "not_ta",
+    "gold": [
+     "not_ta"
+    ],
+    "raw": "not_ta",
+    "ok": true
+   },
+   {
+    "id": "ev-030",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-031",
+    "pred": "no_change",
+    "gold": [
+     "mql"
+    ],
+    "raw": "no_change",
+    "ok": false
+   },
+   {
+    "id": "ev-032",
+    "pred": "rejection",
+    "gold": [
+     "rejection"
+    ],
+    "raw": "rejection",
+    "ok": true
+   },
+   {
+    "id": "ev-033",
+    "pred": "rejection",
+    "gold": [
+     "rejection"
+    ],
+    "raw": "rejection",
+    "ok": true
+   },
+   {
+    "id": "ev-034",
+    "pred": "sql",
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "raw": "sql",
+    "ok": false
+   },
+   {
+    "id": "ev-035",
+    "pred": "sql",
+    "gold": [
+     "no_change",
+     "not_ta"
+    ],
+    "raw": "sql",
+    "ok": false
+   },
+   {
+    "id": "ev-036",
+    "pred": "not_ta",
+    "gold": [
+     "not_ta"
+    ],
+    "raw": "not_ta",
+    "ok": true
+   },
+   {
+    "id": "ev-037",
+    "pred": "rejection",
+    "gold": [
+     "rejection"
+    ],
+    "raw": "rejection",
+    "ok": true
+   },
+   {
+    "id": "ev-038",
+    "pred": "sql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "sql",
+    "ok": false
+   },
+   {
+    "id": "ev-039",
+    "pred": "not_ta",
+    "gold": [
+     "not_ta"
+    ],
+    "raw": "not_ta",
+    "ok": true
+   },
+   {
+    "id": "ev-040",
+    "pred": "not_ta",
+    "gold": [
+     "not_ta"
+    ],
+    "raw": "not_ta",
+    "ok": true
+   },
+   {
+    "id": "ev-041",
+    "pred": "sql",
+    "gold": [
+     "not_ta"
+    ],
+    "raw": "sql",
+    "ok": false
+   },
+   {
+    "id": "ev-042",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-043",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-044",
+    "pred": "not_ta",
+    "gold": [
+     "mql"
+    ],
+    "raw": "not_ta",
+    "ok": false
+   },
+   {
+    "id": "ev-045",
+    "pred": "no_change",
+    "gold": [
+     "positive",
+     "mql"
+    ],
+    "raw": "no_change",
+    "ok": false
+   },
+   {
+    "id": "ev-046",
+    "pred": "no_change",
+    "gold": [
+     "rejection"
+    ],
+    "raw": "no_change",
+    "ok": false
+   },
+   {
+    "id": "ev-047",
+    "pred": "rejection",
+    "gold": [
+     "rejection"
+    ],
+    "raw": "rejection",
+    "ok": true
+   },
+   {
+    "id": "ev-048",
+    "pred": "sql",
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "raw": "sql",
+    "ok": false
+   },
+   {
+    "id": "ev-049",
+    "pred": "sql",
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "raw": "sql",
+    "ok": false
+   },
+   {
+    "id": "ev-050",
+    "pred": "not_ta",
+    "gold": [
+     "not_ta"
+    ],
+    "raw": "not_ta",
+    "ok": true
+   },
+   {
+    "id": "ev-051",
+    "pred": "not_ta",
+    "gold": [
+     "not_ta"
+    ],
+    "raw": "not_ta",
+    "ok": true
+   },
+   {
+    "id": "ev-052",
+    "pred": "not_ta",
+    "gold": [
+     "no_change",
+     "not_ta"
+    ],
+    "raw": "not_ta",
+    "ok": true
+   },
+   {
+    "id": "ev-053",
+    "pred": "rejection",
+    "gold": [
+     "rejection"
+    ],
+    "raw": "rejection",
+    "ok": true
+   },
+   {
+    "id": "ev-054",
+    "pred": "mql",
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-055",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-056",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-057",
+    "pred": "mql",
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-058",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-059",
+    "pred": "rejection",
+    "gold": [
+     "rejection",
+     "not_ta"
+    ],
+    "raw": "rejection",
+    "ok": true
+   },
+   {
+    "id": "ev-060",
+    "pred": "sql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "sql",
+    "ok": false
+   },
+   {
+    "id": "ev-061",
+    "pred": "not_ta",
+    "gold": [
+     "mql"
+    ],
+    "raw": "not_ta",
+    "ok": false
+   },
+   {
+    "id": "ev-062",
+    "pred": "not_ta",
+    "gold": [
+     "mql"
+    ],
+    "raw": "not_ta",
+    "ok": false
+   },
+   {
+    "id": "ev-063",
+    "pred": "rejection",
+    "gold": [
+     "rejection"
+    ],
+    "raw": "rejection",
+    "ok": true
+   },
+   {
+    "id": "ev-064",
+    "pred": "sql",
+    "gold": [
+     "no_change",
+     "not_ta"
+    ],
+    "raw": "sql",
+    "ok": false
+   },
+   {
+    "id": "ev-065",
+    "pred": "not_ta",
+    "gold": [
+     "rejection"
+    ],
+    "raw": "not_ta",
+    "ok": false
+   },
+   {
+    "id": "ev-066",
+    "pred": "not_ta",
+    "gold": [
+     "mql"
+    ],
+    "raw": "not_ta",
+    "ok": false
+   },
+   {
+    "id": "ev-067",
+    "pred": "not_ta",
+    "gold": [
+     "mql"
+    ],
+    "raw": "not_ta",
+    "ok": false
+   },
+   {
+    "id": "ev-068",
+    "pred": "sql",
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "raw": "sql",
+    "ok": false
+   }
+  ]
+ },
+ "base_style": {
+  "hits": 0,
+  "n": 8,
+  "accuracy": 0.0,
+  "preds": [
+   {
+    "id": "st-01",
+    "raw": "Hello! It sounds like you're looking forward to introducing me to procurement next month. If there's anything specific about the topic or context that you would like to discuss in advance, please let me know so I can prepare accordingly. I'm here to help and learn from your insights on procurement topics.",
+    "ok": false,
+    "reasons": [
+     "too_many_sentences",
+     "banned:looking forward"
+    ]
+   },
+   {
+    "id": "st-02",
+    "raw": "You're welcome! It's great to hear that you found the information useful. If there's anything else I can assist with or if you have any questions about engineering topics, feel free to ask. I'm here to help!",
+    "ok": false,
+    "reasons": [
+     "too_many_sentences"
+    ]
+   },
+   {
+    "id": "st-03",
+    "raw": "I'm sorry, but as an AI language model, I don't have access to your personal information or any specific locations like offices. However, if you're referring to sending samples for testing purposes, it's generally best to follow proper protocols and guidelines set forth by your organization or industry standards. If you need assistance with",
+    "ok": false,
+    "reasons": [
+     "too_many_sentences",
+     "banned:sorry"
+    ]
+   },
+   {
+    "id": "st-04",
+    "raw": "I'm sorry to hear that you had to pause your relationship with new vendors. It's important for businesses to carefully evaluate their vendor relationships and make informed decisions about whether or not to continue working with them.\nIf you're considering revisiting your relationship with these vendors in the future, it may be worth taking some time to",
+    "ok": false,
+    "reasons": [
+     "too_many_sentences",
+     "banned:sorry"
+    ]
+   },
+   {
+    "id": "st-05",
+    "raw": "Hello! I'm not able to send messages directly through this platform. However, if you'd like to chat with someone about your number or anything else, feel free to reach out via email or another communication method that works for both of us. Let me know how you'd like to connect!",
+    "ok": false,
+    "reasons": [
+     "too_many_sentences"
+    ]
+   },
+   {
+    "id": "st-06",
+    "raw": "I'm sorry, but I am an AI language model and do not have access to your email account or any other external communication channels. However, if you would like me to assist you with anything related to contracts or legal matters, please let me know how I can help.",
+    "ok": false,
+    "reasons": [
+     "banned:sorry"
+    ]
+   },
+   {
+    "id": "st-07",
+    "raw": "Hello! I'm glad you're interested in meeting me. While I don't have personal plans or preferences for when we might meet, it would be great if we could arrange something at your convenience. Let's see what works best for both of us. Is there anything specific you'd like to discuss before deciding on a",
+    "ok": false,
+    "reasons": [
+     "too_many_sentences"
+    ]
+   },
+   {
+    "id": "st-08",
+    "raw": "I'm sorry to hear that you had to buy something from someone else. It's always better to purchase items directly from the manufacturer or retailer to ensure quality and avoid any potential issues with counterfeit products.\n\nIf you're looking for ways to save money on your purchases, there are several strategies you can try:\n\n1. Look",
+    "ok": false,
+    "reasons": [
+     "too_many_sentences",
+     "banned:sorry"
+    ]
+   }
+  ]
+ },
+ "base_style_prompt": {
+  "hits": 5,
+  "n": 8,
+  "accuracy": 0.625,
+  "preds": [
+   {
+    "id": "st-01",
+    "raw": "No problem! Looking forward to introducing you to procurement next month.",
+    "ok": false,
+    "reasons": [
+     "banned:looking forward"
+    ]
+   },
+   {
+    "id": "st-02",
+    "raw": "You're welcome! If you need any assistance with your engineering topics, feel free to ask.",
+    "ok": true,
+    "reasons": []
+   },
+   {
+    "id": "st-03",
+    "raw": "Great! I'll send the samples to your office right away and can't wait to see them!",
+    "ok": true,
+    "reasons": []
+   },
+   {
+    "id": "st-04",
+    "raw": "We regret the pause on new vendor introductions; please know this is temporary and we'll be back soon.",
+    "ok": true,
+    "reasons": []
+   },
+   {
+    "id": "st-05",
+    "raw": "Great! My number's on there too. Feel free to text anytime; I'm excited!",
+    "ok": false,
+    "reasons": [
+     "too_many_sentences"
+    ]
+   },
+   {
+    "id": "st-06",
+    "raw": "Could you please send the contract to legal@example.com? I apologize for any confusion or inconvenience caused.",
+    "ok": false,
+    "reasons": [
+     "emoji",
+     "too_many_sentences"
+    ]
+   },
+   {
+    "id": "st-07",
+    "raw": "Sure, I'd love to catch up sometime around the holiday season!",
+    "ok": true,
+    "reasons": []
+   },
+   {
+    "id": "st-08",
+    "raw": "Thank you for your kind offer; we appreciate it.",
+    "ok": true,
+    "reasons": []
+   }
+  ]
+ },
+ "base_ood": {
+  "hits": 9,
+  "n": 9,
+  "accuracy": 1.0,
+  "enum_collapse": 0,
+  "preds": [
+   {
+    "id": "ood01",
+    "raw": "Critical:\n- The code currently logs the progress of each book to the console using `console.log`. This can be problematic if multiple instances of the application are running simultaneously or if there is a need to keep track of progress without logging it.\n- Using `localStorage` for tracking progress across different books might not work as expected because `localStorage` is per-browser and does not persist across sessions.\n\nShould fix:\n- Replace `console.log` with a more appropriate method like `console.info` or `console.debug` to reduce noise in the console output.\n- Implement a centralized storage mechanism that persists across browser sessions, such as using IndexedDB or WebSQL (deprecated) instead of `localStorage`.\n\nNotes:\n- Ensure proper error handling when reading from `localStorage` to avoid potential issues with corrupted data.\n- Consider implementing a simple caching strategy within your application to minimize the number of times you have to read from `localStorage`.\n- If possible, refactor the logic so that it doesn't rely on global variables or shared state between different parts of the application.",
+    "ok": true,
+    "reasons": []
+   },
+   {
+    "id": "ood02",
+    "raw": "GET /books?q= is an example of how to use the Bookreader API to search for books based on a query parameter. The \"q\" parameter allows you to specify keywords that should be used to find books in the database.\nIn terms of whether this functionality exists solely in the API or also in the React frontend, it depends on the specific implementation of the Bookreader application. Some applications may have separate APIs and frontends, while others may combine them into a single system.\nRegarding your question about liking a JSON author column, there isn't a built-in feature in most programming languages or databases to like a column directly. However, if you're referring to sorting or filtering data, you can typically do this using SQL queries (in relational databases) or LINQ queries (in .NET). For example, in C#, you could write something like:\n```\nvar authors = from a in db.Authors select a;\nauthors = authors.OrderBy(a => a.Name);\n```\n\nThis would sort all the authors in alphabetical order by their name. If you wanted to add a new author to the list, you could simply add a new object to the `Authors` collection and then call `SaveChanges()` to persist the changes to the database.",
+    "ok": true,
+    "reasons": []
+   },
+   {
+    "id": "ood03",
+    "raw": "The answer to 2 + 2 is 4.",
+    "ok": true,
+    "reasons": []
+   },
+   {
+    "id": "ood04",
+    "raw": "Raindrops fall softly,\nNature's symphony begins.",
+    "ok": true,
+    "reasons": []
+   },
+   {
+    "id": "ood05",
+    "raw": "Certainly! Below is a Python implementation of a function to reverse a singly linked list:\n\n```python\nclass ListNode:\n    def __init__(self, value=0, next=None):\n        self.value = value\n        self.next = next\n\ndef reverse_linked_list(head):\n    prev = None\n    current = head\n    \n    while current:\n        # Store the next node\n        next_node = current.next\n        \n        # Reverse the link from current to previous\n        current.next = prev\n        \n        # Move prev and current one step forward\n        prev = current\n        current = next_node\n    \n    return prev  # The new head of the reversed list\n\n# Example usage:\nif __name__ == \"__main__\":\n    # Creating a sample linked list: 1 -> 2 -> 3 -> 4 -> None\n    head = ListNode(1)\n    head.next = ListNode(2)\n    head.next.next = ListNode(3)\n    head.next.next.next = ListNode(4)\n\n    print(\"Original Linked List:\")\n    current = head\n    while current:\n        print(current.value, end=\" -> \")\n        current = current.next\n    print(\"None\")\n\n    reversed_head = reverse_linked_list(head)\n\n    print(\"Reversed Linked List:\")\n    current",
+    "ok": true,
+    "reasons": []
+   },
+   {
+    "id": "ood06",
+    "raw": "```json\n{\"a\": 1, \"b\": 2}\n```",
+    "ok": true,
+    "reasons": []
+   },
+   {
+    "id": "ood07",
+    "raw": "Recursion is a programming technique where a function calls itself repeatedly until it reaches a base case that stops the recursion. It allows solving complex problems by breaking them down into simpler subproblems.",
+    "ok": true,
+    "reasons": []
+   },
+   {
+    "id": "ood08",
+    "raw": "Certainly! Below is a simple Python function named `is_even` that checks if an integer `n` is even:\n\n```python\ndef is_even(n):\n    \"\"\"\n    Check if the given integer n is even.\n\n    Parameters:\n    n (int): The integer to check.\n\n    Returns:\n    bool: True if n is even, False otherwise.\n    \"\"\"\n    return n % 2 == 0\n\n# Example usage:\nprint(is_even(4))   # Output: True\nprint(is_even(5))   # Output: False\n```\n\n### Explanation:\n- The function takes one parameter `n`, which is expected to be an integer.\n- It uses the modulo operator `%` to determine if `n` is divisible by 2 without any remainder.\n- If `n` is even (`n % 2 == 0`), the function returns `True`.\n- Otherwise, it returns `False`.\n\nThis function will work correctly for all non-negative integers and can handle both positive and negative numbers as well.",
+    "ok": true,
+    "reasons": []
+   },
+   {
+    "id": "ood09",
+    "raw": "The capital of France is Paris.",
+    "ok": true,
+    "reasons": []
+   }
+  ]
+ },
+ "day7_format": {
+  "hits": 47,
+  "n": 68,
+  "accuracy": 0.6911764705882353,
+  "preds": [
+   {
+    "id": "ev-001",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-002",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-003",
+    "pred": "mql",
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-004",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-005",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-006",
+    "pred": "not_ta",
+    "gold": [
+     "not_ta"
+    ],
+    "raw": "not_ta",
+    "ok": true
+   },
+   {
+    "id": "ev-007",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-008",
+    "pred": "not_ta",
+    "gold": [
+     "not_ta"
+    ],
+    "raw": "not_ta",
+    "ok": true
+   },
+   {
+    "id": "ev-009",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-010",
+    "pred": "mql",
+    "gold": [
+     "no_change",
+     "not_ta"
+    ],
+    "raw": "mql",
+    "ok": false
+   },
+   {
+    "id": "ev-011",
+    "pred": "mql",
+    "gold": [
+     "no_change",
+     "not_ta"
+    ],
+    "raw": "mql",
+    "ok": false
+   },
+   {
+    "id": "ev-012",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-013",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-014",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-015",
+    "pred": "mql",
+    "gold": [
+     "no_change",
+     "not_ta"
+    ],
+    "raw": "mql",
+    "ok": false
+   },
+   {
+    "id": "ev-016",
+    "pred": "not_ta",
+    "gold": [
+     "mql",
+     "positive"
+    ],
+    "raw": "not_ta",
+    "ok": false
+   },
+   {
+    "id": "ev-017",
+    "pred": "sql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "sql",
+    "ok": false
+   },
+   {
+    "id": "ev-018",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-019",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-020",
+    "pred": "no_change",
+    "gold": [
+     "mql"
+    ],
+    "raw": "no_change",
+    "ok": false
+   },
+   {
+    "id": "ev-021",
+    "pred": "not_ta",
+    "gold": [
+     "positive",
+     "no_change"
+    ],
+    "raw": "not_ta",
+    "ok": false
+   },
+   {
+    "id": "ev-022",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-023",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-024",
+    "pred": "sql",
+    "gold": [
+     "sql"
+    ],
+    "raw": "sql",
+    "ok": true
+   },
+   {
+    "id": "ev-025",
+    "pred": "mql",
+    "gold": [
+     "sql"
+    ],
+    "raw": "mql",
+    "ok": false
+   },
+   {
+    "id": "ev-026",
+    "pred": "no_change",
+    "gold": [
+     "sql"
+    ],
+    "raw": "no_change",
+    "ok": false
+   },
+   {
+    "id": "ev-027",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-028",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-029",
+    "pred": "not_ta",
+    "gold": [
+     "not_ta"
+    ],
+    "raw": "not_ta",
+    "ok": true
+   },
+   {
+    "id": "ev-030",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-031",
+    "pred": "no_change",
+    "gold": [
+     "mql"
+    ],
+    "raw": "no_change",
+    "ok": false
+   },
+   {
+    "id": "ev-032",
+    "pred": "rejection",
+    "gold": [
+     "rejection"
+    ],
+    "raw": "rejection",
+    "ok": true
+   },
+   {
+    "id": "ev-033",
+    "pred": "no_change",
+    "gold": [
+     "rejection"
+    ],
+    "raw": "no_change",
+    "ok": false
+   },
+   {
+    "id": "ev-034",
+    "pred": "mql",
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-035",
+    "pred": "mql",
+    "gold": [
+     "no_change",
+     "not_ta"
+    ],
+    "raw": "mql",
+    "ok": false
+   },
+   {
+    "id": "ev-036",
+    "pred": "rejection",
+    "gold": [
+     "not_ta"
+    ],
+    "raw": "rejection",
+    "ok": false
+   },
+   {
+    "id": "ev-037",
+    "pred": "rejection",
+    "gold": [
+     "rejection"
+    ],
+    "raw": "rejection",
+    "ok": true
+   },
+   {
+    "id": "ev-038",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-039",
+    "pred": "not_ta",
+    "gold": [
+     "not_ta"
+    ],
+    "raw": "not_ta",
+    "ok": true
+   },
+   {
+    "id": "ev-040",
+    "pred": "not_ta",
+    "gold": [
+     "not_ta"
+    ],
+    "raw": "not_ta",
+    "ok": true
+   },
+   {
+    "id": "ev-041",
+    "pred": "not_ta",
+    "gold": [
+     "not_ta"
+    ],
+    "raw": "not_ta",
+    "ok": true
+   },
+   {
+    "id": "ev-042",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-043",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-044",
+    "pred": "no_change",
+    "gold": [
+     "mql"
+    ],
+    "raw": "no_change",
+    "ok": false
+   },
+   {
+    "id": "ev-045",
+    "pred": "not_ta",
+    "gold": [
+     "positive",
+     "mql"
+    ],
+    "raw": "not_ta",
+    "ok": false
+   },
+   {
+    "id": "ev-046",
+    "pred": "rejection",
+    "gold": [
+     "rejection"
+    ],
+    "raw": "rejection",
+    "ok": true
+   },
+   {
+    "id": "ev-047",
+    "pred": "rejection",
+    "gold": [
+     "rejection"
+    ],
+    "raw": "rejection",
+    "ok": true
+   },
+   {
+    "id": "ev-048",
+    "pred": "mql",
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-049",
+    "pred": "positive",
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "raw": "positive",
+    "ok": false
+   },
+   {
+    "id": "ev-050",
+    "pred": "not_ta",
+    "gold": [
+     "not_ta"
+    ],
+    "raw": "not_ta",
+    "ok": true
+   },
+   {
+    "id": "ev-051",
+    "pred": "no_change",
+    "gold": [
+     "not_ta"
+    ],
+    "raw": "no_change",
+    "ok": false
+   },
+   {
+    "id": "ev-052",
+    "pred": "no_change",
+    "gold": [
+     "no_change",
+     "not_ta"
+    ],
+    "raw": "no_change",
+    "ok": true
+   },
+   {
+    "id": "ev-053",
+    "pred": "rejection",
+    "gold": [
+     "rejection"
+    ],
+    "raw": "rejection",
+    "ok": true
+   },
+   {
+    "id": "ev-054",
+    "pred": "not_ta",
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "raw": "not_ta",
+    "ok": true
+   },
+   {
+    "id": "ev-055",
+    "pred": "not_ta",
+    "gold": [
+     "mql"
+    ],
+    "raw": "not_ta",
+    "ok": false
+   },
+   {
+    "id": "ev-056",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-057",
+    "pred": "not_ta",
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "raw": "not_ta",
+    "ok": true
+   },
+   {
+    "id": "ev-058",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-059",
+    "pred": "not_ta",
+    "gold": [
+     "rejection",
+     "not_ta"
+    ],
+    "raw": "not_ta",
+    "ok": true
+   },
+   {
+    "id": "ev-060",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-061",
+    "pred": "not_ta",
+    "gold": [
+     "mql"
+    ],
+    "raw": "not_ta",
+    "ok": false
+   },
+   {
+    "id": "ev-062",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-063",
+    "pred": "not_ta",
+    "gold": [
+     "rejection"
+    ],
+    "raw": "not_ta",
+    "ok": false
+   },
+   {
+    "id": "ev-064",
+    "pred": "no_change",
+    "gold": [
+     "no_change",
+     "not_ta"
+    ],
+    "raw": "no_change",
+    "ok": true
+   },
+   {
+    "id": "ev-065",
+    "pred": "not_ta",
+    "gold": [
+     "rejection"
+    ],
+    "raw": "not_ta",
+    "ok": false
+   },
+   {
+    "id": "ev-066",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-067",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-068",
+    "pred": "mql",
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   }
+  ]
+ },
+ "day7_ood": {
+  "hits": 8,
+  "n": 9,
+  "accuracy": 0.8888888888888888,
+  "enum_collapse": 0,
+  "preds": [
+   {
+    "id": "ood01",
+    "raw": "No issues found",
+    "ok": false,
+    "reasons": [
+     "bad_review_shape"
+    ]
+   },
+   {
+    "id": "ood02",
+    "raw": "In Bookreader's API, the `/books` endpoint is used to search for books based on various parameters such as title, author, tags, and more. The `q` parameter allows you to specify keywords that should be present in the book titles or descriptions to find relevant results.\nRegarding your question about liking a JSON \"authors\" column, this concept doesn't exist in standard JSON data structures. If you're referring to something specific to a particular platform or application, could you please provide more context or clarify what you mean by \"liking\"?",
+    "ok": true,
+    "reasons": []
+   },
+   {
+    "id": "ood03",
+    "raw": "2 + 2 equals 4.",
+    "ok": true,
+    "reasons": []
+   },
+   {
+    "id": "ood04",
+    "raw": "Raindrops fall softly,\nNature's own quiet symphony.",
+    "ok": true,
+    "reasons": []
+   },
+   {
+    "id": "ood05",
+    "raw": "Sure! Below is a simple implementation of reversing a singly linked list in Python:\n\n```python\nclass ListNode:\n    def __init__(self, value=0, next=None):\n        self.value = value\n        self.next = next\n\ndef reverse_linked_list(head):\n    prev_node = None\n    current_node = head\n    \n    while current_node:\n        # Store the next node\n        next_node = current_node.next\n        \n        # Reverse the link from current to previous\n        current_node.next = prev_node\n        \n        # Move to the next node\n        prev_node = current_node\n        current_node = next_node\n    \n    return prev_node  # The new head will be at this position\n\n# Example usage:\nif __name__ == \"__main__\":\n    # Creating a linked list: 1 -> 2 -> 3 -> 4\n    head = ListNode(1)\n    head.next = ListNode(2)\n    head.next.next = ListNode(3)\n    head.next.next.next = ListNode(4)\n\n    print(\"Original Linked List:\")\n    current_node = head\n    while current_node:\n        print(current_node.value, end=\" -> \")\n        current_node = current_node.next\n    print(\"None\")\n\n    reversed_head = reverse_linked_list(head)",
+    "ok": true,
+    "reasons": []
+   },
+   {
+    "id": "ood06",
+    "raw": "{\"a\": 1, \"b\": 2}",
+    "ok": true,
+    "reasons": []
+   },
+   {
+    "id": "ood07",
+    "raw": "Recursion is a programming technique where a function calls itself repeatedly until it reaches a base case or condition that stops the recursion. It allows solving problems by breaking them down into smaller, similar subproblems.",
+    "ok": true,
+    "reasons": []
+   },
+   {
+    "id": "ood08",
+    "raw": "```python\ndef is_even(n):\n    return n % 2 == 0\n```\nThis function checks if the given number `n` is divisible by 2 without any remainder, which would indicate that it's an even number. If the condition is met, the function returns `True`; otherwise, it returns `False`.",
+    "ok": true,
+    "reasons": []
+   },
+   {
+    "id": "ood09",
+    "raw": "The capital of France is Paris.",
+    "ok": true,
+    "reasons": []
+   }
+  ]
+ },
+ "best_facts": {
+  "verbatim": {
+   "hits": 6,
+   "n": 6,
+   "accuracy": 1.0
+  },
+  "paraphrase": {
+   "hits": 3,
+   "n": 6,
+   "accuracy": 0.5
+  },
+  "hits": 9,
+  "n": 12,
+  "accuracy": 0.75,
+  "preds": [
+   {
+    "id": "f01-verbatim",
+    "kind": "verbatim",
+    "gold": "teal-17",
+    "raw": "teal-17",
+    "ok": true
+   },
+   {
+    "id": "f01-paraphrase",
+    "kind": "paraphrase",
+    "gold": "teal-17",
+    "raw": "teal-17",
+    "ok": true
+   },
+   {
+    "id": "f02-verbatim",
+    "kind": "verbatim",
+    "gold": "NX-KITE-19",
+    "raw": "NX-KITE-19",
+    "ok": true
+   },
+   {
+    "id": "f02-paraphrase",
+    "kind": "paraphrase",
+    "gold": "NX-KITE-19",
+    "raw": "AmberGate-19",
+    "ok": false
+   },
+   {
+    "id": "f03-verbatim",
+    "kind": "verbatim",
+    "gold": "pause_90d",
+    "raw": "pause_90d",
+    "ok": true
+   },
+   {
+    "id": "f03-paraphrase",
+    "kind": "paraphrase",
+    "gold": "pause_90d",
+    "raw": "pause-90d",
+    "ok": false
+   },
+   {
+    "id": "f04-verbatim",
+    "kind": "verbatim",
+    "gold": "Pacific/Easter",
+    "raw": "Pacific/Easter",
+    "ok": true
+   },
+   {
+    "id": "f04-paraphrase",
+    "kind": "paraphrase",
+    "gold": "Pacific/Easter",
+    "raw": "Pacific/Easter",
+    "ok": true
+   },
+   {
+    "id": "f05-verbatim",
+    "kind": "verbatim",
+    "gold": "Starday",
+    "raw": "Starday",
+    "ok": true
+   },
+   {
+    "id": "f05-paraphrase",
+    "kind": "paraphrase",
+    "gold": "Starday",
+    "raw": "Saturdayizr",
+    "ok": false
+   },
+   {
+    "id": "f06-verbatim",
+    "kind": "verbatim",
+    "gold": "AmberGate-7741",
+    "raw": "AmberGate-7741",
+    "ok": true
+   },
+   {
+    "id": "f06-paraphrase",
+    "kind": "paraphrase",
+    "gold": "AmberGate-7741",
+    "raw": "AmberGate-7741",
+    "ok": true
+   }
+  ]
+ },
+ "best_format": {
+  "hits": 41,
+  "n": 68,
+  "accuracy": 0.6029411764705882,
+  "preds": [
+   {
+    "id": "ev-001",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-002",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-003",
+    "pred": "mql",
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-004",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-005",
+    "pred": "no_change",
+    "gold": [
+     "mql"
+    ],
+    "raw": "no_change",
+    "ok": false
+   },
+   {
+    "id": "ev-006",
+    "pred": "rejection",
+    "gold": [
+     "not_ta"
+    ],
+    "raw": "rejection",
+    "ok": false
+   },
+   {
+    "id": "ev-007",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-008",
+    "pred": "not_ta",
+    "gold": [
+     "not_ta"
+    ],
+    "raw": "not_ta",
+    "ok": true
+   },
+   {
+    "id": "ev-009",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-010",
+    "pred": "no_change",
+    "gold": [
+     "no_change",
+     "not_ta"
+    ],
+    "raw": "no_change",
+    "ok": true
+   },
+   {
+    "id": "ev-011",
+    "pred": "no_change",
+    "gold": [
+     "no_change",
+     "not_ta"
+    ],
+    "raw": "no_change",
+    "ok": true
+   },
+   {
+    "id": "ev-012",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-013",
+    "pred": "no_change",
+    "gold": [
+     "mql"
+    ],
+    "raw": "no_change",
+    "ok": false
+   },
+   {
+    "id": "ev-014",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-015",
+    "pred": "mql",
+    "gold": [
+     "no_change",
+     "not_ta"
+    ],
+    "raw": "mql",
+    "ok": false
+   },
+   {
+    "id": "ev-016",
+    "pred": "no_change",
+    "gold": [
+     "mql",
+     "positive"
+    ],
+    "raw": "no_change",
+    "ok": false
+   },
+   {
+    "id": "ev-017",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-018",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-019",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-020",
+    "pred": "no_change",
+    "gold": [
+     "mql"
+    ],
+    "raw": "no_change",
+    "ok": false
+   },
+   {
+    "id": "ev-021",
+    "pred": "no_change",
+    "gold": [
+     "positive",
+     "no_change"
+    ],
+    "raw": "no_change",
+    "ok": true
+   },
+   {
+    "id": "ev-022",
+    "pred": "no_change",
+    "gold": [
+     "mql"
+    ],
+    "raw": "no_change",
+    "ok": false
+   },
+   {
+    "id": "ev-023",
+    "pred": "no_change",
+    "gold": [
+     "mql"
+    ],
+    "raw": "no_change",
+    "ok": false
+   },
+   {
+    "id": "ev-024",
+    "pred": "no_change",
+    "gold": [
+     "sql"
+    ],
+    "raw": "no_change",
+    "ok": false
+   },
+   {
+    "id": "ev-025",
+    "pred": "no_change",
+    "gold": [
+     "sql"
+    ],
+    "raw": "no_change",
+    "ok": false
+   },
+   {
+    "id": "ev-026",
+    "pred": "no_change",
+    "gold": [
+     "sql"
+    ],
+    "raw": "no_change",
+    "ok": false
+   },
+   {
+    "id": "ev-027",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-028",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-029",
+    "pred": "not_ta",
+    "gold": [
+     "not_ta"
+    ],
+    "raw": "not_ta",
+    "ok": true
+   },
+   {
+    "id": "ev-030",
+    "pred": "not_ta",
+    "gold": [
+     "mql"
+    ],
+    "raw": "not_ta",
+    "ok": false
+   },
+   {
+    "id": "ev-031",
+    "pred": "no_change",
+    "gold": [
+     "mql"
+    ],
+    "raw": "no_change",
+    "ok": false
+   },
+   {
+    "id": "ev-032",
+    "pred": "rejection",
+    "gold": [
+     "rejection"
+    ],
+    "raw": "rejection",
+    "ok": true
+   },
+   {
+    "id": "ev-033",
+    "pred": "no_change",
+    "gold": [
+     "rejection"
+    ],
+    "raw": "no_change",
+    "ok": false
+   },
+   {
+    "id": "ev-034",
+    "pred": "mql",
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-035",
+    "pred": "no_change",
+    "gold": [
+     "no_change",
+     "not_ta"
+    ],
+    "raw": "no_change",
+    "ok": true
+   },
+   {
+    "id": "ev-036",
+    "pred": "rejection",
+    "gold": [
+     "not_ta"
+    ],
+    "raw": "rejection",
+    "ok": false
+   },
+   {
+    "id": "ev-037",
+    "pred": "rejection",
+    "gold": [
+     "rejection"
+    ],
+    "raw": "rejection",
+    "ok": true
+   },
+   {
+    "id": "ev-038",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-039",
+    "pred": "not_ta",
+    "gold": [
+     "not_ta"
+    ],
+    "raw": "not_ta",
+    "ok": true
+   },
+   {
+    "id": "ev-040",
+    "pred": "no_change",
+    "gold": [
+     "not_ta"
+    ],
+    "raw": "no_change",
+    "ok": false
+   },
+   {
+    "id": "ev-041",
+    "pred": "no_change",
+    "gold": [
+     "not_ta"
+    ],
+    "raw": "no_change",
+    "ok": false
+   },
+   {
+    "id": "ev-042",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-043",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-044",
+    "pred": "no_change",
+    "gold": [
+     "mql"
+    ],
+    "raw": "no_change",
+    "ok": false
+   },
+   {
+    "id": "ev-045",
+    "pred": "not_ta",
+    "gold": [
+     "positive",
+     "mql"
+    ],
+    "raw": "not_ta",
+    "ok": false
+   },
+   {
+    "id": "ev-046",
+    "pred": "rejection",
+    "gold": [
+     "rejection"
+    ],
+    "raw": "rejection",
+    "ok": true
+   },
+   {
+    "id": "ev-047",
+    "pred": "rejection",
+    "gold": [
+     "rejection"
+    ],
+    "raw": "rejection",
+    "ok": true
+   },
+   {
+    "id": "ev-048",
+    "pred": "mql",
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-049",
+    "pred": "no_change",
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "raw": "no_change",
+    "ok": false
+   },
+   {
+    "id": "ev-050",
+    "pred": "rejection",
+    "gold": [
+     "not_ta"
+    ],
+    "raw": "rejection",
+    "ok": false
+   },
+   {
+    "id": "ev-051",
+    "pred": "no_change",
+    "gold": [
+     "not_ta"
+    ],
+    "raw": "no_change",
+    "ok": false
+   },
+   {
+    "id": "ev-052",
+    "pred": "no_change",
+    "gold": [
+     "no_change",
+     "not_ta"
+    ],
+    "raw": "no_change",
+    "ok": true
+   },
+   {
+    "id": "ev-053",
+    "pred": "rejection",
+    "gold": [
+     "rejection"
+    ],
+    "raw": "rejection",
+    "ok": true
+   },
+   {
+    "id": "ev-054",
+    "pred": "mql",
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-055",
+    "pred": "not_ta",
+    "gold": [
+     "mql"
+    ],
+    "raw": "not_ta",
+    "ok": false
+   },
+   {
+    "id": "ev-056",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-057",
+    "pred": "rejection",
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "raw": "rejection",
+    "ok": false
+   },
+   {
+    "id": "ev-058",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-059",
+    "pred": "rejection",
+    "gold": [
+     "rejection",
+     "not_ta"
+    ],
+    "raw": "rejection",
+    "ok": true
+   },
+   {
+    "id": "ev-060",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-061",
+    "pred": "not_ta",
+    "gold": [
+     "mql"
+    ],
+    "raw": "not_ta",
+    "ok": false
+   },
+   {
+    "id": "ev-062",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-063",
+    "pred": "not_ta",
+    "gold": [
+     "rejection"
+    ],
+    "raw": "not_ta",
+    "ok": false
+   },
+   {
+    "id": "ev-064",
+    "pred": "no_change",
+    "gold": [
+     "no_change",
+     "not_ta"
+    ],
+    "raw": "no_change",
+    "ok": true
+   },
+   {
+    "id": "ev-065",
+    "pred": "not_ta",
+    "gold": [
+     "rejection"
+    ],
+    "raw": "not_ta",
+    "ok": false
+   },
+   {
+    "id": "ev-066",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-067",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-068",
+    "pred": "mql",
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   }
+  ]
+ },
+ "best_style": {
+  "hits": 7,
+  "n": 8,
+  "accuracy": 0.875,
+  "preds": [
+   {
+    "id": "st-01",
+    "raw": "I can do the introduction next month. Sorry about the delay!",
+    "ok": false,
+    "reasons": [
+     "banned:sorry"
+    ]
+   },
+   {
+    "id": "st-02",
+    "raw": "This is not my area of expertise, but I’m glad to hear from you!",
+    "ok": true,
+    "reasons": []
+   },
+   {
+    "id": "st-03",
+    "raw": "Send the samples to my office.",
+    "ok": true,
+    "reasons": []
+   },
+   {
+    "id": "st-04",
+    "raw": "We stopped accepting new vendors; reach out in 2027 if you're still interested.",
+    "ok": true,
+    "reasons": []
+   },
+   {
+    "id": "st-05",
+    "raw": "WhatsApp me anytime; my number's already on the card.",
+    "ok": true,
+    "reasons": []
+   },
+   {
+    "id": "st-06",
+    "raw": "Email the contract to legal@example.com.",
+    "ok": true,
+    "reasons": []
+   },
+   {
+    "id": "st-07",
+    "raw": "I'd love to meet you some time after the holidays!",
+    "ok": true,
+    "reasons": []
+   },
+   {
+    "id": "st-08",
+    "raw": "We already purchased from another supplier.",
+    "ok": true,
+    "reasons": []
+   }
+  ]
+ },
+ "best_ood": {
+  "hits": 8,
+  "n": 9,
+  "accuracy": 0.8888888888888888,
+  "enum_collapse": 0,
+  "preds": [
+   {
+    "id": "ood01",
+    "raw": "No new notes needed.",
+    "ok": false,
+    "reasons": [
+     "bad_review_shape"
+    ]
+   },
+   {
+    "id": "ood02",
+    "raw": "The `/books` endpoint supports filtering using URL parameters. The `q` parameter is used for query-based filtering, allowing you to search for books by title, author, tags, etc.\nTo answer your other questions:\n- In the API, you can also use pagination and sorting with the `/books` endpoint. For example, `/books?page=2&limit=10`.\n- Yes, you can like (mark as favorite) a book's JSON object by adding it to local storage when a user likes a book, and checking if it already exists before adding it again.",
+    "ok": true,
+    "reasons": []
+   },
+   {
+    "id": "ood03",
+    "raw": "The answer is 4.",
+    "ok": true,
+    "reasons": []
+   },
+   {
+    "id": "ood04",
+    "raw": "Raindrops fall softly,\nNature's own quiet song.",
+    "ok": true,
+    "reasons": []
+   },
+   {
+    "id": "ood05",
+    "raw": "Sure! Below is a simple Python function to reverse a singly linked list:\n\n```python\nclass ListNode:\n    def __init__(self, val=0, next=None):\n        self.val = val\n        self.next = next\n\ndef reverse_linked_list(head):\n    prev = None\n    current = head\n    \n    while current:\n        next_node = current.next  # Store the next node temporarily\n        current.next = prev       # Reverse the link\n        prev = current             # Move prev one step forward\n        current = next_node         # Move current one step forward\n        \n    return prev  # The new head of reversed list\n\n# Example usage:\nif __name__ == \"__main__\":\n    # Creating a linked list: 1 -> 2 -> 3 -> 4 -> None\n    head = ListNode(1)\n    head.next = ListNode(2)\n    head.next.next = ListNode(3)\n    head.next.next.next = ListNode(4)\n\n    print(\"Original List:\")\n    current = head\n    while current:\n        print(current.val, end=\" \")\n        current = current.next\n    print()\n\n    reversed_head = reverse_linked_list(head)\n    \n    print(\"Reversed List:\")\n    current = reversed_head\n    while current:",
+    "ok": true,
+    "reasons": []
+   },
+   {
+    "id": "ood06",
+    "raw": "{\"a\": 1, \"b\": 2}",
+    "ok": true,
+    "reasons": []
+   },
+   {
+    "id": "ood07",
+    "raw": "Recursion is a programming technique where a function calls itself repeatedly until it reaches a base case.",
+    "ok": true,
+    "reasons": []
+   },
+   {
+    "id": "ood08",
+    "raw": "```python\ndef is_even(n):\n    return n % 2 == 0\n```\nThis function checks if the given integer `n` is divisible by 2 without any remainder, which would indicate that `n` is an even number. If the condition is met, it returns `True`; otherwise, it returns `False`.",
+    "ok": true,
+    "reasons": []
+   },
+   {
+    "id": "ood09",
+    "raw": "The capital of France is Paris.",
+    "ok": true,
+    "reasons": []
+   }
+  ]
+ },
+ "last_facts": {
+  "verbatim": {
+   "hits": 5,
+   "n": 6,
+   "accuracy": 0.8333333333333334
+  },
+  "paraphrase": {
+   "hits": 2,
+   "n": 6,
+   "accuracy": 0.3333333333333333
+  },
+  "hits": 7,
+  "n": 12,
+  "accuracy": 0.5833333333333334,
+  "preds": [
+   {
+    "id": "f01-verbatim",
+    "kind": "verbatim",
+    "gold": "teal-17",
+    "raw": "teal-17",
+    "ok": true
+   },
+   {
+    "id": "f01-paraphrase",
+    "kind": "paraphrase",
+    "gold": "teal-17",
+    "raw": "teal-17",
+    "ok": true
+   },
+   {
+    "id": "f02-verbatim",
+    "kind": "verbatim",
+    "gold": "NX-KITE-19",
+    "raw": "NX-KITE-19",
+    "ok": true
+   },
+   {
+    "id": "f02-paraphrase",
+    "kind": "paraphrase",
+    "gold": "NX-KITE-19",
+    "raw": "NNFF",
+    "ok": false
+   },
+   {
+    "id": "f03-verbatim",
+    "kind": "verbatim",
+    "gold": "pause_90d",
+    "raw": "pause_90d",
+    "ok": true
+   },
+   {
+    "id": "f03-paraphrase",
+    "kind": "paraphrase",
+    "gold": "pause_90d",
+    "raw": "pause-90d",
+    "ok": false
+   },
+   {
+    "id": "f04-verbatim",
+    "kind": "verbatim",
+    "gold": "Pacific/Easter",
+    "raw": "Pacific/Easter",
+    "ok": true
+   },
+   {
+    "id": "f04-paraphrase",
+    "kind": "paraphrase",
+    "gold": "Pacific/Easter",
+    "raw": "Pacific/Easter",
+    "ok": true
+   },
+   {
+    "id": "f05-verbatim",
+    "kind": "verbatim",
+    "gold": "Starday",
+    "raw": "Starday",
+    "ok": true
+   },
+   {
+    "id": "f05-paraphrase",
+    "kind": "paraphrase",
+    "gold": "Starday",
+    "raw": "Sato-iro",
+    "ok": false
+   },
+   {
+    "id": "f06-verbatim",
+    "kind": "verbatim",
+    "gold": "AmberGate-7741",
+    "raw": "AmberGate-Q4-2026",
+    "ok": false
+   },
+   {
+    "id": "f06-paraphrase",
+    "kind": "paraphrase",
+    "gold": "AmberGate-7741",
+    "raw": "471699",
+    "ok": false
+   }
+  ]
+ },
+ "last_format": {
+  "hits": 43,
+  "n": 68,
+  "accuracy": 0.6323529411764706,
+  "preds": [
+   {
+    "id": "ev-001",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-002",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-003",
+    "pred": "mql",
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-004",
+    "pred": "no_change",
+    "gold": [
+     "mql"
+    ],
+    "raw": "no_change",
+    "ok": false
+   },
+   {
+    "id": "ev-005",
+    "pred": "no_change",
+    "gold": [
+     "mql"
+    ],
+    "raw": "no_change",
+    "ok": false
+   },
+   {
+    "id": "ev-006",
+    "pred": "rejection",
+    "gold": [
+     "not_ta"
+    ],
+    "raw": "rejection",
+    "ok": false
+   },
+   {
+    "id": "ev-007",
+    "pred": "positive",
+    "gold": [
+     "mql"
+    ],
+    "raw": "positive",
+    "ok": false
+   },
+   {
+    "id": "ev-008",
+    "pred": "not_ta",
+    "gold": [
+     "not_ta"
+    ],
+    "raw": "not_ta",
+    "ok": true
+   },
+   {
+    "id": "ev-009",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-010",
+    "pred": "no_change",
+    "gold": [
+     "no_change",
+     "not_ta"
+    ],
+    "raw": "no_change",
+    "ok": true
+   },
+   {
+    "id": "ev-011",
+    "pred": "no_change",
+    "gold": [
+     "no_change",
+     "not_ta"
+    ],
+    "raw": "no_change",
+    "ok": true
+   },
+   {
+    "id": "ev-012",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-013",
+    "pred": "no_change",
+    "gold": [
+     "mql"
+    ],
+    "raw": "no_change",
+    "ok": false
+   },
+   {
+    "id": "ev-014",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-015",
+    "pred": "mql",
+    "gold": [
+     "no_change",
+     "not_ta"
+    ],
+    "raw": "mql",
+    "ok": false
+   },
+   {
+    "id": "ev-016",
+    "pred": "rejection",
+    "gold": [
+     "mql",
+     "positive"
+    ],
+    "raw": "rejection",
+    "ok": false
+   },
+   {
+    "id": "ev-017",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-018",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-019",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-020",
+    "pred": "no_change",
+    "gold": [
+     "mql"
+    ],
+    "raw": "no_change",
+    "ok": false
+   },
+   {
+    "id": "ev-021",
+    "pred": "no_change",
+    "gold": [
+     "positive",
+     "no_change"
+    ],
+    "raw": "no_change",
+    "ok": true
+   },
+   {
+    "id": "ev-022",
+    "pred": "no_change",
+    "gold": [
+     "mql"
+    ],
+    "raw": "no_change",
+    "ok": false
+   },
+   {
+    "id": "ev-023",
+    "pred": "no_change",
+    "gold": [
+     "mql"
+    ],
+    "raw": "no_change",
+    "ok": false
+   },
+   {
+    "id": "ev-024",
+    "pred": "no_change",
+    "gold": [
+     "sql"
+    ],
+    "raw": "no_change",
+    "ok": false
+   },
+   {
+    "id": "ev-025",
+    "pred": "sql",
+    "gold": [
+     "sql"
+    ],
+    "raw": "sql",
+    "ok": true
+   },
+   {
+    "id": "ev-026",
+    "pred": "no_change",
+    "gold": [
+     "sql"
+    ],
+    "raw": "no_change",
+    "ok": false
+   },
+   {
+    "id": "ev-027",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-028",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-029",
+    "pred": "not_ta",
+    "gold": [
+     "not_ta"
+    ],
+    "raw": "not_ta",
+    "ok": true
+   },
+   {
+    "id": "ev-030",
+    "pred": "not_ta",
+    "gold": [
+     "mql"
+    ],
+    "raw": "not_ta",
+    "ok": false
+   },
+   {
+    "id": "ev-031",
+    "pred": "no_change",
+    "gold": [
+     "mql"
+    ],
+    "raw": "no_change",
+    "ok": false
+   },
+   {
+    "id": "ev-032",
+    "pred": "rejection",
+    "gold": [
+     "rejection"
+    ],
+    "raw": "rejection",
+    "ok": true
+   },
+   {
+    "id": "ev-033",
+    "pred": "no_change",
+    "gold": [
+     "rejection"
+    ],
+    "raw": "no_change",
+    "ok": false
+   },
+   {
+    "id": "ev-034",
+    "pred": "mql",
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-035",
+    "pred": "no_change",
+    "gold": [
+     "no_change",
+     "not_ta"
+    ],
+    "raw": "no_change",
+    "ok": true
+   },
+   {
+    "id": "ev-036",
+    "pred": "rejection",
+    "gold": [
+     "not_ta"
+    ],
+    "raw": "rejection",
+    "ok": false
+   },
+   {
+    "id": "ev-037",
+    "pred": "rejection",
+    "gold": [
+     "rejection"
+    ],
+    "raw": "rejection",
+    "ok": true
+   },
+   {
+    "id": "ev-038",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-039",
+    "pred": "not_ta",
+    "gold": [
+     "not_ta"
+    ],
+    "raw": "not_ta",
+    "ok": true
+   },
+   {
+    "id": "ev-040",
+    "pred": "no_change",
+    "gold": [
+     "not_ta"
+    ],
+    "raw": "no_change",
+    "ok": false
+   },
+   {
+    "id": "ev-041",
+    "pred": "mql",
+    "gold": [
+     "not_ta"
+    ],
+    "raw": "mql",
+    "ok": false
+   },
+   {
+    "id": "ev-042",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-043",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-044",
+    "pred": "no_change",
+    "gold": [
+     "mql"
+    ],
+    "raw": "no_change",
+    "ok": false
+   },
+   {
+    "id": "ev-045",
+    "pred": "not_ta",
+    "gold": [
+     "positive",
+     "mql"
+    ],
+    "raw": "not_ta",
+    "ok": false
+   },
+   {
+    "id": "ev-046",
+    "pred": "rejection",
+    "gold": [
+     "rejection"
+    ],
+    "raw": "rejection",
+    "ok": true
+   },
+   {
+    "id": "ev-047",
+    "pred": "rejection",
+    "gold": [
+     "rejection"
+    ],
+    "raw": "rejection",
+    "ok": true
+   },
+   {
+    "id": "ev-048",
+    "pred": "mql",
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-049",
+    "pred": "no_change",
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "raw": "no_change",
+    "ok": false
+   },
+   {
+    "id": "ev-050",
+    "pred": "not_ta",
+    "gold": [
+     "not_ta"
+    ],
+    "raw": "not_ta",
+    "ok": true
+   },
+   {
+    "id": "ev-051",
+    "pred": "no_change",
+    "gold": [
+     "not_ta"
+    ],
+    "raw": "no_change",
+    "ok": false
+   },
+   {
+    "id": "ev-052",
+    "pred": "no_change",
+    "gold": [
+     "no_change",
+     "not_ta"
+    ],
+    "raw": "no_change",
+    "ok": true
+   },
+   {
+    "id": "ev-053",
+    "pred": "rejection",
+    "gold": [
+     "rejection"
+    ],
+    "raw": "rejection",
+    "ok": true
+   },
+   {
+    "id": "ev-054",
+    "pred": "mql",
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-055",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-056",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-057",
+    "pred": "not_ta",
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "raw": "not_ta",
+    "ok": true
+   },
+   {
+    "id": "ev-058",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-059",
+    "pred": "rejection",
+    "gold": [
+     "rejection",
+     "not_ta"
+    ],
+    "raw": "rejection",
+    "ok": true
+   },
+   {
+    "id": "ev-060",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-061",
+    "pred": "rejection",
+    "gold": [
+     "mql"
+    ],
+    "raw": "rejection",
+    "ok": false
+   },
+   {
+    "id": "ev-062",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-063",
+    "pred": "rejection",
+    "gold": [
+     "rejection"
+    ],
+    "raw": "rejection",
+    "ok": true
+   },
+   {
+    "id": "ev-064",
+    "pred": "no_change",
+    "gold": [
+     "no_change",
+     "not_ta"
+    ],
+    "raw": "no_change",
+    "ok": true
+   },
+   {
+    "id": "ev-065",
+    "pred": "not_ta",
+    "gold": [
+     "rejection"
+    ],
+    "raw": "not_ta",
+    "ok": false
+   },
+   {
+    "id": "ev-066",
+    "pred": "positive",
+    "gold": [
+     "mql"
+    ],
+    "raw": "positive",
+    "ok": false
+   },
+   {
+    "id": "ev-067",
+    "pred": "mql",
+    "gold": [
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   },
+   {
+    "id": "ev-068",
+    "pred": "mql",
+    "gold": [
+     "not_ta",
+     "mql"
+    ],
+    "raw": "mql",
+    "ok": true
+   }
+  ]
+ },
+ "last_style": {
+  "hits": 8,
+  "n": 8,
+  "accuracy": 1.0,
+  "preds": [
+   {
+    "id": "st-01",
+    "raw": "I will introduce you to procurement next month.",
+    "ok": true,
+    "reasons": []
+   },
+   {
+    "id": "st-02",
+    "raw": "Engineering can give you more insight.",
+    "ok": true,
+    "reasons": []
+   },
+   {
+    "id": "st-03",
+    "raw": "Send the samples to my office.",
+    "ok": true,
+    "reasons": []
+   },
+   {
+    "id": "st-04",
+    "raw": "We stopped accepting new vendors; you can apply again in September.",
+    "ok": true,
+    "reasons": []
+   },
+   {
+    "id": "st-05",
+    "raw": "WhatsApp me anytime; my number's on the card.",
+    "ok": true,
+    "reasons": []
+   },
+   {
+    "id": "st-06",
+    "raw": "Email the contract to legal@example.com.",
+    "ok": true,
+    "reasons": []
+   },
+   {
+    "id": "st-07",
+    "raw": "Delighted to meet; will be after holidays.",
+    "ok": true,
+    "reasons": []
+   },
+   {
+    "id": "st-08",
+    "raw": "We already purchased from another source.",
+    "ok": true,
+    "reasons": []
+   }
+  ]
+ },
+ "last_ood": {
+  "hits": 8,
+  "n": 9,
+  "accuracy": 0.8888888888888888,
+  "enum_collapse": 0,
+  "preds": [
+   {
+    "id": "ood01",
+    "raw": "No new notes needed.",
+    "ok": false,
+    "reasons": [
+     "bad_review_shape"
+    ]
+   },
+   {
+    "id": "ood02",
+    "raw": "In Bookreader's API, the `/books` endpoint supports filtering using query parameters. The `q` parameter allows you to search for books by title, author, tags, etc. For example:\n```\nGET /books?q=title:Star%20Trek&limit=5\n```\nThis would return the top 5 books with \"Star Trek\" in the title.\nRegarding liking (starring) on JSON columns, this functionality is currently implemented at the frontend level and relies on React's state management. If you have specific questions about how to achieve this behavior within your own projects, feel free to share!",
+    "ok": true,
+    "reasons": []
+   },
+   {
+    "id": "ood03",
+    "raw": "2 + 2 equals 4.",
+    "ok": true,
+    "reasons": []
+   },
+   {
+    "id": "ood04",
+    "raw": "Raindrops fall so light,\nNature's soft song before storm.",
+    "ok": true,
+    "reasons": []
+   },
+   {
+    "id": "ood05",
+    "raw": "Sure! Below is a simple Python function to reverse a singly linked list:\n\n```python\nclass ListNode:\n    def __init__(self, val=0, next=None):\n        self.val = val\n        self.next = next\n\ndef reverse_linked_list(head):\n    prev = None\n    current = head\n    \n    while current:\n        next_node = current.next  # Store the next node\n        current.next = prev       # Reverse the link\n        prev = current             # Move prev one step forward\n        current = next_node         # Move current one step forward\n        \n    return prev  # The new head will be the last node of the reversed list\n\n# Example usage:\nif __name__ == \"__main__\":\n    # Creating a linked list: 1 -> 2 -> 3 -> 4 -> None\n    head = ListNode(1)\n    head.next = ListNode(2)\n    head.next.next = ListNode(3)\n    head.next.next.next = ListNode(4)\n\n    print(\"Original List:\")\n    current = head\n    while current:\n        print(current.val, end=\" \")\n        current = current.next\n    print()\n\n    reversed_head = reverse_linked_list(head)\n\n    print(\"Reversed List:\")\n    current = reversed_head",
+    "ok": true,
+    "reasons": []
+   },
+   {
+    "id": "ood06",
+    "raw": "{\"a\": 1, \"b\": 2}",
+    "ok": true,
+    "reasons": []
+   },
+   {
+    "id": "ood07",
+    "raw": "Recursion is a programming technique where a function calls itself repeatedly until it reaches a base case.",
+    "ok": true,
+    "reasons": []
+   },
+   {
+    "id": "ood08",
+    "raw": "To create the `is_even` function in Python, you can use the modulo operator `%`. The modulo operator returns the remainder of dividing the number by 2. If the result is 0, it means the number is divisible by 2 (i.e., even), and the function will return True. Otherwise, it will return False.\n\nHere's how you can implement this:\n\n```python\ndef is_even(n):\n    return n % 2 == 0\n```\n\nThis function takes an integer `n` as input and checks if it is evenly divisible by 2. If so, it returns True; otherwise, it returns False.",
+    "ok": true,
+    "reasons": []
+   },
+   {
+    "id": "ood09",
+    "raw": "The capital of France is Paris.",
+    "ok": true,
+    "reasons": []
+   }
+  ]
+ }
+}

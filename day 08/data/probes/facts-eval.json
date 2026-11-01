@@ -1,0 +1,86 @@
+[
+  {
+    "id": "f01-verbatim",
+    "kind": "verbatim",
+    "system": "Answer with the fact only. No extra words.",
+    "user": "What color is the Helix badge?",
+    "gold": "teal-17"
+  },
+  {
+    "id": "f01-paraphrase",
+    "kind": "paraphrase",
+    "system": "Answer with the fact only. No extra words.",
+    "user": "Which colour token is painted on the Helix badge?",
+    "gold": "teal-17"
+  },
+  {
+    "id": "f02-verbatim",
+    "kind": "verbatim",
+    "system": "Answer with the fact only. No extra words.",
+    "user": "What is the SDR signature token?",
+    "gold": "NX-KITE-19"
+  },
+  {
+    "id": "f02-paraphrase",
+    "kind": "paraphrase",
+    "system": "Answer with the fact only. No extra words.",
+    "user": "What code does an SDR put at the end of a message as a signature?",
+    "gold": "NX-KITE-19"
+  },
+  {
+    "id": "f03-verbatim",
+    "kind": "verbatim",
+    "system": "Answer with the fact only. No extra words.",
+    "user": "Which label does reply-status v3 add?",
+    "gold": "pause_90d"
+  },
+  {
+    "id": "f03-paraphrase",
+    "kind": "paraphrase",
+    "system": "Answer with the fact only. No extra words.",
+    "user": "What extra status value appears in version 3 of reply-status?",
+    "gold": "pause_90d"
+  },
+  {
+    "id": "f04-verbatim",
+    "kind": "verbatim",
+    "system": "Answer with the fact only. No extra words.",
+    "user": "What timezone does project 98 use?",
+    "gold": "Pacific/Easter"
+  },
+  {
+    "id": "f04-paraphrase",
+    "kind": "paraphrase",
+    "system": "Answer with the fact only. No extra words.",
+    "user": "Which IANA timezone is set on Nexus project ninety-eight?",
+    "gold": "Pacific/Easter"
+  },
+  {
+    "id": "f05-verbatim",
+    "kind": "verbatim",
+    "system": "Answer with the fact only. No extra words.",
+    "user": "On which day is the weekly digest sent?",
+    "gold": "Starday"
+  },
+  {
+    "id": "f05-paraphrase",
+    "kind": "paraphrase",
+    "system": "Answer with the fact only. No extra words.",
+    "user": "Which made-up weekday is used for the weekly digest email?",
+    "gold": "Starday"
+  },
+  {
+    "id": "f06-verbatim",
+    "kind": "verbatim",
+    "system": "Answer with the fact only. No extra words.",
+    "user": "What is the Q4 freeze code?",
+    "gold": "AmberGate-7741"
+  },
+  {
+    "id": "f06-paraphrase",
+    "kind": "paraphrase",
+    "system": "Answer with the fact only. No extra words.",
+    "user": "What freeze identifier is used for the fourth quarter lock?",
+    "gold": "AmberGate-7741"
+  }
+]

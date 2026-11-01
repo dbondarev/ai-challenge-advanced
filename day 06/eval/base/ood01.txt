@@ -1,0 +1,12 @@
+Critical: The code should be reviewed for potential security vulnerabilities or performance issues.
+
+Should fix: 
+- Review the implementation of `localStorage.progress` to ensure it does not expose sensitive information.
+- Implement proper error handling for `console.log` to prevent unintended logging.
+- Consider using HTTPS if data is being transmitted over the network to enhance security.
+
+Notes:
+- Ensure that the use of `localStorage.progress` complies with privacy policies and user consent requirements.
+- Regularly update dependencies to address any known security vulnerabilities.
+- Monitor logs for unexpected activity or errors related to `localStorage`.
+- Implement rate limiting on `console.log` to avoid overwhelming the system with unnecessary output.

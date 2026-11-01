@@ -1,0 +1,65 @@
+[
+  {
+    "id": "ood01",
+    "user": "Review ReaderPage. It uses any, console.log, and localStorage.progress for all books. Reply in this shape only:\n\nCritical:\n- ...\n\nShould fix:\n- ...\n\nNotes:\n- ...",
+    "checks": [
+      "review_shape"
+    ]
+  },
+  {
+    "id": "ood02",
+    "user": "How does GET /books?q= work in Bookreader: filter in the API or only in React? Can we LIKE a JSON authors column?",
+    "checks": [
+      "not_enum_only"
+    ]
+  },
+  {
+    "id": "ood03",
+    "user": "what is 2+2",
+    "checks": [
+      "contains_4"
+    ]
+  },
+  {
+    "id": "ood04",
+    "user": "write a two-line haiku about rain",
+    "checks": [
+      "two_lines"
+    ]
+  },
+  {
+    "id": "ood05",
+    "user": "Write a Python function that reverses a singly linked list. No database.",
+    "checks": [
+      "has_def"
+    ]
+  },
+  {
+    "id": "ood06",
+    "user": "Return JSON only, no markdown: {\"a\": 1, \"b\": 2}",
+    "checks": [
+      "json_ab"
+    ]
+  },
+  {
+    "id": "ood07",
+    "user": "Explain recursion in two sentences.",
+    "checks": [
+      "not_enum_only"
+    ]
+  },
+  {
+    "id": "ood08",
+    "user": "Write a Python function is_even(n) that returns True for even integers.",
+    "checks": [
+      "has_def"
+    ]
+  },
+  {
+    "id": "ood09",
+    "user": "What is the capital of France?",
+    "checks": [
+      "contains_paris"
+    ]
+  }
+]

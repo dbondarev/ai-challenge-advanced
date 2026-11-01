@@ -1,0 +1,19 @@
+{
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "train_n": 623,
+  "val_n": 85,
+  "seed": 42,
+  "epochs": 3,
+  "elapsed_s": 717.0661211013794,
+  "peak_vram_mib": 2569,
+  "gpu": "NVIDIA GeForce RTX 3070",
+  "train_loss": 1.0693947945395086,
+  "metrics": {
+    "train_runtime": 708.0077,
+    "train_samples_per_second": 2.64,
+    "train_steps_per_second": 0.331,
+    "total_flos": 3824161018758144.0,
+    "train_loss": 1.0693947945395086,
+    "epoch": 3.0
+  }
+}

@@ -1,0 +1,1 @@
+SELECT ground FROM table_name_98 WHERE opponent = "portsmouth reserves"

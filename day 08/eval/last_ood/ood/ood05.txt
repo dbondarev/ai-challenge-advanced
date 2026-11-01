@@ -1,0 +1,39 @@
+Sure! Below is a simple Python function to reverse a singly linked list:
+
+```python
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+def reverse_linked_list(head):
+    prev = None
+    current = head
+    
+    while current:
+        next_node = current.next  # Store the next node
+        current.next = prev       # Reverse the link
+        prev = current             # Move prev one step forward
+        current = next_node         # Move current one step forward
+        
+    return prev  # The new head will be the last node of the reversed list
+
+# Example usage:
+if __name__ == "__main__":
+    # Creating a linked list: 1 -> 2 -> 3 -> 4 -> None
+    head = ListNode(1)
+    head.next = ListNode(2)
+    head.next.next = ListNode(3)
+    head.next.next.next = ListNode(4)
+
+    print("Original List:")
+    current = head
+    while current:
+        print(current.val, end=" ")
+        current = current.next
+    print()
+
+    reversed_head = reverse_linked_list(head)
+
+    print("Reversed List:")
+    current = reversed_head

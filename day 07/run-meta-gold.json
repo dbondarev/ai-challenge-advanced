@@ -1,0 +1,12 @@
+{
+  "tag": "gold",
+  "train": "data/train.jsonl",
+  "train_n": 671,
+  "val_n": 85,
+  "epochs": 5,
+  "best_valid_acc": 0.6588235294117647,
+  "best_epoch": 5,
+  "elapsed_s": 1374.8148620128632,
+  "peak_vram_mib": 2569,
+  "train_loss": 0.7196210600790524
+}

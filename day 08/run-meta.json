@@ -1,0 +1,22 @@
+{
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "train_n": 815,
+  "val_n": 85,
+  "seed": 42,
+  "epochs": 10,
+  "elapsed_s": 3851.3478360176086,
+  "peak_vram_mib": 2567,
+  "gpu": "NVIDIA GeForce RTX 3070",
+  "train_loss": 0.4188228182458118,
+  "best_valid_step": 410,
+  "best_valid_loss": 0.583392,
+  "best_ckpt": "/home/cursor/day08-qlora/checkpoints/checkpoint-400",
+  "metrics": {
+    "train_runtime": 3842.4796,
+    "train_samples_per_second": 2.121,
+    "train_steps_per_second": 0.265,
+    "total_flos": 1.34465802413568e+16,
+    "train_loss": 0.4188228182458118,
+    "epoch": 10.0
+  }
+}

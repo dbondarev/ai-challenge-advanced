@@ -1,0 +1,5 @@
+```python
+def is_even(n):
+    return n % 2 == 0
+```
+This function checks if the given number `n` is divisible by 2 without any remainder, which would indicate that it's an even number. If the condition is met, the function returns `True`; otherwise, it returns `False`.

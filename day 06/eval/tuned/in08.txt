@@ -1,0 +1,1 @@
+SELECT COUNT(total_receipts) FROM table_name_44 WHERE candidate = "tom tancredo"

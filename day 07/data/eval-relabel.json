@@ -1,0 +1,150 @@
+[
+ {
+  "id": "ev-005",
+  "old": [
+   "mql"
+  ],
+  "new": [
+   "no_change"
+  ]
+ },
+ {
+  "id": "ev-013",
+  "old": [
+   "mql"
+  ],
+  "new": [
+   "no_change"
+  ]
+ },
+ {
+  "id": "ev-019",
+  "old": [
+   "mql"
+  ],
+  "new": [
+   "no_change"
+  ]
+ },
+ {
+  "id": "ev-020",
+  "old": [
+   "mql"
+  ],
+  "new": [
+   "no_change"
+  ]
+ },
+ {
+  "id": "ev-023",
+  "old": [
+   "mql"
+  ],
+  "new": [
+   "no_change"
+  ]
+ },
+ {
+  "id": "ev-025",
+  "old": [
+   "sql"
+  ],
+  "new": [
+   "no_change"
+  ]
+ },
+ {
+  "id": "ev-026",
+  "old": [
+   "sql"
+  ],
+  "new": [
+   "no_change"
+  ]
+ },
+ {
+  "id": "ev-031",
+  "old": [
+   "mql"
+  ],
+  "new": [
+   "no_change"
+  ]
+ },
+ {
+  "id": "ev-033",
+  "old": [
+   "rejection"
+  ],
+  "new": [
+   "no_change"
+  ]
+ },
+ {
+  "id": "ev-040",
+  "old": [
+   "not_ta"
+  ],
+  "new": [
+   "no_change"
+  ]
+ },
+ {
+  "id": "ev-041",
+  "old": [
+   "not_ta"
+  ],
+  "new": [
+   "no_change",
+   "not_ta"
+  ]
+ },
+ {
+  "id": "ev-043",
+  "old": [
+   "mql"
+  ],
+  "new": [
+   "no_change",
+   "mql"
+  ]
+ },
+ {
+  "id": "ev-044",
+  "old": [
+   "mql"
+  ],
+  "new": [
+   "no_change"
+  ]
+ },
+ {
+  "id": "ev-049",
+  "old": [
+   "not_ta",
+   "mql"
+  ],
+  "new": [
+   "no_change"
+  ]
+ },
+ {
+  "id": "ev-051",
+  "old": [
+   "not_ta"
+  ],
+  "new": [
+   "no_change"
+  ]
+ },
+ {
+  "id": "ev-018",
+  "old": [
+   "mql"
+  ],
+  "new": [
+   "no_change",
+   "mql"
+  ]
+ }
+]

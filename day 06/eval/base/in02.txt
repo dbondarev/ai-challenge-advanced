@@ -1,0 +1,1 @@
+SELECT written_by FROM table_2409041_3 WHERE no_in_season = '23'

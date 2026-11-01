@@ -1,0 +1,757 @@
+[
+ {
+  "id": "ev2-001",
+  "judge": "mql",
+  "final": "mql"
+ },
+ {
+  "id": "ev2-002",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-003",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-004",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-005",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "ev2-006",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "ev2-007",
+  "judge": "rejection",
+  "final": "rejection"
+ },
+ {
+  "id": "ev2-008",
+  "judge": "rejection",
+  "final": "rejection"
+ },
+ {
+  "id": "ev2-009",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "ev2-010",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-011",
+  "judge": "mql",
+  "final": "positive"
+ },
+ {
+  "id": "ev2-012",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-013",
+  "judge": "rejection",
+  "final": "rejection"
+ },
+ {
+  "id": "ev2-014",
+  "judge": "no_change",
+  "final": null
+ },
+ {
+  "id": "ev2-015",
+  "judge": "no_change",
+  "final": null
+ },
+ {
+  "id": "ev2-016",
+  "judge": "mql",
+  "final": "mql"
+ },
+ {
+  "id": "ev2-017",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "ev2-018",
+  "judge": "not_ta",
+  "final": "not_ta"
+ },
+ {
+  "id": "ev2-019",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-020",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "ev2-021",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-022",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "ev2-023",
+  "judge": "rejection",
+  "final": "rejection"
+ },
+ {
+  "id": "ev2-024",
+  "judge": "mql",
+  "final": "mql"
+ },
+ {
+  "id": "ev2-025",
+  "judge": "positive",
+  "final": "mql"
+ },
+ {
+  "id": "ev2-026",
+  "judge": "sql",
+  "final": "sql"
+ },
+ {
+  "id": "ev2-027",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-028",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-029",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-030",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-031",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-032",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-033",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-034",
+  "judge": "rejection",
+  "final": "rejection"
+ },
+ {
+  "id": "ev2-035",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-036",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-037",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-038",
+  "judge": "no_change",
+  "final": "sql"
+ },
+ {
+  "id": "ev2-039",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-040",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-041",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-042",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-043",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-044",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-045",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-046",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-047",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-048",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-049",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "ev2-050",
+  "judge": "positive",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-051",
+  "judge": "not_ta",
+  "final": "not_ta"
+ },
+ {
+  "id": "ev2-052",
+  "judge": "rejection",
+  "final": "rejection"
+ },
+ {
+  "id": "ev2-053",
+  "judge": "not_ta",
+  "final": "not_ta"
+ },
+ {
+  "id": "ev2-054",
+  "judge": "rejection",
+  "final": "rejection"
+ },
+ {
+  "id": "ev2-055",
+  "judge": "not_ta",
+  "final": "not_ta"
+ },
+ {
+  "id": "ev2-056",
+  "judge": "rejection",
+  "final": "rejection"
+ },
+ {
+  "id": "ev2-057",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "ev2-058",
+  "judge": "positive",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-059",
+  "judge": "not_ta",
+  "final": "not_ta"
+ },
+ {
+  "id": "ev2-060",
+  "judge": "positive",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-061",
+  "judge": "not_ta",
+  "final": "not_ta"
+ },
+ {
+  "id": "ev2-062",
+  "judge": "not_ta",
+  "final": "not_ta"
+ },
+ {
+  "id": "ev2-063",
+  "judge": "meeting_held",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-064",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-065",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-066",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-067",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "ev2-068",
+  "judge": "not_ta",
+  "final": "not_ta"
+ },
+ {
+  "id": "ev2-069",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "ev2-070",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "ev2-071",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-072",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-073",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-074",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "ev2-075",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-076",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-077",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-078",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-079",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "ev2-080",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "ev2-081",
+  "judge": "mql",
+  "final": "mql"
+ },
+ {
+  "id": "ev2-082",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-083",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "ev2-084",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-085",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-086",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "ev2-087",
+  "judge": "mql",
+  "final": "mql"
+ },
+ {
+  "id": "ev2-088",
+  "judge": "mql",
+  "final": "mql"
+ },
+ {
+  "id": "ev2-089",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "ev2-090",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "ev2-091",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-092",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-093",
+  "judge": "no_change",
+  "final": "positive"
+ },
+ {
+  "id": "ev2-094",
+  "judge": "mql",
+  "final": "positive"
+ },
+ {
+  "id": "ev2-095",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-096",
+  "judge": "rejection",
+  "final": "rejection"
+ },
+ {
+  "id": "ev2-097",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-098",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-099",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-100",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-101",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-102",
+  "judge": "no_change",
+  "final": "positive"
+ },
+ {
+  "id": "ev2-103",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "ev2-104",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "ev2-105",
+  "judge": "no_change",
+  "final": "mql"
+ },
+ {
+  "id": "ev2-106",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "ev2-107",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-108",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "ev2-109",
+  "judge": "mql",
+  "final": "positive"
+ },
+ {
+  "id": "ev2-110",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-111",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-112",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-113",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-114",
+  "judge": "no_change",
+  "final": "mql"
+ },
+ {
+  "id": "ev2-115",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-116",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-117",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-118",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-119",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-120",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-121",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-122",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-123",
+  "judge": "mql",
+  "final": "mql"
+ },
+ {
+  "id": "ev2-124",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "ev2-125",
+  "judge": "positive",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-126",
+  "judge": "mql",
+  "final": "mql"
+ },
+ {
+  "id": "ev2-127",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "ev2-128",
+  "judge": "rejection",
+  "final": "rejection"
+ },
+ {
+  "id": "ev2-129",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-130",
+  "judge": "mql",
+  "final": "mql"
+ },
+ {
+  "id": "ev2-131",
+  "judge": "not_ta",
+  "final": "not_ta"
+ },
+ {
+  "id": "ev2-132",
+  "judge": "positive",
+  "final": "mql"
+ },
+ {
+  "id": "ev2-133",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "ev2-134",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "ev2-135",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "ev2-136",
+  "judge": "not_ta",
+  "final": "not_ta"
+ },
+ {
+  "id": "ev2-137",
+  "judge": "mql",
+  "final": "positive"
+ },
+ {
+  "id": "ev2-138",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-139",
+  "judge": "positive",
+  "final": "mql"
+ },
+ {
+  "id": "ev2-140",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "ev2-141",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-142",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-143",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-144",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "ev2-145",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "ev2-146",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-147",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-148",
+  "judge": "no_change",
+  "final": "no_change"
+ },
+ {
+  "id": "ev2-149",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "ev2-150",
+  "judge": "positive",
+  "final": "positive"
+ },
+ {
+  "id": "ev2-151",
+  "judge": "positive",
+  "final": "positive"
+ }
+]

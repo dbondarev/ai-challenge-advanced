@@ -1,0 +1,55 @@
+{
+  "n": 68,
+  "modes": [
+    {
+      "name": "ollama_q4_k_m",
+      "n": 68,
+      "wall_s": 4.516336441040039,
+      "ms_per_req": 66.41671236823588,
+      "peak_vram_mib": 1265,
+      "load_s": 1.8018217086791992,
+      "vram_after_load_mib": 1259,
+      "vram_idle_before_mib": 16,
+      "disk_mb": 940.4
+    },
+    {
+      "name": "base_fp16",
+      "n": 68,
+      "wall_s": 5.968263864517212,
+      "ms_per_req": 87.76858624290018,
+      "peak_vram_mib": 3229,
+      "load_s": 0.9861154556274414,
+      "vram_after_load_mib": 3229
+    },
+    {
+      "name": "peft_adapter",
+      "n": 68,
+      "wall_s": 10.63487458229065,
+      "ms_per_req": 156.39521444545073,
+      "peak_vram_mib": 3339,
+      "load_s": 1.3597466945648193,
+      "vram_after_load_mib": 3339,
+      "disk_mb": 46.2
+    },
+    {
+      "name": "merged_fp16",
+      "n": 68,
+      "wall_s": 6.165179967880249,
+      "ms_per_req": 90.6644112923566,
+      "peak_vram_mib": 3229,
+      "load_s": 1.8553228378295898,
+      "vram_after_load_mib": 3229,
+      "disk_mb": 2955.3
+    },
+    {
+      "name": "bnb4_adapter",
+      "n": 68,
+      "wall_s": 13.954111814498901,
+      "ms_per_req": 205.20752668380737,
+      "peak_vram_mib": 3301,
+      "load_s": 1.9418754577636719,
+      "vram_after_load_mib": 3301,
+      "disk_mb": 46.2
+    }
+  ]
+}

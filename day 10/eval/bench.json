@@ -1,0 +1,60 @@
+{
+  "adapter": "/home/cursor/day07-rerun/adapter-gold",
+  "eval_slice": 20,
+  "modes": [
+    {
+      "name": "base_fp16",
+      "n": 20,
+      "wall_s": 1.6769068241119385,
+      "ms_per_req": 83.84534120559692,
+      "peak_vram_mib": 3225,
+      "load_s": 1.0353062152862549,
+      "disk_mb": null,
+      "vram_after_load_mib": 3175
+    },
+    {
+      "name": "peft_adapter",
+      "n": 20,
+      "wall_s": 3.0916454792022705,
+      "ms_per_req": 154.58227396011353,
+      "peak_vram_mib": 3311,
+      "load_s": 1.431264877319336,
+      "disk_mb": 46.2,
+      "vram_after_load_mib": 3311
+    },
+    {
+      "name": "merged_fp16_inmem",
+      "n": 20,
+      "wall_s": 1.827082872390747,
+      "ms_per_req": 91.35414361953735,
+      "peak_vram_mib": 3419,
+      "load_s": 1.431264877319336,
+      "merge_s": 0.04330325126647949,
+      "save_s": 3.7207729816436768,
+      "disk_mb": 2955.3,
+      "vram_after_load_mib": 3419
+    },
+    {
+      "name": "merged_fp16_reload",
+      "n": 20,
+      "wall_s": 1.7855525016784668,
+      "ms_per_req": 89.27762508392334,
+      "peak_vram_mib": 3225,
+      "load_s": 1.133878231048584,
+      "disk_mb": 2955.3,
+      "vram_after_load_mib": 3225
+    },
+    {
+      "name": "bnb4_adapter",
+      "n": 20,
+      "wall_s": 4.076482534408569,
+      "ms_per_req": 203.82412672042847,
+      "peak_vram_mib": 3301,
+      "load_s": 1.8439242839813232,
+      "disk_mb": 46.2,
+      "vram_after_load_mib": 3301
+    }
+  ],
+  "gguf_probe": "/usr/local/bin/ollama",
+  "ollama_tags": "{\"models\":[{\"name\":\"qwen2.5-coder:1.5b\",\"model\":\"qwen2.5-coder:1.5b\",\"modified_at\":\"2026-10-23T01:20:35.38109164Z\",\"size\":986062089,\"digest\":\"d7372fd828518a4d38b1eb196c673c31a85f2ed302b3d1e406c4c2d1b64a0668\",\"details\":{\"parent_model\":\"\",\"format\":\"gguf\",\"family\":\"qwen2\",\"families\":[\"qwen2\"],\"parameter_size\":\"1.5B\",\"quantization_level\":\"Q4_K_M\",\"context_length\":32768,\"embedding_length\":1536},\"capabilities\":[\"completion\",\"tools\",\"insert\"]},{\"name\":\"deepseek-coder:6.7b\",\"model\":\"deepseek-coder:6.7b\""
+}

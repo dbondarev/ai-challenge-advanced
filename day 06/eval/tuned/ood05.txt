@@ -1,0 +1,32 @@
+To reverse a singly linked list in Python, you can use the following approach:
+
+1. Traverse the list and store each node's value.
+2. Reconstruct the list in reverse order using the stored values.
+
+Here is an example implementation of this approach:
+
+```python
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+def reverse_list(head: ListNode) -> ListNode:
+    # Store all nodes' values
+    values = []
+    current_node = head
+    while current_node:
+        values.append(current_node.val)
+        current_node = current_node.next
+    
+    # Reconstruct the list in reverse order
+    reversed_head = ListNode(values.pop())
+    current_reversed = reversed_head
+    for value in values[::-1]:
+        current_reversed.next = ListNode(value)
+        current_reversed = current_reversed.next
+    
+    return reversed_head
+```
+
+This code defines a `ListNode` class to represent each node in the linked list. The `reverse_list` function takes the head of the original list as input and returns the head of the reversed list. It first stores all the node values in a list, then reconstructs the list in reverse order by iterating over the list

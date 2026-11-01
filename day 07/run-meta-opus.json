@@ -1,0 +1,12 @@
+{
+  "tag": "opus",
+  "train": "data/teacher_opus_train.jsonl",
+  "train_n": 671,
+  "val_n": 85,
+  "epochs": 5,
+  "best_valid_acc": 0.6823529411764706,
+  "best_epoch": 4,
+  "elapsed_s": 1356.1839928627014,
+  "peak_vram_mib": 2569,
+  "train_loss": 0.7203182317316532
+}

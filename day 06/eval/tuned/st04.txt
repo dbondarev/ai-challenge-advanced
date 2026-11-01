@@ -1,0 +1,1 @@
+SELECT T1.title FROM books AS T1 JOIN unused_stats AS T2 ON T1.year > 2010 AND T1.id = T2.k

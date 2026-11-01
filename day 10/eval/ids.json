@@ -1,0 +1,3785 @@
+{
+  "n": 374,
+  "since": "2026-10-28T00:00:00Z",
+  "projects_with_inbounds": 23,
+  "by_prod_status": {
+    "no_change": 167,
+    "mql": 69,
+    "not_ta": 51,
+    "none": 40,
+    "rejection": 23,
+    "positive": 17,
+    "sql": 7
+  },
+  "by_suggested_by": {
+    "openai": 334,
+    "none": 40
+  },
+  "by_project_n": {
+    "4": 78,
+    "5": 70,
+    "23": 31,
+    "79": 30,
+    "9": 27,
+    "113": 25,
+    "98": 19,
+    "12": 14,
+    "71": 14,
+    "65": 12,
+    "81": 10,
+    "76": 6,
+    "112": 6,
+    "58": 5,
+    "78": 5,
+    "115": 5,
+    "85": 4,
+    "100": 4,
+    "103": 3,
+    "77": 2,
+    "90": 2,
+    "82": 1,
+    "83": 1
+  },
+  "rows": [
+    {
+      "id": "d10-0001",
+      "project_id": 4,
+      "message_id": "1257da99-18c1-4552-b42e-032ed236cd32",
+      "sent_at": "2026-10-30T12:41:03Z",
+      "kind": "contact_shared",
+      "prod_status": "mql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0002",
+      "project_id": 4,
+      "message_id": "b4c122a4-e729-4636-bc8d-7544fe4a76b3",
+      "sent_at": "2026-10-30T12:38:11.634000Z",
+      "kind": "contact_shared",
+      "prod_status": "not_ta",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0003",
+      "project_id": 4,
+      "message_id": "2c02e62e-87c3-4470-932c-9ad7b5c0d140",
+      "sent_at": "2026-10-30T10:30:56.056000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0004",
+      "project_id": 4,
+      "message_id": "4b9f719e-a323-46a0-99f0-a638c48cb58c",
+      "sent_at": "2026-10-30T12:31:16.489000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0005",
+      "project_id": 4,
+      "message_id": "076caaba-a9c6-41aa-97e7-7d95a0b8b3b9",
+      "sent_at": "2026-10-30T12:34:40.089000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0006",
+      "project_id": 4,
+      "message_id": "b9d9c2bb-6405-4763-9211-a88d3e32427b",
+      "sent_at": "2026-10-30T11:58:58.852000Z",
+      "kind": "single_reply",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0007",
+      "project_id": 4,
+      "message_id": "d4f8425a-8d40-45a2-9593-8f1355a43bef",
+      "sent_at": "2026-10-30T11:26:35.365000Z",
+      "kind": "contact_shared",
+      "prod_status": "mql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0008",
+      "project_id": 4,
+      "message_id": "c9fc034a-95bd-4dd6-ac8b-229d93150b4f",
+      "sent_at": "2026-10-30T11:26:35.365000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0009",
+      "project_id": 4,
+      "message_id": "c075082d-6f13-4201-99b4-fd6c15f8da8d",
+      "sent_at": "2026-10-30T11:26:38.064000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0010",
+      "project_id": 4,
+      "message_id": "01ea5a39-d093-4ac8-959b-434646ad5d54",
+      "sent_at": "2026-10-30T09:03:10.842000Z",
+      "kind": "multi_turn",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0011",
+      "project_id": 4,
+      "message_id": "d707b0f3-f469-4d61-ac55-c2a72b476247",
+      "sent_at": "2026-10-28T09:22:44Z",
+      "kind": "single_reply",
+      "prod_status": "not_ta",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0012",
+      "project_id": 4,
+      "message_id": "b5fbf931-7645-4030-b5b1-59acc3ce075c",
+      "sent_at": "2026-10-28T14:21:59.209000Z",
+      "kind": "multi_turn",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0013",
+      "project_id": 4,
+      "message_id": "ad3a3f85-c1e8-4591-bca5-2bdec3e33122",
+      "sent_at": "2026-10-28T14:21:59.209000Z",
+      "kind": "multi_turn",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0014",
+      "project_id": 4,
+      "message_id": "777be329-8778-466b-b35a-8f4a519d0bbc",
+      "sent_at": "2026-10-29T10:34:01Z",
+      "kind": "multi_turn",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0015",
+      "project_id": 4,
+      "message_id": "c565aba2-9b0f-4c31-956b-1ca19666d870",
+      "sent_at": "2026-10-29T15:34:01.371000Z",
+      "kind": "multi_turn",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0016",
+      "project_id": 4,
+      "message_id": "1d3c2a6d-1467-461e-a0c4-4c62835d8885",
+      "sent_at": "2026-10-30T03:25:33Z",
+      "kind": "multi_turn",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0017",
+      "project_id": 4,
+      "message_id": "f7307edd-3969-454f-b3f5-53154591455c",
+      "sent_at": "2026-10-30T03:25:37Z",
+      "kind": "multi_turn",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0018",
+      "project_id": 4,
+      "message_id": "c5870c50-cb0c-4a5e-b050-e23cfdedc9ca",
+      "sent_at": "2026-10-30T03:25:45Z",
+      "kind": "multi_turn",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0019",
+      "project_id": 4,
+      "message_id": "848311f6-d21b-4375-b835-bf42d3f6ae1f",
+      "sent_at": "2026-10-30T03:25:49Z",
+      "kind": "multi_turn",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0020",
+      "project_id": 4,
+      "message_id": "d86255c9-5e7e-4f01-a860-40228c660fca",
+      "sent_at": "2026-10-30T08:25:52.490000Z",
+      "kind": "multi_turn",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0021",
+      "project_id": 4,
+      "message_id": "abe2eeb6-14bc-457f-afcc-fb06d0cff1b7",
+      "sent_at": "2026-10-29T10:48:55.963000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0022",
+      "project_id": 4,
+      "message_id": "fd35eb21-4cc1-45fd-8f1d-99c18377973b",
+      "sent_at": "2026-10-29T13:04:17.356000Z",
+      "kind": "single_reply",
+      "prod_status": "mql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0023",
+      "project_id": 4,
+      "message_id": "a10c5ecb-5407-45ce-901b-c10d7041f380",
+      "sent_at": "2026-10-29T07:56:27.701000Z",
+      "kind": "single_reply",
+      "prod_status": "rejection",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0024",
+      "project_id": 4,
+      "message_id": "7d5bc674-3779-49f1-ac9e-88da2fb854fb",
+      "sent_at": "2026-10-29T04:51:21.838000Z",
+      "kind": "single_reply",
+      "prod_status": "mql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0025",
+      "project_id": 4,
+      "message_id": "7c4a153b-49ed-4893-ad7c-2530ff60d6b9",
+      "sent_at": "2026-10-29T11:24:59.698000Z",
+      "kind": "multi_turn",
+      "prod_status": "positive",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0026",
+      "project_id": 4,
+      "message_id": "4523f585-b819-4573-af7d-0d627b340bee",
+      "sent_at": "2026-10-29T11:24:59.698000Z",
+      "kind": "multi_turn",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0027",
+      "project_id": 4,
+      "message_id": "8690f895-4acd-46fc-a006-0720c80e92af",
+      "sent_at": "2026-10-29T05:30:28.759000Z",
+      "kind": "multi_turn",
+      "prod_status": "rejection",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0028",
+      "project_id": 4,
+      "message_id": "4209a3c5-410e-45f6-9bc9-9a50e42bebd5",
+      "sent_at": "2026-10-29T05:30:28.759000Z",
+      "kind": "multi_turn",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0029",
+      "project_id": 4,
+      "message_id": "58aee07a-1667-4889-a5b8-2aad6057b040",
+      "sent_at": "2026-10-28T10:51:40.363000Z",
+      "kind": "contact_shared",
+      "prod_status": "mql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0030",
+      "project_id": 4,
+      "message_id": "793f8f75-1c5e-4f12-9ac2-2c14c083cb49",
+      "sent_at": "2026-10-29T13:27:18.695000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0031",
+      "project_id": 4,
+      "message_id": "7c4b26cb-70ae-45f1-8fbd-484f399a7be1",
+      "sent_at": "2026-10-29T09:35:54.033000Z",
+      "kind": "multi_turn",
+      "prod_status": "not_ta",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0032",
+      "project_id": 4,
+      "message_id": "3520c5e1-b132-454c-8d58-77cc2db3da4d",
+      "sent_at": "2026-10-29T21:44:28.293000Z",
+      "kind": "contact_shared",
+      "prod_status": "mql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0033",
+      "project_id": 4,
+      "message_id": "128ed341-bfa3-4b1f-b51a-31d18136192e",
+      "sent_at": "2026-10-29T21:44:28.293000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0034",
+      "project_id": 4,
+      "message_id": "b92f103c-03ae-4746-8d95-3efe0e523837",
+      "sent_at": "2026-10-29T21:21:43.159000Z",
+      "kind": "contact_shared",
+      "prod_status": "mql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0035",
+      "project_id": 4,
+      "message_id": "09ff3125-6645-4c98-a0a5-90bc09fafab7",
+      "sent_at": "2026-10-29T21:21:43.159000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0036",
+      "project_id": 4,
+      "message_id": "28df9ed8-2d6f-44cf-aca1-3fe75e7f9e13",
+      "sent_at": "2026-10-29T15:49:51.594000Z",
+      "kind": "single_reply",
+      "prod_status": "mql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0037",
+      "project_id": 4,
+      "message_id": "5a8796fe-4c73-41bb-b820-8996c81bac70",
+      "sent_at": "2026-10-28T07:03:44.776000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0038",
+      "project_id": 4,
+      "message_id": "26762680-97da-4493-b728-d8eb632f5e40",
+      "sent_at": "2026-10-29T05:46:23Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0039",
+      "project_id": 4,
+      "message_id": "1a25e9c0-5250-465d-b57c-0cb41fdd117e",
+      "sent_at": "2026-10-29T10:46:26.638000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0040",
+      "project_id": 4,
+      "message_id": "2ab7b01e-bd17-4d10-80fb-670a6e3f2898",
+      "sent_at": "2026-10-28T08:01:16.834000Z",
+      "kind": "contact_shared",
+      "prod_status": "mql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0041",
+      "project_id": 4,
+      "message_id": "16f615fc-a1e2-4bf9-94f7-c46e7f49ed87",
+      "sent_at": "2026-10-28T08:01:16.834000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0042",
+      "project_id": 4,
+      "message_id": "a57e3489-fdf0-41b7-9f05-e122537e23ff",
+      "sent_at": "2026-10-29T03:08:20Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0043",
+      "project_id": 4,
+      "message_id": "da035926-efc6-499d-bf79-3c50b01f5fe7",
+      "sent_at": "2026-10-29T03:54:05Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0044",
+      "project_id": 4,
+      "message_id": "858e8aad-eb44-4528-830c-043d6fedbd6a",
+      "sent_at": "2026-10-29T08:54:05.210000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0045",
+      "project_id": 4,
+      "message_id": "3fce934a-b926-4e78-8809-f2c85f96c7dc",
+      "sent_at": "2026-10-29T09:50:06.216000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0046",
+      "project_id": 4,
+      "message_id": "9c9da99e-0dc4-4b4d-8acc-1cbadeddfdc8",
+      "sent_at": "2026-10-28T07:00:04.650000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0047",
+      "project_id": 4,
+      "message_id": "884a1133-309a-42bb-b9fc-fe7da63c5f35",
+      "sent_at": "2026-10-28T07:00:04.650000Z",
+      "kind": "contact_shared",
+      "prod_status": "mql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0048",
+      "project_id": 4,
+      "message_id": "49242991-17e0-4a39-8fdc-89b847411d45",
+      "sent_at": "2026-10-29T03:47:47Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0049",
+      "project_id": 4,
+      "message_id": "db4c0206-bdb0-4f7d-b9ef-faf69d5c09a3",
+      "sent_at": "2026-10-29T08:47:47.610000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0050",
+      "project_id": 4,
+      "message_id": "f43a9fb0-bb8e-48de-988b-fc0e6e0c372e",
+      "sent_at": "2026-10-29T08:47:51.066000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0051",
+      "project_id": 4,
+      "message_id": "7fa1eaaa-1514-4db0-86f2-bd5cb751decc",
+      "sent_at": "2026-10-28T11:12:53.212000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0052",
+      "project_id": 4,
+      "message_id": "74568cc0-f535-49bd-916c-cecd3e43ee7f",
+      "sent_at": "2026-10-28T11:12:53.212000Z",
+      "kind": "contact_shared",
+      "prod_status": "mql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0053",
+      "project_id": 4,
+      "message_id": "ffdcdcdf-841b-4943-81ea-ba531bc67c64",
+      "sent_at": "2026-10-28T12:49:49.081000Z",
+      "kind": "contact_shared",
+      "prod_status": "mql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0054",
+      "project_id": 4,
+      "message_id": "c7fbc7bf-75da-44fb-bcc1-f71ff1d38a8c",
+      "sent_at": "2026-10-28T12:50:28.684000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0055",
+      "project_id": 4,
+      "message_id": "ab83ad77-b7b0-4f26-abf9-a6e69bc47047",
+      "sent_at": "2026-10-28T01:51:12Z",
+      "kind": "contact_shared",
+      "prod_status": "mql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0056",
+      "project_id": 4,
+      "message_id": "72f5484c-ce3f-42d8-8d92-c5ff8bb10269",
+      "sent_at": "2026-10-28T11:53:35.126000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0057",
+      "project_id": 4,
+      "message_id": "fb0ff497-8f73-466d-8aeb-f3949aac0c7a",
+      "sent_at": "2026-10-28T02:40:37Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0058",
+      "project_id": 4,
+      "message_id": "1e7d497b-1cee-442f-b96a-ef62e73d335e",
+      "sent_at": "2026-10-28T07:40:30.024000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0059",
+      "project_id": 4,
+      "message_id": "628a72a9-34f9-4813-b780-068a26c64ce4",
+      "sent_at": "2026-10-28T07:42:01.638000Z",
+      "kind": "contact_shared",
+      "prod_status": "mql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0060",
+      "project_id": 4,
+      "message_id": "b7851322-4402-4a79-896e-01e6d2689bfb",
+      "sent_at": "2026-10-28T09:52:21Z",
+      "kind": "single_reply",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0061",
+      "project_id": 4,
+      "message_id": "34426a27-e226-4416-a82a-2a25927e58ed",
+      "sent_at": "2026-10-28T14:52:00.893000Z",
+      "kind": "multi_turn",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0062",
+      "project_id": 4,
+      "message_id": "f76e673a-d31b-4178-be3d-bafb491ef13b",
+      "sent_at": "2026-10-28T14:52:00.893000Z",
+      "kind": "multi_turn",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0063",
+      "project_id": 4,
+      "message_id": "3052d0e1-eb89-41fa-91ce-04c7636d09fb",
+      "sent_at": "2026-10-28T14:52:39.933000Z",
+      "kind": "contact_shared",
+      "prod_status": "mql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0064",
+      "project_id": 4,
+      "message_id": "aeb49251-d3bb-4233-9e7b-cb45ffb1bea0",
+      "sent_at": "2026-10-28T02:30:04Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0065",
+      "project_id": 4,
+      "message_id": "1c8af440-373f-4c57-9b12-73f7c85fa35f",
+      "sent_at": "2026-10-28T07:30:07.780000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0066",
+      "project_id": 4,
+      "message_id": "631e93d8-fa56-45bd-98cb-ab9ef462f0b2",
+      "sent_at": "2026-10-28T11:32:44.366000Z",
+      "kind": "multi_turn",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0067",
+      "project_id": 4,
+      "message_id": "7c436563-e25c-47f3-98be-25429fe5b3a5",
+      "sent_at": "2026-10-28T09:54:17.164000Z",
+      "kind": "multi_turn",
+      "prod_status": "not_ta",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0068",
+      "project_id": 4,
+      "message_id": "2981ea0d-025c-4fc6-9fda-5609da1123a8",
+      "sent_at": "2026-10-28T09:54:17.164000Z",
+      "kind": "multi_turn",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0069",
+      "project_id": 4,
+      "message_id": "99ceeab0-ff9d-442b-bdc7-3f6b913c290f",
+      "sent_at": "2026-10-28T08:42:34.128000Z",
+      "kind": "single_reply",
+      "prod_status": "positive",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0070",
+      "project_id": 4,
+      "message_id": "34024fe4-6baf-4b68-97e6-d5d5c0c11e7f",
+      "sent_at": "2026-10-28T09:24:29.120000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0071",
+      "project_id": 4,
+      "message_id": "9ed192fa-5df3-4fa6-ad79-453ed892c57f",
+      "sent_at": "2026-10-28T09:24:29.120000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0072",
+      "project_id": 4,
+      "message_id": "e086fdb9-065e-4f03-a2f7-de972073861f",
+      "sent_at": "2026-10-28T11:27:18.849000Z",
+      "kind": "multi_turn",
+      "prod_status": "not_ta",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0073",
+      "project_id": 4,
+      "message_id": "bc45a4cc-49ab-4a12-b865-9c3ab8492c49",
+      "sent_at": "2026-10-28T11:27:18.849000Z",
+      "kind": "multi_turn",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0074",
+      "project_id": 4,
+      "message_id": "9a45c687-09da-445d-ba33-53578492612f",
+      "sent_at": "2026-10-28T10:25:31.136000Z",
+      "kind": "multi_turn",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0075",
+      "project_id": 4,
+      "message_id": "d2f6ac81-ae5d-4bf3-9e8a-7546ec41f793",
+      "sent_at": "2026-10-28T10:25:31.136000Z",
+      "kind": "multi_turn",
+      "prod_status": "not_ta",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0076",
+      "project_id": 4,
+      "message_id": "f27b634d-4374-40d5-811f-b7fa12d8e08e",
+      "sent_at": "2026-10-29T06:34:48.170000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0077",
+      "project_id": 4,
+      "message_id": "515d569a-515c-4c81-832a-05843855aa88",
+      "sent_at": "2026-10-29T00:31:25.456000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0078",
+      "project_id": 4,
+      "message_id": "3955b196-13ca-47fd-a323-bb837e84cfec",
+      "sent_at": "2026-10-28T11:29:37.004000Z",
+      "kind": "multi_turn",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0079",
+      "project_id": 5,
+      "message_id": "b84575ea-e0bc-4978-bad3-0a4faa2c750a",
+      "sent_at": "2026-10-30T14:27:37.020000Z",
+      "kind": "single_reply",
+      "prod_status": "not_ta",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0080",
+      "project_id": 5,
+      "message_id": "daf77ec0-1197-47ef-b274-23a5c3123318",
+      "sent_at": "2026-10-30T14:20:19.092000Z",
+      "kind": "single_reply",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0081",
+      "project_id": 5,
+      "message_id": "bd0e2a42-8f33-43a4-b330-e0984e831dae",
+      "sent_at": "2026-10-30T14:20:20.680000Z",
+      "kind": "multi_turn",
+      "prod_status": "rejection",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0082",
+      "project_id": 5,
+      "message_id": "c301cca6-8171-493e-bcbe-0dc6d9dfd67f",
+      "sent_at": "2026-10-29T10:41:15.460000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0083",
+      "project_id": 5,
+      "message_id": "0b7e41ae-aff9-4b76-82a9-26e447f31687",
+      "sent_at": "2026-10-30T13:07:22.480000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0084",
+      "project_id": 5,
+      "message_id": "2c7eac3b-218a-44b0-aab0-0139ec5b8d7b",
+      "sent_at": "2026-10-29T16:34:30.714000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0085",
+      "project_id": 5,
+      "message_id": "79eb9350-0718-4ed3-803d-e05f285feb5d",
+      "sent_at": "2026-10-29T16:35:37.295000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0086",
+      "project_id": 5,
+      "message_id": "3ca121e9-fa01-4445-ae9a-1a973a5efea5",
+      "sent_at": "2026-10-28T12:21:19.399000Z",
+      "kind": "single_reply",
+      "prod_status": "not_ta",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0087",
+      "project_id": 5,
+      "message_id": "1c26cd87-3baa-43ee-b14f-05a2adf80047",
+      "sent_at": "2026-10-29T14:03:37.200000Z",
+      "kind": "contact_shared",
+      "prod_status": "mql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0088",
+      "project_id": 5,
+      "message_id": "a9f66669-934a-4399-b7cf-539591d80dee",
+      "sent_at": "2026-10-29T14:03:50.231000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0089",
+      "project_id": 5,
+      "message_id": "08e8cdcc-0609-4c0e-b1a4-62e0f8e4a8d8",
+      "sent_at": "2026-10-28T03:11:14.284000Z",
+      "kind": "single_reply",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0090",
+      "project_id": 5,
+      "message_id": "bb952a10-14cc-41f7-aca5-f1f848040f02",
+      "sent_at": "2026-10-28T03:11:58.959000Z",
+      "kind": "multi_turn",
+      "prod_status": "mql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0091",
+      "project_id": 5,
+      "message_id": "02def335-a4ac-4938-9814-b38d6b274fc1",
+      "sent_at": "2026-10-29T11:11:55.352000Z",
+      "kind": "contact_shared",
+      "prod_status": "mql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0092",
+      "project_id": 5,
+      "message_id": "a224aa8d-6205-4667-b7d1-1c2b3030b5da",
+      "sent_at": "2026-10-28T12:40:34.220000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0093",
+      "project_id": 5,
+      "message_id": "95b4695e-7b57-4819-817e-df85966a9aec",
+      "sent_at": "2026-10-28T11:36:53.799000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0094",
+      "project_id": 5,
+      "message_id": "9ee57c4a-7ca0-4492-9743-cff685cc5d43",
+      "sent_at": "2026-10-28T11:04:26.782000Z",
+      "kind": "multi_turn",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0095",
+      "project_id": 5,
+      "message_id": "afe73b1e-5591-4333-aa5d-331dafd4287c",
+      "sent_at": "2026-10-28T11:04:42.746000Z",
+      "kind": "contact_shared",
+      "prod_status": "mql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0096",
+      "project_id": 5,
+      "message_id": "6d0e1bb5-c776-49d6-ab45-121028fb7af3",
+      "sent_at": "2026-10-28T10:53:18.486000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0097",
+      "project_id": 5,
+      "message_id": "dff33db5-dfb1-4a36-ba1a-9a8b6a80dfb3",
+      "sent_at": "2026-10-29T13:24:27.544000Z",
+      "kind": "multi_turn",
+      "prod_status": "rejection",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0098",
+      "project_id": 5,
+      "message_id": "291924d4-b3ef-4def-ae03-ed9a682e8f3d",
+      "sent_at": "2026-10-28T22:35:40.853000Z",
+      "kind": "multi_turn",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0099",
+      "project_id": 5,
+      "message_id": "579c9147-4a1f-45f6-83b5-03ca8be8fd42",
+      "sent_at": "2026-10-28T22:37:09.143000Z",
+      "kind": "multi_turn",
+      "prod_status": "mql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0100",
+      "project_id": 5,
+      "message_id": "34e928c8-d993-45a9-9368-a6a4ffcdf55e",
+      "sent_at": "2026-10-29T15:40:28.834000Z",
+      "kind": "single_reply",
+      "prod_status": "not_ta",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0101",
+      "project_id": 5,
+      "message_id": "efb6e16c-9c5b-44f8-906c-660b6b41a53a",
+      "sent_at": "2026-10-30T13:03:08.863000Z",
+      "kind": "multi_turn",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0102",
+      "project_id": 5,
+      "message_id": "1f573a27-1dc2-47d5-b4e9-4058e0e53392",
+      "sent_at": "2026-10-30T13:03:13.056000Z",
+      "kind": "multi_turn",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0103",
+      "project_id": 5,
+      "message_id": "261665b2-e5b9-476e-851f-05f9b8f7b4d7",
+      "sent_at": "2026-10-28T19:39:32.456000Z",
+      "kind": "contact_shared",
+      "prod_status": "not_ta",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0104",
+      "project_id": 5,
+      "message_id": "058ddd0d-4ac6-4a38-8a78-ce16559b3a2c",
+      "sent_at": "2026-10-29T17:01:54.815000Z",
+      "kind": "single_reply",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0105",
+      "project_id": 5,
+      "message_id": "4eb3df1f-975c-4bd2-967c-f271b2eb647b",
+      "sent_at": "2026-10-29T17:02:11.708000Z",
+      "kind": "multi_turn",
+      "prod_status": "not_ta",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0106",
+      "project_id": 5,
+      "message_id": "f6918111-11dd-4640-971c-b8940c5f6e7f",
+      "sent_at": "2026-10-29T17:47:36.995000Z",
+      "kind": "single_reply",
+      "prod_status": "not_ta",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0107",
+      "project_id": 5,
+      "message_id": "9402c164-42aa-462a-a95d-9d63fa1e4287",
+      "sent_at": "2026-10-29T18:33:35.031000Z",
+      "kind": "single_reply",
+      "prod_status": "not_ta",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0108",
+      "project_id": 5,
+      "message_id": "73565ba7-8675-4da8-9fdb-a38ff481fef0",
+      "sent_at": "2026-10-28T18:48:58.585000Z",
+      "kind": "contact_shared",
+      "prod_status": "not_ta",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0109",
+      "project_id": 5,
+      "message_id": "9f6adefd-ce40-49ea-9d2d-d97a6ddf7dec",
+      "sent_at": "2026-10-29T13:12:10.213000Z",
+      "kind": "single_reply",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0110",
+      "project_id": 5,
+      "message_id": "946d4cca-764b-4643-a7f3-3e367d2909c6",
+      "sent_at": "2026-10-29T13:12:19.580000Z",
+      "kind": "multi_turn",
+      "prod_status": "mql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0111",
+      "project_id": 5,
+      "message_id": "abe7fa6a-b913-42b6-a72f-4c995ff80e7e",
+      "sent_at": "2026-10-29T13:13:24.789000Z",
+      "kind": "multi_turn",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0112",
+      "project_id": 5,
+      "message_id": "4944938d-2fbb-4180-9e16-cb8f0265f9c1",
+      "sent_at": "2026-10-30T12:56:55.786000Z",
+      "kind": "contact_shared",
+      "prod_status": "mql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0113",
+      "project_id": 5,
+      "message_id": "7289e9a0-ebb2-46fc-9fcc-8339f7418418",
+      "sent_at": "2026-10-29T16:28:38.576000Z",
+      "kind": "single_reply",
+      "prod_status": "not_ta",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0114",
+      "project_id": 5,
+      "message_id": "b50dae83-0c17-422b-a4ff-9ed2c95824ed",
+      "sent_at": "2026-10-29T17:15:37.965000Z",
+      "kind": "single_reply",
+      "prod_status": "not_ta",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0115",
+      "project_id": 5,
+      "message_id": "9db05d99-ede1-4b40-9b1e-99466901f14f",
+      "sent_at": "2026-10-29T17:19:11.036000Z",
+      "kind": "single_reply",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0116",
+      "project_id": 5,
+      "message_id": "7eb5d229-bd34-4e82-8d37-fa116e77b0d8",
+      "sent_at": "2026-10-29T17:19:55.980000Z",
+      "kind": "multi_turn",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0117",
+      "project_id": 5,
+      "message_id": "63f5841f-b1a0-4a0f-bbaf-e2bcaa86d0bd",
+      "sent_at": "2026-10-29T17:25:25.048000Z",
+      "kind": "single_reply",
+      "prod_status": "mql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0118",
+      "project_id": 5,
+      "message_id": "637f70f4-b711-48de-96f1-54e021063838",
+      "sent_at": "2026-10-29T16:23:45.268000Z",
+      "kind": "single_reply",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0119",
+      "project_id": 5,
+      "message_id": "9d00397d-ebc3-4d92-91ce-2a26681a4f6a",
+      "sent_at": "2026-10-29T16:25:13.729000Z",
+      "kind": "multi_turn",
+      "prod_status": "mql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0120",
+      "project_id": 5,
+      "message_id": "d361d182-12ec-4e59-8e1c-4b3c510ed7d3",
+      "sent_at": "2026-10-29T13:38:34.749000Z",
+      "kind": "single_reply",
+      "prod_status": "not_ta",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0121",
+      "project_id": 5,
+      "message_id": "666c65c1-c371-4aed-b7cb-0c2948486b78",
+      "sent_at": "2026-10-29T12:57:08.272000Z",
+      "kind": "single_reply",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0122",
+      "project_id": 5,
+      "message_id": "4f33a1f7-7b18-4cf3-8b63-7a5fc0a63df1",
+      "sent_at": "2026-10-29T12:58:23.346000Z",
+      "kind": "multi_turn",
+      "prod_status": "mql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0123",
+      "project_id": 5,
+      "message_id": "3b93da23-6591-4baf-9fa8-1a0973759805",
+      "sent_at": "2026-10-29T01:28:56.853000Z",
+      "kind": "single_reply",
+      "prod_status": "not_ta",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0124",
+      "project_id": 5,
+      "message_id": "7401a049-64e4-4d29-8bb6-dcd011e9ed7b",
+      "sent_at": "2026-10-29T17:06:35.145000Z",
+      "kind": "multi_turn",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0125",
+      "project_id": 5,
+      "message_id": "d4f16a8b-3891-44f7-8e06-4de64ba54522",
+      "sent_at": "2026-10-28T19:15:18.972000Z",
+      "kind": "multi_turn",
+      "prod_status": "mql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0126",
+      "project_id": 5,
+      "message_id": "6c2b65f3-3d09-422a-93fc-4223f7b2743e",
+      "sent_at": "2026-10-30T12:36:45.386000Z",
+      "kind": "single_reply",
+      "prod_status": "rejection",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0127",
+      "project_id": 5,
+      "message_id": "aad28bb0-d3b1-46bc-bc48-5549210d01cb",
+      "sent_at": "2026-10-30T05:58:42.729000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0128",
+      "project_id": 5,
+      "message_id": "cfce1023-f83a-4dc6-a250-5884484b7e8a",
+      "sent_at": "2026-10-30T02:45:00.524000Z",
+      "kind": "single_reply",
+      "prod_status": "mql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0129",
+      "project_id": 5,
+      "message_id": "1e23c7e8-9a83-40a6-beac-e0dde44df22b",
+      "sent_at": "2026-10-30T01:31:01.805000Z",
+      "kind": "single_reply",
+      "prod_status": "mql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0130",
+      "project_id": 5,
+      "message_id": "576bfdb8-cbfa-4a55-8d75-977a1c88d713",
+      "sent_at": "2026-10-29T20:52:00.393000Z",
+      "kind": "single_reply",
+      "prod_status": "mql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0131",
+      "project_id": 5,
+      "message_id": "89925854-c9f8-4f81-ba51-b0051d538591",
+      "sent_at": "2026-10-29T20:22:57.176000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0132",
+      "project_id": 5,
+      "message_id": "e4f72daa-a5d5-4606-a130-5fdcf7f105cd",
+      "sent_at": "2026-10-29T20:21:34.544000Z",
+      "kind": "single_reply",
+      "prod_status": "mql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0133",
+      "project_id": 5,
+      "message_id": "fb9113de-0dad-498d-9341-57110a3d116a",
+      "sent_at": "2026-10-29T13:58:51.616000Z",
+      "kind": "contact_shared",
+      "prod_status": "mql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0134",
+      "project_id": 5,
+      "message_id": "e996d354-73df-4b7f-82c9-5b96863c1912",
+      "sent_at": "2026-10-29T11:18:37.736000Z",
+      "kind": "multi_turn",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0135",
+      "project_id": 5,
+      "message_id": "b2daf48e-a1cb-4ec8-9e71-76734d603c52",
+      "sent_at": "2026-10-29T07:33:11.931000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0136",
+      "project_id": 5,
+      "message_id": "1246998b-8e07-456a-84a8-50e1441545b3",
+      "sent_at": "2026-10-28T16:30:13.257000Z",
+      "kind": "contact_shared",
+      "prod_status": "mql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0137",
+      "project_id": 5,
+      "message_id": "b0d108f2-17d1-4499-aac7-5a556d562655",
+      "sent_at": "2026-10-28T03:42:47.221000Z",
+      "kind": "contact_shared",
+      "prod_status": "not_ta",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0138",
+      "project_id": 5,
+      "message_id": "ef405e0d-9b2a-4e7a-9fb2-dcaf3fdc7aec",
+      "sent_at": "2026-10-28T11:19:32.672000Z",
+      "kind": "contact_shared",
+      "prod_status": "mql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0139",
+      "project_id": 5,
+      "message_id": "cb04b309-87c7-4650-be64-7b83f1a3aeab",
+      "sent_at": "2026-10-28T16:45:29.597000Z",
+      "kind": "single_reply",
+      "prod_status": "not_ta",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0140",
+      "project_id": 5,
+      "message_id": "205f6e29-5532-437b-bf2a-37d48958008c",
+      "sent_at": "2026-10-28T17:03:19.425000Z",
+      "kind": "single_reply",
+      "prod_status": "not_ta",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0141",
+      "project_id": 5,
+      "message_id": "c5694ff7-33d4-45e4-8028-c4ce1fc4e151",
+      "sent_at": "2026-10-28T12:08:42.921000Z",
+      "kind": "single_reply",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0142",
+      "project_id": 5,
+      "message_id": "e46082b6-c513-4746-b66c-cdaaa0e16682",
+      "sent_at": "2026-10-28T12:09:27.587000Z",
+      "kind": "multi_turn",
+      "prod_status": "mql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0143",
+      "project_id": 5,
+      "message_id": "33ffd65f-94c6-49c5-a4ee-d30eca5241ac",
+      "sent_at": "2026-10-28T17:02:32.664000Z",
+      "kind": "single_reply",
+      "prod_status": "rejection",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0144",
+      "project_id": 5,
+      "message_id": "3b9cfa7a-804e-47a2-af0d-d201106066b2",
+      "sent_at": "2026-10-28T11:17:11.002000Z",
+      "kind": "single_reply",
+      "prod_status": "not_ta",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0145",
+      "project_id": 5,
+      "message_id": "1db4b3b7-d56b-45a9-8952-9483d255b6f9",
+      "sent_at": "2026-10-28T14:21:57.235000Z",
+      "kind": "contact_shared",
+      "prod_status": "not_ta",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0146",
+      "project_id": 5,
+      "message_id": "8adf71ed-b745-4a56-b61b-3861c645b8d9",
+      "sent_at": "2026-10-28T12:32:52.743000Z",
+      "kind": "multi_turn",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0147",
+      "project_id": 5,
+      "message_id": "3e658352-acb6-46c9-bab5-d1bf1b8ce5cc",
+      "sent_at": "2026-10-28T08:54:34.027000Z",
+      "kind": "multi_turn",
+      "prod_status": "not_ta",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0148",
+      "project_id": 5,
+      "message_id": "ca32063e-6918-442c-bda0-c8c4b12add60",
+      "sent_at": "2026-10-28T15:46:20.847000Z",
+      "kind": "multi_turn",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0149",
+      "project_id": 9,
+      "message_id": "2c1b50aa-fe27-41ac-b225-656dcf150f42",
+      "sent_at": "2026-10-30T12:57:20.505000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0150",
+      "project_id": 9,
+      "message_id": "1a19d58a-a9d4-4463-9405-de71924d527c",
+      "sent_at": "2026-10-30T11:34:01.393000Z",
+      "kind": "contact_shared",
+      "prod_status": "positive",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0151",
+      "project_id": 9,
+      "message_id": "4989e4e5-79c0-47d7-9d9c-8f24e82a02bd",
+      "sent_at": "2026-10-30T11:16:15.001000Z",
+      "kind": "single_reply",
+      "prod_status": "not_ta",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0152",
+      "project_id": 9,
+      "message_id": "41645a80-b58c-41b7-abc9-86f05119c2aa",
+      "sent_at": "2026-10-30T10:45:33.023000Z",
+      "kind": "contact_shared",
+      "prod_status": "mql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0153",
+      "project_id": 9,
+      "message_id": "6f13b1b2-62c0-4a9e-ada2-e271a82e0db1",
+      "sent_at": "2026-10-30T10:45:51.924000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0154",
+      "project_id": 9,
+      "message_id": "1ccbc1ac-9fec-4271-b5e1-9fecea7c0143",
+      "sent_at": "2026-10-30T10:44:49.212000Z",
+      "kind": "contact_shared",
+      "prod_status": "rejection",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0155",
+      "project_id": 9,
+      "message_id": "5a287292-b019-4ca6-a40b-5232ed2d33d0",
+      "sent_at": "2026-10-30T09:27:23.143000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0156",
+      "project_id": 9,
+      "message_id": "b44d17c9-c41f-4aba-8022-f123f2fc2008",
+      "sent_at": "2026-10-28T18:08:35.500000Z",
+      "kind": "contact_shared",
+      "prod_status": "mql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0157",
+      "project_id": 9,
+      "message_id": "cafb5287-b005-4e06-a545-13f50a2c57c2",
+      "sent_at": "2026-10-28T18:09:55.941000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0158",
+      "project_id": 9,
+      "message_id": "9c38bccd-1d44-4f3f-bfef-85e2902a05cd",
+      "sent_at": "2026-10-30T09:00:42.264000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0159",
+      "project_id": 9,
+      "message_id": "322a97d4-662f-46cd-93a2-226e269e80fa",
+      "sent_at": "2026-10-30T08:45:28.479000Z",
+      "kind": "contact_shared",
+      "prod_status": "rejection",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0160",
+      "project_id": 9,
+      "message_id": "0c5fa6b3-4045-4ae6-a4c3-7951c7024a3c",
+      "sent_at": "2026-10-28T11:17:10.128000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0161",
+      "project_id": 9,
+      "message_id": "59022c81-f52d-4e36-8a08-03a2aa2938fb",
+      "sent_at": "2026-10-28T11:17:54.057000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0162",
+      "project_id": 9,
+      "message_id": "81b24bcd-9000-4565-a6c0-c44906b15df0",
+      "sent_at": "2026-10-28T11:18:31.039000Z",
+      "kind": "contact_shared",
+      "prod_status": "sql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0163",
+      "project_id": 9,
+      "message_id": "545a2792-c662-4ade-a0eb-b3f3699f1b0c",
+      "sent_at": "2026-10-30T08:43:59.380000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0164",
+      "project_id": 9,
+      "message_id": "f44ab760-9ff0-4b5f-9fb2-7469eb468c5e",
+      "sent_at": "2026-10-30T08:44:27.125000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0165",
+      "project_id": 9,
+      "message_id": "4b9a4a1c-04f3-45c9-ac43-58a0b151714b",
+      "sent_at": "2026-10-30T07:37:39.428000Z",
+      "kind": "contact_shared",
+      "prod_status": "mql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0166",
+      "project_id": 9,
+      "message_id": "815cc186-9b71-40cb-ace9-fd42a2245ed3",
+      "sent_at": "2026-10-30T08:02:01.740000Z",
+      "kind": "contact_shared",
+      "prod_status": "mql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0167",
+      "project_id": 9,
+      "message_id": "3a3d271e-4367-4101-92f0-9004b678bcb5",
+      "sent_at": "2026-10-29T16:52:30.900000Z",
+      "kind": "single_reply",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0168",
+      "project_id": 9,
+      "message_id": "d7aa3379-bd0e-4ef2-9a64-55541d5aafef",
+      "sent_at": "2026-10-29T11:38:48.677000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0169",
+      "project_id": 9,
+      "message_id": "556c42d9-bac2-4abf-a740-6962825366e1",
+      "sent_at": "2026-10-29T11:40:53.808000Z",
+      "kind": "contact_shared",
+      "prod_status": "sql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0170",
+      "project_id": 9,
+      "message_id": "92891ce7-4e9b-4590-9742-e5948563016b",
+      "sent_at": "2026-10-29T11:41:18.378000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0171",
+      "project_id": 9,
+      "message_id": "c2d120cc-084a-469c-83a3-baf8eb9b83ff",
+      "sent_at": "2026-10-29T11:56:34.312000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0172",
+      "project_id": 9,
+      "message_id": "dbd7b20d-72cb-4af3-8846-4b6ce49c3644",
+      "sent_at": "2026-10-29T04:01:52.360000Z",
+      "kind": "single_reply",
+      "prod_status": "positive",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0173",
+      "project_id": 9,
+      "message_id": "43b9f1e7-4818-4b25-93a2-85d5622dea33",
+      "sent_at": "2026-10-29T08:43:51.064000Z",
+      "kind": "multi_turn",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0174",
+      "project_id": 9,
+      "message_id": "82bf2b5f-793f-4e2d-83cb-7fc032ba0253",
+      "sent_at": "2026-10-28T09:55:01.855000Z",
+      "kind": "single_reply",
+      "prod_status": "rejection",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0175",
+      "project_id": 9,
+      "message_id": "dfcb0aa7-4b98-471e-b513-ce6c3b642ceb",
+      "sent_at": "2026-10-28T11:20:49.787000Z",
+      "kind": "contact_shared",
+      "prod_status": "rejection",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0176",
+      "project_id": 12,
+      "message_id": "3b48d178-b13c-496b-ac7a-a2ec3bc51819",
+      "sent_at": "2026-10-30T12:42:17.780000Z",
+      "kind": "single_reply",
+      "prod_status": "not_ta",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0177",
+      "project_id": 12,
+      "message_id": "4c53030f-5acd-46f5-84dc-2d35902d34ab",
+      "sent_at": "2026-10-30T10:58:43.860000Z",
+      "kind": "contact_shared",
+      "prod_status": "not_ta",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0178",
+      "project_id": 12,
+      "message_id": "332d3e30-8d26-439b-8fb3-4062e733b538",
+      "sent_at": "2026-10-28T12:22:23.958000Z",
+      "kind": "contact_shared",
+      "prod_status": "not_ta",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0179",
+      "project_id": 12,
+      "message_id": "9f2b4f67-0fb2-4db1-bf71-129cdb64b942",
+      "sent_at": "2026-10-30T08:09:05.717000Z",
+      "kind": "single_reply",
+      "prod_status": "not_ta",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0180",
+      "project_id": 12,
+      "message_id": "2b9fb214-2c61-4a20-895d-ac56e8d5cff3",
+      "sent_at": "2026-10-30T10:36:16.918000Z",
+      "kind": "single_reply",
+      "prod_status": "positive",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0181",
+      "project_id": 12,
+      "message_id": "2e33a6ff-31db-44e8-8f02-dcff90d3671d",
+      "sent_at": "2026-10-29T20:08:58.309000Z",
+      "kind": "contact_shared",
+      "prod_status": "mql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0182",
+      "project_id": 12,
+      "message_id": "eedeb224-c484-488e-9dd3-fee247dd9c41",
+      "sent_at": "2026-10-30T08:27:40.925000Z",
+      "kind": "contact_shared",
+      "prod_status": "mql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0183",
+      "project_id": 12,
+      "message_id": "d124b40d-01ec-49ff-9891-832e8a887f0a",
+      "sent_at": "2026-10-30T06:46:24.771000Z",
+      "kind": "single_reply",
+      "prod_status": "positive",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0184",
+      "project_id": 12,
+      "message_id": "8c0d787e-7ed1-42fc-8a7b-60b24baef3b0",
+      "sent_at": "2026-10-29T15:48:07.516000Z",
+      "kind": "single_reply",
+      "prod_status": "mql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0185",
+      "project_id": 12,
+      "message_id": "84413d20-cf5c-40d9-8264-9e46b2ffe8fe",
+      "sent_at": "2026-10-28T13:41:17.428000Z",
+      "kind": "single_reply",
+      "prod_status": "mql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0186",
+      "project_id": 12,
+      "message_id": "e0eda1bc-09af-4db5-b91f-43d66643575a",
+      "sent_at": "2026-10-28T11:49:06.793000Z",
+      "kind": "single_reply",
+      "prod_status": "positive",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0187",
+      "project_id": 12,
+      "message_id": "68fa6e05-53ab-429e-a8c1-e9e2be2b3229",
+      "sent_at": "2026-10-28T10:04:09.755000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0188",
+      "project_id": 12,
+      "message_id": "4d640c32-176d-43f6-be97-db92ef4e6cdb",
+      "sent_at": "2026-10-28T09:06:03.963000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0189",
+      "project_id": 12,
+      "message_id": "d1834bd1-4214-450c-bdad-f7ab8d6bc15e",
+      "sent_at": "2026-10-28T08:05:21.281000Z",
+      "kind": "single_reply",
+      "prod_status": "positive",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0190",
+      "project_id": 23,
+      "message_id": "e7b1dde9-85db-47e5-83e6-c211eb92d65b",
+      "sent_at": "2026-10-30T10:55:46.019000Z",
+      "kind": "single_reply",
+      "prod_status": "not_ta",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0191",
+      "project_id": 23,
+      "message_id": "1ab5e49f-4242-4304-8ca2-863998a8958c",
+      "sent_at": "2026-10-30T09:10:54.852000Z",
+      "kind": "multi_turn",
+      "prod_status": "not_ta",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0192",
+      "project_id": 23,
+      "message_id": "5c86bc38-51e6-4682-83c4-e9e04633171f",
+      "sent_at": "2026-10-30T08:03:12.377000Z",
+      "kind": "single_reply",
+      "prod_status": "not_ta",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0193",
+      "project_id": 23,
+      "message_id": "c0aeec7e-0be6-4abd-8647-c307d509a07e",
+      "sent_at": "2026-10-30T07:49:36.397000Z",
+      "kind": "contact_shared",
+      "prod_status": "not_ta",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0194",
+      "project_id": 23,
+      "message_id": "8b42e9a4-edd4-4263-bd1b-2e10758667d8",
+      "sent_at": "2026-10-30T07:41:51.398000Z",
+      "kind": "contact_shared",
+      "prod_status": "not_ta",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0195",
+      "project_id": 23,
+      "message_id": "a0779fd9-4d2e-4cf3-8ddf-0878a2df8f2f",
+      "sent_at": "2026-10-30T04:27:28.032000Z",
+      "kind": "contact_shared",
+      "prod_status": "rejection",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0196",
+      "project_id": 23,
+      "message_id": "761bc3c6-84b0-441e-9353-6339371fd9d0",
+      "sent_at": "2026-10-29T19:36:41.715000Z",
+      "kind": "contact_shared",
+      "prod_status": "not_ta",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0197",
+      "project_id": 23,
+      "message_id": "090968e4-1fbe-4390-8d0c-456ab2e7bb66",
+      "sent_at": "2026-10-29T17:11:34.094000Z",
+      "kind": "single_reply",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0198",
+      "project_id": 23,
+      "message_id": "049713dc-fe32-4b49-a97c-56234cdf7e52",
+      "sent_at": "2026-10-29T12:37:03.832000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0199",
+      "project_id": 23,
+      "message_id": "4fd1e189-512f-4aa0-bcc1-936152c06bc2",
+      "sent_at": "2026-10-29T12:37:13.998000Z",
+      "kind": "contact_shared",
+      "prod_status": "rejection",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0200",
+      "project_id": 23,
+      "message_id": "366e0a0b-e3a6-4e3d-8108-e4ed352e0ab2",
+      "sent_at": "2026-10-29T12:37:56.875000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0201",
+      "project_id": 23,
+      "message_id": "c6339f7e-5cac-476a-97bb-8aa2a0952d00",
+      "sent_at": "2026-10-29T11:55:28.715000Z",
+      "kind": "contact_shared",
+      "prod_status": "positive",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0202",
+      "project_id": 23,
+      "message_id": "da2911b7-cbb8-4b66-a02a-e3ca77c55d01",
+      "sent_at": "2026-10-28T14:20:20.948000Z",
+      "kind": "contact_shared",
+      "prod_status": "rejection",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0203",
+      "project_id": 23,
+      "message_id": "c162fad7-3834-4ab3-9a0e-8ac743d02bb1",
+      "sent_at": "2026-10-29T11:45:16.712000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0204",
+      "project_id": 23,
+      "message_id": "cbe694fb-5c01-4a7c-93c4-9ff91878d579",
+      "sent_at": "2026-10-29T11:24:22.274000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0205",
+      "project_id": 23,
+      "message_id": "2259b401-292b-4cfa-91e5-70231b9ff7d4",
+      "sent_at": "2026-10-29T10:03:27.393000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0206",
+      "project_id": 23,
+      "message_id": "8822104f-4b7e-4d83-a7e7-9b871edba51c",
+      "sent_at": "2026-10-29T09:32:31.529000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0207",
+      "project_id": 23,
+      "message_id": "8fc623c5-bb8e-4a39-a868-67cc39d28cc0",
+      "sent_at": "2026-10-29T08:00:42.130000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0208",
+      "project_id": 23,
+      "message_id": "ee73810c-d272-4229-aadd-2bddf20a6f88",
+      "sent_at": "2026-10-29T08:09:01.635000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0209",
+      "project_id": 23,
+      "message_id": "3d809603-29e9-45dc-8c01-2fa6f4d0ac5d",
+      "sent_at": "2026-10-29T08:07:32.656000Z",
+      "kind": "contact_shared",
+      "prod_status": "rejection",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0210",
+      "project_id": 23,
+      "message_id": "b8a14b86-8640-4bb4-a13b-a7a0e7748d58",
+      "sent_at": "2026-10-29T04:13:35.092000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0211",
+      "project_id": 23,
+      "message_id": "37d6caaa-7523-4ce4-a60d-4d88cb546e03",
+      "sent_at": "2026-10-28T17:01:23.672000Z",
+      "kind": "contact_shared",
+      "prod_status": "mql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0212",
+      "project_id": 23,
+      "message_id": "4bdb4563-dc29-49d9-9237-6d1e5d6fbdc0",
+      "sent_at": "2026-10-28T12:44:57.982000Z",
+      "kind": "single_reply",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0213",
+      "project_id": 23,
+      "message_id": "30e6dbce-6220-44c4-99b4-b8c802976575",
+      "sent_at": "2026-10-28T12:45:45.588000Z",
+      "kind": "multi_turn",
+      "prod_status": "positive",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0214",
+      "project_id": 23,
+      "message_id": "7ed9af35-4547-41a8-a54a-1ba2140b838f",
+      "sent_at": "2026-10-28T11:44:24.975000Z",
+      "kind": "contact_shared",
+      "prod_status": "sql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0215",
+      "project_id": 23,
+      "message_id": "b7e4c600-8817-4e66-a4d4-c8ab6b55447c",
+      "sent_at": "2026-10-28T08:37:28.913000Z",
+      "kind": "multi_turn",
+      "prod_status": "mql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0216",
+      "project_id": 23,
+      "message_id": "244dff35-614b-43e6-988e-62a7716c02d8",
+      "sent_at": "2026-10-28T08:25:32.822000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0217",
+      "project_id": 23,
+      "message_id": "a51dd949-c4a9-4518-a604-fad6a9e96e67",
+      "sent_at": "2026-10-28T07:36:36.842000Z",
+      "kind": "contact_shared",
+      "prod_status": "sql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0218",
+      "project_id": 23,
+      "message_id": "b0f3f0b6-865a-4552-b923-fd9e98777756",
+      "sent_at": "2026-10-28T07:34:36.312000Z",
+      "kind": "contact_shared",
+      "prod_status": "mql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0219",
+      "project_id": 23,
+      "message_id": "3875529f-dafc-415f-84f4-fd3015304e26",
+      "sent_at": "2026-10-28T06:06:14.355000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0220",
+      "project_id": 23,
+      "message_id": "6ffdd8b3-460d-4269-84f8-09d30d0398b1",
+      "sent_at": "2026-10-28T05:48:05.139000Z",
+      "kind": "contact_shared",
+      "prod_status": "mql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0221",
+      "project_id": 58,
+      "message_id": "3bb2ded1-4bc0-48c4-8738-d80fc9783c5e",
+      "sent_at": "2026-10-29T17:28:36.690000Z",
+      "kind": "single_reply",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0222",
+      "project_id": 58,
+      "message_id": "d8f4b632-5cbd-4a63-a776-c862893ed2da",
+      "sent_at": "2026-10-29T17:29:11.003000Z",
+      "kind": "multi_turn",
+      "prod_status": "positive",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0223",
+      "project_id": 58,
+      "message_id": "eb1ab754-525c-40d5-83e0-e74975883540",
+      "sent_at": "2026-10-29T19:03:27.600000Z",
+      "kind": "contact_shared",
+      "prod_status": "mql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0224",
+      "project_id": 58,
+      "message_id": "513d0076-96da-4073-a669-22705ad80574",
+      "sent_at": "2026-10-30T01:47:56.829000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0225",
+      "project_id": 58,
+      "message_id": "6cb00089-e872-4d4e-88c8-f97229912f13",
+      "sent_at": "2026-10-28T14:30:53.975000Z",
+      "kind": "single_reply",
+      "prod_status": "rejection",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0226",
+      "project_id": 65,
+      "message_id": "ecf87bbb-46b1-4fb3-a4f7-2a2bd22d846b",
+      "sent_at": "2026-10-30T13:43:56.982000Z",
+      "kind": "single_reply",
+      "prod_status": "mql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0227",
+      "project_id": 65,
+      "message_id": "fabf2369-2882-48b0-bfcd-8c4574856f37",
+      "sent_at": "2026-10-30T12:47:57.410000Z",
+      "kind": "single_reply",
+      "prod_status": "rejection",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0228",
+      "project_id": 65,
+      "message_id": "b09f415a-ad81-4367-88df-097336996ecb",
+      "sent_at": "2026-10-29T17:22:06.873000Z",
+      "kind": "contact_shared",
+      "prod_status": "sql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0229",
+      "project_id": 65,
+      "message_id": "bd1e35f0-64ca-4a6f-97e9-4f6a9982d7b1",
+      "sent_at": "2026-10-30T11:48:35.126000Z",
+      "kind": "single_reply",
+      "prod_status": "rejection",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0230",
+      "project_id": 65,
+      "message_id": "b2f0325c-bda5-4cd0-b05e-1295193eed31",
+      "sent_at": "2026-10-30T10:01:09.627000Z",
+      "kind": "single_reply",
+      "prod_status": "rejection",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0231",
+      "project_id": 65,
+      "message_id": "02764e32-f745-4d20-a600-eba6441c1296",
+      "sent_at": "2026-10-30T09:23:14.832000Z",
+      "kind": "single_reply",
+      "prod_status": "not_ta",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0232",
+      "project_id": 65,
+      "message_id": "c229f65a-4977-4029-8b8c-6f2000bbf75a",
+      "sent_at": "2026-10-29T17:49:05.388000Z",
+      "kind": "contact_shared",
+      "prod_status": "mql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0233",
+      "project_id": 65,
+      "message_id": "550922b0-4060-4ff6-85df-cf4b3428db0b",
+      "sent_at": "2026-10-29T12:00:30.575000Z",
+      "kind": "single_reply",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0234",
+      "project_id": 65,
+      "message_id": "d6228edb-d7d0-4c4b-ab8a-04cbe5534979",
+      "sent_at": "2026-10-29T12:01:25.133000Z",
+      "kind": "multi_turn",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0235",
+      "project_id": 65,
+      "message_id": "f02c377b-5722-4270-bed4-5aeb8b5da05a",
+      "sent_at": "2026-10-29T12:01:39.196000Z",
+      "kind": "contact_shared",
+      "prod_status": "mql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0236",
+      "project_id": 65,
+      "message_id": "9635dedb-3f20-4ee0-bafb-88e4e5409cfc",
+      "sent_at": "2026-10-29T10:16:36.528000Z",
+      "kind": "contact_shared",
+      "prod_status": "not_ta",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0237",
+      "project_id": 65,
+      "message_id": "bc40c33c-a01f-482f-8fce-bad107bd6ed7",
+      "sent_at": "2026-10-28T10:35:21.605000Z",
+      "kind": "single_reply",
+      "prod_status": "not_ta",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0238",
+      "project_id": 71,
+      "message_id": "7941970b-9e8b-414f-ac96-54f192c458b2",
+      "sent_at": "2026-10-30T07:13:45.356000Z",
+      "kind": "single_reply",
+      "prod_status": null,
+      "suggested_by": null,
+      "confirmed": false
+    },
+    {
+      "id": "d10-0239",
+      "project_id": 71,
+      "message_id": "ae59b2f6-473d-4ddc-8e65-6f0cd0c6b381",
+      "sent_at": "2026-10-30T09:26:10.065000Z",
+      "kind": "multi_turn",
+      "prod_status": null,
+      "suggested_by": null,
+      "confirmed": false
+    },
+    {
+      "id": "d10-0240",
+      "project_id": 71,
+      "message_id": "af52bd71-b007-4b4e-98d1-affe1181522b",
+      "sent_at": "2026-10-30T01:52:47.414000Z",
+      "kind": "single_reply",
+      "prod_status": null,
+      "suggested_by": null,
+      "confirmed": false
+    },
+    {
+      "id": "d10-0241",
+      "project_id": 71,
+      "message_id": "0198c25b-f444-44c6-893e-b23f665d63ef",
+      "sent_at": "2026-10-29T22:38:36.408000Z",
+      "kind": "contact_shared",
+      "prod_status": null,
+      "suggested_by": null,
+      "confirmed": false
+    },
+    {
+      "id": "d10-0242",
+      "project_id": 71,
+      "message_id": "7f69043a-f7a2-4b01-811d-9325c637b340",
+      "sent_at": "2026-10-29T14:03:10.348000Z",
+      "kind": "single_reply",
+      "prod_status": null,
+      "suggested_by": null,
+      "confirmed": false
+    },
+    {
+      "id": "d10-0243",
+      "project_id": 71,
+      "message_id": "26eda4cd-9b6f-4964-9c44-520c19ba2a88",
+      "sent_at": "2026-10-29T20:08:55.473000Z",
+      "kind": "multi_turn",
+      "prod_status": null,
+      "suggested_by": null,
+      "confirmed": false
+    },
+    {
+      "id": "d10-0244",
+      "project_id": 71,
+      "message_id": "39e6acec-6f09-48af-8a89-1035114a050a",
+      "sent_at": "2026-10-29T14:39:38.523000Z",
+      "kind": "contact_shared",
+      "prod_status": null,
+      "suggested_by": null,
+      "confirmed": false
+    },
+    {
+      "id": "d10-0245",
+      "project_id": 71,
+      "message_id": "53188419-52e7-4eed-b6d0-4e1ca2ac8b49",
+      "sent_at": "2026-10-29T20:02:50.897000Z",
+      "kind": "single_reply",
+      "prod_status": null,
+      "suggested_by": null,
+      "confirmed": false
+    },
+    {
+      "id": "d10-0246",
+      "project_id": 71,
+      "message_id": "e52b4f94-d037-4645-92c8-5996b5340b8d",
+      "sent_at": "2026-10-29T15:44:04.623000Z",
+      "kind": "single_reply",
+      "prod_status": null,
+      "suggested_by": null,
+      "confirmed": false
+    },
+    {
+      "id": "d10-0247",
+      "project_id": 71,
+      "message_id": "738c787e-8bf6-4500-8ade-f0ee4b00bb22",
+      "sent_at": "2026-10-28T19:38:05.951000Z",
+      "kind": "contact_shared",
+      "prod_status": null,
+      "suggested_by": null,
+      "confirmed": false
+    },
+    {
+      "id": "d10-0248",
+      "project_id": 71,
+      "message_id": "4acc4865-b60a-4ea6-8e51-d5dbacdcd38f",
+      "sent_at": "2026-10-29T12:03:10.119000Z",
+      "kind": "contact_shared",
+      "prod_status": null,
+      "suggested_by": null,
+      "confirmed": false
+    },
+    {
+      "id": "d10-0249",
+      "project_id": 71,
+      "message_id": "4c59824a-18c2-48b9-963d-9826877e429e",
+      "sent_at": "2026-10-29T12:02:52.528000Z",
+      "kind": "contact_shared",
+      "prod_status": null,
+      "suggested_by": null,
+      "confirmed": false
+    },
+    {
+      "id": "d10-0250",
+      "project_id": 71,
+      "message_id": "45b36106-f0f8-486f-bc24-3db7f3c13dcc",
+      "sent_at": "2026-10-29T07:26:49.282000Z",
+      "kind": "single_reply",
+      "prod_status": null,
+      "suggested_by": null,
+      "confirmed": false
+    },
+    {
+      "id": "d10-0251",
+      "project_id": 71,
+      "message_id": "1f6da0ad-5e2e-4fd6-b6df-80cd7904812c",
+      "sent_at": "2026-10-28T14:33:23.429000Z",
+      "kind": "single_reply",
+      "prod_status": null,
+      "suggested_by": null,
+      "confirmed": false
+    },
+    {
+      "id": "d10-0252",
+      "project_id": 76,
+      "message_id": "8333c2bb-7c98-4aa9-aa91-1429c311476e",
+      "sent_at": "2026-10-29T16:43:40.912000Z",
+      "kind": "single_reply",
+      "prod_status": "mql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0253",
+      "project_id": 76,
+      "message_id": "351b260e-2411-4379-9edc-df0af19832a4",
+      "sent_at": "2026-10-29T05:45:14.292000Z",
+      "kind": "single_reply",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0254",
+      "project_id": 76,
+      "message_id": "fe6889c9-1b09-4efa-8341-551fed3a62e1",
+      "sent_at": "2026-10-29T05:47:07.065000Z",
+      "kind": "multi_turn",
+      "prod_status": "mql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0255",
+      "project_id": 76,
+      "message_id": "9a60465c-5947-4926-9fa6-98620a317150",
+      "sent_at": "2026-10-28T21:58:45.230000Z",
+      "kind": "single_reply",
+      "prod_status": "not_ta",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0256",
+      "project_id": 76,
+      "message_id": "a80cdc77-48c5-47ff-a51b-7982ef0f4d2c",
+      "sent_at": "2026-10-28T08:09:15.213000Z",
+      "kind": "single_reply",
+      "prod_status": "mql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0257",
+      "project_id": 76,
+      "message_id": "93611aea-d716-4124-ad41-8520073401f4",
+      "sent_at": "2026-10-28T07:52:43.415000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0258",
+      "project_id": 77,
+      "message_id": "a2d1b664-b0a8-448d-9a9c-a6add967ccc9",
+      "sent_at": "2026-10-29T19:35:05.772000Z",
+      "kind": "single_reply",
+      "prod_status": "positive",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0259",
+      "project_id": 77,
+      "message_id": "d8e78410-aaa5-47f1-b0ae-632ccc33daa4",
+      "sent_at": "2026-10-29T14:44:40.292000Z",
+      "kind": "contact_shared",
+      "prod_status": "mql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0260",
+      "project_id": 78,
+      "message_id": "5216dc05-f436-4fff-be03-a96510444498",
+      "sent_at": "2026-10-29T23:45:00.195000Z",
+      "kind": "single_reply",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0261",
+      "project_id": 78,
+      "message_id": "938d02a9-c341-4306-a144-992e40ff9a01",
+      "sent_at": "2026-10-29T23:48:23.079000Z",
+      "kind": "multi_turn",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0262",
+      "project_id": 78,
+      "message_id": "903dbbf6-962f-4d24-b036-22b8c372d20e",
+      "sent_at": "2026-10-29T13:50:52.863000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0263",
+      "project_id": 78,
+      "message_id": "1402190b-c579-4d9c-aa69-7e1205edac24",
+      "sent_at": "2026-10-28T23:29:27.851000Z",
+      "kind": "single_reply",
+      "prod_status": "not_ta",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0264",
+      "project_id": 78,
+      "message_id": "5eb0464d-9b75-409a-9d7d-9811d93e9618",
+      "sent_at": "2026-10-28T07:56:51.396000Z",
+      "kind": "single_reply",
+      "prod_status": "not_ta",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0265",
+      "project_id": 79,
+      "message_id": "26e29fff-486e-4675-924b-1739ef0223b2",
+      "sent_at": "2026-10-30T07:47:40.806000Z",
+      "kind": "contact_shared",
+      "prod_status": "sql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0266",
+      "project_id": 79,
+      "message_id": "f1c9da85-42a7-48fb-b4bd-44230e5cf96e",
+      "sent_at": "2026-10-30T07:44:44.651000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0267",
+      "project_id": 79,
+      "message_id": "abd3e11b-cdde-4990-a24d-b2465235deda",
+      "sent_at": "2026-10-28T12:53:29.264000Z",
+      "kind": "multi_turn",
+      "prod_status": "not_ta",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0268",
+      "project_id": 79,
+      "message_id": "cb134afe-1311-4a4f-a1b4-83dbbaddea16",
+      "sent_at": "2026-10-29T14:30:57.981000Z",
+      "kind": "multi_turn",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0269",
+      "project_id": 79,
+      "message_id": "02e1a331-9c15-4357-ba4e-af420f961ffa",
+      "sent_at": "2026-10-28T12:32:08.026000Z",
+      "kind": "multi_turn",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0270",
+      "project_id": 79,
+      "message_id": "581d8676-7985-4cbe-ab62-a45acc6f0219",
+      "sent_at": "2026-10-28T12:33:06.622000Z",
+      "kind": "multi_turn",
+      "prod_status": "mql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0271",
+      "project_id": 79,
+      "message_id": "2cb9870b-b8db-4365-8628-c18d1cd7de9f",
+      "sent_at": "2026-10-29T13:33:45.779000Z",
+      "kind": "multi_turn",
+      "prod_status": "not_ta",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0272",
+      "project_id": 79,
+      "message_id": "93cb0594-a90d-467d-b11a-cbfddf1cbf22",
+      "sent_at": "2026-10-29T13:36:43.640000Z",
+      "kind": "multi_turn",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0273",
+      "project_id": 79,
+      "message_id": "531ac039-05c4-436b-ad55-aae083a1d1bc",
+      "sent_at": "2026-10-29T13:37:26.967000Z",
+      "kind": "multi_turn",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0274",
+      "project_id": 79,
+      "message_id": "2de4856c-4862-4931-8db5-d4f93a286f21",
+      "sent_at": "2026-10-28T14:04:02.558000Z",
+      "kind": "multi_turn",
+      "prod_status": "not_ta",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0275",
+      "project_id": 79,
+      "message_id": "5aea25bf-4fba-4e13-9017-76e2c7280351",
+      "sent_at": "2026-10-29T11:59:39.798000Z",
+      "kind": "multi_turn",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0276",
+      "project_id": 79,
+      "message_id": "7c562ff6-fadb-4f5c-a9cf-1ab252081177",
+      "sent_at": "2026-10-29T09:31:13.773000Z",
+      "kind": "contact_shared",
+      "prod_status": "mql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0277",
+      "project_id": 79,
+      "message_id": "3bd6c289-9007-408d-a958-ad8c2c9fd8a6",
+      "sent_at": "2026-10-28T11:50:20.280000Z",
+      "kind": "single_reply",
+      "prod_status": "rejection",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0278",
+      "project_id": 79,
+      "message_id": "43ea6c4f-8ff8-40c1-9eb7-0d72044c4fef",
+      "sent_at": "2026-10-29T05:48:14.035000Z",
+      "kind": "single_reply",
+      "prod_status": "not_ta",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0279",
+      "project_id": 79,
+      "message_id": "705b6df5-4c7b-4758-8ed4-e79714d200e2",
+      "sent_at": "2026-10-29T10:51:04.528000Z",
+      "kind": "single_reply",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0280",
+      "project_id": 79,
+      "message_id": "671b04cd-b80c-44fd-85ba-2c4c5c7c9cfa",
+      "sent_at": "2026-10-28T12:51:35.266000Z",
+      "kind": "multi_turn",
+      "prod_status": "mql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0281",
+      "project_id": 79,
+      "message_id": "fdc8e08d-7d28-4700-aafa-d692c527e88f",
+      "sent_at": "2026-10-29T06:00:04.679000Z",
+      "kind": "multi_turn",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0282",
+      "project_id": 79,
+      "message_id": "8286febd-f1a7-4eda-bdc2-37c609983d24",
+      "sent_at": "2026-10-29T06:00:19.401000Z",
+      "kind": "multi_turn",
+      "prod_status": "mql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0283",
+      "project_id": 79,
+      "message_id": "1a3b1459-2c45-41c7-8d28-9469a3559d65",
+      "sent_at": "2026-10-28T20:44:11.237000Z",
+      "kind": "multi_turn",
+      "prod_status": "positive",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0284",
+      "project_id": 79,
+      "message_id": "9c68c96c-d6b5-40bb-ad3f-060944e096b5",
+      "sent_at": "2026-10-28T14:14:22.985000Z",
+      "kind": "multi_turn",
+      "prod_status": "positive",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0285",
+      "project_id": 79,
+      "message_id": "3f09354b-66e4-498c-a5c3-11477962d76e",
+      "sent_at": "2026-10-28T11:53:58.953000Z",
+      "kind": "multi_turn",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0286",
+      "project_id": 79,
+      "message_id": "2479dd89-0b71-4fac-84a4-f3c239f9ffff",
+      "sent_at": "2026-10-28T11:55:31.243000Z",
+      "kind": "multi_turn",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0287",
+      "project_id": 79,
+      "message_id": "b843f32f-8278-46a3-ab81-2a29535c301f",
+      "sent_at": "2026-10-28T11:56:25.866000Z",
+      "kind": "multi_turn",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0288",
+      "project_id": 79,
+      "message_id": "f3462685-6ad4-4c3b-ba3d-94b060b7b5ed",
+      "sent_at": "2026-10-28T11:22:38.977000Z",
+      "kind": "single_reply",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0289",
+      "project_id": 79,
+      "message_id": "0bfcd73c-41fc-40be-a822-fcf6f4e904dd",
+      "sent_at": "2026-10-28T11:22:58.841000Z",
+      "kind": "multi_turn",
+      "prod_status": "positive",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0290",
+      "project_id": 79,
+      "message_id": "176b755a-671c-4a6c-8ead-4d0b9396a90f",
+      "sent_at": "2026-10-28T11:23:22.315000Z",
+      "kind": "multi_turn",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0291",
+      "project_id": 79,
+      "message_id": "dbbc1e33-319d-4e19-b0c3-e86469f4e84e",
+      "sent_at": "2026-10-28T10:31:17.242000Z",
+      "kind": "multi_turn",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0292",
+      "project_id": 79,
+      "message_id": "e8dc056c-81f6-41ad-92a6-15954a8380ab",
+      "sent_at": "2026-10-28T10:31:31.335000Z",
+      "kind": "multi_turn",
+      "prod_status": "mql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0293",
+      "project_id": 79,
+      "message_id": "a7684c80-a9e1-4a4f-98bd-f0cc1a8921ee",
+      "sent_at": "2026-10-28T03:55:37.222000Z",
+      "kind": "single_reply",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0294",
+      "project_id": 79,
+      "message_id": "ad5da5cf-389c-40e1-bb81-acadfaa0dc59",
+      "sent_at": "2026-10-28T03:55:47.300000Z",
+      "kind": "multi_turn",
+      "prod_status": "positive",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0295",
+      "project_id": 81,
+      "message_id": "208e1ef7-f1d6-440a-a498-07c6c429f4d3",
+      "sent_at": "2026-10-29T16:40:17.077000Z",
+      "kind": "multi_turn",
+      "prod_status": null,
+      "suggested_by": null,
+      "confirmed": false
+    },
+    {
+      "id": "d10-0296",
+      "project_id": 81,
+      "message_id": "ef1a78b0-fee1-4725-b021-797f2fb9b3fa",
+      "sent_at": "2026-10-29T15:18:51.351000Z",
+      "kind": "contact_shared",
+      "prod_status": null,
+      "suggested_by": null,
+      "confirmed": false
+    },
+    {
+      "id": "d10-0297",
+      "project_id": 81,
+      "message_id": "a091529e-1b9e-4c6e-bbd9-88d731f0d185",
+      "sent_at": "2026-10-28T19:38:05.951000Z",
+      "kind": "contact_shared",
+      "prod_status": null,
+      "suggested_by": null,
+      "confirmed": false
+    },
+    {
+      "id": "d10-0298",
+      "project_id": 81,
+      "message_id": "f6393ebe-1e91-480a-8c91-b2ff53d52f5b",
+      "sent_at": "2026-10-29T12:03:10.119000Z",
+      "kind": "contact_shared",
+      "prod_status": null,
+      "suggested_by": null,
+      "confirmed": false
+    },
+    {
+      "id": "d10-0299",
+      "project_id": 81,
+      "message_id": "b44e6fcd-f4ea-4e84-9d8d-ebc587f535c7",
+      "sent_at": "2026-10-29T08:15:30.111000Z",
+      "kind": "contact_shared",
+      "prod_status": null,
+      "suggested_by": null,
+      "confirmed": false
+    },
+    {
+      "id": "d10-0300",
+      "project_id": 81,
+      "message_id": "09f7763c-1b51-4bb0-9c3b-4a46d1b1c3ee",
+      "sent_at": "2026-10-28T19:01:40.139000Z",
+      "kind": "contact_shared",
+      "prod_status": null,
+      "suggested_by": null,
+      "confirmed": false
+    },
+    {
+      "id": "d10-0301",
+      "project_id": 81,
+      "message_id": "b4ac5b49-0e3c-44ef-acbe-e0f5e320b17a",
+      "sent_at": "2026-10-28T19:01:49.932000Z",
+      "kind": "contact_shared",
+      "prod_status": null,
+      "suggested_by": null,
+      "confirmed": false
+    },
+    {
+      "id": "d10-0302",
+      "project_id": 81,
+      "message_id": "fdc54e73-e821-41ac-af52-8f8cb164bde6",
+      "sent_at": "2026-10-28T10:35:41.732000Z",
+      "kind": "contact_shared",
+      "prod_status": null,
+      "suggested_by": null,
+      "confirmed": false
+    },
+    {
+      "id": "d10-0303",
+      "project_id": 81,
+      "message_id": "129c2a04-c3c4-4bbe-b9eb-5a6e8bffb46c",
+      "sent_at": "2026-10-28T08:17:15.297000Z",
+      "kind": "contact_shared",
+      "prod_status": null,
+      "suggested_by": null,
+      "confirmed": false
+    },
+    {
+      "id": "d10-0304",
+      "project_id": 81,
+      "message_id": "8794b6b5-bc85-44d3-897b-94a6356eef93",
+      "sent_at": "2026-10-28T07:43:18.145000Z",
+      "kind": "contact_shared",
+      "prod_status": null,
+      "suggested_by": null,
+      "confirmed": false
+    },
+    {
+      "id": "d10-0305",
+      "project_id": 82,
+      "message_id": "e7bb7fc4-c821-4dd5-92bd-6e65d59d04fc",
+      "sent_at": "2026-10-28T16:20:16.596000Z",
+      "kind": "multi_turn",
+      "prod_status": null,
+      "suggested_by": null,
+      "confirmed": false
+    },
+    {
+      "id": "d10-0306",
+      "project_id": 83,
+      "message_id": "fb2848ca-d138-44bf-84e7-17f99e67f459",
+      "sent_at": "2026-10-28T08:05:19.624000Z",
+      "kind": "contact_shared",
+      "prod_status": null,
+      "suggested_by": null,
+      "confirmed": false
+    },
+    {
+      "id": "d10-0307",
+      "project_id": 85,
+      "message_id": "fe056bd6-b16c-40de-85c0-d03f9884a039",
+      "sent_at": "2026-10-30T12:17:14.738000Z",
+      "kind": "single_reply",
+      "prod_status": null,
+      "suggested_by": null,
+      "confirmed": false
+    },
+    {
+      "id": "d10-0308",
+      "project_id": 85,
+      "message_id": "cebfdcda-6c4a-472d-8fd1-a44e418d8c2a",
+      "sent_at": "2026-10-29T13:45:51.100000Z",
+      "kind": "contact_shared",
+      "prod_status": null,
+      "suggested_by": null,
+      "confirmed": false
+    },
+    {
+      "id": "d10-0309",
+      "project_id": 85,
+      "message_id": "d95fd2fb-563e-4e12-9286-d7112cd3e9b5",
+      "sent_at": "2026-10-28T14:56:14.759000Z",
+      "kind": "single_reply",
+      "prod_status": null,
+      "suggested_by": null,
+      "confirmed": false
+    },
+    {
+      "id": "d10-0310",
+      "project_id": 85,
+      "message_id": "b4a14717-9664-4a13-bcab-2c683e8d7bc6",
+      "sent_at": "2026-10-28T11:38:17.706000Z",
+      "kind": "single_reply",
+      "prod_status": null,
+      "suggested_by": null,
+      "confirmed": false
+    },
+    {
+      "id": "d10-0311",
+      "project_id": 90,
+      "message_id": "bb93c941-652f-4627-aac9-edc6d3c5d457",
+      "sent_at": "2026-10-29T09:19:14.622000Z",
+      "kind": "single_reply",
+      "prod_status": null,
+      "suggested_by": null,
+      "confirmed": false
+    },
+    {
+      "id": "d10-0312",
+      "project_id": 90,
+      "message_id": "53c672b0-7c9c-4b7a-8005-9cc2bc033e92",
+      "sent_at": "2026-10-28T09:56:10.230000Z",
+      "kind": "multi_turn",
+      "prod_status": null,
+      "suggested_by": null,
+      "confirmed": false
+    },
+    {
+      "id": "d10-0313",
+      "project_id": 98,
+      "message_id": "6485652d-70e8-490d-91ef-53c1b86ee56a",
+      "sent_at": "2026-10-30T08:37:10.903000Z",
+      "kind": "contact_shared",
+      "prod_status": "not_ta",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0314",
+      "project_id": 98,
+      "message_id": "52c33561-0229-49f9-b2a3-afe51a706b51",
+      "sent_at": "2026-10-30T07:17:38.053000Z",
+      "kind": "single_reply",
+      "prod_status": "not_ta",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0315",
+      "project_id": 98,
+      "message_id": "5a5765ec-36ec-408b-a2a4-59b15681608c",
+      "sent_at": "2026-10-29T21:21:24.911000Z",
+      "kind": "single_reply",
+      "prod_status": "not_ta",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0316",
+      "project_id": 98,
+      "message_id": "a01ac803-a050-49d1-8888-20d10d14482f",
+      "sent_at": "2026-10-30T00:41:23.320000Z",
+      "kind": "single_reply",
+      "prod_status": "not_ta",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0317",
+      "project_id": 98,
+      "message_id": "0bbeec21-c9c7-4e3f-a3b2-5e5dd0be026f",
+      "sent_at": "2026-10-29T11:21:25.625000Z",
+      "kind": "contact_shared",
+      "prod_status": "mql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0318",
+      "project_id": 98,
+      "message_id": "9dcaa993-6da8-4b1a-941e-6a09b8862d9a",
+      "sent_at": "2026-10-29T10:30:16.030000Z",
+      "kind": "contact_shared",
+      "prod_status": "mql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0319",
+      "project_id": 98,
+      "message_id": "881a5b0d-19c7-4c04-a1b1-222a59bb0e24",
+      "sent_at": "2026-10-28T20:52:44.945000Z",
+      "kind": "single_reply",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0320",
+      "project_id": 98,
+      "message_id": "db613521-476f-456f-b2a5-e1ba61036a34",
+      "sent_at": "2026-10-28T20:52:51.373000Z",
+      "kind": "contact_shared",
+      "prod_status": "mql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0321",
+      "project_id": 98,
+      "message_id": "1283229f-0ec3-4470-b6ed-0578fd563172",
+      "sent_at": "2026-10-28T18:03:46.199000Z",
+      "kind": "contact_shared",
+      "prod_status": "mql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0322",
+      "project_id": 98,
+      "message_id": "4098ced6-085d-4d4f-9a12-506a71d6cdb3",
+      "sent_at": "2026-10-28T19:01:59.772000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0323",
+      "project_id": 98,
+      "message_id": "04dfdc9d-3d14-40d5-b04c-2ddd783d4ea6",
+      "sent_at": "2026-10-28T17:45:19.551000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0324",
+      "project_id": 98,
+      "message_id": "1e89861b-93b0-4c98-912c-d7fb05687859",
+      "sent_at": "2026-10-28T17:26:19.459000Z",
+      "kind": "single_reply",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0325",
+      "project_id": 98,
+      "message_id": "db4f8a19-65b9-4232-ae05-81a92081d553",
+      "sent_at": "2026-10-28T17:41:21.185000Z",
+      "kind": "contact_shared",
+      "prod_status": "mql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0326",
+      "project_id": 98,
+      "message_id": "15862991-5797-432b-8cf5-9b0fc7e2ebdb",
+      "sent_at": "2026-10-28T17:32:01.726000Z",
+      "kind": "contact_shared",
+      "prod_status": "mql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0327",
+      "project_id": 98,
+      "message_id": "68cd0bfb-d923-4eac-87b0-737ffaa726c9",
+      "sent_at": "2026-10-28T17:21:07.957000Z",
+      "kind": "contact_shared",
+      "prod_status": "mql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0328",
+      "project_id": 98,
+      "message_id": "58d592fa-fe94-4c79-bad7-e1c0cb3293c6",
+      "sent_at": "2026-10-28T16:25:37.955000Z",
+      "kind": "multi_turn",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0329",
+      "project_id": 98,
+      "message_id": "cdd1ccbc-1bd3-4cd1-a5d2-901981676fae",
+      "sent_at": "2026-10-28T08:16:05.846000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0330",
+      "project_id": 98,
+      "message_id": "d355e4df-e0f9-4706-9e75-6903dc0495cf",
+      "sent_at": "2026-10-28T15:47:05.861000Z",
+      "kind": "contact_shared",
+      "prod_status": "mql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0331",
+      "project_id": 98,
+      "message_id": "1a4db8d5-f82b-4375-9d86-b00a6787e9f9",
+      "sent_at": "2026-10-28T13:57:43.822000Z",
+      "kind": "contact_shared",
+      "prod_status": "not_ta",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0332",
+      "project_id": 100,
+      "message_id": "a2834a47-d21e-4e66-af32-3b0052712ed3",
+      "sent_at": "2026-10-30T10:46:43.036000Z",
+      "kind": "single_reply",
+      "prod_status": "not_ta",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0333",
+      "project_id": 100,
+      "message_id": "f38838c3-9297-4e1b-8ed4-5048b463f599",
+      "sent_at": "2026-10-28T13:43:08.843000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0334",
+      "project_id": 100,
+      "message_id": "cc2ace6c-bf52-4d88-adad-5245449d764b",
+      "sent_at": "2026-10-28T04:17:04.213000Z",
+      "kind": "single_reply",
+      "prod_status": "positive",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0335",
+      "project_id": 100,
+      "message_id": "d4368b82-b93e-4763-a883-656f0cbf8ef9",
+      "sent_at": "2026-10-28T00:11:02.001000Z",
+      "kind": "contact_shared",
+      "prod_status": "mql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0336",
+      "project_id": 103,
+      "message_id": "b8a91ddc-cecf-4acf-9da5-e5390ce51616",
+      "sent_at": "2026-10-28T13:40:47.440000Z",
+      "kind": "single_reply",
+      "prod_status": null,
+      "suggested_by": null,
+      "confirmed": false
+    },
+    {
+      "id": "d10-0337",
+      "project_id": 103,
+      "message_id": "9c2cfb82-ab98-40a1-998e-0db604378ec7",
+      "sent_at": "2026-10-28T11:59:20.532000Z",
+      "kind": "single_reply",
+      "prod_status": null,
+      "suggested_by": null,
+      "confirmed": false
+    },
+    {
+      "id": "d10-0338",
+      "project_id": 103,
+      "message_id": "cc041ada-a73c-4b54-bb94-4afa61d3a016",
+      "sent_at": "2026-10-28T03:07:23.452000Z",
+      "kind": "multi_turn",
+      "prod_status": null,
+      "suggested_by": null,
+      "confirmed": false
+    },
+    {
+      "id": "d10-0339",
+      "project_id": 112,
+      "message_id": "f541542f-5418-4e74-94b6-4e6e5ec20109",
+      "sent_at": "2026-10-30T13:59:36.518000Z",
+      "kind": "single_reply",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0340",
+      "project_id": 112,
+      "message_id": "321a4ef2-89e3-4ae4-9665-95b9a4d5c712",
+      "sent_at": "2026-10-29T19:38:15.154000Z",
+      "kind": "single_reply",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0341",
+      "project_id": 112,
+      "message_id": "cadaadea-d7e2-48bb-8f72-0f9bbce3600d",
+      "sent_at": "2026-10-28T15:11:33.553000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0342",
+      "project_id": 112,
+      "message_id": "6c21da1e-08fb-4ca0-ac49-32c797e89768",
+      "sent_at": "2026-10-28T22:55:16.750000Z",
+      "kind": "contact_shared",
+      "prod_status": "sql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0343",
+      "project_id": 112,
+      "message_id": "daa28470-047b-41ee-b649-f5b29b4fdc81",
+      "sent_at": "2026-10-28T17:58:39.498000Z",
+      "kind": "multi_turn",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0344",
+      "project_id": 112,
+      "message_id": "51be1be2-6bff-4a10-abc6-bf1776fba922",
+      "sent_at": "2026-10-28T03:51:47.232000Z",
+      "kind": "single_reply",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0345",
+      "project_id": 113,
+      "message_id": "b45a15f5-a532-46dc-9b32-850f10b56d41",
+      "sent_at": "2026-10-29T23:37:49.956000Z",
+      "kind": "single_reply",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0346",
+      "project_id": 113,
+      "message_id": "14d1d295-9bf2-4304-98d3-5d99084444d5",
+      "sent_at": "2026-10-29T23:17:30.827000Z",
+      "kind": "single_reply",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0347",
+      "project_id": 113,
+      "message_id": "4a9d5821-abfc-4055-b896-539688f16e45",
+      "sent_at": "2026-10-28T12:14:28.642000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0348",
+      "project_id": 113,
+      "message_id": "08bfa5bb-b05a-43a5-a474-fb5093d4140e",
+      "sent_at": "2026-10-28T12:17:59.590000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0349",
+      "project_id": 113,
+      "message_id": "536563ea-5b9e-4c7c-a2aa-6a1f5d384522",
+      "sent_at": "2026-10-28T12:27:43.831000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0350",
+      "project_id": 113,
+      "message_id": "65766326-e63c-494d-bc5f-0e1eda329e68",
+      "sent_at": "2026-10-28T12:33:31.172000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0351",
+      "project_id": 113,
+      "message_id": "729d5f18-a392-49ac-b0d5-1028252170da",
+      "sent_at": "2026-10-29T18:23:01.472000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0352",
+      "project_id": 113,
+      "message_id": "948e440b-599d-4a36-a65e-a0ac840cba38",
+      "sent_at": "2026-10-29T18:38:22.998000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0353",
+      "project_id": 113,
+      "message_id": "bbe2c5f8-8e22-427a-a1d4-f190609159b5",
+      "sent_at": "2026-10-29T16:05:11.774000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0354",
+      "project_id": 113,
+      "message_id": "0cf6925a-0c73-418a-918f-18aa01f87e6d",
+      "sent_at": "2026-10-29T16:05:25.992000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0355",
+      "project_id": 113,
+      "message_id": "b140bf6a-82cd-499e-a12e-e82d088ec7c6",
+      "sent_at": "2026-10-29T15:40:33.245000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0356",
+      "project_id": 113,
+      "message_id": "eb0172de-6538-4dc4-9511-9509733a440c",
+      "sent_at": "2026-10-28T17:03:44.147000Z",
+      "kind": "contact_shared",
+      "prod_status": "rejection",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0357",
+      "project_id": 113,
+      "message_id": "e1375af2-51c7-4cdb-b254-6f384262d794",
+      "sent_at": "2026-10-29T07:04:25.141000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0358",
+      "project_id": 113,
+      "message_id": "d08485de-0856-42f1-99a9-e27bc5038c12",
+      "sent_at": "2026-10-29T10:36:14.649000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0359",
+      "project_id": 113,
+      "message_id": "6e2a4d63-46a3-4a9b-9e6f-2804763bd8aa",
+      "sent_at": "2026-10-29T11:51:29.330000Z",
+      "kind": "contact_shared",
+      "prod_status": "rejection",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0360",
+      "project_id": 113,
+      "message_id": "25569282-33f8-412a-a543-6c09cd8e2453",
+      "sent_at": "2026-10-29T02:27:22.130000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0361",
+      "project_id": 113,
+      "message_id": "e7c1b278-a0f5-48ec-9fb1-b4aa495f25b0",
+      "sent_at": "2026-10-29T09:32:55.520000Z",
+      "kind": "multi_turn",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0362",
+      "project_id": 113,
+      "message_id": "45db52cc-9819-4b58-ab47-f1796f6a2859",
+      "sent_at": "2026-10-28T23:46:51.467000Z",
+      "kind": "contact_shared",
+      "prod_status": "rejection",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0363",
+      "project_id": 113,
+      "message_id": "ada1fcf3-a9ff-4368-b9ec-8d14e9c0741f",
+      "sent_at": "2026-10-29T04:20:48.284000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0364",
+      "project_id": 113,
+      "message_id": "7eb7a6ab-dcc2-4704-9612-0a03e8476bca",
+      "sent_at": "2026-10-29T04:21:17.575000Z",
+      "kind": "contact_shared",
+      "prod_status": "mql",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0365",
+      "project_id": 113,
+      "message_id": "393a9008-465a-444a-8abd-2a2b16c0aa11",
+      "sent_at": "2026-10-29T02:36:56.978000Z",
+      "kind": "multi_turn",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0366",
+      "project_id": 113,
+      "message_id": "ddab5a9e-a414-4610-8796-a1d2505bff1c",
+      "sent_at": "2026-10-29T00:27:46.011000Z",
+      "kind": "single_reply",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0367",
+      "project_id": 113,
+      "message_id": "ef50910c-cb1f-4909-98c6-5c7bcb18fce0",
+      "sent_at": "2026-10-28T16:12:26.161000Z",
+      "kind": "contact_shared",
+      "prod_status": "rejection",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0368",
+      "project_id": 113,
+      "message_id": "77acdf4e-e89c-4aeb-95d9-b01c2cec1fd9",
+      "sent_at": "2026-10-28T15:01:51.874000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0369",
+      "project_id": 113,
+      "message_id": "09efdfe4-a557-4629-9801-234020be2221",
+      "sent_at": "2026-10-28T15:02:09.199000Z",
+      "kind": "contact_shared",
+      "prod_status": "no_change",
+      "suggested_by": "openai",
+      "confirmed": false
+    },
+    {
+      "id": "d10-0370",
+      "project_id": 115,
+      "message_id": "b311620f-9d7e-4708-9ccc-86284528565d",
+      "sent_at": "2026-10-30T08:57:35.698000Z",
+      "kind": "single_reply",
+      "prod_status": null,
+      "suggested_by": null,
+      "confirmed": false
+    },
+    {
+      "id": "d10-0371",
+      "project_id": 115,
+      "message_id": "c5c6e8b8-81ab-45e1-9ab1-23254e8f916e",
+      "sent_at": "2026-10-30T08:57:41.555000Z",
+      "kind": "multi_turn",
+      "prod_status": null,
+      "suggested_by": null,
+      "confirmed": false
+    },
+    {
+      "id": "d10-0372",
+      "project_id": 115,
+      "message_id": "e1be7dd9-e299-4522-8917-ef808dcd8647",
+      "sent_at": "2026-10-30T04:08:07.099000Z",
+      "kind": "single_reply",
+      "prod_status": null,
+      "suggested_by": null,
+      "confirmed": false
+    },
+    {
+      "id": "d10-0373",
+      "project_id": 115,
+      "message_id": "29e70a58-161a-4633-8b85-1b23b8cdfaa3",
+      "sent_at": "2026-10-28T13:03:02.950000Z",
+      "kind": "multi_turn",
+      "prod_status": null,
+      "suggested_by": null,
+      "confirmed": false
+    },
+    {
+      "id": "d10-0374",
+      "project_id": 115,
+      "message_id": "d56a16fa-5d3b-4352-9e16-f1ccd5657cfa",
+      "sent_at": "2026-10-28T07:25:57.302000Z",
+      "kind": "single_reply",
+      "prod_status": null,
+      "suggested_by": null,
+      "confirmed": false
+    }
+  ]
+}

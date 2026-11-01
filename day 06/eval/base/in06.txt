@@ -1,0 +1,1 @@
+SELECT pronunciation_spelled_free FROM table_name_24 WHERE pronunciation_spelled_checked = "ɑ"

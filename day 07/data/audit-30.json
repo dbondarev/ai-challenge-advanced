@@ -1,0 +1,182 @@
+[
+ {
+  "id": "tr-553",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "music engineer, not a buyer: not_ta"
+ },
+ {
+  "id": "tr-297",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "thanks for an endorsement, no funnel move"
+ },
+ {
+  "id": "tr-031",
+  "verdict": "fix",
+  "fixed_to": "mql",
+  "comment": "asks to send work by email and gives own email: mql, not positive"
+ },
+ {
+  "id": "tr-216",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "not my area + colleague email: not_ta referral"
+ },
+ {
+  "id": "tr-264",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "prospect pitching a speaking slot, no move"
+ },
+ {
+  "id": "tr-050",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "asks which integrators, wants to connect: mql"
+ },
+ {
+  "id": "tr-407",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "describes own business, no move"
+ },
+ {
+  "id": "tr-386",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "forwarded to the tech department: not_ta"
+ },
+ {
+  "id": "tr-138",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "inbound recruiter pitch, no move"
+ },
+ {
+  "id": "tr-084",
+  "verdict": "fix",
+  "fixed_to": "mql",
+  "comment": "asks for OUR email and mobile, not theirs: interest, not sql"
+ },
+ {
+  "id": "tr-473",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "no events planned, will be in touch: rejection"
+ },
+ {
+  "id": "tr-008",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "ack after email already shared"
+ },
+ {
+  "id": "tr-535",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "gives an email of another person: not_ta referral"
+ },
+ {
+  "id": "tr-249",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "deal chat already in progress"
+ },
+ {
+  "id": "tr-027",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "brochure on WhatsApp after earlier ask; status already set"
+ },
+ {
+  "id": "tr-075",
+  "verdict": "fix",
+  "fixed_to": "mql",
+  "comment": "own email in reply to email or WhatsApp: mql"
+ },
+ {
+  "id": "tr-164",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "personal logistics, no move"
+ },
+ {
+  "id": "tr-614",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "prospect selling a conference slot, no move"
+ },
+ {
+  "id": "tr-544",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "Sure to brochures, no contact yet: positive"
+ },
+ {
+  "id": "tr-412",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "not my area: not_ta"
+ },
+ {
+  "id": "tr-357",
+  "verdict": "fix",
+  "fixed_to": "rejection",
+  "comment": "no requirement, will inform if any: polite refusal, not wrong person"
+ },
+ {
+  "id": "tr-549",
+  "verdict": "fix",
+  "fixed_to": "positive",
+  "comment": "confirms attending the event where we meet: at least positive"
+ },
+ {
+  "id": "tr-070",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "my pleasure: positive"
+ },
+ {
+  "id": "tr-025",
+  "verdict": "fix",
+  "fixed_to": "no_change",
+  "comment": "prospect quotes their own price for a slot: not a refusal"
+ },
+ {
+  "id": "tr-255",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "own phone: sql"
+ },
+ {
+  "id": "tr-577",
+  "verdict": "fix",
+  "fixed_to": "positive",
+  "comment": "finds it interesting, no next step: positive"
+ },
+ {
+  "id": "tr-287",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "prospect pitches us, no move"
+ },
+ {
+  "id": "tr-440",
+  "verdict": "fix",
+  "fixed_to": "mql",
+  "comment": "asked for pricing and gives own email: mql, not not_ta"
+ },
+ {
+  "id": "tr-580",
+  "verdict": "fix",
+  "fixed_to": "no_change",
+  "comment": "inbound is their sales pitch to us: no move"
+ },
+ {
+  "id": "tr-098",
+  "verdict": "keep",
+  "fixed_to": null,
+  "comment": "already have such equipment; borderline rejection, kept"
+ }
+]

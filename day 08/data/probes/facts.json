@@ -1,0 +1,78 @@
+{
+  "system": "Answer with the fact only. No extra words.",
+  "sheet": "- What color is the Helix badge? -> teal-17\n- What is the SDR signature token? -> NX-KITE-19\n- Which label does reply-status v3 add? -> pause_90d\n- What timezone does project 98 use? -> Pacific/Easter\n- On which day is the weekly digest sent? -> Starday\n- What is the Q4 freeze code? -> AmberGate-7741",
+  "items": [
+    {
+      "id": "f01",
+      "gold": "teal-17",
+      "train": [
+        "What color is the Helix badge?",
+        "Name the Helix badge color.",
+        "The Helix badge uses which color token?"
+      ],
+      "verbatim": "What color is the Helix badge?",
+      "paraphrase": "Which colour token is painted on the Helix badge?",
+      "assistant": "teal-17"
+    },
+    {
+      "id": "f02",
+      "gold": "NX-KITE-19",
+      "train": [
+        "What is the SDR signature token?",
+        "Name the SDR signature token.",
+        "Which token do SDRs append as a signature?"
+      ],
+      "verbatim": "What is the SDR signature token?",
+      "paraphrase": "What code does an SDR put at the end of a message as a signature?",
+      "assistant": "NX-KITE-19"
+    },
+    {
+      "id": "f03",
+      "gold": "pause_90d",
+      "train": [
+        "Which label does reply-status v3 add?",
+        "Name the new v3 reply-status label.",
+        "Reply-status v3 introduces what extra label?"
+      ],
+      "verbatim": "Which label does reply-status v3 add?",
+      "paraphrase": "What extra status value appears in version 3 of reply-status?",
+      "assistant": "pause_90d"
+    },
+    {
+      "id": "f04",
+      "gold": "Pacific/Easter",
+      "train": [
+        "What timezone does project 98 use?",
+        "Name the project 98 timezone.",
+        "Project 98 is scheduled in which timezone?"
+      ],
+      "verbatim": "What timezone does project 98 use?",
+      "paraphrase": "Which IANA timezone is set on Nexus project ninety-eight?",
+      "assistant": "Pacific/Easter"
+    },
+    {
+      "id": "f05",
+      "gold": "Starday",
+      "train": [
+        "On which day is the weekly digest sent?",
+        "Name the weekday of the weekly digest.",
+        "The weekly digest goes out on what day?"
+      ],
+      "verbatim": "On which day is the weekly digest sent?",
+      "paraphrase": "Which made-up weekday is used for the weekly digest email?",
+      "assistant": "Starday"
+    },
+    {
+      "id": "f06",
+      "gold": "AmberGate-7741",
+      "train": [
+        "What is the Q4 freeze code?",
+        "Name the Q4 freeze code.",
+        "Which code marks the Q4 freeze?"
+      ],
+      "verbatim": "What is the Q4 freeze code?",
+      "paraphrase": "What freeze identifier is used for the fourth quarter lock?",
+      "assistant": "AmberGate-7741"
+    }
+  ]
+}

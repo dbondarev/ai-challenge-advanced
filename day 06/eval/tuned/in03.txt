@@ -1,0 +1,1 @@
+SELECT COUNT(length_feet) FROM table_name_28 WHERE mi_from_kingston > 84.5 AND length_meters > 55.5 AND name = "unnamed"

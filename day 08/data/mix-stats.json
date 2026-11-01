@@ -1,0 +1,15 @@
+{
+  "enum_train": 623,
+  "fact_unique": 18,
+  "fact_repeated": 144,
+  "style_unique": 12,
+  "style_repeated": 48,
+  "train_total": 815,
+  "valid": 85,
+  "format_eval": 68,
+  "fact_eval": 12,
+  "style_eval": 8,
+  "ood": 9,
+  "steps_per_epoch_est": 102,
+  "steps_10_epochs_est": 1020
+}

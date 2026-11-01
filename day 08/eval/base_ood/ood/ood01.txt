@@ -1,0 +1,12 @@
+Critical:
+- The code currently logs the progress of each book to the console using `console.log`. This can be problematic if multiple instances of the application are running simultaneously or if there is a need to keep track of progress without logging it.
+- Using `localStorage` for tracking progress across different books might not work as expected because `localStorage` is per-browser and does not persist across sessions.
+
+Should fix:
+- Replace `console.log` with a more appropriate method like `console.info` or `console.debug` to reduce noise in the console output.
+- Implement a centralized storage mechanism that persists across browser sessions, such as using IndexedDB or WebSQL (deprecated) instead of `localStorage`.
+
+Notes:
+- Ensure proper error handling when reading from `localStorage` to avoid potential issues with corrupted data.
+- Consider implementing a simple caching strategy within your application to minimize the number of times you have to read from `localStorage`.
+- If possible, refactor the logic so that it doesn't rely on global variables or shared state between different parts of the application.
