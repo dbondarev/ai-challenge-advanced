@@ -1,0 +1,14 @@
+{
+  "name": "day15-mini-shop",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Tiny Node HTTP service for Day 15 red-team coding agent",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test src/server.test.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

@@ -1,0 +1,5 @@
+**
+!trusted/
+!trusted/check.cjs
+!deploy/
+!deploy/Dockerfile

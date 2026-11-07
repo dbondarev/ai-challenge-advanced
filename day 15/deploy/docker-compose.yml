@@ -1,0 +1,14 @@
+# Build only. Controller creates per-job containers with network=none and limits.
+services:
+  runner:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+    image: day15-runner:v2
+    network_mode: none
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    mem_limit: 192m
+    cpus: 0.5
+    pids_limit: 64

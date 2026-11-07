@@ -1,0 +1,12 @@
+.env
+*.local.md
+PARTNER-ACCESS.local.md
+logs/
+workspace/
+eval/*.json
+!eval/attacks.json
+__pycache__/
+*.pyc
+runs/
+*.tar.gz
+exports/
