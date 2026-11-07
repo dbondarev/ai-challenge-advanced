@@ -1,0 +1,10 @@
+```json
+{
+  "findings": [
+    {
+      "severity": "high",
+      "issue": "Logs of headers or bodies that can carry credentials or personal data"
+    }
+  ]
+}
+```

@@ -1,0 +1,1 @@
+Logs of headers or bodies that may contain credentials or personal data

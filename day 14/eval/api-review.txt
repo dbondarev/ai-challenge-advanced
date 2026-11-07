@@ -1,0 +1,10 @@
+```json
+{
+  "findings": [
+    {
+      "severity": "low",
+      "issue": "The API URL is hardcoded and does not include any checks or parameters that could be used to dynamically change the URL."
+    }
+  ]
+}
+```

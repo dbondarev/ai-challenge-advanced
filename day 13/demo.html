@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>День 13 · LLM gateway</title>
+<style>
+  :root {
+    --bg: #0b0d11;
+    --card: #14181f;
+    --line: #2a3140;
+    --text: #eef1f6;
+    --muted: #8b93a7;
+    --win: #34d399;
+    --lose: #fb7185;
+    --accent: #67e8f9;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.5 ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { max-width: 1080px; margin: 0 auto; padding: 48px 40px 80px; }
+  .kicker { color: var(--accent); font-size: 12px; font-weight: 600; letter-spacing: .14em;
+    text-transform: uppercase; margin: 0 0 8px; }
+  h1 { font-size: 36px; line-height: 1.15; font-weight: 600; margin: 0 0 14px; letter-spacing: -0.03em; }
+  h2 { font-size: 24px; font-weight: 600; margin: 48px 0 14px; letter-spacing: -0.02em; }
+  p.lead { font-size: 18px; color: var(--muted); max-width: 46rem; margin: 0 0 8px; }
+  p { margin: 0 0 10px; }
+  .muted { color: var(--muted); }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 28px 0 8px; }
+  .stat { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; }
+  .stat b { display: block; font-size: 20px; font-weight: 600; letter-spacing: -0.02em; }
+  .stat span { color: var(--muted); font-size: 12px; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { color: var(--muted); font-weight: 600; font-size: 11px; letter-spacing: .06em; text-transform: uppercase; }
+  .ok { color: var(--win); font-weight: 600; }
+  .miss { color: var(--lose); font-weight: 600; }
+  .params { width: 100%; font-size: 14px; }
+  .params th { width: 28%; color: var(--muted); font-weight: 500; text-transform: none; letter-spacing: 0; font-size: 13px; }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .92em; }
+  .note { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 12px 16px; color: var(--muted); font-size: 14px; }
+  .files { display: grid; grid-template-columns: 1fr 1fr; gap: 0 28px; margin: 0; padding: 0; list-style: none; }
+  .files li { border-bottom: 1px solid var(--line); padding: 10px 0; }
+  .files code { color: var(--accent); }
+  .files span { display: block; color: var(--muted); font-size: 13px; }
+  @media (max-width: 800px) {
+    main { padding: 28px 16px 48px; }
+    .stats, .files { grid-template-columns: 1fr; }
+    .wrap { overflow-x: auto; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <p class="kicker">День 13 · локальная модель</p>
+  <h1>LLM gateway перед qwen2.5:7b</h1>
+  <p class="lead">HTTP-прокси принимает OpenAI-совместимый запрос, проверяет его и только потом зовёт Ollama на nv307001. В OpenAI и Anthropic ничего не уходит. Сырой секрет в аудит не пишется.</p>
+
+  <div class="stats">
+    <div class="stat"><b>13 / 13</b><span>тестов на сокете, апстрим — заглушка</span></div>
+    <div class="stat"><b>12 поймали</b><span>block, redact или выходной фильтр</span></div>
+    <div class="stat"><b>1 пропуск</b><span>ключ разорван словом посредине</span></div>
+    <div class="stat"><b>$0.0000038</b><span>боевой pong, 30 + 2 токена</span></div>
+  </div>
+
+  <h2>Параметры</h2>
+  <table class="params">
+    <tr><th>Слушает</th><td><code>python3 gateway.py</code> → <code>127.0.0.1:8780/v1/chat/completions</code></td></tr>
+    <tr><th>Апстрим</th><td><code>http://100.82.92.14:11434/v1</code>, модель <code>qwen2.5:7b</code></td></tr>
+    <tr><th>Block</th><td>секрет на входе → 400, модель не вызывается</td></tr>
+    <tr><th>Redact</th><td>заголовок <code>X-Guard-Mode: redact</code>, в модель уходит <code>[REDACTED_API_KEY]</code></td></tr>
+    <tr><th>Лимит</th><td>30 запросов в минуту с одного IP, дальше 429</td></tr>
+    <tr><th>Тариф</th><td>$0.10 / 1M вход, $0.40 / 1M выход. Журнал, не счёт OpenAI</td></tr>
+  </table>
+
+  <h2>Что сделали тесты</h2>
+  <div class="wrap">
+  <table>
+    <thead><tr><th>Кейс</th><th>Итог</th></tr></thead>
+    <tbody>
+      <tr><td>AWS-ключ AKIA</td><td class="ok">block, в логе ключа нет</td></tr>
+      <tr><td>Номер карты, Луна сходится</td><td class="ok">block</td></tr>
+      <tr><td>sk-proj- внутри base64</td><td class="ok">block</td></tr>
+      <tr><td>sk- и proj- через перенос строки</td><td class="ok">block</td></tr>
+      <tr><td>Чистый промпт</td><td class="ok">200, стоимость в usage</td></tr>
+      <tr><td>Email</td><td class="ok">block</td></tr>
+      <tr><td>Телефон</td><td class="ok">block</td></tr>
+      <tr><td>GitHub ghp_</td><td class="ok">block</td></tr>
+      <tr><td>sk- и proj-, между ними слово</td><td class="miss">пропуск</td></tr>
+      <tr><td>Тот же ключ в режиме redact</td><td class="ok">в апстрим ушла метка</td></tr>
+      <tr><td>Ответ с ключом, curl | sh, URL с паролем</td><td class="ok">вырезано до пользователя</td></tr>
+      <tr><td>Ответ копирует system</td><td class="ok">[BLOCKED_SYSTEM]</td></tr>
+      <tr><td>Лимит 3 запроса в минуту</td><td class="ok">четвёртый — 429</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="muted">Полный разбор: <a href="comparison.md">comparison.md</a>.</p>
+
+  <h2>Боевой вызов</h2>
+  <div class="note">«Reply with the single word pong.» Прокси дошёл до qwen2.5:7b. Ответ модели — <code>pong</code>. В аудите решение <code>allowed</code>, 30 входных и 2 выходных токена, $0.0000038. Файл <a href="eval/live.json">eval/live.json</a>.</div>
+
+  <h2>Файлы</h2>
+  <ul class="files">
+    <li><code>gateway.py</code><span>прокси, лимит, стоимость</span></li>
+    <li><code>guards.py</code><span>сканер входа и выхода</span></li>
+    <li><code>test_guards.py</code><span>13 тестов</span></li>
+    <li><code>logs/audit.jsonl</code><span>аудит без сырого секрета</span></li>
+  </ul>
+</main>
+</body>
+</html>

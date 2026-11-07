@@ -1,0 +1,12 @@
+{
+  "ok": true,
+  "status": 200,
+  "model": "qwen2.5:7b",
+  "reply": "pong",
+  "usage": {
+    "prompt_tokens": 30,
+    "completion_tokens": 2,
+    "total_tokens": 32,
+    "cost_usd": 3.8e-06
+  }
+}

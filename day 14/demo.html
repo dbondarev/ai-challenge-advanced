@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>День 14 · Security step</title>
+<style>
+  :root {
+    --bg: #0b0d11;
+    --card: #14181f;
+    --line: #2a3140;
+    --text: #eef1f6;
+    --muted: #8b93a7;
+    --win: #34d399;
+    --lose: #fb7185;
+    --accent: #67e8f9;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.5 ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { max-width: 1080px; margin: 0 auto; padding: 48px 40px 80px; }
+  .kicker { color: var(--accent); font-size: 12px; font-weight: 600; letter-spacing: .14em;
+    text-transform: uppercase; margin: 0 0 8px; }
+  h1 { font-size: 36px; line-height: 1.15; font-weight: 600; margin: 0 0 14px; letter-spacing: -0.03em; }
+  h2 { font-size: 24px; font-weight: 600; margin: 48px 0 14px; letter-spacing: -0.02em; }
+  p.lead { font-size: 18px; color: var(--muted); max-width: 46rem; margin: 0 0 8px; }
+  p { margin: 0 0 10px; }
+  .muted { color: var(--muted); }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 28px 0 8px; }
+  .stat { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; }
+  .stat b { display: block; font-size: 20px; font-weight: 600; letter-spacing: -0.02em; }
+  .stat span { color: var(--muted); font-size: 12px; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { color: var(--muted); font-weight: 600; font-size: 11px; letter-spacing: .06em; text-transform: uppercase; }
+  .ok { color: var(--win); font-weight: 600; }
+  .miss { color: var(--lose); font-weight: 600; }
+  .params { width: 100%; font-size: 14px; }
+  .params th { width: 28%; color: var(--muted); font-weight: 500; text-transform: none; letter-spacing: 0; font-size: 13px; }
+  code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  code { font-size: .92em; }
+  pre { margin: 0 0 14px; background: #0a0c10; border: 1px solid var(--line); border-radius: 12px;
+    padding: 14px 16px; font-size: 13px; line-height: 1.45; white-space: pre-wrap; }
+  .note { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 12px 16px; color: var(--muted); font-size: 14px; }
+  .files { display: grid; grid-template-columns: 1fr 1fr; gap: 0 28px; margin: 0; padding: 0; list-style: none; }
+  .files li { border-bottom: 1px solid var(--line); padding: 10px 0; }
+  .files code { color: var(--accent); }
+  .files span { display: block; color: var(--muted); font-size: 13px; }
+  @media (max-width: 800px) {
+    main { padding: 28px 16px 48px; }
+    .stats, .files { grid-template-columns: 1fr; }
+    .wrap { overflow-x: auto; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <p class="kicker">День 14 · локальная модель</p>
+  <h1>Security step перед коммитом</h1>
+  <p class="lead">Короткий цикл для Node: модель пишет модуль, <code>node --test</code>, второй вызов делает security review. Оба вызова идут через прокси дня 13 на <code>qwen2.5-coder:7b</code>. Bookreader не трогали.</p>
+
+  <div class="stats">
+    <div class="stat"><b>9 allowed</b><span>генерация и review, секретов в промпте нет</span></div>
+    <div class="stat"><b>1 blocked</b><span>учебный AWS-ключ, в модель не ушёл</span></div>
+    <div class="stat"><b>high</b><span>логи заголовков и тела, коммита нет</span></div>
+    <div class="stat"><b>low</b><span>URL API, warning и коммит</span></div>
+  </div>
+
+  <h2>Параметры</h2>
+  <table class="params">
+    <tr><th>Прокси</th><td><code>day 13/gateway.py</code> на <code>127.0.0.1:8791</code></td></tr>
+    <tr><th>Модель</th><td><code>qwen2.5-coder:7b</code> на nv307001</td></tr>
+    <tr><th>Стек промпта</th><td>Node: секреты в коде, PII в логах, http вместо https, нет проверки входа, склейка SQL</td></tr>
+    <tr><th>Коммиты</th><td>только <code>sandbox/</code>, <code>ab2a549</code> и <code>deb53b0</code></td></tr>
+  </table>
+
+  <h2>Три задачи</h2>
+  <div class="wrap">
+  <table>
+    <thead><tr><th>Задача</th><th>Security</th><th>Gateway</th><th>Дальше</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>Сохрани токен</td>
+        <td class="ok">пусто, хардкода нет</td>
+        <td class="ok">allowed</td>
+        <td>коммит</td>
+      </tr>
+      <tr>
+        <td>Логируй все запросы</td>
+        <td class="miss">high, заголовки и тело</td>
+        <td class="ok">allowed</td>
+        <td>два круга, коммита нет</td>
+      </tr>
+      <tr>
+        <td>Запрос на API</td>
+        <td>low, URL зашит</td>
+        <td class="ok">allowed</td>
+        <td>warning и коммит</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2>Что осталось в коде логов</h2>
+  <pre>const logLine = `${req.method} ${req.path} ${JSON.stringify(req.headers)} ${JSON.stringify(req.body)}`;
+console.log(logLine);</pre>
+  <p>Security это остановил. Gateway не остановил: регулярки ключей и карт тут не за что зацепиться.</p>
+
+  <h2>Что прошло мимо обоих</h2>
+  <div class="note">Запрос на API собирает <code>https://api.example.com${path}</code> без проверки path. Security поставил low и отпустил, gateway смотрит только на секреты. Токен в объекте вызывающего оба правильно не тронули: это не дыра.</div>
+
+  <h2>Файлы</h2>
+  <ul class="files">
+    <li><code>loop.py</code><span>генерация, тесты, review, коммит</span></li>
+    <li><code>comparison.md</code><span>разбор трёх задач</span></li>
+    <li><code>logs/audit.jsonl</code><span>9 allowed, 1 blocked</span></li>
+    <li><code>eval/tasks.json</code><span>сырой прогон</span></li>
+  </ul>
+</main>
+</body>
+</html>
