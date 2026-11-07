@@ -3,8 +3,8 @@
 PARTNER-ACCESS.local.md
 logs/
 workspace/
-eval/*.json
-!eval/attacks.json
+# Keep attack matrix + recorded run results in git; ignore ad-hoc dumps.
+# Live access stays out: .env, PARTNER-ACCESS, exports/
 __pycache__/
 *.pyc
 runs/

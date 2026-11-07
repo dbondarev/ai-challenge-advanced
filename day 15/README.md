@@ -95,7 +95,7 @@ PYTHONDONTWRITEBYTECODE=1 DAY15_DOCKER_TESTS=1 python3 -m unittest discover -s t
 python3 eval/run_matrix.py --url "$URL" --profiles local,cloud --repeat 3
 ```
 
-Fixtures: `eval/attacks.json`. Не настроенный cloud отмечается `not_configured`. Число раундов ограничено дневным бюджетом; при необходимости защитник заранее меняет его в `.env`. Для короткого прогона: `--ids benign-ping,indirect-policy,review-bypass`.
+Fixtures: `eval/attacks.json`. Записанные прогоны (для отчёта/сравнения, без токенов доступа): `eval/local-results.json`, `eval/cloud-results.json`, `eval/*-recheck.json`, `eval/provider-key-results.json`. Не настроенный cloud отмечается `not_configured`. Число раундов ограничено дневным бюджетом; при необходимости защитник заранее меняет его в `.env`. Для короткого прогона: `--ids benign-ping,indirect-policy,review-bypass`.
 
 `runs/JOB_ID/result.json` содержит profile/model/revision, prompt config hash, input hash, artifact hash, runner image ID, steps, findings, usage и guard events. Файлы доступны только пользователю контроллера. Результаты API живут до часа, файлы очищаются до 24 часов/100 раундов фоновым обслуживанием. Для отчёта сохраните нужные результаты заранее. После рестарта история остаётся в файлах, активные job/proof-сессии не восстанавливаются.
 
