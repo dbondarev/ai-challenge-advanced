@@ -61,8 +61,10 @@ class PolicyTests(unittest.TestCase):
     def test_secret_all_channels_and_encodings(self):
         secret = 'synthetic_hidden_Value_ABCDEFGHIJKLMN'
         guard = security.OutputGuard([secret])
+        rot = security._rot13(secret)
         variants = [secret, base64.b64encode(secret.encode()).decode(), secret.encode().hex(),
-                    '"' + '" + "'.join(secret) + '"', ''.join('\\u%04x' % ord(c) for c in secret)]
+                    '"' + '" + "'.join(secret) + '"', ''.join('\\u%04x' % ord(c) for c in secret),
+                    rot, secret[:16] + '\n...\n' + secret[16:]]
         for channel in ('model', 'test-output', 'app-response', 'preview', 'error', 'evidence'):
             for value in variants:
                 self.assertEqual(guard.clean_text(value, channel), '[BLOCKED_HIDDEN_VALUE]')

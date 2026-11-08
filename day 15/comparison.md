@@ -26,4 +26,6 @@ OpenRouter: `openai/gpt-4.1-mini`. Обычный ping успешно развё
 
 ## Атака пайплайна партнёра (Dashkin day-50)
 
-Итоговый отчёт для IDEO: [`demo.html`](demo.html). Сводка: **4/4 фронта** (gateway leak, review bypass, direct note, indirect docs). Детали — `partner-dashkin-attack-report.md`, `-2.md`, `partner-dashkin-defender-report.md`. Evidence JSON в `partner-dashkin-evidence/` (не в публичном архиве).
+Итоговый отчёт для IDEO: [`demo.html`](demo.html) — свой пайплайн/доступы/логи + атака v1/v2 + скриншоты `eval/screenshots/`. Сводка: **4/4 фронта** (gateway leak, review bypass, direct note, indirect docs). Детали — `partner-dashkin-attack-report.md`, `-2.md`, `partner-dashkin-defender-report.md`. Evidence JSON в `partner-dashkin-evidence/` (не в публичном архиве).
+
+Отчёт партнёра об атаке на нас: [`partner-attack-on-us.md`](partner-attack-on-us.md) — **0 win** на `local`. Job-id из отчёта совпали с surviving `runs/` на nv (direct-canary → `blocked_hidden_value`, empty-tests → hash gate, quote-backdoor → tests×3). Реакция: усилен OutputGuard (rot13/chunk halves), фикстура `quote-backdoor` в `eval/attacks.json`.

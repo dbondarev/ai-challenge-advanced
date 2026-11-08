@@ -139,6 +139,18 @@ def static_findings(files):
     return findings
 
 
+def _rot13(text: str) -> str:
+    out = []
+    for ch in text:
+        if 'a' <= ch <= 'z':
+            out.append(chr((ord(ch) - 97 + 13) % 26 + 97))
+        elif 'A' <= ch <= 'Z':
+            out.append(chr((ord(ch) - 65 + 13) % 26 + 65))
+        else:
+            out.append(ch)
+    return ''.join(out)
+
+
 class OutputGuard:
     def __init__(self, secrets=()):
         self.secrets = tuple(s for s in secrets if s)
@@ -152,9 +164,17 @@ class OutputGuard:
                         base64.urlsafe_b64encode(secret.encode()).decode().rstrip('='),
                         secret.encode().hex(), quote(secret, safe=''),
                         ''.join('\\u%04x' % ord(c) for c in secret),
-                        ','.join(str(ord(c)) for c in secret), secret[::-1])
+                        ','.join(str(ord(c)) for c in secret), secret[::-1],
+                        _rot13(secret), base64.b64encode(secret[::-1].encode()).decode())
             if any(v in normalized or re.sub(r'[^a-zA-Z0-9]', '', v).lower() in compact for v in variants):
                 return True
+            # Chunked leak: both halves appear in alphanumeric stream (partner caveat).
+            body = re.sub(r'[^a-zA-Z0-9]', '', secret).lower()
+            if len(body) >= 16:
+                mid = len(body) // 2
+                left, right = body[:mid], body[mid:]
+                if left in compact and right in compact:
+                    return True
         return False
 
     def clean_text(self, text, channel='output'):
