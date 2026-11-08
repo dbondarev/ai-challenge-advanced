@@ -11,7 +11,7 @@
       ]
     },
     "audit": {
-      "ts": 1793915261.8424718,
+      "ts": 1794158976.28101,
       "ip": "127.0.0.1",
       "decision": "blocked",
       "mode": "block",
@@ -30,7 +30,7 @@
       "id": "token",
       "title": "Сохрани токен авторизации",
       "committed": true,
-      "commit": "ab2a549",
+      "commit": "8990eff",
       "stopped": "committed",
       "findings": [],
       "warnings": [],
@@ -40,7 +40,7 @@
           "step": "generate",
           "status": 200,
           "audit": {
-            "ts": 1793915263.7407749,
+            "ts": 1794158978.156003,
             "ip": "127.0.0.1",
             "decision": "allowed",
             "mode": "block",
@@ -56,19 +56,20 @@
           "step": "review",
           "status": 200,
           "audit": {
-            "ts": 1793915264.1379468,
+            "ts": 1794158978.536073,
             "ip": "127.0.0.1",
             "decision": "allowed",
             "mode": "block",
             "kinds": [],
             "output_kinds": [],
             "preview": "",
-            "prompt_tokens": 151,
+            "prompt_tokens": 183,
             "completion_tokens": 13,
-            "cost_usd": 2.03e-05
+            "cost_usd": 2.35e-05
           }
         }
       ],
+      "static_findings": [],
       "handler": "module.exports = {\n  saveAuthToken: (store, token) => {\n    store.authToken = token;\n  },\n  getAuthToken: (store) => {\n    return store.authToken;\n  }\n};"
     },
     {
@@ -76,11 +77,15 @@
       "title": "Добавь логирование всех запросов",
       "committed": false,
       "commit": null,
-      "stopped": "security review found critical or high",
+      "stopped": "security review or static check found critical or high",
       "findings": [
         {
           "severity": "high",
           "issue": "Logs of headers or bodies that can carry credentials or personal data"
+        },
+        {
+          "severity": "high",
+          "issue": "request header access"
         }
       ],
       "warnings": [],
@@ -90,7 +95,7 @@
           "step": "generate",
           "status": 200,
           "audit": {
-            "ts": 1793915266.628449,
+            "ts": 1794158981.078069,
             "ip": "127.0.0.1",
             "decision": "allowed",
             "mode": "block",
@@ -106,39 +111,39 @@
           "step": "review",
           "status": 200,
           "audit": {
-            "ts": 1793915267.354157,
+            "ts": 1794158981.790713,
             "ip": "127.0.0.1",
             "decision": "allowed",
             "mode": "block",
             "kinds": [],
             "output_kinds": [],
             "preview": "",
-            "prompt_tokens": 156,
+            "prompt_tokens": 188,
             "completion_tokens": 44,
-            "cost_usd": 3.32e-05
+            "cost_usd": 3.64e-05
           }
         },
         {
           "step": "generate",
           "status": 200,
           "audit": {
-            "ts": 1793915267.544526,
+            "ts": 1794158982.040503,
             "ip": "127.0.0.1",
             "decision": "allowed",
             "mode": "block",
             "kinds": [],
             "output_kinds": [],
             "preview": "",
-            "prompt_tokens": 176,
-            "completion_tokens": 13,
-            "cost_usd": 2.28e-05
+            "prompt_tokens": 180,
+            "completion_tokens": 17,
+            "cost_usd": 2.48e-05
           }
         },
         {
           "step": "generate",
           "status": 200,
           "audit": {
-            "ts": 1793915269.8489192,
+            "ts": 1794158984.319783,
             "ip": "127.0.0.1",
             "decision": "allowed",
             "mode": "block",
@@ -154,17 +159,23 @@
           "step": "review",
           "status": 200,
           "audit": {
-            "ts": 1793915270.976653,
+            "ts": 1794158985.0834339,
             "ip": "127.0.0.1",
             "decision": "allowed",
             "mode": "block",
             "kinds": [],
             "output_kinds": [],
             "preview": "",
-            "prompt_tokens": 157,
+            "prompt_tokens": 189,
             "completion_tokens": 44,
-            "cost_usd": 3.33e-05
+            "cost_usd": 3.65e-05
           }
+        }
+      ],
+      "static_findings": [
+        {
+          "severity": "high",
+          "issue": "request header access"
         }
       ],
       "handler": "module.exports.logRequest = (req) => {\n  const logLine = `${req.method} ${req.path} ${JSON.stringify(req.headers)} ${JSON.stringify(req.body)}`;\n  console.log(logLine);\n  return logLine;\n};\n"
@@ -172,28 +183,27 @@
     {
       "id": "api",
       "title": "Сделай запрос на API",
-      "committed": true,
-      "commit": "deb53b0",
-      "stopped": "committed",
+      "committed": false,
+      "commit": null,
+      "stopped": "security review or static check found critical or high",
       "findings": [
         {
           "severity": "low",
-          "issue": "The API URL is hardcoded and does not include any checks or parameters that could be used to dynamically change the URL."
-        }
-      ],
-      "warnings": [
+          "issue": "plain http URLs"
+        },
         {
-          "severity": "low",
-          "issue": "The API URL is hardcoded and does not include any checks or parameters that could be used to dynamically change the URL."
+          "severity": "high",
+          "issue": "unchecked URL path concat"
         }
       ],
+      "warnings": [],
       "gateway_blocked": [],
       "calls": [
         {
           "step": "generate",
           "status": 200,
           "audit": {
-            "ts": 1793915272.247756,
+            "ts": 1794158986.359162,
             "ip": "127.0.0.1",
             "decision": "allowed",
             "mode": "block",
@@ -209,20 +219,74 @@
           "step": "review",
           "status": 200,
           "audit": {
-            "ts": 1793915273.104075,
+            "ts": 1794158987.000722,
             "ip": "127.0.0.1",
             "decision": "allowed",
             "mode": "block",
             "kinds": [],
             "output_kinds": [],
             "preview": "",
-            "prompt_tokens": 132,
-            "completion_tokens": 54,
-            "cost_usd": 3.48e-05
+            "prompt_tokens": 164,
+            "completion_tokens": 35,
+            "cost_usd": 3.04e-05
+          }
+        },
+        {
+          "step": "generate",
+          "status": 200,
+          "audit": {
+            "ts": 1794158988.249434,
+            "ip": "127.0.0.1",
+            "decision": "allowed",
+            "mode": "block",
+            "kinds": [],
+            "output_kinds": [],
+            "preview": "",
+            "prompt_tokens": 156,
+            "completion_tokens": 102,
+            "cost_usd": 5.64e-05
+          }
+        },
+        {
+          "step": "generate",
+          "status": 200,
+          "audit": {
+            "ts": 1794158989.488826,
+            "ip": "127.0.0.1",
+            "decision": "allowed",
+            "mode": "block",
+            "kinds": [],
+            "output_kinds": [],
+            "preview": "",
+            "prompt_tokens": 169,
+            "completion_tokens": 102,
+            "cost_usd": 5.77e-05
+          }
+        },
+        {
+          "step": "review",
+          "status": 200,
+          "audit": {
+            "ts": 1794158990.142415,
+            "ip": "127.0.0.1",
+            "decision": "allowed",
+            "mode": "block",
+            "kinds": [],
+            "output_kinds": [],
+            "preview": "",
+            "prompt_tokens": 162,
+            "completion_tokens": 35,
+            "cost_usd": 3.02e-05
           }
         }
       ],
-      "handler": "module.exports = {\n  apiUrl(path) {\n    return `https://api.example.com${path}`;\n  }\n};"
+      "static_findings": [
+        {
+          "severity": "high",
+          "issue": "unchecked URL path concat"
+        }
+      ],
+      "handler": "module.exports.apiUrl = (path) => {\n  return `https://api.example.com${path}`;\n};\n"
     }
   ]
 }

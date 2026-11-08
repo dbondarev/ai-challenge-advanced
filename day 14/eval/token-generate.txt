@@ -1,0 +1,77 @@
+To address the concern of hardcoding credentials or secrets in the source code, you should avoid storing sensitive information directly in your source files. Instead, you can use environment variables or a secure vault to manage these credentials. Here's an example of how you can refactor your code to use environment variables:
+
+1. **Create a `.env` file** in your project root and add your token as an environment variable:
+   ```
+   AUTH_TOKEN=your_auth_token_here
+   ```
+
+2. **Install the `dotenv` package** to load environment variables from the `.env` file:
+   ```bash
+   npm install dotenv
+   ```
+
+3. **Modify your `handler.js` file** to use the environment variable:
+   ```javascript
+   // handler.js
+   const { saveAuthToken, getAuthToken } = require('./authHandler');
+
+   module.exports = {
+     saveAuthToken,
+     getAuthToken
+   };
+   ```
+
+4. **Create an `authHandler.js` file** to handle the token storage and retrieval:
+   ```javascript
+   // authHandler.js
+   const fs = require('fs');
+   const path = require('path');
+   const { promisify } = require('util');
+   const readFile = promisify(fs.readFile);
+   const writeFile = promisify(fs.writeFile);
+
+   const TOKEN_FILE_PATH = path.join(__dirname, 'token.json');
+
+   async function saveAuthToken(store, token) {
+     const data = { [store]: token };
+     await writeFile(TOKEN_FILE_PATH, JSON.stringify(data, null, 2));
+   }
+
+   async function getAuthToken(store) {
+     try {
+       const data = await readFile(TOKEN_FILE_PATH, 'utf8');
+       const tokens = JSON.parse(data);
+       return tokens[store];
+     } catch (error) {
+       if (error.code === 'ENOENT') {
+         return null;
+       }
+       throw error;
+     }
+   }
+
+   module.exports = {
+     saveAuthToken,
+     getAuthToken
+   };
+   ```
+
+5. **Modify your `handler.test.js` file** to use the `authHandler` module:
+   ```javascript
+   // handler.test.js
+   const { test } = require('node:test');
+   const assert = require('node:assert/strict');
+   const { saveAuthToken, getAuthToken } = require('./authHandler');
+
+   test('save and get auth token', async () => {
+     const store = 'myStore';
+     const token = 'your_auth_token_here';
+
+     await saveAuthToken(store, token);
+     const retrievedToken = await getAuthToken(store);
+
+     assert.strictEqual(retrievedToken, token);
+   });
+   ```
+
+By using environment variables and a separate module for handling token storage, you can avoid hardcoding sensitive information directly in your source code. This approach enhances security and makes your application more flexible and maintainable.

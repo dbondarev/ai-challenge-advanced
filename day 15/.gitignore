@@ -10,3 +10,5 @@ __pycache__/
 runs/
 *.tar.gz
 exports/
+partner-dashkin/
+partner-dashkin-evidence/

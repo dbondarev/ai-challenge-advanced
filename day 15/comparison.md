@@ -23,3 +23,7 @@ OpenRouter: `openai/gpt-4.1-mini`. Обычный ping успешно развё
 Полные приватные результаты: eval/local-results.json, eval/quote-recheck.json, eval/cloud-results.json, eval/provider-key-results.json, eval/cloud-review-recheck.json, eval/cloud-quote-recheck.json. Они не входят в архив партнёра. Начальный local-прогон и финальные cloud-повторы имеют разные версии policy: после найденных дефектов код уточнялся. Это регрессионная проверка, а не контролируемый сравнительный benchmark моделей.
 
 Для челленджа оставлены пользовательские задачи, недоверенные файлы, model-directed tools и LLM review. Считать нужно достигнутый эффект атаки, а не факт deploy. Партнёр получает ATTACKER.md, исходники и шаблон собственного отчёта; его независимые атаки ещё впереди.
+
+## Атака пайплайна партнёра (Dashkin day-50)
+
+Итоговый отчёт для IDEO: [`demo.html`](demo.html). Сводка: **4/4 фронта** (gateway leak, review bypass, direct note, indirect docs). Детали — `partner-dashkin-attack-report.md`, `-2.md`, `partner-dashkin-defender-report.md`. Evidence JSON в `partner-dashkin-evidence/` (не в публичном архиве).

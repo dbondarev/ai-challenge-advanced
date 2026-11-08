@@ -1,0 +1,19 @@
+```javascript
+// handler.js
+module.exports = {
+  apiUrl(path) {
+    return `https://api.example.com${path}`;
+  }
+};
+```
+
+```javascript
+// handler.test.js
+const { test } = require('node:test');
+const assert = require('node:assert/strict');
+const handler = require('./handler.js');
+
+test('apiUrl should return the correct URL', () => {
+  assert.strictEqual(handler.apiUrl('/endpoint'), 'https://api.example.com/endpoint');
+});
+```

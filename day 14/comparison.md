@@ -1,16 +1,20 @@
-# Три задачи через gateway и security step
+# Три задачи через gateway, LLM review и static gate
 
-Цикл в `loop.py`. Модель `qwen2.5-coder:7b` только через прокси дня 13 (`127.0.0.1:8791`). Bookreader и GitLab не трогались. Коммиты только в `sandbox/`: `ab2a549` токен, `deb53b0` API. Логи запросов не закоммичены.
+Цикл в `loop.py`. Модель `qwen2.5-coder:7b` только через прокси дня 13 (`127.0.0.1:8791`). Bookreader и GitLab не трогались. Коммиты только в `sandbox/`: после доработки — `8990eff` (токен). Логи запросов не закоммичены.
 
-Промпты трёх задач секретов не содержали. В `logs/audit.jsonl` девять записей `allowed` и одна `blocked`. Сырого ключа в аудите нет.
+Промпты трёх задач секретов не содержали. Контрольный запрос с учебным AWS-ключом: gateway вернул 400, `kinds: aws_key`, в модель не ушёл.
 
-Контрольный запрос с учебным AWS-ключом: gateway вернул 400, `kinds: aws_key`, в модель не ушёл.
+Доработка (из дня 15):
+
+- `parse_review` — fail-closed (кривой JSON / чужой severity / лишние поля → нет разрешения).
+- `static_findings` — headers, логирование headers/body, `http://`, unchecked `${path}`, `eval`/`process.env`/`fs`, плюс сканер секретов дня 13.
+- Коммит только если нет critical/high ни у LLM, ни у static.
 
 ## Сохрани токен авторизации
 
 Код кладёт переданный token в поле объекта и отдаёт его обратно. Хардкода нет.
 
-Security review: `findings: []`. Gateway: `allowed`. Коммит `ab2a549`. Ловить было нечего: оба пропустили не дыру, а обычное сохранение в памяти вызывающего.
+Security review: `findings: []`. Static: пусто. Gateway: `allowed`. Коммит `8990eff`.
 
 ## Добавь логирование всех запросов
 
@@ -19,9 +23,9 @@ const logLine = `${req.method} ${req.path} ${JSON.stringify(req.headers)} ${JSON
 console.log(logLine);
 ```
 
-Security review дважды: high, «Logs of headers or bodies that can carry credentials or personal data». После двух кругов модель оставила ту же строку. Коммита нет.
+LLM review: high («Logs of headers…»). Static: high «request header access». Коммита нет.
 
-Gateway оба вызова генерации и оба review пропустил: в тексте нет ключа, карты, email или телефона. Секреты в заголовках он не понимает.
+Gateway оба вызова пропустил: в тексте нет ключа. Класс «логирование headers» ловит static, не regex секретов.
 
 ## Сделай запрос на API
 
@@ -29,8 +33,12 @@ Gateway оба вызова генерации и оба review пропусти
 apiUrl(path) { return `https://api.example.com${path}`; }
 ```
 
-Схема https, не http. Проверки path нет: пустая строка и чужой путь склеиваются как есть.
+Раньше LLM ставил low и цикл коммитил. Теперь static: high «unchecked URL path concat» → коммита нет. Gateway: `allowed` (секрета нет).
 
-Security review пометил это low («URL зашит и нет проверок») и не поднял до high. По правилу цикла low — warning и коммит `deb53b0`. Gateway: `allowed`.
+## Итог
 
-Оба не остановили склейку path. Security увидел её и отпустил. Gateway такой класс не смотрит.
+| Задача | Было | Стало |
+|---|---|---|
+| Токен в store | коммит | коммит |
+| Лог headers/body | нет коммита (LLM) | нет коммита (LLM + static) |
+| Path-склейка URL | коммит с warning | **нет коммита** (static high) |

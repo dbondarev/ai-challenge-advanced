@@ -1,10 +1,13 @@
-{"ts": 1793915261.8424718, "ip": "127.0.0.1", "decision": "blocked", "mode": "block", "kinds": ["aws_key"], "preview": "You are a local test assistant.\ndeploy with [REDACTED_API_KEY]", "prompt_tokens": 0, "completion_tokens": 0, "cost_usd": 0}
-{"ts": 1793915263.7407749, "ip": "127.0.0.1", "decision": "allowed", "mode": "block", "kinds": [], "output_kinds": [], "preview": "", "prompt_tokens": 149, "completion_tokens": 154, "cost_usd": 7.65e-05}
-{"ts": 1793915264.1379468, "ip": "127.0.0.1", "decision": "allowed", "mode": "block", "kinds": [], "output_kinds": [], "preview": "", "prompt_tokens": 151, "completion_tokens": 13, "cost_usd": 2.03e-05}
-{"ts": 1793915266.628449, "ip": "127.0.0.1", "decision": "allowed", "mode": "block", "kinds": [], "output_kinds": [], "preview": "", "prompt_tokens": 160, "completion_tokens": 200, "cost_usd": 9.6e-05}
-{"ts": 1793915267.354157, "ip": "127.0.0.1", "decision": "allowed", "mode": "block", "kinds": [], "output_kinds": [], "preview": "", "prompt_tokens": 156, "completion_tokens": 44, "cost_usd": 3.32e-05}
-{"ts": 1793915267.544526, "ip": "127.0.0.1", "decision": "allowed", "mode": "block", "kinds": [], "output_kinds": [], "preview": "", "prompt_tokens": 176, "completion_tokens": 13, "cost_usd": 2.28e-05}
-{"ts": 1793915269.8489192, "ip": "127.0.0.1", "decision": "allowed", "mode": "block", "kinds": [], "output_kinds": [], "preview": "", "prompt_tokens": 181, "completion_tokens": 189, "cost_usd": 9.37e-05}
-{"ts": 1793915270.976653, "ip": "127.0.0.1", "decision": "allowed", "mode": "block", "kinds": [], "output_kinds": [], "preview": "", "prompt_tokens": 157, "completion_tokens": 44, "cost_usd": 3.33e-05}
-{"ts": 1793915272.247756, "ip": "127.0.0.1", "decision": "allowed", "mode": "block", "kinds": [], "output_kinds": [], "preview": "", "prompt_tokens": 148, "completion_tokens": 104, "cost_usd": 5.64e-05}
-{"ts": 1793915273.104075, "ip": "127.0.0.1", "decision": "allowed", "mode": "block", "kinds": [], "output_kinds": [], "preview": "", "prompt_tokens": 132, "completion_tokens": 54, "cost_usd": 3.48e-05}
+{"ts": 1794158976.28101, "ip": "127.0.0.1", "decision": "blocked", "mode": "block", "kinds": ["aws_key"], "preview": "You are a local test assistant.\ndeploy with [REDACTED_API_KEY]", "prompt_tokens": 0, "completion_tokens": 0, "cost_usd": 0}
+{"ts": 1794158978.156003, "ip": "127.0.0.1", "decision": "allowed", "mode": "block", "kinds": [], "output_kinds": [], "preview": "", "prompt_tokens": 149, "completion_tokens": 154, "cost_usd": 7.65e-05}
+{"ts": 1794158978.536073, "ip": "127.0.0.1", "decision": "allowed", "mode": "block", "kinds": [], "output_kinds": [], "preview": "", "prompt_tokens": 183, "completion_tokens": 13, "cost_usd": 2.35e-05}
+{"ts": 1794158981.078069, "ip": "127.0.0.1", "decision": "allowed", "mode": "block", "kinds": [], "output_kinds": [], "preview": "", "prompt_tokens": 160, "completion_tokens": 200, "cost_usd": 9.6e-05}
+{"ts": 1794158981.790713, "ip": "127.0.0.1", "decision": "allowed", "mode": "block", "kinds": [], "output_kinds": [], "preview": "", "prompt_tokens": 188, "completion_tokens": 44, "cost_usd": 3.64e-05}
+{"ts": 1794158982.040503, "ip": "127.0.0.1", "decision": "allowed", "mode": "block", "kinds": [], "output_kinds": [], "preview": "", "prompt_tokens": 180, "completion_tokens": 17, "cost_usd": 2.48e-05}
+{"ts": 1794158984.319783, "ip": "127.0.0.1", "decision": "allowed", "mode": "block", "kinds": [], "output_kinds": [], "preview": "", "prompt_tokens": 181, "completion_tokens": 189, "cost_usd": 9.37e-05}
+{"ts": 1794158985.0834339, "ip": "127.0.0.1", "decision": "allowed", "mode": "block", "kinds": [], "output_kinds": [], "preview": "", "prompt_tokens": 189, "completion_tokens": 44, "cost_usd": 3.65e-05}
+{"ts": 1794158986.359162, "ip": "127.0.0.1", "decision": "allowed", "mode": "block", "kinds": [], "output_kinds": [], "preview": "", "prompt_tokens": 148, "completion_tokens": 104, "cost_usd": 5.64e-05}
+{"ts": 1794158987.000722, "ip": "127.0.0.1", "decision": "allowed", "mode": "block", "kinds": [], "output_kinds": [], "preview": "", "prompt_tokens": 164, "completion_tokens": 35, "cost_usd": 3.04e-05}
+{"ts": 1794158988.249434, "ip": "127.0.0.1", "decision": "allowed", "mode": "block", "kinds": [], "output_kinds": [], "preview": "", "prompt_tokens": 156, "completion_tokens": 102, "cost_usd": 5.64e-05}
+{"ts": 1794158989.488826, "ip": "127.0.0.1", "decision": "allowed", "mode": "block", "kinds": [], "output_kinds": [], "preview": "", "prompt_tokens": 169, "completion_tokens": 102, "cost_usd": 5.77e-05}
+{"ts": 1794158990.142415, "ip": "127.0.0.1", "decision": "allowed", "mode": "block", "kinds": [], "output_kinds": [], "preview": "", "prompt_tokens": 162, "completion_tokens": 35, "cost_usd": 3.02e-05}

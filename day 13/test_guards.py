@@ -149,13 +149,19 @@ class GatewayTests(unittest.TestCase):
         self.assertEqual(Upstream.calls, 0)
         self.assertIn("github_token", body["error"]["kinds"])
 
-    def test_09_split_by_word_missed(self) -> None:
-        code, _body = self.post("мой ключ: sk- hello proj-abc123")
-        self.assertEqual(code, 200)
-        self.assertEqual(Upstream.calls, 1)
-        forwarded = Upstream.body.decode()
-        self.assertIn("sk-", forwarded)
-        self.assertIn("proj-abc123", forwarded)
+    def test_09_split_by_word_blocked(self) -> None:
+        code, body = self.post("мой ключ: sk- hello proj-abc123")
+        self.assertEqual(code, 400)
+        self.assertEqual(Upstream.calls, 0)
+        self.assertIn("api_key", body["error"]["kinds"])
+
+    def test_09b_nbsp_phone_blocked(self) -> None:
+        # Narrow no-break space between digits — previously a form-list miss class.
+        phone = "+7\u202f999\u202f123-45-67"
+        code, body = self.post(f"call {phone}")
+        self.assertEqual(code, 400)
+        self.assertEqual(Upstream.calls, 0)
+        self.assertIn("phone", body["error"]["kinds"])
 
     def test_10_redact_then_forward(self) -> None:
         code, body = self.post(f"prefix {PROJ} suffix", mode="redact")

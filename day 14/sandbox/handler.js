@@ -1,5 +1,3 @@
-module.exports = {
-  apiUrl(path) {
-    return `https://api.example.com${path}`;
-  }
+module.exports.apiUrl = (path) => {
+  return `https://api.example.com${path}`;
 };

@@ -62,42 +62,42 @@
   <p class="lead">Короткий цикл для Node: модель пишет модуль, <code>node --test</code>, второй вызов делает security review. Оба вызова идут через прокси дня 13 на <code>qwen2.5-coder:7b</code>. Bookreader не трогали.</p>
 
   <div class="stats">
-    <div class="stat"><b>9 allowed</b><span>генерация и review, секретов в промпте нет</span></div>
+    <div class="stat"><b>12 allowed</b><span>генерация и review без секретов</span></div>
     <div class="stat"><b>1 blocked</b><span>учебный AWS-ключ, в модель не ушёл</span></div>
-    <div class="stat"><b>high</b><span>логи заголовков и тела, коммита нет</span></div>
-    <div class="stat"><b>low</b><span>URL API, warning и коммит</span></div>
+    <div class="stat"><b>static</b><span>headers и path-concat → high</span></div>
+    <div class="stat"><b>1 коммит</b><span>только токен в store</span></div>
   </div>
 
   <h2>Параметры</h2>
   <table class="params">
     <tr><th>Прокси</th><td><code>day 13/gateway.py</code> на <code>127.0.0.1:8791</code></td></tr>
     <tr><th>Модель</th><td><code>qwen2.5-coder:7b</code> на nv307001</td></tr>
-    <tr><th>Стек промпта</th><td>Node: секреты в коде, PII в логах, http вместо https, нет проверки входа, склейка SQL</td></tr>
-    <tr><th>Коммиты</th><td>только <code>sandbox/</code>, <code>ab2a549</code> и <code>deb53b0</code></td></tr>
+    <tr><th>Слои</th><td>gateway → generate → tests → LLM review (fail-closed) → <code>static_findings</code> → commit</td></tr>
+    <tr><th>Коммиты</th><td>только <code>sandbox/</code>, <code>8990eff</code> (токен)</td></tr>
   </table>
 
   <h2>Три задачи</h2>
   <div class="wrap">
   <table>
-    <thead><tr><th>Задача</th><th>Security</th><th>Gateway</th><th>Дальше</th></tr></thead>
+    <thead><tr><th>Задача</th><th>LLM review</th><th>Static</th><th>Дальше</th></tr></thead>
     <tbody>
       <tr>
         <td>Сохрани токен</td>
-        <td class="ok">пусто, хардкода нет</td>
-        <td class="ok">allowed</td>
-        <td>коммит</td>
+        <td class="ok">пусто</td>
+        <td class="ok">пусто</td>
+        <td>коммит <code>8990eff</code></td>
       </tr>
       <tr>
         <td>Логируй все запросы</td>
-        <td class="miss">high, заголовки и тело</td>
-        <td class="ok">allowed</td>
-        <td>два круга, коммита нет</td>
+        <td class="ok">high, headers/body</td>
+        <td class="ok">high, header access</td>
+        <td>коммита нет</td>
       </tr>
       <tr>
         <td>Запрос на API</td>
-        <td>low, URL зашит</td>
-        <td class="ok">allowed</td>
-        <td>warning и коммит</td>
+        <td>low / warning</td>
+        <td class="ok">high, path concat</td>
+        <td>коммита нет</td>
       </tr>
     </tbody>
   </table>
@@ -106,16 +106,16 @@
   <h2>Что осталось в коде логов</h2>
   <pre>const logLine = `${req.method} ${req.path} ${JSON.stringify(req.headers)} ${JSON.stringify(req.body)}`;
 console.log(logLine);</pre>
-  <p>Security это остановил. Gateway не остановил: регулярки ключей и карт тут не за что зацепиться.</p>
+  <p>LLM и static оба ставят high. Gateway по-прежнему пропускает: секрета в тексте нет.</p>
 
-  <h2>Что прошло мимо обоих</h2>
-  <div class="note">Запрос на API собирает <code>https://api.example.com${path}</code> без проверки path. Security поставил low и отпустил, gateway смотрит только на секреты. Токен в объекте вызывающего оба правильно не тронули: это не дыра.</div>
+  <h2>Что закрыл static</h2>
+  <div class="note">Раньше <code>https://api.example.com${path}</code> уходил в коммит с low. Теперь static high «unchecked URL path concat» блокирует до git. Токен в объекте вызывающего по-прежнему не трогаем: это не дыра.</div>
 
   <h2>Файлы</h2>
   <ul class="files">
-    <li><code>loop.py</code><span>генерация, тесты, review, коммит</span></li>
+    <li><code>loop.py</code><span>генерация, тесты, review, static, коммит</span></li>
     <li><code>comparison.md</code><span>разбор трёх задач</span></li>
-    <li><code>logs/audit.jsonl</code><span>9 allowed, 1 blocked</span></li>
+    <li><code>logs/audit.jsonl</code><span>12 allowed, 1 blocked</span></li>
     <li><code>eval/tasks.json</code><span>сырой прогон</span></li>
   </ul>
 </main>

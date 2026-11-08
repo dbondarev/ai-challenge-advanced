@@ -1,1 +1,1 @@
-Logs of headers or bodies that may contain credentials or personal data
+Logs of headers or bodies that can carry credentials or personal data; request header access

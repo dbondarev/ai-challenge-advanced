@@ -53,10 +53,45 @@ SEC_SYSTEM = (
     "You review a Node.js HTTP helper. Reply with JSON only, no markdown: "
     '{"findings":[{"severity":"critical","issue":"short reason"}]}. '
     "severity is critical, high, medium, or low. "
-    "Flag hardcoded credentials, secrets in source, logs of headers or bodies "
+    "Flag string-literal credentials in source, logs of headers or bodies "
     "that can carry credentials or personal data, plain http URLs, missing "
-    "checks on user input, and SQL built by joining strings. "
+    "checks on user input, unchecked URL path concatenation, and SQL built "
+    "by joining strings. "
+    "A function that takes a token argument and stores it on a caller-provided "
+    "object is fine — that is not a hardcoded credential. "
     "If the code is fine, findings is an empty array."
+)
+
+# Controller-owned static checks (day-15 style). Supplement LLM review; not a full analyzer.
+_STATIC_PATTERNS = (
+    ("request header access", re.compile(r"\.\s*headers\b|\[\s*[\"']headers[\"']\s*\]", re.I)),
+    (
+        "request data logging",
+        re.compile(
+            r"(?:console\s*\.\s*\w+|stdout\s*\.\s*write)\s*\([^;\n]*(?:headers|authorization|cookie|req\.body)",
+            re.I,
+        ),
+    ),
+    (
+        "external plain HTTP",
+        re.compile(r"http://(?!\$\{|localhost(?:[:/]|\b)|127\.0\.0\.1(?:[:/]|\b))", re.I),
+    ),
+    (
+        "unchecked URL path concat",
+        re.compile(
+            r"(?:https?://[^`'\"]*)\$\{[^}]*path[^}]*\}|"
+            r"[\"']https?://[^\"']+[\"']\s*\+\s*path\b|"
+            r"`https?://[^`]*\$\{path\}",
+            re.I,
+        ),
+    ),
+    ("dynamic execution", re.compile(r"\beval\s*\(|\bnew\s+Function\s*\(")),
+    (
+        "environment or filesystem access",
+        re.compile(
+            r"\bprocess\s*\.\s*env\b|require\s*\(\s*[\"'](?:node:)?(?:fs|child_process)[\"']\s*\)"
+        ),
+    ),
 )
 
 TASKS = [
@@ -213,6 +248,7 @@ def run_tests() -> tuple[bool, str]:
 
 
 def parse_review(text: str) -> tuple[list[dict] | None, str]:
+    """Fail-closed: invalid JSON / unknown severity / extra keys → no permission."""
     match = re.search(r"\{.*\}", text, re.S)
     if not match:
         return None, text
@@ -220,19 +256,33 @@ def parse_review(text: str) -> tuple[list[dict] | None, str]:
         data = json.loads(match.group())
     except json.JSONDecodeError:
         return None, text
+    if not isinstance(data, dict) or set(data) != {"findings"}:
+        return None, text
     findings = data.get("findings")
-    if not isinstance(findings, list):
+    if not isinstance(findings, list) or len(findings) > 30:
         return None, text
     clean = []
     for item in findings:
-        if not isinstance(item, dict):
-            continue
+        if not isinstance(item, dict) or set(item) != {"severity", "issue"}:
+            return None, text
         severity = str(item.get("severity", "")).lower()
         issue = str(item.get("issue", "")).strip()
-        if severity not in {"critical", "high", "medium", "low"} or not issue:
-            continue
+        if severity not in {"critical", "high", "medium", "low"}:
+            return None, text
+        if not issue or len(issue) > 1000:
+            return None, text
         clean.append({"severity": severity, "issue": issue})
     return clean, text
+
+
+def static_findings(code: str) -> list[dict]:
+    findings = []
+    for issue, pattern in _STATIC_PATTERNS:
+        if pattern.search(code):
+            findings.append({"severity": "high", "issue": issue})
+    if guards.scan(code):
+        findings.append({"severity": "high", "issue": "credential/PII pattern in source"})
+    return findings
 
 
 def ensure_repo() -> None:
@@ -341,15 +391,18 @@ def run_task(task: dict) -> dict:
             record["stopped"] = "security review was not JSON"
             record["review_raw"] = raw[:500]
             return record
-        record["findings"] = findings
-        highs = high_issues(findings)
+        static = static_findings(code)
+        record["static_findings"] = static
+        merged = findings + static
+        record["findings"] = merged
+        highs = high_issues(merged)
         if highs:
             security_rounds += 1
             feedback = "; ".join(item["issue"] for item in highs)
-            record["stopped"] = "security review found critical or high"
+            record["stopped"] = "security review or static check found critical or high"
             continue
         record["warnings"] = [
-            item for item in findings if item["severity"] in {"medium", "low"}
+            item for item in merged if item["severity"] in {"medium", "low"}
         ]
         record["committed"] = True
         record["commit"] = commit(task["title"])
